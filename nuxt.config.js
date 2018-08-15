@@ -44,7 +44,6 @@ module.exports = {
   },
   modules: [
     // Simple usage
-    'nuxt-buefy',
-    ['nuxt-sass-resources-loader', '@/assets/main.scss'],
+    ['nuxt-sass-resources-loader', './assets/main.scss'],
   ]
 }

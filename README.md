@@ -1,4 +1,4 @@
-# jtebert
+# juliaebert.com
 
 > Julia Ebert's personal website
 
@@ -21,3 +21,9 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
+## Creating It
+
+[Basic static site
+setup (including deploying to Netlify)](https://scotch.io/tutorials/build-a-server-side-rendered-vue-app-with-nuxtjs)
+
+[Using Bulma and Sass with Nuxt](https://medium.com/@mlars84/nuxt-bulma-sass-for-beginners-426aba0153ba)

@@ -1,9 +1,38 @@
-@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
 
-$green: #069E2D;
+$green: #00B140;
 $green-invert: findColorInvert($green);
 
 $link: $green;
 $primary: $black-bis;
 
-@import "node_modules/bulma/bulma";
+$family-sans-serif: 'Montserrat', sans-serif;
+$family-title: 'Montserrat', 'Frank Ruhl Libre', serif;
+$family-subtitle: 'Share Tech', sans-serif;
+
+
+// Derived variables
+
+@import "~bulma/sass/utilities/derived-variables";
+
+$body-background-color: $primary;
+
+
+// Custom CSS
+
+@import "~bulma/sass/utilities/mixins";
+
+
+.is-white {
+    background: $white;
+}
+.is-primary {
+    background: $primary;
+}
+.is-success {
+    background: $success;
+}
+
+
+@import "~bulma/bulma";
