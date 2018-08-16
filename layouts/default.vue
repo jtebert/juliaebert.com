@@ -85,9 +85,11 @@ export default {
   @include mobile {
     grid-template-columns: repeat(2, 1fr);
   }
-  > * {
-    background-color: $white;
-  }
+}
+
+.square {
+  position: relative;
+  background-color: $white;
 }
 
 .square:after {
