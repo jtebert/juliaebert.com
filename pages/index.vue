@@ -1,56 +1,24 @@
 <template>
-
-  <div class="section">
-    <div class="container">
-    <div class="columns">
-      <div class="column is-3">
-        <square-tile class="is-white">HELLO</square-tile>
-      </div>
-      <div class="column is-3">
-        <square-tile class="is-white">HELLO</square-tile>
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column is-3">
-        <square-tile>
-          <figure class="image is-square">
-          <img src="https://bulma.io/images/placeholders/256x256.png">
-        </figure>
-        </square-tile>
-      </div>
-      <div class="column">
-        <div class="is-white">
-          <h1 class="title">It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  </div>
+<div class="columns">
+</div>
 
 </template>
 
 <script>
 import SquareTile from "~/components/SquareTile.vue";
+import SquareImgTile from "~/components/SquareImgTile.vue";
 
 export default {
   components: {
-    SquareTile
+    SquareTile,
+    SquareImgTile
   }
 };
 </script>
 
 <style lang="scss">
 .title {
-  color: $link;
+  // color: $link;
 }
 </style>
 
