@@ -12,10 +12,13 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,600|Share+Tech' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Share+Tech' },
       // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css' },
 
-    ]
+    ],
+    script: [
+      { src: "https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js" }
+    ],
   },
   css: [
     'assets/main.scss'
@@ -23,7 +26,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#03BC25' },
   /*
   ** Build configuration
   */
