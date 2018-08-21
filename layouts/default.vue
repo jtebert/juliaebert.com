@@ -6,51 +6,23 @@
               <img src="~/assets/logo.png">
             </figure> -->
 
+    <div class="layout">
 
-    <div class="columns">
-      <div class="column is-narrow">
-          <img src="~/assets/logo.png" style="max-width: 200px;">
+      <div id="logo">
+        <img src="~/assets/imgs/logos/circuit-logo.svg">
       </div>
 
-      <div class="column">
-        <h1 class="title is-1">Julia<br>Ebert</h1>
-      </div>
+      <div id="name"><h1>
+        Julia<br>Ebert
+      </h1></div>
+
+      <nav-box></nav-box>
+
+      <nuxt/>
+
+      <footer>&copy; 2018 by Julia Ebert</footer>
+
     </div>
-
-  <div class="columns">
-    <nav-box></nav-box>
-
-  <!-- <div class="column is-narrow">
-    <div  id="nav-box">
-      <ul id="nav-links" class="is-size-4">
-        <li><nuxt-link to="/">Home</nuxt-link></li>
-        <li><nuxt-link to="/cv">CV</nuxt-link></li>
-        <li><nuxt-link to="/research">Research</nuxt-link></li>
-        <li><nuxt-link to="/publications">Publications</nuxt-link></li>
-        <li><nuxt-link to="/programming">Programming</nuxt-link></li>
-        <li><nuxt-link to="/media">Media</nuxt-link></li>
-      </ul>
-    </div>
-  </div> -->
-
-
-  <div class="column">
-    <div class="grid">
-      <div class="square"><div class="square-content img">
-          <img src="~/assets/self-csgf.jpg">
-      </div></div>
-      <div class="square"><div class="square-content">Hi</div></div>
-      <div class="square"><div class="square-content">3</div></div>
-      <div class="square"><div class="square-content">4</div></div>
-      <div class="square"><div class="square-content">4</div></div>
-      <div class="square"><div class="square-content">6</div></div>
-      <div class="square"><div class="square-content">7</div></div>
-      <div class="square"><div class="square-content">8</div></div>
-      <div class="square"><div class="square-content">9</div></div>
-    </div>
-  </div>
-  </div>
-
 
 
 
@@ -73,8 +45,45 @@ export default {
 </script>
 
 <style lang="scss">
-.column.is-narrow {
-  min-width: 200px;
+#logo {
+  position: relative;
+  text-align: right;
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+#name {
+  display: flex;
+  height: 100%;
+  h1 {
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 4rem;
+    font-weight: 500;
+    color: $light;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: $column-gap;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 205px auto auto;
+  grid-template-areas:
+    "logo name"
+    "nav content"
+    ". footer";
+  grid-gap: 2 * $column-gap 2 * $column-gap;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 .grid {
@@ -87,30 +96,11 @@ export default {
   }
 }
 
-.square {
-  position: relative;
-  background-color: $white;
-}
-
-.square:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-
-.square-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 1.25rem 1.5rem;
-  &.img {
-    padding: 0;
-    img {
-      object-fit: cover;
-      width: 100%;
-      max-height: 100%;
-    }
-  }
+footer {
+  grid-column-start: footer-start;
+  grid-column-end: footer-end;
+  text-align: center;
+  color: $light;
 }
 </style>
 

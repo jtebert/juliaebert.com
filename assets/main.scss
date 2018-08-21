@@ -1,11 +1,22 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
-$green: #00B140;
+// $green: #00B140;
+$green: #03BC25;
 $green-invert: findColorInvert($green);
 
+$blue: #2D7DD2;
+$blue-invert: findColorInvert($blue);
+$orange: #EA7100;
+$orange-invert: findColorInvert($orange);
+
 $link: $green;
-$primary: $black-bis;
+$primary: $green;
+$dark: $black-bis;
+$light: $white-bis;
+
+$warning: $orange;
+$warning-invert: $orange-invert;
 
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-title: 'Montserrat', 'Frank Ruhl Libre', serif;
@@ -16,7 +27,7 @@ $family-subtitle: 'Share Tech', sans-serif;
 
 @import "~bulma/sass/utilities/derived-variables";
 
-$body-background-color: $primary;
+$body-background-color: $dark;
 
 
 // Custom CSS
@@ -24,8 +35,8 @@ $body-background-color: $primary;
 @import "~bulma/sass/utilities/mixins";
 
 
-.is-white {
-    background: $white;
+.is-light {
+    background: $light;
 }
 .is-primary {
     background: $primary;

@@ -1,6 +1,67 @@
 <template>
-<div class="columns">
-</div>
+<div class="grid">
+        <!-- <div class="square"><div class="square-content img">
+            <img src="~/assets/imgs/self-csgf.jpg">
+        </div></div> -->
+
+        <!-- <div class="square-wrapper">
+            <div class="square-padder"></div>
+            <div class="square-content img">
+                <img src="~/assets/imgs/self-csgf.jpg">
+            </div>
+        </div> -->
+
+        <square-tile :img-src="require('~/assets/imgs/self-csgf.jpg')"></square-tile>
+
+        <square-tile title="About">
+          <p>I am a PhD candidate in computer science at Harvard University
+          studying bio-inspired swarm robotics with Prof. Radhika Nagpal. I also
+          hold an MRes in bioengineering and a BS in behavioral neuroscience.</p>
+        </square-tile>
+
+        <square-tile title="Goals">
+          <p>During my PhD, my goal is to apply concepts from neuroscience and
+          biological learning to improve collective behavior of robots. After my
+          PhD, I intend to pursue a career in academic research.</p>
+        </square-tile>
+
+        <square-tile title="Interests">
+          <p>I am interested in biology, learning, robotics, and the interface
+          between them, such as bio-inspired robotics, cooperative robot
+          control, and artificial intelligence. I also enjoy <a href="http://harvardcurling.com">curling</a> and <a href="http://lazybaker.juliaebert.com/recipes/cinnamon-rolls">baking
+          cinammon rolls</a>.</p>
+        </square-tile>
+
+        <square-tile
+        :img-src="require('~/assets/imgs/logos/harvard-seas-logo-light.svg')"></square-tile>
+
+        <square-tile title="Links">
+          <div class="links">
+            <a href="https://github.com/jtebert">
+              <i class="mdi mdi-github-circle"></i>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/ebertjulia">
+              <i class="mdi mdi-linkedin"></i>
+              Linkedin
+            </a>
+            <a href="https://ssr.seas.harvard.edu">
+              <i class="mdi mdi-robot"></i>
+              Self-Organizing Systems Research
+            </a>
+            <a href="mailto:julia@juliaebert.com">
+              <i class="mdi mdi-email"></i>
+              Contact Me
+            </a>
+          </div>
+        </square-tile>
+
+        <square-tile>7</square-tile>
+
+        <square-tile :img-src="require('~/assets/imgs/research/kilobots2.jpg')"></square-tile>
+
+        <square-tile>9</square-tile>
+      </div>
 
 </template>
 

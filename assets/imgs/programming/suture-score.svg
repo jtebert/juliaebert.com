@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 449.99999 450"
+   version="1.1"
+   x="0px"
+   y="0px"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="suture-score.svg"
+   width="450"
+   height="450"
+   inkscape:export-filename="/home/jtebert/Copy/Projects/Programming/html/juliaebert.com/assets/imgs/programming/suture-score.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>banana</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="900"
+     id="namedview14"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.67428571"
+     inkscape:cx="117.37939"
+     inkscape:cy="495.56302"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">banana</title>
+  <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+  <path
+     style="fill:#eed500;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1"
+     inkscape:connector-curvature="0"
+     id="path8"
+     sketch:type="MSShapeGroup"
+     d="m 51.349082,328.73692 c 0,0 119.257888,4.86549 181.420028,-32.59027 34.47317,-20.77176 91.27284,-68.1732 121.67801,-125.60479 26.86797,-50.75025 17.6309,-114.883247 22.29168,-121.682884 4.66078,-6.799644 35.76121,-2.508171 35.7612,18.672729 -2e-5,21.180894 -16.02769,28.266454 -19.42371,35.815735 -3.39603,7.54928 -7.76719,26.95738 -4.76998,32.92865 9.18793,18.30491 28.73442,57.07599 17.00324,113.07951 -6.16937,29.45198 -33.35357,76.22231 -74.24566,108.6752 -36.86508,29.25692 -85.21754,45.81988 -133.29187,46.08156 -101.400179,0.55181 -146.422938,-40.53389 -146.422938,-40.53389 -24.109112,-16.25011 -11.826699,-38.72192 0,-34.84155 z" />
+  <text
+     x="-0.79059368"
+     y="465.36304"
+     font-size="5px"
+     font-weight="bold"
+     id="text10"
+     style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#000000">Created by Pham Thi Dieu Linh</text>
+  <text
+     x="-0.79059368"
+     y="470.36304"
+     font-size="5px"
+     font-weight="bold"
+     id="text12"
+     style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#000000">from the Noun Project</text>
+</svg>

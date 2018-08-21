@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "bibtex-parse-js": "0.0.24",
     "bulma": "^0.7.1",
     "node-sass": "^4.9.3",
     "nuxt": "^1.0.0",
