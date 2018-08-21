@@ -24,14 +24,10 @@
 </template>
 
 <script>
-import SquareTile from "~/components/SquareTile.vue";
-import SquareImgTile from "~/components/SquareImgTile.vue";
 import NavBox from "~/components/NavBox.vue";
 
 export default {
   components: {
-    SquareTile,
-    SquareImgTile,
     NavBox
   }
 };
