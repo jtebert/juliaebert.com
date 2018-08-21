@@ -11,7 +11,7 @@
             </div>
         </div> -->
 
-        <square-tile :img-src="require('~/assets/imgs/self-csgf.jpg')"></square-tile>
+        <square-tile type="img" :img-src="require('~/assets/imgs/self-csgf.jpg')"></square-tile>
 
         <square-tile title="About">
           <p>I am a PhD candidate in computer science at Harvard University
@@ -32,11 +32,11 @@
           cinammon rolls</a>.</p>
         </square-tile>
 
-        <square-tile
-        :img-src="require('~/assets/imgs/logos/harvard-seas-logo-light.svg')"></square-tile>
+        <square-tile type="img"
+          :img-src="require('~/assets/imgs/logos/harvard-seas-logo-light.svg')"></square-tile>
 
-        <square-tile title="Links">
-          <div class="links">
+        <square-tile type="links"
+        title="Links">
             <a href="https://github.com/jtebert">
               <i class="mdi mdi-github-circle"></i>
               GitHub
@@ -53,14 +53,24 @@
               <i class="mdi mdi-email"></i>
               Contact Me
             </a>
-          </div>
         </square-tile>
 
-        <square-tile>7</square-tile>
+        <square-tile type="link"
+        :target="'http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/'"
+        title="Projects"
+        subtitle="How To Make (Almost) Anything">
+          <p>Check out the projects I made in this MIT digital fabrication class.</p>
+        </square-tile>
 
-        <square-tile :img-src="require('~/assets/imgs/research/kilobots2.jpg')"></square-tile>
+        <square-tile type="img"
+          :img-src="require('~/assets/imgs/research/kilobots2.jpg')"></square-tile>
 
-        <square-tile>9</square-tile>
+        <square-tile type="link"
+        :target="'https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza'"
+        title="Podcast"
+        subtitle="Brains On! Robotstravaganza">
+          <p>I was a guest in a live science show for kids, talking about bio-inspired robotics and showing off my LARVAbots.</p>
+        </square-tile>
       </div>
 
 </template>

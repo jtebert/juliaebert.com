@@ -1,15 +1,14 @@
 <template>
-<div class="page-content">
-  <h1 class="title is-1-desktop is-3-touch has-text-success">Research</h1>
+<page-content
+  title="Research">
   <p class="intro">These are research projects I've been involved in and
-  projects that I'm
-  currently working on.</p>
+  projects that I'm currently working on.</p>
   <hr>
-  <project :img-src="require('~/assets/imgs/research/kilobots.jpg')">
+  <project
+    :img-src="require('~/assets/imgs/research/kilobots.jpg')"
+    title="Collective Perception and Decision Making in a Robot Swarm"
+    subtitle="Advisor: Radhika Nagpal">
     <div slot="content">
-      <h2 class="title">Collective Perception and Decision Making in a
-      Robot Swarm</h2>
-      <h3 class="subtitle">Advisor: Radhika Nagpal</h3>
       <p>This research aims to improve the ability of a large group of robots to
       perceive and understand their environment by employing agents with
       different perceptual skills.</p>
@@ -58,31 +57,23 @@
 <a href="/papers.bib">LINK</a>
 
 
-</div>
+</page-content>
 </template>
 
 <script>
 import Project from "~/components/Project.vue";
+import PageContent from "~/components/PageContent.vue";
 
 export default {
   components: {
-    Project
+    Project,
+    PageContent
   }
 };
 </script>
 
 
 <style lang="scss">
-.page-content {
-  background-color: $light;
-  width: 100%;
-  padding: 1.25rem 1.5rem;
-
-  .intro {
-    font-size: 1.2rem;
-  }
-}
-
 #bibtex_display {
   .title {
     font-size: 1rem;

@@ -1,10 +1,6 @@
 <template>
   <div class="section">
     <div class="container">
-          <!-- <square-img-tile :img-src="require('~/assets/logo.png')" ></square-img-tile> -->
-            <!-- <figure class="image is-square">
-              <img src="~/assets/logo.png">
-            </figure> -->
 
     <div class="layout">
 
@@ -23,9 +19,6 @@
       <footer>&copy; 2018 by Julia Ebert</footer>
 
     </div>
-
-
-
   </div>
 </div>
 </template>

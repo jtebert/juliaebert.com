@@ -4,8 +4,10 @@
     <img :src=imgSrc>
   </div>
   <div class="column is-7">
+    <h2 class="title">{{ title }}</h2>
+    <h4 class="subtitle" v-if="subtitle">{{ subtitle }}</h4>
     <slot name="content"></slot>
-    <div>
+    <div v-if="this.$slots.results">
         <h3 class="results-title title is-5">Selected Results:</h3>
         <slot name="results"></slot>
     </div>
@@ -15,7 +17,11 @@
 
 <script>
 export default {
-  props: ["imgSrc"]
+  props: {
+    imgSrc: String,
+    title: String,
+    subtitle: String
+  }
 };
 </script>
 
