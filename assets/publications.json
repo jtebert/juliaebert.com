@@ -1,0 +1,245 @@
+{
+    "ebert2018aamas": {
+        "type": "paper",
+        "title": "Multi-feature collective decision making robot swarms",
+        "authors": [
+            "Ebert, Julia",
+            "Gauci, Melvin",
+            "Nagpal, Radhika"
+        ],
+        "booktitle": "Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems",
+        "pages": "1711--1719",
+        "year": 2018,
+        "organization": "International Foundation for Autonomous Agents and Multiagent Systems",
+        "file": "2018_aamas.pdf",
+        "keywords": ["kilobots", "decision making", "swarms", "collective behavior"]
+    },
+    "bazzi2018icra": {
+        "type": "paper",
+        "title": "Stability and Predictability in Dynamically Complex Physical Interactions",
+        "author": [
+            "Bazzi, Salah",
+            "Ebert, Julia",
+            "Hogan, Neville",
+            "Sternad, Dagmar"
+        ],
+        "booktitle": "2018 IEEE International Conference on Robotics and Automation (ICRA)",
+        "pages": "5540--5545",
+        "year": 2018,
+        "file": "2018_icra.pdf",
+        "keywords": ["stability", "contraction", "motor learning"]
+    },
+    "bazzi2018chaos": {
+        "type": "paper",
+        "title": "Stability Analysis of Human Movement: Contraction Theory as a New Tool",
+        "author": [
+            "Bazzi, Salah",
+            "Ebert, Julia",
+            "Hogan, Neville",
+            "Sternad, Dagmar"
+        ],
+        "year": 2018,
+        "note": "Submitted to <i>Chaos</i>",
+        "keywords": ["stability", "contraction", "motor learning"]
+    },
+    "farkhatdinov2018": {
+        "type": "paper",
+        "title": "Experiments on Human Balancing Co-Control in Standing",
+        "author": [
+            "Farkhatdinov, Ildar",
+            "Ebert, Julia",
+            "van Oort, Geiss",
+            "van Asseldonk, E",
+            "Burdet, Etienne"
+        ],
+        "year": 2018,
+        "note": "Submitted to <i>IEEE RA-L</i>",
+        "keywords": ["human robot interaction", "control"]
+    },
+    "park2018": {
+        "type": "paper",
+        "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
+        "author": [
+            "Park, Se-Woong",
+            "Ebert, Julia",
+            "Sternad, Dagmar"
+        ],
+        "note": "In preparation",
+        "keywords": ["motor learning", "bimanual"]
+    },
+    "ebert2018llnl": {
+        "type": "poster",
+        "title": "Collaborative Autonomy for Space Situational Awareness",
+        "author": [
+            "Ebert, Julia",
+            "Meyers, Joshua",
+            "Dawson, William",
+            "Schneider, Michael"
+        ],
+        "address": "Livermore, CA",
+        "addendum": "Poster at: <i>Lawrence Livermore National Laboratory Summer Student Poster Symposium,</i> 8 August 2018",
+        "keywords": ["satellites"],
+        "file": "2018_llnl.pdf"
+    },
+    "ebert2018csgf": {
+        "type": "poster",
+        "title": "Multi-Feature Collective Decision Making in Robot Swarms",
+        "author": [
+            "Ebert, Julia",
+            "Gauci, Melvin",
+            "Nagpal, Radhika"
+        ],
+        "year": 2018,
+        "address": "Washington, DC",
+        "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 15--19 July 2018",
+        "keywords": ["kilobots", "decision making", "swarms", "collective behavior"],
+        "file": "2018_csgf.pdf"
+    },
+    "ebert2017csgf": {
+        "type": "poster",
+        "title": "Infotaxis in a Multi-agent Sensor Network",
+        "author": [
+            "Ebert, Julia",
+            "Teeple, Clark",
+            "Steinhardt, Emma",
+            "Ramanathan, Sharad"
+        ],
+        "year": 2018,
+        "address": "Washington, DC",
+        "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 24--27 July 2017",
+        "keywords": ["collective behavior"],
+        "file": "2017_csgf.pdf"
+    },
+    "ebert2017rehabweek": {
+        "type": "poster",
+        "title": "Human Balance Augmentation with Lower Limb Exoskeleton Robot",
+        "author": [
+            "Farkhatdinov, Ildar",
+            "Ebert, Julia",
+            "van Oort, Geiss",
+            "van Asseldonk, E",
+            "Burdet, Etienne"
+        ],
+        "year": 2017,
+        "address": "London, UK",
+        "addendum": "Extended abstract and poster at: <i>RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy,</i> 17 July 2017",
+        "keywords": ["human robot interaction", "control"]
+    },
+    "ebert2016eurohaptics": {
+        "type": "poster",
+        "title": "Preliminary Study on Assisting Balance Recovery with Lower Limb Exoskeleton",
+        "author": [
+            "Ebert, Julia",
+            "Farkhatdinov, Ildar",
+            "van Oort, G",
+            "van Asseldonk, E",
+            "Burdet, Etienne"
+        ],
+        "year": 2016,
+        "address": "London, UK",
+        "addendum": "Work in progress paper and poster at: <i>EuroHaptics 2016,</i> 4--7 July 2016",
+        "keywords": ["human robot interaction", "control"],
+        "file": "2016_eurohaptics.pdf"
+    },
+    "sternad2016biomech": {
+        "type": "poster",
+        "title": "Dynamic Stability in the Control of Complex Objects",
+        "author": [
+            "Sternad, Dagmar",
+            "Mukovskiy, Albert",
+            "Ebert, Julia",
+            "Dijkstra, Tjeerd"
+        ],
+        "year": 2016,
+        "address": "Mt. Sterling, OH",
+        "addendum": "Poster at: <i>Biomechanics and Neural Control of Movement 2016,</i> 12--17 June 2016",
+        "keywords": ["contraction", "stability", "motor learning"]
+    },
+    "ebert2015ncm": {
+        "type": "poster",
+        "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
+        "author": [
+            "Ebert, Julia",
+            "Park, Se-Woong",
+            "Sternad, Dagmar"
+        ],
+        "year": 2015,
+        "address": "Charleston, SC",
+        "addendum": "Poster at: <i>Society for the Neural Control of Movement 25th Annual Meeting,</i> 20--24 April 2015",
+        "keywords": ["motor learning", "bimanual"],
+        "file": "2015_ncm.pdf"
+    },
+    "ebert2015rise": {
+        "type": "poster",
+        "title": "Why You Don't Spill Your Coffee",
+        "author": [
+            "Ebert, Julia",
+            "Mukovskiy, Albert",
+            "Dijkstra, T",
+            "Sternad, Dagmar"
+        ],
+        "year": 2015,
+        "address": "Boston, MA",
+        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 9 April 2015",
+        "keywords": ["contraction", "stability", "motor learning"],
+    },
+    "ebert2014ncm": {
+        "type": "poster",
+        "title": "Learning and exploration in a novel dimensionality-reduction task",
+        "author": [
+            "Ebert, Julia",
+            "Kim, S",
+            "Sternad, Dagmar",
+            "Schaal, Stefan"
+        ],
+        "year": 2014,
+        "address": "Amsterdam, NL",
+        "addendum": "Poster at: <i>Society for the Neural Control of Movement 24th Annual Meeting,</i> 20--25 April 2014",
+        "keywords": ["motor learning", "dimensionality reduction"],
+        "file": "2014_ncm.pdf"
+    },
+    "ebert2014rise": {
+        "type": "poster",
+        "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
+        "author": [
+            "Ebert, Julia",
+            "Park, Se-Woong",
+            "Sternad, Dagmar"
+        ],
+        "year": 2014,
+        "address": "Boston, MA",
+        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 10 April 2014",
+        "keywords": ["motor learning", "bimanual"],
+        "file": "2014_rise.pdf"
+    },
+    "ebert2013nurds": {
+        "type": "poster",
+        "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
+        "author": [
+            "Ebert, Julia",
+            "Park, Se-Woong",
+            "Sternad, Dagmar"
+        ],
+        "year": 2013,
+        "address": "Biddeford, ME",
+        "addendum": "Poster at: <i>Northeast Undergraduate Research and Development Symposium,</i> 2--3 March 2013",
+        "keywords": ["motor learning", "bimanual"],
+        "file": "2013_nurds"
+    },
+    "ebert2012rise": {
+        "type": "poster",
+        "title": "Central Fatigue in Cognitive and Motor Performance",
+        "author": [
+            "Ebert, Julia",
+            "Park, Se-Woong",
+            "Griffen, L",
+            "O'Neil Pirozzi, T",
+            "Sternad, Dagmar"
+        ],
+        "year": 2012,
+        "address": "Boston, MA",
+        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 29 March 2012",
+        "keywords": ["motor control"],
+        "file": "2018_rise.pdf"
+    }
+}
