@@ -1,14 +1,12 @@
 <template>
     <page-content
-        title="Programming">
-        <p slot="intro">
-        </p>
+        title="Curriculum Vitae">
 
+        <p slot="intro">
+            <a href="" class="mdi mdi-file-pdf"> View as PDF</a>
+        </p>
         <div slot="content">
-          <project
-            :img-src="require('~/assets/imgs/programming/lazy-baker.png')"
-            title="Hello, World">
-          </project>
+            Hello, world.
         </div>
     </page-content>
 
@@ -16,12 +14,12 @@
 
 <script>
 import PageContent from "~/components/PageContent.vue";
-import Project from "~/components/Project.vue";
+import PublicationList from "~/components/PublicationList.vue";
 
 export default {
   components: {
     PageContent,
-    Project
+    PublicationList
   }
 };
 </script>

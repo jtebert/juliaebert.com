@@ -45,10 +45,11 @@ $body-background-color: $dark;
     background: $success;
 }
 
-.subtitle {
+.subtitle, .content .subtitle {
     font-family: $family-subtitle;
     // text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 400;
 }
 
 @import "~bulma/bulma";
