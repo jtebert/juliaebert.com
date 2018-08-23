@@ -8,7 +8,7 @@
     <h4 class="subtitle" v-if="subtitle">{{ subtitle }}</h4>
     <slot name="content"></slot>
     <div v-if="this.$slots.results">
-        <h3 class="results-title title is-5">Selected Results:</h3>
+        <h3 class="results-title subtitle is-4">Some Results</h3>
         <slot name="results"></slot>
     </div>
   </div>
@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title.results-title {
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+.subtitle.results-title {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 </style>

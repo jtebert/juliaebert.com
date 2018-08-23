@@ -1,14 +1,10 @@
 <template>
     <page-content
-        title="Programming">
+        title="Media">
         <p slot="intro">
         </p>
 
         <div slot="content">
-          <project
-            :img-src="require('~/assets/imgs/programming/lazy-baker.png')"
-            title="Hello, World">
-          </project>
         </div>
     </page-content>
 

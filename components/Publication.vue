@@ -1,7 +1,7 @@
 <template>
 <p class="publication">
     <span class="download-link">
-        <a v-if="json.file" :class="['mdi', iconName]" :href=file></a>
+        <a v-if="json.file" :class="['download-link', 'mdi', iconName]" :href=file></a>
         <i v-else class="['mdi', iconName]"></i>
     </span>
     <span class="citation">
@@ -103,7 +103,8 @@ export default {
     left: 0;
   }
   .citation {
-    margin-left: 1.5em;
+    display: block;
+    padding-left: 1.75em;
   }
 }
 </style>

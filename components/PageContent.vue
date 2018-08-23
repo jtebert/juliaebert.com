@@ -1,7 +1,14 @@
 <template>
   <div class="page-content">
-    <h1 class="title is-1">{{ title }}</h1>
-    <slot></slot>
+    <div class="section is-white">
+      <h1 class="title is-1">{{ title }}</h1>
+      <div class="intro">
+        <slot name="intro"></slot>
+      </div>
+    </div>
+    <div class="section content">
+      <slot name="content"></slot>
+    </div>
   </div>
 </template>
 
@@ -16,7 +23,7 @@ export default {
 .page-content {
   background-color: $light;
   width: 100%;
-  padding: 1.25rem 1.5rem;
+  //padding: 1.25rem 1.5rem;
 
   .intro {
     font-size: 1.2rem;
