@@ -11,14 +11,12 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Share+Tech' },
-    ],
-    script: [
-      { src: "https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js" }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Share' },
     ],
   },
   css: [
-    'assets/main.scss'
+    'assets/main.scss',
+    '@mdi/font/css/materialdesignicons.min.css'
   ],
   /*
   ** Customize the progress bar color
@@ -45,6 +43,5 @@ module.exports = {
   modules: [
     // Simple usage
     ['nuxt-sass-resources-loader', './assets/main.scss'],
-    'nuxt-material-design-icons',
   ]
 }

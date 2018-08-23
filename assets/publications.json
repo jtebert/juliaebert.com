@@ -2,7 +2,7 @@
     "ebert2018aamas": {
         "type": "paper",
         "title": "Multi-feature collective decision making robot swarms",
-        "authors": [
+        "author": [
             "Ebert, Julia",
             "Gauci, Melvin",
             "Nagpal, Radhika"
@@ -12,7 +12,12 @@
         "year": 2018,
         "organization": "International Foundation for Autonomous Agents and Multiagent Systems",
         "file": "2018_aamas.pdf",
-        "keywords": ["kilobots", "decision making", "swarms", "collective behavior"]
+        "keywords": [
+            "kilobots",
+            "decision making",
+            "swarms",
+            "collective behavior"
+        ]
     },
     "bazzi2018icra": {
         "type": "paper",
@@ -27,7 +32,11 @@
         "pages": "5540--5545",
         "year": 2018,
         "file": "2018_icra.pdf",
-        "keywords": ["stability", "contraction", "motor learning"]
+        "keywords": [
+            "stability",
+            "contraction",
+            "motor learning"
+        ]
     },
     "bazzi2018chaos": {
         "type": "paper",
@@ -40,7 +49,11 @@
         ],
         "year": 2018,
         "note": "Submitted to <i>Chaos</i>",
-        "keywords": ["stability", "contraction", "motor learning"]
+        "keywords": [
+            "stability",
+            "contraction",
+            "motor learning"
+        ]
     },
     "farkhatdinov2018": {
         "type": "paper",
@@ -54,7 +67,10 @@
         ],
         "year": 2018,
         "note": "Submitted to <i>IEEE RA-L</i>",
-        "keywords": ["human robot interaction", "control"]
+        "keywords": [
+            "human robot interaction",
+            "control"
+        ]
     },
     "park2018": {
         "type": "paper",
@@ -65,7 +81,10 @@
             "Sternad, Dagmar"
         ],
         "note": "In preparation",
-        "keywords": ["motor learning", "bimanual"]
+        "keywords": [
+            "motor learning",
+            "bimanual"
+        ]
     },
     "ebert2018llnl": {
         "type": "poster",
@@ -78,7 +97,9 @@
         ],
         "address": "Livermore, CA",
         "addendum": "Poster at: <i>Lawrence Livermore National Laboratory Summer Student Poster Symposium,</i> 8 August 2018",
-        "keywords": ["satellites"],
+        "keywords": [
+            "satellites"
+        ],
         "file": "2018_llnl.pdf"
     },
     "ebert2018csgf": {
@@ -92,7 +113,12 @@
         "year": 2018,
         "address": "Washington, DC",
         "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 15--19 July 2018",
-        "keywords": ["kilobots", "decision making", "swarms", "collective behavior"],
+        "keywords": [
+            "kilobots",
+            "decision making",
+            "swarms",
+            "collective behavior"
+        ],
         "file": "2018_csgf.pdf"
     },
     "ebert2017csgf": {
@@ -107,7 +133,9 @@
         "year": 2018,
         "address": "Washington, DC",
         "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 24--27 July 2017",
-        "keywords": ["collective behavior"],
+        "keywords": [
+            "collective behavior"
+        ],
         "file": "2017_csgf.pdf"
     },
     "ebert2017rehabweek": {
@@ -123,7 +151,10 @@
         "year": 2017,
         "address": "London, UK",
         "addendum": "Extended abstract and poster at: <i>RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy,</i> 17 July 2017",
-        "keywords": ["human robot interaction", "control"]
+        "keywords": [
+            "human robot interaction",
+            "control"
+        ]
     },
     "ebert2016eurohaptics": {
         "type": "poster",
@@ -138,7 +169,10 @@
         "year": 2016,
         "address": "London, UK",
         "addendum": "Work in progress paper and poster at: <i>EuroHaptics 2016,</i> 4--7 July 2016",
-        "keywords": ["human robot interaction", "control"],
+        "keywords": [
+            "human robot interaction",
+            "control"
+        ],
         "file": "2016_eurohaptics.pdf"
     },
     "sternad2016biomech": {
@@ -153,7 +187,11 @@
         "year": 2016,
         "address": "Mt. Sterling, OH",
         "addendum": "Poster at: <i>Biomechanics and Neural Control of Movement 2016,</i> 12--17 June 2016",
-        "keywords": ["contraction", "stability", "motor learning"]
+        "keywords": [
+            "contraction",
+            "stability",
+            "motor learning"
+        ]
     },
     "ebert2015ncm": {
         "type": "poster",
@@ -166,7 +204,10 @@
         "year": 2015,
         "address": "Charleston, SC",
         "addendum": "Poster at: <i>Society for the Neural Control of Movement 25th Annual Meeting,</i> 20--24 April 2015",
-        "keywords": ["motor learning", "bimanual"],
+        "keywords": [
+            "motor learning",
+            "bimanual"
+        ],
         "file": "2015_ncm.pdf"
     },
     "ebert2015rise": {
@@ -181,7 +222,11 @@
         "year": 2015,
         "address": "Boston, MA",
         "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 9 April 2015",
-        "keywords": ["contraction", "stability", "motor learning"],
+        "keywords": [
+            "contraction",
+            "stability",
+            "motor learning"
+        ]
     },
     "ebert2014ncm": {
         "type": "poster",
@@ -195,7 +240,10 @@
         "year": 2014,
         "address": "Amsterdam, NL",
         "addendum": "Poster at: <i>Society for the Neural Control of Movement 24th Annual Meeting,</i> 20--25 April 2014",
-        "keywords": ["motor learning", "dimensionality reduction"],
+        "keywords": [
+            "motor learning",
+            "dimensionality reduction"
+        ],
         "file": "2014_ncm.pdf"
     },
     "ebert2014rise": {
@@ -209,7 +257,10 @@
         "year": 2014,
         "address": "Boston, MA",
         "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 10 April 2014",
-        "keywords": ["motor learning", "bimanual"],
+        "keywords": [
+            "motor learning",
+            "bimanual"
+        ],
         "file": "2014_rise.pdf"
     },
     "ebert2013nurds": {
@@ -223,7 +274,10 @@
         "year": 2013,
         "address": "Biddeford, ME",
         "addendum": "Poster at: <i>Northeast Undergraduate Research and Development Symposium,</i> 2--3 March 2013",
-        "keywords": ["motor learning", "bimanual"],
+        "keywords": [
+            "motor learning",
+            "bimanual"
+        ],
         "file": "2013_nurds"
     },
     "ebert2012rise": {
@@ -239,7 +293,9 @@
         "year": 2012,
         "address": "Boston, MA",
         "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 29 March 2012",
-        "keywords": ["motor control"],
+        "keywords": [
+            "motor control"
+        ],
         "file": "2018_rise.pdf"
     }
 }
