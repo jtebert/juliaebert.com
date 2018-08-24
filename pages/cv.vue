@@ -20,7 +20,8 @@
                 title="Imperial College London"
                 subtitle="Master of Research in Bioengineering, with Distinction<br>
                     Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
-                    Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>"></cv-entry>
+                    Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>"
+                ></cv-entry>
             <cv-entry
                 location="Boston, MA"
                 dates="2015"

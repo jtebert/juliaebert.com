@@ -69,7 +69,8 @@
         "note": "Submitted to <i>IEEE RA-L</i>",
         "keywords": [
             "human robot interaction",
-            "control"
+            "control",
+            "exoskeleton"
         ]
     },
     "park2018": {
@@ -153,7 +154,8 @@
         "addendum": "Extended abstract and poster at: <i>RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy,</i> 17 July 2017",
         "keywords": [
             "human robot interaction",
-            "control"
+            "control",
+            "exoskeleton"
         ]
     },
     "ebert2016eurohaptics": {
@@ -171,7 +173,8 @@
         "addendum": "Work in progress paper and poster at: <i>EuroHaptics 2016,</i> 4--7 July 2016",
         "keywords": [
             "human robot interaction",
-            "control"
+            "control",
+            "exoskeleton"
         ],
         "file": "2016_eurohaptics.pdf"
     },
