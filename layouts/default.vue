@@ -12,9 +12,9 @@
         Julia<br>Ebert
       </h1></div>
 
-      <nav-box></nav-box>
+      <nav-box id='nav'></nav-box>
 
-      <nuxt/>
+      <nuxt id='grid-content'/>
 
       <footer>&copy; 2018 by Julia Ebert</footer>
 
@@ -37,6 +37,7 @@ export default {
 #logo {
   position: relative;
   text-align: right;
+  grid-area: logo;
   img {
     max-width: 100%;
     height: 100%;
@@ -45,6 +46,7 @@ export default {
 
 #name {
   display: flex;
+  grid-area: name;
   height: 100%;
   h1 {
     display: inline-block;
@@ -59,14 +61,25 @@ export default {
   }
 }
 
+#nav {
+  grid-area: nav;
+  @include touch {
+    grid-area: nav-touch;
+  }
+}
+
+#grid-content {
+  grid-area: content;
+}
+
 .layout {
   display: grid;
-  grid-template-columns: 250px auto;
-  grid-template-rows: 205px auto auto;
+  grid-template-columns: 250px auto auto;
+  grid-template-rows: 205px 1fr auto;
   grid-template-areas:
-    "logo name"
-    "nav content"
-    ". footer";
+    "logo name nav-touch"
+    "nav content content"
+    ". footer footer";
   grid-gap: 2 * $column-gap 2 * $column-gap;
   @include mobile {
     display: flex;
@@ -86,8 +99,7 @@ export default {
 }
 
 footer {
-  grid-column-start: footer-start;
-  grid-column-end: footer-end;
+  grid-area: footer;
   text-align: center;
   color: $light;
 }

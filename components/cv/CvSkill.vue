@@ -1,17 +1,12 @@
 <template>
-<div class="cv-skills">
+<div class="cv-skill">
     <div class="cv-sidebar">
-        {{ category }}
+        <b>{{ category }}</b>
     </div>
+    <div class="cv-bar"></div>
     <div class="cv-main">
-        {{ skills.join(' &middot; ') }}
+        {{ skills.join(' &bull; ') }}
     </div>
-
-    <cv-skill
-        dates="2016--2017"
-        task="Take out the trash">
-    </cv-skill>
-
 </div>
 </template>
 

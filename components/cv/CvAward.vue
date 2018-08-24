@@ -1,7 +1,7 @@
 <template>
-<div class="cv-award is-fixed">
+<div class="cv-award">
     <div class="cv-sidebar">
-        {{ date }}
+        {{ String(date).replace('--', '–') }}
     </div>
     <div class="cv-main" v-html="award"></div>
 </div>

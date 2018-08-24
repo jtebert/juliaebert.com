@@ -1,5 +1,5 @@
 <template>
-  <ul id="nav-links" class="is-size-4">
+  <ul class="nav-links is-size-4">
     <li><nuxt-link to="/">
       Home &ensp;<span class="mdi mdi-home"></span>
     </nuxt-link></li>
@@ -22,7 +22,7 @@
 </template>
 
 <style lang="scss">
-#nav-links {
+.nav-links {
   font-family: $family-subtitle;
   // font-size: 1.75rem;
   text-align: right;
