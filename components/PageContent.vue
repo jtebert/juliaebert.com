@@ -6,7 +6,10 @@
         <slot name="intro"></slot>
       </div>
     </div>
-    <div class="section is-content content">
+    <div class="section is-content is-white content" v-if="hasSection">
+      <slot name="content"></slot>
+    </div>
+    <div class="content" v-else>
       <slot name="content"></slot>
     </div>
   </div>
@@ -14,7 +17,10 @@
 
 <script>
 export default {
-  props: ["title"]
+  props: {
+    title: { type: String },
+    hasSection: { type: Boolean, default: true }
+  }
 };
 </script>
 

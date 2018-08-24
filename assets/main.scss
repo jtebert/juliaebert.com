@@ -29,14 +29,28 @@ $family-subtitle: 'Share', sans-serif;
 
 $body-background-color: $dark;
 
+.subtitle, .content .subtitle {
+    font-family: $family-subtitle;
+    // text-transform: uppercase;
+    //letter-spacing: 1px;
+    font-weight: 400;
+    color: $primary;
+}
+
 
 // Custom CSS
 
 @import "~bulma/sass/utilities/mixins";
 
+p a:hover {
+    text-decoration: underline;
+}
 
 .is-light {
     background: $light;
+}
+.is-white {
+    background: $white;
 }
 .is-primary {
     background: $primary;
@@ -45,15 +59,8 @@ $body-background-color: $dark;
     background: $success;
 }
 
-.subtitle, .content .subtitle {
-    font-family: $family-subtitle;
-    // text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-}
-
 .section.is-content {
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
 }
 
 @import "~bulma/bulma";
