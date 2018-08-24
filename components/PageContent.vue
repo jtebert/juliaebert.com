@@ -1,12 +1,12 @@
 <template>
   <div class="page-content">
-    <div class="section is-white">
+    <div class="section is-content">
       <h1 class="title is-1">{{ title }}</h1>
       <div class="intro">
         <slot name="intro"></slot>
       </div>
     </div>
-    <div class="section content">
+    <div class="section is-content content">
       <slot name="content"></slot>
     </div>
   </div>

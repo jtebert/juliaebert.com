@@ -1,8 +1,8 @@
 <template>
 <p class="publication">
     <span class="download-link">
-        <a v-if="json.file" :class="['download-link', 'mdi', iconName]" :href=file></a>
-        <i v-else class="['mdi', iconName]"></i>
+        <a v-if="json.file" :class="['mdi', iconName]" :href=file></a>
+        <i v-else :class="['mdi', iconName]"></i>
     </span>
     <span class="citation">
         <span class="author" v-html="authorsLastFI"></span>

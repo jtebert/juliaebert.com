@@ -52,4 +52,8 @@ $body-background-color: $dark;
     font-weight: 400;
 }
 
+.section.is-content {
+    padding: 2rem 2rem;
+}
+
 @import "~bulma/bulma";
