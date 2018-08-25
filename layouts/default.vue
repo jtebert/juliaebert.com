@@ -4,8 +4,8 @@
 
     <div class="layout">
 
-      <div id="logo">
-        <img src="~/assets/imgs/logos/circuit-logo.svg">
+      <div id="main-logo">
+        <img src="/imgs/logos/circuit-logo.svg">
       </div>
 
       <div id="name"><h1>
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
-#logo {
+#main-logo {
   position: relative;
   text-align: right;
   grid-area: logo;

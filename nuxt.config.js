@@ -11,7 +11,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Share' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Space+Mono' },
     ],
   },
   css: [
@@ -40,6 +40,10 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    { src: '~/plugins/vue-typer.js', ssr: false },
+    { src: '~/plugins/directives.js' }
+  ],
   modules: [
     // Simple usage
     ['nuxt-sass-resources-loader', './assets/main.scss'],

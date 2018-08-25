@@ -5,22 +5,28 @@
 $green: #03BC25;
 $green-invert: findColorInvert($green);
 
-$blue: #2D7DD2;
+$blue: #3689e1;
 $blue-invert: findColorInvert($blue);
-$orange: #EA7100;
+$orange: #ea9e00;
 $orange-invert: findColorInvert($orange);
 
-$link: $green;
 $primary: $green;
-$dark: $black-bis;
-$light: $white-bis;
+$link: $primary;
+$dark: $black;
+$light: $white-ter;
 
 $warning: $orange;
 $warning-invert: $orange-invert;
 
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-title: 'Montserrat', 'Frank Ruhl Libre', serif;
-$family-subtitle: 'Share', sans-serif;
+$family-subtitle: 'Space Mono', sans-serif;
+
+$title-weight: 500;
+$subtitle-weight: $weight-normal;
+
+$radius: 0;
+$small-radius: 0;
 
 
 // Derived variables
@@ -61,6 +67,10 @@ p a:hover {
 
 .section.is-content {
     padding: 3rem 2rem;
+}
+
+.tag {
+    font-weight: 500;
 }
 
 @import "~bulma/bulma";

@@ -18,5 +18,6 @@ export default {
 .icon-link {
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 </style>
