@@ -11,7 +11,7 @@
 
         <div slot="content">
           <project
-            :img-src="require('~/assets/imgs/programming/lazy-baker.png')"
+            :img-src="'/imgs/programming/lazy-baker.png'"
             title="Lazy Baker">
             <div slot="content">
               <tags tags="Python, Django, Wagtail CMS"></tags>
@@ -40,7 +40,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/owen-tribune.png')"
+            :img-src="'/imgs/programming/owen-tribune.png'"
             img-align="right"
             title="The Owen Tribune">
             <div slot="content">
@@ -64,7 +64,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/jekyll-polymer.png')"
+            :img-src="'/imgs/programming/jekyll-polymer.png'"
             title="Jekyll Polymer">
             <div slot="content">
               <tags tags="HTML, JavaScript, Jekyll, Google Polymer"></tags>
@@ -87,7 +87,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/suture-score.png')"
+            :img-src="'/imgs/programming/suture-score.png'"
             img-align="right"
             title="Suture Score">
             <div slot="content">
@@ -114,7 +114,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/sciencebait_logo.png')"
+            :img-src="'/imgs/programming/sciencebait_logo.png'"
             title="Science Clickbait">
             <div slot="content">
               <tags tags="Python, Django"></tags>
@@ -144,7 +144,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/vroom_logo_alt.png')"
+            :img-src="'/imgs/programming/vroom_logo_alt.png'"
             img-align="right"
             title="VROOM: Vacuum Robot Overcoming Obstacles and Messes">
             <div slot="content">
@@ -166,7 +166,7 @@
           </project>
 
           <project
-            :img-src="require('~/assets/imgs/programming/blurber.png')"
+            :img-src="'/imgs/programming/blurber.png'"
             title="Blurber">
             <div slot="content">
               <tags tags="Python"></tags>

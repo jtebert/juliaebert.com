@@ -42,4 +42,6 @@ setup (including deploying to Netlify)](https://scotch.io/tutorials/build-a-serv
 - Create/add logo favicon
 - Maybe add to footer?
 - Animations (page transitions, anything else?)
+- Make error template look good
 - Check links
+- Redirects for assets/PDFs?

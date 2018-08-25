@@ -29,11 +29,11 @@ The color palette and secondary font choice are a reference to classic green-on-
 
 - Failing doesn't make you a failure
 - Not knowing something doesn't mean you're stupid. We're all learning and no one knows everything.
-- You don't have to fit the stereotypes. 
+- You don't have to fit the stereotypes.
 
 ## Logo
 
-The logo is a circuit representation of my first initial, because I do computery things. It may be used prominently (i.e., as a feature) or as an icon down to _______ pixels. The latter is likely prefered when heavy use of graphics is not the norm (such as a CV or as a watermark). It may also be used as a Favicon.
+The logo is a circuit representation of my first initial, because I do computery things. It may be used prominently (i.e., as a feature) or as an icon down to _______ pixels. The latter is likely preferred when heavy use of graphics is not the norm (such as a CV or as a watermark). It may also be used as a Favicon.
 
 Don't be so full of yourself as to use it more than once on each page.
 
@@ -151,7 +151,7 @@ I don't want to sound too serious or inaccessible. I want to be open, confident,
 
 Phrasing should be focused on action and verbs. For example, "Julia Makes Things" and "Julia Blogs," or blog sections "Making," "Sharing," and "Learning". Bonus points for articles with puns, alliteration, and sci-fi references in the titles. For general audience writing, try to eliminate jargon. Humorous metaphors and similes are often useful, but don't neglect content for the sake of style and swagger.
 
-Some purposes require a more formal tone, primarily those involving academic standing and jobs. That's where this branding can take a more demure tone, leaving out the extra colors and icons and focusing on what I 
+Some purposes require a more formal tone, primarily those involving academic standing and jobs. That's where this branding can take a more demure tone, leaving out the extra colors and icons and focusing on what I
 
 ## Design
 

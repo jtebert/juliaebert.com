@@ -5,7 +5,7 @@
     >
     <div slot="content">
         <project
-          :img-src="require('~/assets/imgs/media/robotstravaganza.jpg')"
+          :img-src="'/imgs/media/robotstravaganza.jpg'"
           title="Robotstravaganza"
           subtitle="Brains On! Podcast">
               <div slot="content">
@@ -23,7 +23,7 @@
               </div>
         </project>
         <project
-          :img-src="require('~/assets/imgs/media/health_innovators.png')"
+          :img-src="'/imgs/media/health_innovators.png'"
           img-align="right"
           title="Interview at TELHack NHS Hackathon"
           subtitle="Health Innovators TV">
@@ -41,7 +41,7 @@
               </div>
         </project>
         <project
-          :img-src="require('~/assets/imgs/media/marshall_1_small.jpg')"
+          :img-src="'/imgs/media/marshall_1_small.jpg'"
           title="Honors Student Wins Marshall Scholarship"
           subtitle="Northeastern News, 5 December 2014">
               <div slot="content">
@@ -63,7 +63,7 @@
               </div>
         </project>
         <project
-          :img-src="require('~/assets/imgs/media/research_video_small.png')"
+          :img-src="'/imgs/media/research_video_small.png'"
           img-align="right"
           title="Stories to Inspire: Julia Ebert"
           subtitle="Northeastern University Scholars Program">
@@ -80,7 +80,7 @@
               </div>
         </project>
         <project
-          :img-src="require('~/assets/imgs/media/goldwater_small.jpg')"
+          :img-src="'/imgs/media/goldwater_small.jpg'"
           title="Honors Student Named Goldwater Scholar"
           subtitle="Northeastern News, 24 April 2013">
               <div slot="content">
