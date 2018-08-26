@@ -70,7 +70,6 @@ talks to kids about robots (brains on)
 - Black/white
 - Scrolling effects + animation
 - Spaaaaaaace
-- 
 
 [Devon Stank](https://www.devonstank.com/)
 
