@@ -1,13 +1,5 @@
 <template>
     <div class="publication-list">
-        <!-- <div v-if=showYears v-for="yearpubs in publicationsByYear">
-            <h2 class="title">{{ yearpubs.year }}</h2>
-            <publication
-                v-for="pub in yearpubs.publications"
-                :json=pub
-                highlightAuthor=highlightAuthor>
-            </publication>
-        </div> -->
         <publication
             v-for="pub in publications"
             :json=pub :key=pub.key
