@@ -29,7 +29,7 @@
               <icon-link
                 icon="web"
                 :to="'http://lazybaker.juliaebert.com/'">
-                View Website
+                Find a tasty recipe
               </icon-link>
               <icon-link
                 icon="github-circle"
@@ -53,7 +53,7 @@
               <icon-link
                 icon="web"
                 :to="'http://owen-tribune.herokuapp.com/'">
-                View Website
+                Read some fake news
               </icon-link>
               <icon-link
                 icon="github-circle"
@@ -76,7 +76,7 @@
               <icon-link
                 icon="web"
                 :to="'http://juliaebert.com/jekyll-polymer'">
-                View Website
+                View demo
               </icon-link>
               <icon-link
                 icon="github-circle"
@@ -108,7 +108,7 @@
               <icon-link
                 icon="web"
                 :to="'https://scoremysutures.herokuapp.com/'">
-                View Website
+                View website
               </icon-link>
             </div>
           </project>
@@ -133,7 +133,7 @@
               <icon-link
                 icon="web"
                 :to="'http://sciencebait.juliaebert.com/'">
-                Try it
+                Make a headline
               </icon-link>
               <icon-link
                 icon="github-circle"
