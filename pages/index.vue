@@ -3,8 +3,13 @@
   <div class="section scroll-section">
     <div class="container is-narrow">
       <div class=flexy>
-        <hex-img :width=300 class="grid-img"
-          img-src="/imgs/self-csgf.jpg"></hex-img>
+        <!-- <hex-img :width=300 class="grid-img"
+          img-src="/imgs/self-csgf.jpg"></hex-img> -->
+          <div class="grid-img">
+            <div class="image is-square">
+              <img src="/imgs/self-csgf.jpg">
+            </div>
+          </div>
         <div class="grid-content">
           <h1 class="title is-2">Who I Am</h1>
           <p>
@@ -15,12 +20,17 @@
     </div>
   </div>
 
-  <div class="section has-background-black-bis">
+  <div class="section has-background-black-ter">
     <div class="container is-narrow">
       <h1 class="title is-1 has-text-centered">What I Do</h1>
       <div class="flexy img-right">
-        <hex-img :width=300 class="grid-img"
-          img-src="/imgs/research/kilobots2.jpg"></hex-img>
+        <div class="grid-img">
+          <div class="image is-square">
+            <img src="/imgs/research/kilobots2.jpg">
+          </div>
+        </div>
+        <!-- <hex-img :width=300 class="grid-img"
+          img-src="/imgs/research/kilobots2.jpg"></hex-img> -->
         <div class="grid-content">
           <h2 class="title is-3">For Research</h2>
           <vue-markdown class="content">
@@ -36,8 +46,13 @@ After my PhD, I plan to pursue a career in academic research.
       </div>
 
       <div class="flexy">
-        <hex-img :width=300 class="grid-img"
-          img-src="/imgs/curling.jpg"></hex-img>
+        <!-- <hex-img :width=300 class="grid-img"
+          img-src="/imgs/curling.jpg"></hex-img> -->
+          <div class="grid-img">
+            <div class="image is-square">
+              <img src="/imgs/curling.jpg">
+            </div>
+          </div>
         <div class="grid-content">
           <h2 class="title is-3">For Fun</h2>
           <vue-markdown class="content">
@@ -50,15 +65,6 @@ I am also on the [Harvard curling team](http://harvardcurling.com/), and I enjoy
     </div>
   </div>
 
-
-    <div class="section is-unpadded scroll-section">
-      <div class="section-image">
-        <img src="https://source.unsplash.com/random/800x600">
-      </div>
-      <div class="section-content">
-        <h1 class="title is-1">Hello, World</h1>
-      </div>
-    </div>
 </div>
 </template>
 
@@ -78,7 +84,7 @@ export default {
 .container.is-narrow {
   max-width: 1000px;
   .flexy {
-    margin: $column-gap 0;
+    margin: $gap 0;
     display: flex;
     flex-direction: row;
     @include mobile {
@@ -89,36 +95,16 @@ export default {
     }
     .grid-content {
       width: 65%;
-      padding: $gap;
+      padding: 0 $gap;
     }
     &.img-right {
       flex-direction: row-reverse;
     }
   }
-}
-
-.section.is-unpadded {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  .section-image {
-    width: 40%;
-    position: relative;
-    img {
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .section-content {
-    width: 60%;
-    padding: 5rem;
-    color: $text;
+  .title.is-1,
+  .title.is-2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 </style>
