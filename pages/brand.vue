@@ -43,11 +43,12 @@ It is available as a vector (SVG) or raster (PNG) image. Never use it as a JPG i
 <script>
 // import VueMarkdown from "vue-markdown";
 import PageContent from "~/components/PageContent.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
-    PageContent
-    // VueMarkdown
+    PageContent,
+    VueMarkdown
   }
 };
 </script>

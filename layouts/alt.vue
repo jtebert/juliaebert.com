@@ -1,5 +1,5 @@
 <template>
-<div class="has-text-light">
+<div>
 <section class="hero is-black is-fullheight bg-img scroll-section">
     <div class="hero-body">
         <h1 class="title is-0">Julia Ebert</h1>
@@ -26,9 +26,7 @@
 
     <nuxt/>
 
-    <div id="stuff" class="scroll-section">
-        <scroll-links></scroll-links>
-    </div>
+<scroll-links></scroll-links>
 
 </div>
 </template>
