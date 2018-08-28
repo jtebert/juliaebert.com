@@ -1,7 +1,5 @@
 <template>
-    <page-content
-        title="Programming"
-        :hasSection="false">
+    <div>
 
         <p slot="intro">
           These are some of the side projects I've worked on. You can also find
@@ -10,22 +8,16 @@
         </p>
 
         <div slot="content">
-          <project
+          <full-project is-alt
             :img-src="'/imgs/programming/lazy-baker.png'"
             title="Lazy Baker">
             <div slot="content">
               <tags tags="Python, Django, Wagtail CMS"></tags>
-              <p>
-                It's cookbook-style recipe website using the Wagtail CMS
-                framework for Django. It was a fun challenge for myself to build
-                the whole thing in a weekend and a week's worth of evenings.
-              </p>
-              <p>
-                I was bad at keeping track of recipes from various cookbooks,
-                websites, and a very poorly organized recipe box. Clearly, the
-                easiest solution to this problem was to build an entire website
-                from scratch to put all the recipes in.
-              </p>
+              <vue-markdown>
+It's cookbook-style recipe website using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings.
+
+I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to  build an entire website from scratch to put all the recipes in.
+              </vue-markdown>
               <icon-link
                 icon="web"
                 :to="'http://lazybaker.juliaebert.com/'">
@@ -37,7 +29,7 @@
                 View on GitHub
               </icon-link>
             </div>
-          </project>
+          </full-project>
 
           <project
             :img-src="'/imgs/programming/owen-tribune.png'"
@@ -194,22 +186,25 @@
           </project>
 
         </div>
-    </page-content>
+    </div>
 
 </template>
 
 <script>
 import Tags from "~/components/Tags.vue";
 import IconLink from "~/components/IconLink.vue";
-import PageContent from "~/components/PageContent.vue";
 import Project from "~/components/Project.vue";
+import FullProject from "~/components/FullProject.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     Tags,
     IconLink,
-    PageContent,
-    Project
-  }
+    VueMarkdown,
+    Project,
+    FullProject
+  },
+  layout: "alt"
 };
 </script>

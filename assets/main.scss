@@ -10,12 +10,17 @@ $blue-invert: findColorInvert($blue);
 $orange: #ea9e00;
 $orange-invert: findColorInvert($orange);
 
+$text: $white-ter;
+
 $primary: $green;
 $link: $primary;
-$dark: $black;
+$link-invert: $green-invert;
+$link-hover: $text;
+$link-focus: $white;
+$link-active: $white;
+$dark: $black-bis;
 $light: $white-ter;
 
-$text: $white-ter;
 
 $warning: $orange;
 $warning-invert: $orange-invert;
@@ -27,8 +32,11 @@ $family-subtitle: 'Space Mono', sans-serif;
 $title-weight: 500;
 $subtitle-weight: $weight-normal;
 
-$title-color: $light;
+$title-color: $text;
 $subtitle-color: $primary;
+
+$content-heading-color: $text;
+$content-heading-weight: 500;
 
 $radius: 0;
 $small-radius: 0;
@@ -55,7 +63,6 @@ $body-background-color: $dark;
 
 p a:hover {
     text-decoration: underline;
-    color: inherit;
 }
 
 .is-light {
