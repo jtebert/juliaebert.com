@@ -1,6 +1,10 @@
 ## Who I Am
 
+*Photo of self*
+
 I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF)
+
+*Read my full CV*
 
 Other highlights:
 
@@ -13,33 +17,47 @@ Other highlights:
 
 ### For Research
 
+*Photo of kilobots*
+
 I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots.
 
 In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group. Now, I am developing methods to make it easier to create and understand complex swarm behavior -- imagine map reduce for robots.
 
-I also care about science communication and outreach. I've spoken to an audience of hundreds of kids about bio-inspired robots, and this fall I will be giving a public talk on robotics through Harvard's Science in the News fall lecture series.
+I also care about science communication and outreach. I've spoken to hundreds of kids about robotics, and this fall I am giving a public talk on robotics through Harvard's Science in the News lecture series.
 
 After my PhD, I plan to pursue a career in academic research.
 
+*Read more about my research*
+
+*See my publications*
+
 ### For Fun
 
-I like to make silly things in my free time. Need a clickbait headline for your next science project? [I've got you covered.](http://sciencebait.juliaebert.com) Need some robots that climb over each other? [I made them in fun colors.](http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/)
+*Photo of curling*
 
-I am also on the [Harvard curling team](http://harvardcurling.com/), and I enjoy [baking cinnamon rolls](http://lazybaker.juliaebert.com/). (I made both those websites, too.)
+I like to make things in my free time. Need a clickbait headline for your next science project? [I've got you covered.](http://sciencebait.juliaebert.com) Need some robots that climb over each other? [I made them in fun colors.](http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/)
 
-### Descriptors
+I am also on the [Harvard curling team](http://harvardcurling.com/), and I bake [awesome cinnamon rolls](http://lazybaker.juliaebert.com/). (I made both those websites, too.)
 
-builds robots (LARVAbot)
+*See more of my programming projects*
 
-studies motor learning (bimanual/contraction)
+## Footer
 
-programs a swarm (kilobot decision making)
+**^Go to top ^**
 
-writes a blog (blog.juliaebert.com)
+---
 
-talks to kids about robots (brains on)
+Julia Ebert
 
+PhD Candidate in Computer Science
 
+Harvard University
+
+[julia@juliaebert.com](mailto:julia@juliaebert.com)
+
+---
+
+*Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), using [Vue.js](https://vuejs.org/), [Textures.js](https://riccardoscalco.it/textures/), [Bulma](https://bulma.io/) framework, icons by Maxim Basinski and Eucalyp. Typeset in [Space Mono](https://fonts.google.com/specimen/Space+Mono) and [Montserrat](https://fonts.google.com/specimen/Montserrat).*
 
 ---
 
@@ -98,6 +116,17 @@ talks to kids about robots (brains on)
 - Illustrations
 - Playful personality
 
+[Sacha Greif](http://sachagreif.com/)
+
+- Geometric icons/use of icons ([http://ego-icons.com/](http://ego-icons.com/))
+- [Textures](https://riccardoscalco.it/textures/)
+- Space Mono!
+- Sense of humor
+
+[Angela Axworthy](http://angelaaxworthy.com/)
+
+- Clean one-page academic CV
+
 ### Academic
 
 [Daniel Wolpert](https://wolpertlab.neuroscience.columbia.edu/)
@@ -122,8 +151,29 @@ talks to kids about robots (brains on)
 
 - Retro future sci-fi look (Space Mono)
 
+[Built by Buffalo](http://builtbybuffalo.com/)
+
+- Hexagons
+
+[Ghost Horses](http://www.ghosthorses.co.uk/)
+
+- Pretty animation (but kind of too much)
+- Footer revealed underneath
+
+[HTML5UP Story](https://html5up.net/story)
+
+- Full width spotlight sections
+- Dark + multiple **styles**
+- Mockups for images
+
+[One Page Love](https://onepagelove.com/gallery/resume)
+
+- A bunch of one-page resume examples
+
 ## Stuff to Use
 
 - [Duotone images with Gimp gradient map](https://photo.stackexchange.com/questions/85291/how-do-i-create-a-split-tone-effect-using-gimp)
 - Modal: [Vue](https://vuejs.org/v2/examples/modal.html) + [Bulma modal](https://bulma.io/documentation/components/modal/)
 - [Vue Toolbox](http://www.vuetoolbox.com/)
+- [SVG Backgrounds](https://www.svgbackgrounds.com/)
+- [Square geometric icons by Maxim Basinski](https://thenounproject.com/basinskimaxim/collection/program-coding/)
