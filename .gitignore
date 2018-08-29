@@ -12,3 +12,4 @@ dist
 
 # My own stuff
 .vscode/
+.tmp/
