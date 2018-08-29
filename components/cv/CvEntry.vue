@@ -40,42 +40,4 @@ export default {
 </script>
 
 <style lang="scss">
-.cv-entry,
-.cv-skill,
-.cv-award {
-  display: grid;
-  grid-column-gap: 2 * $column-gap;
-  grid-template-rows: auto;
-  grid-template-columns: [sidebar] 9rem [main] 1fr;
-  .cv-sidebar {
-    grid-column: sidebar;
-    text-align: right;
-  }
-  .cv-main {
-    grid-column: main;
-  }
-  .cv-task {
-    display: block;
-    position: relative;
-    padding-left: calc(0.5rem + 1.25em);
-    .mdi,
-    .fa {
-      position: absolute;
-      left: 0.5rem;
-    }
-  }
-}
-.cv-entry,
-.cv-skill {
-  margin-bottom: 1rem;
-  grid-template-columns: [sidebar] 9rem [bar] auto [main] 1fr;
-  grid-column-gap: $column-gap;
-  .cv-bar {
-    width: 2px;
-    height: 100%;
-    grid-column: bar;
-    grid-row: 1 / 5;
-    background-color: $primary;
-  }
-}
 </style>

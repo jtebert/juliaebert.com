@@ -67,6 +67,10 @@ $navbar-item-active-background-color: transparent;
     color: $primary;
 }
 
+// Workaround because for some reason it's complaining that
+// this variable doesn't exist
+$column-gap: 0.75rem;
+
 
 // Custom CSS
 
@@ -97,5 +101,147 @@ p a:hover {
 .tag {
     font-weight: 500;
 }
+
+
+// CV STUFF
+
+.cv-entry,
+.cv-skill,
+.cv-award {
+  display: grid;
+  grid-column-gap: $column-gap * 2;
+  grid-template-rows: auto;
+  grid-template-columns: [sidebar] 9rem [main] 1fr;
+  .cv-sidebar {
+    grid-column: sidebar;
+    text-align: right;
+  }
+  .cv-main {
+    grid-column: main;
+  }
+  .cv-task {
+    display: block;
+    position: relative;
+    padding-left: calc(0.5rem + 1.25em);
+    .mdi,
+    .fa {
+      position: absolute;
+      left: 0.5rem;
+    }
+  }
+}
+.cv-entry,
+.cv-skill {
+  margin-bottom: 1rem;
+  grid-template-columns: [sidebar] 9rem [bar] auto [main] 1fr;
+  grid-column-gap: $column-gap;
+  .cv-bar {
+    width: 2px;
+    height: 100%;
+    grid-column: bar;
+    grid-row: 1 / 5;
+    background-color: $primary;
+  }
+}
+
+// LAYOUT: ALT
+.hero {
+    .title.is-0 {
+      padding-left: $gap;
+      text-transform: uppercase;
+      font-size: 90px;
+      display: inline-block;
+      letter-spacing: 2px;
+      @include mobile {
+        font-size: 13vw;
+      }
+    }
+    .to-rest {
+      font-size: 72px;
+    }
+    &.bg-img {
+      background-image: url(/imgs/stars.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+  #does-things {
+    display: flex;
+    align-items: center;
+    padding-left: $gap;
+    &.subtitle {
+      line-height: 1em;
+      font-size: 60px;
+      &.vue-typer {
+        .custom.char {
+          color: $primary;
+        }
+        .custom.caret {
+          background-color: $primary;
+          width: 0.5em;
+          height: 0.8em;
+          vertical-align: bottom;
+          margin: 0.1em 0.05em;
+        }
+      }
+    }
+  }
+
+  // COMPONENT : NAVBAR
+  .square-nav {
+    .navbar-item {
+      padding: 0;
+      margin: 0 0.5rem;
+      background-color: $primary;
+      img {
+        height: $navbar-height;
+      }
+    }
+  }
+
+  // PAGE : INDEX
+  .container.is-narrow {
+    max-width: 1000px;
+  }
+  .section.primary {
+    position: relative;
+    padding-left: 8rem;
+    .icon-block {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      top: 3rem;
+      left: -5rem;
+      background-color: $primary;
+    }
+    .title.is-1 {
+      font-size: 4rem;
+    }
+  }
+  .flexy {
+    // margin: $gap 0;
+    display: flex;
+    flex-direction: row;
+    @include mobile {
+      flex-direction: column;
+    }
+    .grid-img {
+      width: 35%;
+    }
+    .grid-content {
+      width: 65%;
+      padding: 0 $gap;
+    }
+    &.img-right {
+      flex-direction: row-reverse;
+    }
+  }
+  .title.is-1,
+  .title.is-2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 
 @import "~bulma/bulma";

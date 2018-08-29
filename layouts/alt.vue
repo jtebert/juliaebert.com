@@ -28,16 +28,14 @@
     </div>
 </section>
 
-    <nuxt/>
-
-
-<!-- <scroll-links></scroll-links> -->
+<nuxt/>
 
 </div>
 </template>
 
 <script>
 import NavBar from "~/components/NavBar.vue";
+
 export default {
   components: {
     NavBar
@@ -46,47 +44,4 @@ export default {
 </script>
 
 <style lang="scss">
-.hero {
-  .title.is-0 {
-    padding-left: $gap;
-    text-transform: uppercase;
-    font-size: 90px;
-    display: inline-block;
-    letter-spacing: 2px;
-    @include mobile {
-      font-size: 13vw;
-    }
-  }
-  .to-rest {
-    font-size: 72px;
-  }
-  &.bg-img {
-    background-image: url(/imgs/stars.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-}
-#does-things {
-  display: flex;
-  align-items: center;
-  padding-left: $gap;
-  &.subtitle {
-    line-height: 1em;
-    font-size: 60px;
-    &.vue-typer {
-      .custom.char {
-        color: $primary;
-      }
-      .custom.caret {
-        background-color: $primary;
-        width: 0.5em;
-        height: 0.8em;
-        vertical-align: bottom;
-        margin: 0.1em 0.05em;
-      }
-    }
-  }
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <page-content
+    <div
         title="Publications">
 
         <p slot="intro">
@@ -20,17 +20,15 @@
             </publication-list>
 
         </div>
-    </page-content>
+    </div>
 
 </template>
 
 <script>
-import PageContent from "~/components/PageContent.vue";
 import PublicationList from "~/components/PublicationList.vue";
 
 export default {
   components: {
-    PageContent,
     PublicationList
   }
 };

@@ -1,5 +1,5 @@
 <template>
-<page-content
+<div
   title="Research"
   :hasSection="false">
 
@@ -76,18 +76,16 @@
     </project>
 
   </div>
-</page-content>
+</div>
 </template>
 
 <script>
 import Project from "~/components/Project.vue";
-import PageContent from "~/components/PageContent.vue";
 import PublicationList from "~/components/PublicationList.vue";
 
 export default {
   components: {
     Project,
-    PageContent,
     PublicationList
   }
 };
