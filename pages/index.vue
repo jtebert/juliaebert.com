@@ -42,45 +42,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container.is-narrow {
-  max-width: 1000px;
-}
-.section.primary {
-  position: relative;
-  padding-left: 8rem;
-  .icon-block {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    top: 3rem;
-    left: -5rem;
-    background-color: $primary;
-  }
-  .title.is-1 {
-    font-size: 4rem;
-  }
-}
-.flexy {
-  // margin: $gap 0;
-  display: flex;
-  flex-direction: row;
-  @include mobile {
-    flex-direction: column;
-  }
-  .grid-img {
-    width: 35%;
-  }
-  .grid-content {
-    width: 65%;
-    padding: 0 $gap;
-  }
-  &.img-right {
-    flex-direction: row-reverse;
-  }
-}
-.title.is-1,
-.title.is-2 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 </style>

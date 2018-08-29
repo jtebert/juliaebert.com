@@ -26,15 +26,4 @@
 </template>
 
 <style lang="scss">
-.square-nav {
-  .navbar-item {
-    padding: 0;
-    margin: 0 0.5rem;
-    background-color: $primary;
-    img {
-      height: $navbar-height;
-      //   max-height: $navbar-height;
-    }
-  }
-}
 </style>

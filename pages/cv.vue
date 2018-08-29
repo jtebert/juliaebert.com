@@ -1,5 +1,5 @@
 <template>
-    <page-content
+    <div
         title="Curriculum Vitae">
 
         <p slot="intro">
@@ -237,12 +237,11 @@
                 ></cv-skill>
 
         </div>
-    </page-content>
+    </div>
 
 </template>
 
 <script>
-import PageContent from "~/components/PageContent.vue";
 import PublicationList from "~/components/PublicationList.vue";
 import CvEntry from "~/components/cv/CvEntry.vue";
 import CvAward from "~/components/cv/CvAward.vue";
@@ -250,7 +249,6 @@ import CvSkill from "~/components/cv/CvSkill.vue";
 
 export default {
   components: {
-    PageContent,
     PublicationList,
     CvEntry,
     CvAward,

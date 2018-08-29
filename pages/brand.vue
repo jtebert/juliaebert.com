@@ -1,5 +1,5 @@
 <template>
-<page-content
+<div
     title="Personal Branding Guide">
     <div slot="content">
         <div slot="intro" id='toc'></div>
@@ -37,17 +37,15 @@ It is available as a vector (SVG) or raster (PNG) image. Never use it as a JPG i
 | [256x256]()              | [256x256]()              | [256x256]()              |
         </vue-markdown>
     </div>
-</page-content>
+</div>
 </template>
 
 <script>
 // import VueMarkdown from "vue-markdown";
-import PageContent from "~/components/PageContent.vue";
 import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
-    PageContent,
     VueMarkdown
   }
 };

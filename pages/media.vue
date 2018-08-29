@@ -1,5 +1,5 @@
 <template>
-<page-content
+<div
     title="Media"
     :hasSection="false"
     >
@@ -103,18 +103,16 @@
               </div>
         </project>
     </div>
-</page-content>
+</div>
 
 </template>
 
 <script>
 import IconLink from "~/components/IconLink.vue";
-import PageContent from "~/components/PageContent.vue";
 import Project from "~/components/Project.vue";
 
 export default {
   components: {
-    PageContent,
     Project,
     IconLink
   }

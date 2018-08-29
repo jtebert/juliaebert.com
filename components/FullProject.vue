@@ -40,10 +40,6 @@ export default {
   flex-direction: row;
   &.is-alt {
     flex-direction: row-reverse;
-    background-color: $black-ter;
-  }
-  @include mobile {
-    flex-direction: column;
   }
   .section-image {
     width: 40%;
@@ -62,7 +58,6 @@ export default {
   .section-content {
     width: 60%;
     padding: 5rem;
-    color: $text;
     .title.results-title {
       margin-top: 1.25rem;
       margin-bottom: 0.5rem;

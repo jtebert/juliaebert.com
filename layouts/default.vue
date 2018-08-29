@@ -12,7 +12,6 @@
         Julia<br>Ebert
       </h1></div>
 
-      <nav-box id='nav'></nav-box>
 
       <nuxt id='grid-content'/>
 
@@ -24,12 +23,8 @@
 </template>
 
 <script>
-import NavBox from "~/components/NavBox.vue";
-
 export default {
-  components: {
-    NavBox
-  }
+  components: {}
 };
 </script>
 
@@ -53,18 +48,9 @@ export default {
     align-self: flex-end;
     font-size: 4rem;
     font-weight: 500;
-    color: $light;
     line-height: 1.2em;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: $column-gap;
-  }
-}
-
-#nav {
-  grid-area: nav;
-  @include touch {
-    grid-area: nav-touch;
   }
 }
 
@@ -80,28 +66,16 @@ export default {
     "logo name nav-touch"
     "nav content content"
     ". footer footer";
-  grid-gap: 2 * $column-gap 2 * $column-gap;
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2 * $column-gap;
-  grid-row-gap: 2 * $column-gap;
-  @include mobile {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 footer {
   grid-area: footer;
   text-align: center;
-  color: $light;
 }
 </style>
 
