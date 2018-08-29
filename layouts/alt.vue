@@ -1,6 +1,6 @@
 <template>
 <div>
-<section class="hero is-black is-fullheight bg-img scroll-section" id="header">
+<section class="hero is-fullheight bg-img scroll-section" id="header">
 <div class="hero-head">
     <nav-bar></nav-bar>
   </div>
