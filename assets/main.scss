@@ -10,7 +10,8 @@ $blue-invert: findColorInvert($blue);
 $orange: #ea9e00;
 $orange-invert: findColorInvert($orange);
 
-$text: $white-ter;
+// $text: $white-ter;
+$text: $grey-darker;
 
 $primary: $green;
 $link: $primary;
@@ -48,6 +49,16 @@ $small-radius: 0;
 
 $body-background-color: $dark;
 
+$navbar-height: 6.25rem;
+$navbar-item-img-max-height: $navbar-height;
+$navbar-padding-vertical: 0;
+$navbar-padding-horizontal: 0;
+
+$navbar-item-hover-color: transparent;
+$navbar-item-active-color: transparent;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-background-color: transparent;
+
 .subtitle, .content .subtitle {
     font-family: $family-subtitle;
     // text-transform: uppercase;
@@ -60,6 +71,7 @@ $body-background-color: $dark;
 // Custom CSS
 
 @import "~bulma/sass/utilities/mixins";
+
 
 p a:hover {
     text-decoration: underline;

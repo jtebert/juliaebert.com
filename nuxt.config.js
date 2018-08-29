@@ -16,6 +16,7 @@ module.exports = {
   },
   css: [
     'assets/main.scss',
+    'assets/texture.scss',
     '@mdi/font/css/materialdesignicons.min.css'
   ],
   /*
@@ -42,6 +43,7 @@ module.exports = {
   },
   plugins: [
     { src: '~/plugins/vue-typer.js', ssr: false },
+    { src: '~/plugins/vue-scrollactive.js' },
     { src: '~/plugins/directives.js' }
   ],
   modules: [

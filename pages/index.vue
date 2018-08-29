@@ -1,79 +1,40 @@
 <template>
 <div>
-  <div class="section scroll-section">
-    <div class="container is-narrow">
-      <div class=flexy>
-        <!-- <hex-img :width=300 class="grid-img"
-          img-src="/imgs/self-csgf.jpg"></hex-img> -->
-          <div class="grid-img">
-            <div class="image is-square">
-              <img src="/imgs/self-csgf.jpg">
+  <div class="section scroll-section is-medium has-texture-circuit-board" id="research">
+    <div class="container">
+        <div class="section is-light is-small primary">
+          <img class="icon-block" src="/imgs/icons/research.svg">
+              <h1 class="title is-1">Research</h1>
+              <h3 class="subtitle is-4">Beep boop something robots</h3>
+
+        <div class=flexy>
+            <div class="grid-img">
+              <div class="image is-square">
+                <img src="/imgs/self-csgf.jpg">
+              </div>
             </div>
+          <div class="grid-content">
+            <h1 class="title is-2">Who I Am</h1>
+            <p>
+              I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF)
+            </p>
           </div>
-        <div class="grid-content">
-          <h1 class="title is-2">Who I Am</h1>
-          <p>
-            I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF)
-          </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section has-background-black-ter">
-    <div class="container is-narrow">
-      <h1 class="title is-1 has-text-centered">What I Do</h1>
-      <div class="flexy img-right">
-        <div class="grid-img">
-          <div class="image is-square">
-            <img src="/imgs/research/kilobots2.jpg">
-          </div>
-        </div>
-        <!-- <hex-img :width=300 class="grid-img"
-          img-src="/imgs/research/kilobots2.jpg"></hex-img> -->
-        <div class="grid-content">
-          <h2 class="title is-3">For Research</h2>
-          <vue-markdown class="content">
-I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots.
-
-In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group. Now, I am developing methods to make it easier to create and understand complex swarm behavior -- imagine map reduce for robots.
-
-I also care about science communication and outreach. I've spoken to an audience of hundreds of kids about bio-inspired robots, and this fall I will be giving a public talk on robotics through Harvard's Science in the News fall lecture series.
-
-After my PhD, I plan to pursue a career in academic research.
-          </vue-markdown>
-        </div>
-      </div>
-
-      <div class="flexy">
-        <!-- <hex-img :width=300 class="grid-img"
-          img-src="/imgs/curling.jpg"></hex-img> -->
-          <div class="grid-img">
-            <div class="image is-square">
-              <img src="/imgs/curling.jpg">
-            </div>
-          </div>
-        <div class="grid-content">
-          <h2 class="title is-3">For Fun</h2>
-          <vue-markdown class="content">
-I like to make things in my free time. Need a clickbait headline for your next science project? [I've got you covered.](http://sciencebait.juliaebert.com) Need some robots that climb over each other? [I made them in fun colors.](http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/)
-
-I am also on the [Harvard curling team](http://harvardcurling.com/), and I enjoy [baking cinnamon rolls](http://lazybaker.juliaebert.com/). (I made both those websites, too.)
-          </vue-markdown>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="children">
+  <nuxt-child />
+</div>
 
 </div>
 </template>
 
 <script>
-import HexImg from "~/components/HexImg.vue";
 import VueMarkdown from "vue-markdown";
 export default {
   components: {
-    HexImg,
     VueMarkdown
   },
   layout: "alt"
@@ -83,28 +44,43 @@ export default {
 <style lang="scss">
 .container.is-narrow {
   max-width: 1000px;
-  .flexy {
-    margin: $gap 0;
-    display: flex;
-    flex-direction: row;
-    @include mobile {
-      flex-direction: column;
-    }
-    .grid-img {
-      width: 35%;
-    }
-    .grid-content {
-      width: 65%;
-      padding: 0 $gap;
-    }
-    &.img-right {
-      flex-direction: row-reverse;
-    }
+}
+.section.primary {
+  position: relative;
+  padding-left: 8rem;
+  .icon-block {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    top: 3rem;
+    left: -5rem;
+    background-color: $primary;
   }
-  .title.is-1,
-  .title.is-2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  .title.is-1 {
+    font-size: 4rem;
   }
+}
+.flexy {
+  // margin: $gap 0;
+  display: flex;
+  flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+  }
+  .grid-img {
+    width: 35%;
+  }
+  .grid-content {
+    width: 65%;
+    padding: 0 $gap;
+  }
+  &.img-right {
+    flex-direction: row-reverse;
+  }
+}
+.title.is-1,
+.title.is-2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 </style>

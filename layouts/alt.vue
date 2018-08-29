@@ -1,6 +1,10 @@
 <template>
 <div>
-<section class="hero is-black is-fullheight bg-img scroll-section">
+<section class="hero is-black is-fullheight bg-img scroll-section" id="header">
+<div class="hero-head">
+    <nav-bar></nav-bar>
+  </div>
+
     <div class="hero-body">
         <h1 class="title is-0">Julia Ebert</h1>
         <vue-typer class="subtitle" id="does-things"
@@ -26,15 +30,18 @@
 
     <nuxt/>
 
-<scroll-links></scroll-links>
+
+<!-- <scroll-links></scroll-links> -->
 
 </div>
 </template>
 
 <script>
-import ScrollLinks from "~/components/ScrollLinks.vue";
+import NavBar from "~/components/NavBar.vue";
 export default {
-  components: { ScrollLinks }
+  components: {
+    NavBar
+  }
 };
 </script>
 
