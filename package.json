@@ -20,6 +20,7 @@
     "nuxt-sass-resources-loader": "^2.0.4",
     "sass-loader": "^7.1.0",
     "vue-markdown": "^2.2.4",
+    "vue-scrollactive": "^0.6.1",
     "vue-scrollto": "^2.11.0",
     "vue-style-loader": "^4.1.2",
     "vue-typer": "^1.2.0"
