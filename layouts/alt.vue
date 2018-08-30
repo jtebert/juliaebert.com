@@ -6,7 +6,8 @@
   </div>
 
     <div class="hero-body">
-        <h1 class="title is-0">Julia Ebert</h1>
+      <div class="typer-title">
+        <h1 class="name-title">Julia Ebert</h1>
         <vue-typer class="subtitle" id="does-things"
             :pre-type-delay='600'
             :type-delay='70'
@@ -19,6 +20,7 @@
                 'writes a blog.',
                 'makes things.']">
         </vue-typer>
+      </div>
     </div>
     <div class="hero-footer has-text-centered">
       <div class="container">
