@@ -1,12 +1,13 @@
 <template>
 <div class="section is-block" :class=textureClass :id=slug>
     <div class="container">
-        <div class="section is-light is-small primary">
-            <img class="icon-block" :src="'/imgs/icons/'+slug+'.svg'"/>
+        <img class="icon-block" :src="'/imgs/icons/'+slug+'.svg'"/>
+        <div class="section is-light is-unpadded ">
+          <div class="section is-block-content">
             <h1 class="title is-1">{{ title }}</h1>
             <h3 class="subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
-
-            <slot></slot>
+          </div>
+          <slot></slot>
         </div>
     </div>
 </div>
@@ -33,8 +34,4 @@ export default {
 </script>
 
 <style lang="scss">
-.section.is-block {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
 </style>
