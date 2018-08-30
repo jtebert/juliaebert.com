@@ -3,7 +3,7 @@
     <div class="container">
         <img class="icon-block" :src="'/imgs/icons/'+slug+'.svg'"/>
         <div class="section is-light is-unpadded ">
-          <div class="section is-block-content">
+          <div class="block-content">
             <h1 class="title is-1">{{ title }}</h1>
             <h3 class="subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
           </div>

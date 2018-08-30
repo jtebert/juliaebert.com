@@ -15,8 +15,8 @@ module.exports = {
     ],
   },
   css: [
-    'assets/main.scss',
-    'assets/texture.scss',
+    'assets/sass/main.scss',
+    'assets/sass/texture.scss',
     '@mdi/font/css/materialdesignicons.min.css'
   ],
   /*

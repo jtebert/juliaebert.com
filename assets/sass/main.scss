@@ -49,15 +49,22 @@ $small-radius: 0;
 
 $body-background-color: $dark;
 
-$navbar-height: 6.25rem;
-$navbar-item-img-max-height: $navbar-height;
+$navbar-height: 8.5rem;
+$navbar-height-touch: 4.5rem;
+$navbar-item-img-max-height: 6.25rem;
 $navbar-padding-vertical: 0;
 $navbar-padding-horizontal: 0;
+//$tabs-link-padding: 0;
 
 // $navbar-item-hover-color: transparent;
 // $navbar-item-active-color: transparent;
 $navbar-item-hover-background-color: $primary;
 $navbar-item-active-background-color: $text;
+
+$tabs-link-padding: 0;
+$tabs-link-color: $light;
+$tabs-boxed-link-hover-background-color: $primary;
+
 
 .subtitle, .content .subtitle {
     font-family: $family-subtitle;
@@ -221,38 +228,53 @@ p a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     &::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-          opacity: 0;
-          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-        &:hover {
-          transform: scale(1.15, 1.15);
-        }
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+      transform: scale(1.15, 1.15);
+    }
 
-        &:hover::after {
-            opacity: 1;
-        }
+    &:hover::after {
+        opacity: 1;
+    }
     img {
       transition: all 0.3s ease-in-out;
-      height: $navbar-height;
+      height: $navbar-item-img-max-height;
+      @include touch {
+        height: $navbar-height-touch;
+      }
       // &:hover {transform: scale(1.1, 1.1);}
     }
+  }
+}
+.navbar .container,
+.navbar .container .navbar-brand {
+  flex-direction: row-reverse;
+  @include touch {flex-direction: row-reverse;}
+}
+.tabs.is-boxed {
+  align-items: flex-start !important;
+  padding: 0 1rem;
+
+  a {
+    border: none !important;
+    &:hover {border: none !important;}
   }
 }
 
 // PAGE : INDEX
 $icon-block-size: 8rem;
 $icon-block-size-touch: 6rem;
-.container.is-narrow {
-  max-width: 1000px;
-}
+
 
 .section.is-block {
   padding-top: 6rem;
@@ -268,6 +290,8 @@ $icon-block-size-touch: 6rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-left: $icon-block-size / 2;
     padding: 0;
+    padding-top: 3rem;
+    overflow: auto;
     @include tablet-only {
       margin-left: $icon-block-size-touch / 2;
     }
@@ -277,7 +301,9 @@ $icon-block-size-touch: 6rem;
     }
   }
 
-  .section.is-block-content {
+  .block-content {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
     @include desktop {
       padding-left: $icon-block-size / 2 + 2rem;
     }
@@ -292,7 +318,7 @@ $icon-block-size-touch: 6rem;
   }
 
   .icon-block {
-    z-index: 30;
+    //z-index: 30;
     position: absolute;
     width: $icon-block-size;
     height: $icon-block-size;
@@ -321,28 +347,24 @@ $icon-block-size-touch: 6rem;
 
 }
 
-  .flexy {
-    // margin: $gap 0;
-    display: flex;
-    flex-direction: row;
-    @include mobile {
-      flex-direction: column;
-    }
-    .grid-img {
-      width: 35%;
-    }
-    .grid-content {
-      width: 65%;
-      padding: 0 $gap;
-    }
-    &.img-right {
-      flex-direction: row-reverse;
+// COMPONENT : GALLERY
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // @include touch {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  grid-gap: -1px;
+  img {
+    width: 100%;
+    padding-bottom: 75%;  // 4:3
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include touch {
+      padding-bottom: 100%;
     }
   }
-  .title.is-1,
-  .title.is-2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+}
 
 @import "~bulma/bulma";

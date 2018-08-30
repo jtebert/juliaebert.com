@@ -2,38 +2,55 @@
     <nav class="navbar is-fixed-top square-nav">
       <div class="container">
         <div class="navbar-brand">
-          <!-- <a class="navbar-item">
-            <img src="/imgs/icons/misc.svg" alt="Logo">
-          </a> -->
-          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+          <scrollactive class="tabs is-boxed">
+              <ul>
+                <li><a href="#who-i-am" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/who-i-am.svg">
+                </a></li>
+                <li><a href="#cv" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/cv.svg">
+                </a></li>
+                <li><a href="#research" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/research.svg">
+                </a></li>
+                <li><a href="#publications" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/publications.svg">
+                </a></li>
+                <li><a href="#projects" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/projects.svg">
+                </a></li>
+                <li><a href="#media" class="navbar-item scrollactive-item">
+                  <img src="/imgs/icons/media.svg">
+                </a></li>
+                <!-- <li class="is-active">
+                  <a>Overview</a>
+                </li> -->
+              </ul>
+          </scrollactive>
         </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
+        <!-- <div id="navbarMenuHeroA" class="navbar-menu">
           <scrollactive :offset="64" class="navbar-end">
-            <a href="#who-i-am" class="navbar-item scrollactive-item">
+            <li><a href="#who-i-am" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/who-i-am.svg">
-            </a>
-            <a href="#cv" class="navbar-item scrollactive-item">
+            </a></li>
+            <li><a href="#cv" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/cv.svg">
-            </a>
-            <a href="#research" class="navbar-item scrollactive-item">
+            </a></li>
+            <li><a href="#research" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/research.svg">
-            </a>
-            <a href="#publications" class="navbar-item scrollactive-item">
+            </a></li>
+            <li><a href="#publications" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/publications.svg">
-            </a>
-            <a href="#projects" class="navbar-item scrollactive-item">
+            </a></li>
+            <li><a href="#projects" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/projects.svg">
-            </a>
-            <a href="#media" class="navbar-item scrollactive-item">
+            </a></li>
+            <li><a href="#media" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/media.svg">
-            </a>
+            </a></li>
 
             </scrollactive>
-        </div>
+        </div> -->
       </div>
     </nav>
 </template>
