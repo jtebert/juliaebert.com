@@ -146,36 +146,46 @@ p a:hover {
 
 // LAYOUT: ALT
 .hero {
-  .title.is-0 {
-    padding-left: $gap;
-    text-transform: uppercase;
-    font-size: 90px;
-    display: inline-block;
-    letter-spacing: 2px;
-    color: $light;
-    @include mobile {
-      font-size: 13vw;
+  .typer-title {
+    display: flex;
+    @include fullhd {
+      flex-direction: row;
     }
-  }
-  .to-rest {
-    font-size: 72px;
-  }
-  &.bg-img {
-    background-image: url(/imgs/stars.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-}
-#does-things {
-  display: flex;
-  align-items: center;
-  padding-left: $gap;
-  &.subtitle {
-    line-height: 1em;
-    font-size: 60px;
-    &.vue-typer {
+    flex-direction: column;
+
+    > * {
+      margin: 3rem $gap 0 $gap;
+      line-height: 1em;
+      @include fullhd {
+        margin-right: 0;
+      }
+      @include tablet-only {
+        margin-left: $gap / 2;
+        margin-right: $gap / 2;
+      }
+      @include mobile {
+        margin-left: $column-gap;
+        margin-right: $column-gap;
+      }
+    }
+    //align-items: flex-end;
+    .name-title {
+      text-transform: uppercase;
+      font-size: 80px;
+      display: inline-block;
+      letter-spacing: 2px;
+      color: $light;
+      @include mobile {
+        font-size: 13vw;
+      }
+    }
+    #does-things.subtitle.vue-typer {
+      display: flex;
+      align-items: center;
+      font-size: 50px;
+      @include mobile {
+        font-size: 6.5vw;
+      }
       .custom.char {
         color: $primary;
       }
@@ -187,6 +197,17 @@ p a:hover {
         margin: 0.1em 0.05em;
       }
     }
+  }
+
+  .to-rest {
+    font-size: 72px;
+  }
+  &.bg-img {
+    background-image: url(/imgs/stars.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
@@ -257,7 +278,6 @@ $icon-block-size-touch: 6rem;
   }
 
   .section.is-block-content {
-    &:not(:first-child) {margin-top: 0;}
     @include desktop {
       padding-left: $icon-block-size / 2 + 2rem;
     }
@@ -265,7 +285,9 @@ $icon-block-size-touch: 6rem;
       padding-left: $icon-block-size-touch / 2 + 1.5rem;
     }
     @include mobile {
-      &:not(:first-child) {margin-top: 0;}
+      &:first-child {
+        padding-top: 0 !important;
+      }
     }
   }
 
@@ -292,6 +314,9 @@ $icon-block-size-touch: 6rem;
     font-size: 4rem;
     @include tablet {font-size: 3rem;}
     @include mobile {font-size: 2rem;}
+  }
+  .subtitle {
+    @include mobile {font-size: 1.5rem;}
   }
 
 }

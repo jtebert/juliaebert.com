@@ -12,7 +12,7 @@
           </span>
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
-          <scrollactive :offset="0" class="navbar-end">
+          <scrollactive :offset="64" class="navbar-end">
             <a href="#who-i-am" class="navbar-item scrollactive-item">
               <img src="/imgs/icons/who-i-am.svg">
             </a>
