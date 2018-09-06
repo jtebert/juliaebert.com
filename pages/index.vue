@@ -14,11 +14,14 @@
 
 <primary-section title="CV" subtitle="Curriculum Vitae"
   texture="brick-wall">
+  <div class="block-content content">
+    <cv></cv>
+  </div>
 </primary-section>
 
 <primary-section title="Research" subtitle="Robots and Satellites and Humans"
   texture="circuit-board">
-  I did things.
+  <research></research>
 </primary-section>
 
 <primary-section title="Publications"
@@ -28,7 +31,7 @@
 
 <primary-section title="Projects" subtitle="I make a lot of mostly useless things."
   texture="hexagons">
-Hello, world
+  <programming></programming>
 </primary-section>
 
 <primary-section title="Media" subtitle="It's an ego boost"
@@ -45,12 +48,18 @@ Hello, world
 import VueMarkdown from "vue-markdown";
 import PrimarySection from "~/components/PrimarySection.vue";
 import Gallery from "~/components/Gallery.vue";
+import cv from "~/pages/cv.vue";
+import research from "~/pages/research.vue";
+import programming from "~/pages/programming.vue";
 
 export default {
   components: {
     VueMarkdown,
     PrimarySection,
-    Gallery
+    Gallery,
+    cv,
+    research,
+    programming
   },
   layout: "alt"
 };
