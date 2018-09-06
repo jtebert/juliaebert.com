@@ -5,7 +5,7 @@
         <div class="section is-light is-unpadded ">
           <div class="block-content">
             <h1 class="title is-1">{{ title }}</h1>
-            <h3 class="subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
+            <h3 class="section-subtitle subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
           </div>
           <slot></slot>
         </div>

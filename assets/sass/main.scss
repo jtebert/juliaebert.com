@@ -303,7 +303,7 @@ $icon-block-size-touch: 6rem;
 
   .block-content {
     padding: 0 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: $gap;
     @include desktop {
       padding-left: $icon-block-size / 2 + 2rem;
     }
@@ -318,7 +318,7 @@ $icon-block-size-touch: 6rem;
   }
 
   .icon-block {
-    //z-index: 30;
+    z-index: 3;
     position: absolute;
     width: $icon-block-size;
     height: $icon-block-size;
@@ -341,10 +341,57 @@ $icon-block-size-touch: 6rem;
     @include tablet {font-size: 3rem;}
     @include mobile {font-size: 2rem;}
   }
-  .subtitle {
+  .section-subtitle.subtitle {
     @include mobile {font-size: 1.5rem;}
   }
+}
 
+// COMPONENT: FULL-PROJECT/FULLPROJECT
+.project-section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(even) {
+    @include tablet {
+      flex-direction: row-reverse;
+    }
+  }
+  &:nth-child(odd) {
+    background-color: $white;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  .section-image {
+    width: 40%;
+    position: relative;
+    align-self: center;
+    @include mobile {
+      width: 100%;
+    }
+    // img {
+    //   object-fit: cover;
+    //   object-position: center center;
+    //   display: block;
+    //   position: absolute;
+    //   top: 0px;
+    //   left: 0px;
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+  .section-content {
+    width: 60%;
+    padding: $gap 2*$column-gap;
+    @include mobile {
+      width: 100%;
+    }
+    .title.results-title {
+      //margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 }
 
 // COMPONENT : GALLERY

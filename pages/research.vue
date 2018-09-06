@@ -1,12 +1,5 @@
 <template>
-<div
-  title="Research"
-  :hasSection="false">
-
-  <p slot="intro">These are research projects I've been involved in and
-  projects that I'm currently working on.</p>
-
-  <div slot="content">
+<div>
     <project
       :img-src="'/imgs/research/kilobots.jpg'"
       title="Collective Perception and Decision Making in a Robot Swarm"
@@ -26,7 +19,6 @@
 
     <project
       :img-src="'/imgs/research/lopes_ii.png'"
-      img-align="right"
       title="Cooperative Exoskeleton Control for Human Balance Recovery"
       subtitle="Advisors: Prof. Etienne Burdet and Dr. Ildar Farkhatdinov">
       <p slot="content">
@@ -49,7 +41,7 @@
 
     <project
       :img-src="'/imgs/research/bimanual_small.jpg'"
-      title="Bimanual Learning and Retension"
+      title="Bimanual Learning and Retention"
       subtitle="Advisor: Prof. Dagmar Sternad">
       <div slot="content">
         <p>
@@ -75,7 +67,6 @@
         </div>
     </project>
 
-  </div>
 </div>
 </template>
 
@@ -86,7 +77,8 @@ import PublicationList from "~/components/PublicationList.vue";
 export default {
   components: {
     Project,
-    PublicationList
+    PublicationList,
+    Project
   }
 };
 </script>
