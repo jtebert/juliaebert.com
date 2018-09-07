@@ -19,5 +19,6 @@ export default {
   display: flex;
   align-items: center;
   font-weight: 500;
+  width: max-content;
 }
 </style>
