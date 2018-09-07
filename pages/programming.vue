@@ -39,7 +39,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
       <icon-link
         icon="web"
         :to="'http://owen-tribune.herokuapp.com/'">
-        Read some fake news
+        Read fake news
       </icon-link>
       <icon-link
         icon="github-circle"
