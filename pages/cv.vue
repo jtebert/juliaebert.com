@@ -135,8 +135,7 @@
                 ></cv-award>
             <cv-award
                 date=2016
-                award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program
-(NSF GRFP)"
+                award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
                 ></cv-award>
             <cv-award
                 date=2015
@@ -164,14 +163,7 @@
                 ></cv-award>
 
             <h1>Publications</h1>
-            <publication-list
-                :type-filter="['paper']"
-                highlight-author="Ebert"></publication-list>
-
-            <h1>Conference Abstracts and Posters</h1>
-            <publication-list
-                :type-filter="['poster']"
-                highlight-author="Ebert"></publication-list>
+            <p>See <a v-scroll-to="'#publications'">publications section</a></p>
 
             <h1>Teaching</h1>
             <cv-entry

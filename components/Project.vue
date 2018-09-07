@@ -4,7 +4,7 @@
       <mockup :imgSrc=imgSrc
               :mobileImgSrc=mobileImgSrc></mockup>
     </div>
-    <img v-else class="section-image" :src=imgSrc>
+    <img v-else :class="['section-image', {'is-padded': isPadded}]" :src=imgSrc>
 
     <div class="section-content">
         <h1 class="title is-4">{{ title }}</h1>
@@ -31,7 +31,8 @@ export default {
     mobileImgSrc: String,
     title: String,
     subtitle: String,
-    isMockup: Boolean
+    isMockup: {type: Boolean, default: false},
+    isPadded: {type: Boolean, default: false}
   },
   components: {
     Mockup

@@ -26,7 +26,9 @@
 
 <primary-section title="Publications"
   texture="bank-note">
-  I wrote things.
+  <div class="block-content content">
+    <publications></publications>
+  </div>
 </primary-section>
 
 <primary-section title="Projects" subtitle="I make a lot of mostly useless things."
@@ -51,6 +53,7 @@ import Gallery from "~/components/Gallery.vue";
 import cv from "~/pages/cv.vue";
 import research from "~/pages/research.vue";
 import programming from "~/pages/programming.vue";
+import publications from "~/pages/publications.vue";
 
 export default {
   components: {
@@ -59,7 +62,8 @@ export default {
     Gallery,
     cv,
     research,
-    programming
+    programming,
+    publications
   },
   layout: "alt"
 };
