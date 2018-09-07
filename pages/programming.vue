@@ -74,8 +74,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
   </project>
 
   <project
-    :img-src="'/imgs/programming/suture-score.png'"
-    img-align="right"
+    img-src="/imgs/programming/suture-score.jpg"
     title="Suture Score">
     <div slot="content">
       <tags tags="Python, Ruby, Matlab, JavaScript"></tags>
@@ -100,8 +99,8 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     </div>
   </project>
 
-  <project
-    :img-src="'/imgs/programming/sciencebait_logo.png'"
+  <project is-mockup
+    :img-src="'/imgs/programming/sciencebait-mockup-desktop.png'"
     title="Science Clickbait">
     <div slot="content">
       <tags tags="Python, Django"></tags>
@@ -130,7 +129,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     </div>
   </project>
 
-  <project
+  <project is-padded
     :img-src="'/imgs/programming/vroom_logo_alt.png'"
     img-align="right"
     title="VROOM: Vacuum Robot Overcoming Obstacles and Messes">
@@ -152,8 +151,8 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     </div>
   </project>
 
-  <project
-    :img-src="'/imgs/programming/blurber.png'"
+  <project is-mockup
+    :img-src="'/imgs/programming/blurber-mockup.png'"
     title="Blurber">
     <div slot="content">
       <tags tags="Python"></tags>

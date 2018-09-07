@@ -24,14 +24,15 @@
     </div>
 
     <div class="hero-footer has-text-centered">
-        <!-- <nav-bar></nav-bar> -->
 
-        <!-- <i class="mdi mdi-chevron-down to-rest"
-            v-scroll-to="'#stuff'"></i> -->
+        <i class="mdi mdi-chevron-down to-rest"
+            v-scroll-to="'#main'"></i>
     </div>
   </section>
 
-<nuxt/>
+  <div id="main">
+    <nuxt/>
+  </div>
 
 <my-footer></my-footer>
 
