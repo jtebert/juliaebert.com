@@ -113,19 +113,76 @@ p a:hover {
 
 // CV STUFF
 
+@mixin sidebar-rows($var) {
+  @include tablet {
+    grid-row: $var;
+  }
+  @include mobile {
+    grid-row: (2*$var)-1;
+  }
+}
+@mixin main-rows($var) {
+  @include tablet {
+    grid-row: $var;
+  }
+  @include mobile {
+    grid-row: 2*$var;
+  }
+}
+
+@for $i from 1 through 8 {
+    .cv-sidebar.grid-row-#{$i} {
+      @include sidebar-rows($i);
+    }
+    .cv-main.grid-row-#{$i} {
+      @include main-rows($i);
+    }
+}
+
+.cv-award {
+  @include tablet {
+    grid-template-columns: [sidebar] 9rem [main] 1fr;
+  }
+  @include mobile {
+  grid-column-gap: $column-gap;
+  grid-template-columns: [sidebar] auto [main] 1fr;
+  }
+}
+
 .cv-entry,
 .cv-skill,
 .cv-award {
   display: grid;
-  grid-column-gap: $column-gap * 2;
-  grid-template-rows: auto;
-  grid-template-columns: [sidebar] 9rem [main] 1fr;
+  @include tablet {
+    grid-column-gap: $column-gap * 2;
+    grid-template-rows: auto;
+  }
+  .location {
+    @include mobile {
+       display: none;
+    }
+  }
   .cv-sidebar {
-    grid-column: sidebar;
-    text-align: right;
+    text-align: left;
+    @include tablet {
+      grid-column: sidebar;
+      text-align: right;
+    }
+    &.entry-primary {
+      @include mobile {
+        grid-row: 2;
+      }
+    }
   }
   .cv-main {
-    grid-column: main;
+    @include tablet {
+      grid-column: main;
+    }
+    &.entry-primary {
+      @include mobile {
+        grid-row: 1;
+      }
+    }
   }
   .cv-task {
     display: block;
@@ -141,14 +198,21 @@ p a:hover {
 .cv-entry,
 .cv-skill {
   margin-bottom: 1rem;
-  grid-template-columns: [sidebar] 9rem [bar] auto [main] 1fr;
   grid-column-gap: $column-gap;
+  @include tablet {
+    grid-template-columns: [sidebar] 9rem [bar] auto [main] 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
   .cv-bar {
-    width: 2px;
-    height: 100%;
-    grid-column: bar;
-    grid-row: 1 / 5;
-    background-color: $primary;
+    @include tablet {
+      width: 2px;
+      height: 100%;
+      grid-column: bar;
+      grid-row: 1 / 5;
+      background-color: $primary;
+    }
   }
 }
 
@@ -397,7 +461,7 @@ $icon-block-size-touch: 6rem;
   }
   .section-content {
     width: 60%;
-    padding: $gap 2*$column-gap;
+    padding: 3*$column-gap 2*$column-gap;
     @include mobile {
       width: 100%;
     }
