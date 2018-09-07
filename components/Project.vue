@@ -1,6 +1,11 @@
 <template>
-<div :class="['project-section', 'scroll-section', {'is-alt': isAlt}]">
-    <img class="section-image" :src=imgSrc>
+<div class="project-section scroll-section">
+    <div v-if=isMockup class="section-image">
+      <mockup :imgSrc=imgSrc
+              :mobileImgSrc=mobileImgSrc></mockup>
+    </div>
+    <img v-else class="section-image" :src=imgSrc>
+
     <div class="section-content">
         <h1 class="title is-4">{{ title }}</h1>
         <h4 class="subtitle is-6" v-if="subtitle">{{ subtitle }}</h4>
@@ -18,15 +23,18 @@
 </template>
 
 <script>
+import Mockup from "~/components/Mockup.vue";
+
 export default {
   props: {
     imgSrc: String,
+    mobileImgSrc: String,
     title: String,
     subtitle: String,
-    isAlt: {
-      type: Boolean,
-      default: false
-    }
+    isMockup: Boolean
+  },
+  components: {
+    Mockup
   }
 };
 </script>

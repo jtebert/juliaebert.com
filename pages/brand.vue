@@ -41,7 +41,6 @@ It is available as a vector (SVG) or raster (PNG) image. Never use it as a JPG i
 </template>
 
 <script>
-// import VueMarkdown from "vue-markdown";
 import VueMarkdown from "vue-markdown";
 
 export default {

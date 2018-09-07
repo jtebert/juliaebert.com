@@ -1,14 +1,9 @@
 <template>
 <div>
 
-  <p>
-    These are some of the side projects I've worked on. You can also find
-    a lot of my projects on my
-    <a href="https://github.com/jtebert">GitHub page.</a>
-  </p>
-
-  <project
-    :img-src="'/imgs/programming/lazy-baker.png'"
+  <project is-mockup
+    img-src="/imgs/programming/lazy-baker-mockup-desktop.png"
+    mobile-img-src="/imgs/programming/lazy-baker-mockup-mobile.png"
     title="Lazy Baker">
     <div slot="content">
       <tags tags="Python, Django, Wagtail CMS"></tags>
@@ -19,19 +14,20 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
       </p>
       <icon-link
         icon="web"
-        :to="'http://lazybaker.juliaebert.com/'">
+        to="http://lazybaker.juliaebert.com/">
         Find a tasty recipe
       </icon-link>
       <icon-link
         icon="github-circle"
-        :to="'https://github.com/jtebert/lazy-baker'">
+        to="https://github.com/jtebert/lazy-baker">
         View on GitHub
       </icon-link>
     </div>
   </project>
 
-  <project
-    :img-src="'/imgs/programming/owen-tribune.png'"
+  <project is-mockup
+    img-src="/imgs/programming/owen-tribune-mockup-desktop.png"
+    mobile-img-src="/imgs/programming/owen-tribune-mockup-mobile.png"
     title="The Owen Tribune">
     <div slot="content">
       <tags tags="Python, Django"></tags>
@@ -53,8 +49,9 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     </div>
   </project>
 
-  <project
-    :img-src="'/imgs/programming/jekyll-polymer.png'"
+  <project is-mockup
+    img-src="/imgs/programming/jekyll-polymer-mockup-desktop.png"
+    mobile-img-src="/imgs/programming/jekyll-polymer-mockup-mobile.png"
     title="Jekyll Polymer">
     <div slot="content">
       <tags tags="HTML, JavaScript, Jekyll, Google Polymer"></tags>
