@@ -2,13 +2,16 @@
 <footer class="footer has-text-light">
   <div class="container">
     <div class="columns">
+      <div class="column is-2 has-text-centered">
+        <img src="/imgs/logos/harvard-seas-logo-light-opt.svg" style="max-height: 125px;">
+      </div>
       <div class="column content">
         <vue-markdown>
 Julia Ebert
 
 PhD Candidate in Computer Science
 
-Harvard University
+School of Engineering and Applied Sciences, Harvard University
 
 [julia@juliaebert.com](mailto:julia@juliaebert.com)
         </vue-markdown>
