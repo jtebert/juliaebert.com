@@ -446,7 +446,7 @@ $icon-block-size-touch: 6rem;
       width: 100%;
     }
     &.is-padded {
-      margin: 2* $column-gap;
+      padding: 2* $column-gap;
     }
     // img {
     //   object-fit: cover;
@@ -464,6 +464,7 @@ $icon-block-size-touch: 6rem;
     padding: 3*$column-gap 2*$column-gap;
     @include mobile {
       width: 100%;
+      padding: 2*$column-gap;
     }
     .title.results-title {
       //margin-top: 1.25rem;

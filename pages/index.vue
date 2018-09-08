@@ -24,7 +24,7 @@
   <research></research>
 </primary-section>
 
-<primary-section title="Publications"
+<primary-section title="Publications" subtitle="I wrote things (with other people, of course)"
   texture="bank-note">
   <div class="block-content content">
     <publications></publications>
@@ -38,7 +38,7 @@
 
 <primary-section title="Media" subtitle="It's an ego boost"
   texture="diagonal-lines">
-  I did things.
+  <media></media>
 </primary-section>
 
 
@@ -54,6 +54,7 @@ import cv from "~/pages/cv.vue";
 import research from "~/pages/research.vue";
 import programming from "~/pages/programming.vue";
 import publications from "~/pages/publications.vue";
+import media from "~/pages/media.vue";
 
 export default {
   components: {
@@ -63,7 +64,8 @@ export default {
     cv,
     research,
     programming,
-    publications
+    publications,
+    media
   },
   layout: "alt"
 };
