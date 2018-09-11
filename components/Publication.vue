@@ -1,6 +1,6 @@
 <template>
-<p class="publication">
-    <span class="download-link">
+<p :class="['publication', {'has-download': showLink}]">
+    <span class="download-link" v-if=showLink>
         <a v-if="json.file" :class="['mdi', iconName]" :href=file></a>
         <i v-else :class="['mdi', iconName]"></i>
     </span>
@@ -23,7 +23,14 @@
 // which passes just a dictionary of values for a particular publication. This
 // compononent should not be used directly.
 export default {
-  props: ["json", "highlightAuthor"],
+  props: {
+    json: Object,
+    highlightAuthor: String,
+    showLink: {
+      type: Boolean,
+      default: true
+    }
+  },
   computed: {
     iconName: function() {
       // Get the name of the MDI icon depending on the file type
@@ -96,7 +103,7 @@ export default {
 .highlight-author {
   font-weight: 600;
 }
-.publication {
+.publication.has-download {
   position: relative;
   .download-link {
     position: absolute;

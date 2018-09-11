@@ -1,10 +1,27 @@
 <template>
-    <div
-        title="Curriculum Vitae">
-
-        <p slot="intro">
-            <a href="" class="mdi mdi-file-pdf"> View as PDF</a>
+    <div>
+        <p slot="intro" v-if="!isPaper">
+            <a href="/pdfs/ebert-julia.cv.pdf" class="mdi mdi-file-pdf"> View as PDF</a>
         </p>
+
+        <div v-if=isPaper class="cv-header">
+            <img class="logo" src="/imgs/logos/logo-black.svg">
+            <div class="name">
+                <h1>Julia Ebert</h1>
+                <p class="subtitle">PhD Candidate &bull; Robotics Researcher</p>
+            </div>
+            <div class="links">
+                <icon-link to="https://juliaebert.com" icon="web" size="">
+                    juliaebert.com
+                </icon-link>
+                <icon-link to="mailto:julia@juliaebert.com" icon="email" size="">
+                    julia@juliaebert.com
+                </icon-link>
+                <icon-link to="https://github.com/jtebert" icon="github-circle" size="">
+                    github.com/jtebert
+                </icon-link>
+            </div>
+        </div>
 
         <div slot="content">
             <h1>Education</h1>
@@ -162,8 +179,29 @@
                 award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"
                 ></cv-award>
 
-            <h1>Publications</h1>
-            <p>See <a v-scroll-to="'#publications'">publications section</a></p>
+            <h1 v-if=isPaper>Papers</h1>
+            <publication-list v-if=isPaper
+                highlight-author="Ebert"
+                :type-filter="['paper']"
+                :showLinks="false">
+            </publication-list>
+
+            <h1 v-if=isPaper>Conference Abstracts and Posters</h1>
+            <publication-list v-if=isPaper
+                highlight-author="Ebert"
+                :type-filter="['poster']"
+                :showLinks="false">
+            </publication-list>
+
+            <h1 v-if="!isPaper">Publications</h1>
+            <p v-if="!isPaper">See <a v-scroll-to="'#publications'">publications section</a></p>
+
+            <h1>Talks</h1>
+            <publication-list
+                highlight-author="Ebert"
+                :type-filter="['talk']"
+                :showLinks="false">
+            </publication-list>
 
             <h1>Teaching</h1>
             <cv-entry
@@ -184,6 +222,48 @@
                     {date: '2011 -- 2013',
                      task: '<b>Undergraduate Mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
                 ></cv-entry>
+
+            <h1>Outreach and Service</h1>
+            <cv-award
+                date="2018"
+                award="Guest, <i>Brains On!</i> science podcast live show"
+                ></cv-award>
+            <cv-award
+                date="2017, 2018"
+                award="Volunteer, Boston Public Schools Science Fair"
+                ></cv-award>
+            <cv-award
+                date="2016"
+                award="Volunteer, EuroHaptics 2016"
+                ></cv-award>
+            <cv-award
+                date="2010 -- 2015"
+                award="Volunteer, Northeastern Civic Engagement Program"
+                ></cv-award>
+            <cv-award
+                date="2014"
+                award="Tutor team leader, TechBoston Academy"
+                ></cv-award>
+            <cv-award
+                date="2011 -- 2013"
+                award="Volunteer, Brigham and Women's Hospital"
+                ></cv-award>
+            <cv-award
+                date="2010 -- 2011"
+                award="Mentor, Massachusetts General Hospital Youth Program"
+                ></cv-award>
+            <cv-award
+                date=""
+                award=""
+                ></cv-award>
+            <cv-award
+                date=""
+                award=""
+                ></cv-award>
+            <cv-award
+                date=""
+                award=""
+                ></cv-award>
 
             <h1>Skills</h1>
             <cv-skill
@@ -238,13 +318,19 @@ import PublicationList from "~/components/PublicationList.vue";
 import CvEntry from "~/components/cv/CvEntry.vue";
 import CvAward from "~/components/cv/CvAward.vue";
 import CvSkill from "~/components/cv/CvSkill.vue";
+import IconLink from "~/components/IconLink.vue";
 
 export default {
   components: {
     PublicationList,
     CvEntry,
     CvAward,
-    CvSkill
-  }
+    CvSkill,
+    IconLink
+  },
+  props: {
+    isPaper: { default: true }
+  },
+  layout: "paper"
 };
 </script>

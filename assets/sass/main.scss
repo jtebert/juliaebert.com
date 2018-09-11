@@ -141,7 +141,7 @@ p a:hover {
 
 .cv-award {
   @include tablet {
-    grid-template-columns: [sidebar] 9rem [main] 1fr;
+    grid-template-columns: [sidebar] 9em [main] 1fr;
   }
   @include mobile {
   grid-column-gap: $column-gap;
@@ -200,7 +200,7 @@ p a:hover {
   margin-bottom: 1rem;
   grid-column-gap: $column-gap;
   @include tablet {
-    grid-template-columns: [sidebar] 9rem [bar] auto [main] 1fr;
+    grid-template-columns: [sidebar] 9em [bar] auto [main] 1fr;
   }
   @include mobile {
     grid-template-columns: 1fr;
@@ -212,6 +212,46 @@ p a:hover {
       grid-column: bar;
       grid-row: 1 / 5;
       background-color: $primary;
+    }
+  }
+}
+// Printable CV
+.paper {
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 11px;
+  h1 {
+    font-size: 2em;
+    font-family: $family-subtitle;
+    color: $primary !important;
+  }
+  .cv-bar {
+      border-left: 1px solid black;
+      background: none;
+  }
+  .cv-header {
+    display: grid;
+    grid-template-columns: 9em auto auto;
+    grid-template-areas: "logo name links";
+    grid-column-gap: $column-gap * 2;
+    margin-bottom: 2em;
+    .logo {
+      grid-area: logo;
+      justify-self: right;
+      height: 7em;
+    }
+    .name {
+      grid-area: name;
+      h1 {
+        font-size: 4em;
+        font-weight: 600;
+        color: black !important;
+        margin-bottom: 0;
+        font-family: $family-title;
+      }
+      .subtitle {
+        font-size: 1.25em;
+      }
     }
   }
 }
