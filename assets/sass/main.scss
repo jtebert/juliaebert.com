@@ -49,17 +49,14 @@ $small-radius: 0;
 
 $body-background-color: $dark;
 
-$navbar-height: 8.5rem;
-$navbar-height-touch: 4.5rem;
-$navbar-item-img-max-height: 6.25rem;
-$navbar-padding-vertical: 0;
-$navbar-padding-horizontal: 0;
-//$tabs-link-padding: 0;
-
-// $navbar-item-hover-color: transparent;
-// $navbar-item-active-color: transparent;
-$navbar-item-hover-background-color: $primary;
-$navbar-item-active-background-color: $text;
+// For boxed navbar
+// $navbar-height: 8.5rem;
+// $navbar-height-touch: 4.5rem;
+// $navbar-item-img-max-height: 6.25rem;
+// $navbar-padding-vertical: 0;
+// $navbar-padding-horizontal: 0;
+// $navbar-item-hover-background-color: $primary;
+// $navbar-item-active-background-color: $text;
 
 $tabs-link-padding: 0;
 $tabs-link-color: $light;
@@ -310,10 +307,14 @@ p a:hover {
       }
     }
   }
-
   .to-rest {
+    color: $white;
+    opacity: .4;
     font-size: 72px;
     cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
   }
   &.bg-img {
     background-image: url(/imgs/stars.jpg);
@@ -325,57 +326,57 @@ p a:hover {
 }
 
 // COMPONENT : NAVBAR
-.square-nav {
-  .navbar-item {
-    padding: 0;
-    margin: 0 0.5rem;
-    background-color: $primary;
-    // http://tobiasahlin.com/blog/how-to-animate-box-shadow/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    &:hover {
-      transform: scale(1.15, 1.15);
-    }
+// .square-nav {
+//   .navbar-item {
+//     padding: 0;
+//     margin: 0 0.5rem;
+//     background-color: $primary;
+//     // http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+//     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       z-index: -1;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+//       opacity: 0;
+//       transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+//     }
+//     &:hover {
+//       transform: scale(1.15, 1.15);
+//     }
 
-    &:hover::after {
-        opacity: 1;
-    }
-    img {
-      transition: all 0.3s ease-in-out;
-      height: $navbar-item-img-max-height;
-      @include touch {
-        height: $navbar-height-touch;
-      }
-      // &:hover {transform: scale(1.1, 1.1);}
-    }
-  }
-}
-.navbar .container,
-.navbar .container .navbar-brand {
-  flex-direction: row-reverse;
-  @include touch {flex-direction: row-reverse;}
-}
-.tabs.is-boxed {
-  align-items: flex-start !important;
-  padding: 0 1rem;
+//     &:hover::after {
+//         opacity: 1;
+//     }
+//     img {
+//       transition: all 0.3s ease-in-out;
+//       height: $navbar-item-img-max-height;
+//       @include touch {
+//         height: $navbar-height-touch;
+//       }
+//       // &:hover {transform: scale(1.1, 1.1);}
+//     }
+//   }
 
-  a {
-    border: none !important;
-    &:hover {border: none !important;}
-  }
-}
+//   &.navbar .container,
+//   &.navbar .container .navbar-brand {
+//     flex-direction: row-reverse;
+//     @include touch {flex-direction: row-reverse;}
+//   }
+//   .tabs.is-boxed {
+//     align-items: flex-start !important;
+//     padding: 0 1rem;
+//     a {
+//       border: none !important;
+//       &:hover {border: none !important;}
+//     }
+//   }
+// }
 
 // COMPONENT : MOCKUP
 .mockup {
@@ -394,6 +395,7 @@ $icon-block-size-touch: 6rem;
 .section.is-block {
   padding-top: 6rem;
   padding-bottom: 6rem;
+  min-height: 100vh;
   @include mobile {
     padding-bottom: 3rem;
   }

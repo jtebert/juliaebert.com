@@ -1,11 +1,17 @@
 <template>
 <div>
 
-<primary-section title="Who I Am" subtitle="Beep boop robots" texture="graph-paper">
+<primary-section title="About Me" subtitle="Beep boop robots" texture="graph-paper">
   <div class="block-content content">
     <p>
       I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF).
     </p>
+    <p><a v-scroll-to="'#cv'">Read my full CV here.</a></p>
+    <p>I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots.</p>
+    <p>In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group. Now, I am developing methods to make it easier to create and understand complex swarm behavior -- imagine map reduce for robots.</p>
+    <p>I also care about science communication and outreach. I've spoken to hundreds of kids about robotics, and this fall I am giving a public talk on robotics through Harvard's Science in the News lecture series.
+
+After my PhD, I plan to pursue a career in academic research.</p>
   </div>
   <gallery
     :img-srcs="['march-for-science.jpg', 'self-csgf.jpg', 'curling.jpg']">
