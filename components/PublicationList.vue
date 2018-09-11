@@ -3,7 +3,8 @@
         <publication
             v-for="pub in publications"
             :json=pub :key=pub.key
-            :highlightAuthor=highlightAuthor>
+            :highlightAuthor=highlightAuthor
+            :showLink=showLinks>
         </publication>
     </div>
 </template>
@@ -22,7 +23,11 @@ export default {
       type: Boolean,
       default: false
     },
-    highlightAuthor: String
+    highlightAuthor: String,
+    showLinks: {
+      type: Boolean,
+      default: true
+    }
   },
   data() {
     return {

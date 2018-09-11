@@ -15,7 +15,7 @@
 <primary-section title="CV" subtitle="Curriculum Vitae"
   texture="brick-wall">
   <div class="block-content content">
-    <cv></cv>
+    <cv :isPaper="false"></cv>
   </div>
 </primary-section>
 

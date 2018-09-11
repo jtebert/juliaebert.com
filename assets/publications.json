@@ -96,6 +96,7 @@
             "Dawson, William",
             "Schneider, Michael"
         ],
+        "year": "2018",
         "address": "Livermore, CA",
         "addendum": "Poster at: <i>Lawrence Livermore National Laboratory Summer Student Poster Symposium,</i> 8 August 2018",
         "keywords": [
@@ -300,5 +301,27 @@
             "motor control"
         ],
         "file": "2018_rise.pdf"
+    },
+    "ebert2017uq": {
+        "type": "talk",
+        "title": "Bioinspired Collective Robotics",
+        "author": [
+            "Ebert, Julia"
+        ],
+        "year": 2018,
+        "address": "University of Queensland",
+        "addendum": "14 May 2018"
+    },
+    "ebert2017wyss": {
+        "type": "talk",
+        "title": "Collective Perception and Decision Making in Heterogeneous Swarms",
+        "author": [
+            "Ebert, Julia",
+            "Gauci, Melvin",
+            "Nagpal, Radhika"
+        ],
+        "year": 2017,
+        "address": "Wyss Institute Molecular Robotics Initiative",
+        "addendum": "14 September, 2017"
     }
 }
