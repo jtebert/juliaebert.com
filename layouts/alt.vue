@@ -41,6 +41,7 @@
 
 <script>
 import NavBar from "~/components/NavBar.vue";
+import BoxNavBar from "~/components/BoxNavBar.vue";
 import MyFooter from "~/components/MyFooter.vue";
 
 export default {
