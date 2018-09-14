@@ -73,7 +73,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     </div>
   </project>
 
-  <project
+  <project is-cover
     img-src="/imgs/programming/suture-score.jpg"
     title="Suture Score">
     <div slot="content">

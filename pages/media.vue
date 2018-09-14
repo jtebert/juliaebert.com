@@ -36,7 +36,7 @@
               </icon-link>
           </div>
     </project>
-    <project
+    <project is-cover
       :img-src="'/imgs/media/marshall_1.jpg'"
       title="Honors Student Wins Marshall Scholarship"
       subtitle="Northeastern News, 5 December 2014">
@@ -58,7 +58,7 @@
             </icon-link>
           </div>
     </project>
-    <project
+    <project is-cover
       :img-src="'/imgs/media/research_video_small.png'"
       img-align="right"
       title="Stories to Inspire: Julia Ebert"
@@ -75,7 +75,7 @@
               </icon-link>
           </div>
     </project>
-    <project
+    <project is-cover
       :img-src="'/imgs/media/goldwater.jpg'"
       title="Honors Student Named Goldwater Scholar"
       subtitle="Northeastern News, 24 April 2013">

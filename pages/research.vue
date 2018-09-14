@@ -1,6 +1,6 @@
 <template>
 <div>
-    <project
+    <project is-cover
       img-src="/imgs/research/kilobots3.jpg"
       title="Collective Perception and Decision Making in a Robot Swarm"
       subtitle="Advisor: Prof. Radhika Nagpal">
