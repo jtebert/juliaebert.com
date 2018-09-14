@@ -261,6 +261,15 @@ p a:hover {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       background-color: $black;
     }
+    .navbar-brand {
+      #brand-icon {
+        background-color: $primary;
+        position: fixed;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        padding: 0;
+        cursor: pointer;
+      }
+    }
   }
   .typer-title {
     display: flex;

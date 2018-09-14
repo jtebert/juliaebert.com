@@ -1,7 +1,7 @@
 <template>
 <div>
     <project
-      :img-src="'/imgs/research/kilobots.jpg'"
+      img-src="/imgs/research/kilobots3.jpg"
       title="Collective Perception and Decision Making in a Robot Swarm"
       subtitle="Advisor: Prof. Radhika Nagpal">
       <p slot="content">
@@ -18,7 +18,7 @@
     </project>
 
     <project
-      :img-src="'/imgs/research/lopes_ii.png'"
+      img-src="/imgs/research/lopes_ii.png"
       title="Cooperative Exoskeleton Control for Human Balance Recovery"
       subtitle="Advisors: Prof. Etienne Burdet and Dr. Ildar Farkhatdinov">
       <p slot="content">
@@ -40,7 +40,7 @@
     </project>
 
     <project
-      :img-src="'/imgs/research/bimanual_small.jpg'"
+      img-src="/imgs/research/bimanual_small.jpg"
       title="Bimanual Learning and Retention"
       subtitle="Advisor: Prof. Dagmar Sternad">
       <div slot="content">

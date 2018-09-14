@@ -2,7 +2,8 @@
 <div class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="top-nav">
     <div class="container">
         <div class="navbar-brand">
-            <div class="navbar-item">Logo</div>
+            <img src="/imgs/icons/about-me.svg" id='brand-icon'
+                v-scroll-to="'#header'" class="navbar-item">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -10,7 +11,7 @@
             </a>
         </div>
         <div class="navbar-menu" id="navMenu">
-            <scrollactive class="navbar-end" :offset="0">
+            <scrollactive class="navbar-end" :offset="48">
                 <a class="navbar-item scrollactive-item" href="#about-me">About Me</a>
                 <a class="navbar-item scrollactive-item" href="#cv">CV</a>
                 <a class="navbar-item scrollactive-item" href="#research">Research</a>
@@ -26,6 +27,7 @@
 <script>
 export default {};
 
+// Make navbar opaque on scrolling
 if (process.browser) {
   let scrollpos = window.scrollY;
   var header = document.getElementById("top-nav");
@@ -42,6 +44,7 @@ if (process.browser) {
   });
 }
 
+// Make hamburger open menu
 if (process.browser) {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(
