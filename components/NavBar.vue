@@ -1,5 +1,5 @@
 <template>
-<div class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+<div class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="top-nav">
     <div class="container">
         <div class="navbar-brand">
             <div class="navbar-item">Logo</div>
@@ -10,14 +10,14 @@
             </a>
         </div>
         <div class="navbar-menu" id="navMenu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="#about-me">About Me</a>
-                <a class="navbar-item" href="#cv">CV</a>
-                <a class="navbar-item" href="#research">Research</a>
-                <a class="navbar-item" href="#publications">Publications</a>
-                <a class="navbar-item" href="#projects">Projects</a>
-                <a class="navbar-item" href="#media">Media</a>
-            </div>
+            <scrollactive class="navbar-end" :offset="0">
+                <a class="navbar-item scrollactive-item" href="#about-me">About Me</a>
+                <a class="navbar-item scrollactive-item" href="#cv">CV</a>
+                <a class="navbar-item scrollactive-item" href="#research">Research</a>
+                <a class="navbar-item scrollactive-item" href="#publications">Publications</a>
+                <a class="navbar-item scrollactive-item" href="#projects">Projects</a>
+                <a class="navbar-item scrollactive-item" href="#media">Media</a>
+            </scrollactive>
         </div>
     </div>
 </div>
@@ -25,6 +25,22 @@
 
 <script>
 export default {};
+
+if (process.browser) {
+  let scrollpos = window.scrollY;
+  var header = document.getElementById("top-nav");
+  var header_height = header.offsetHeight;
+  var add_class_on_scroll = () => header.classList.add("is-solid");
+  var remove_class_on_scroll = () => header.classList.remove("is-solid");
+  window.addEventListener("scroll", function() {
+    scrollpos = window.scrollY;
+    if (scrollpos >= header_height * 3) {
+      add_class_on_scroll();
+    } else {
+      remove_class_on_scroll();
+    }
+  });
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // Get all "navbar-burger" elements
