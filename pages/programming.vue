@@ -10,7 +10,7 @@
       <p>
 It's cookbook-style recipe website using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings.
 
-I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to  build an entire website from scratch to put all the recipes in.
+I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to  build an entire website from scratch.
       </p>
       <icon-link
         icon="web"

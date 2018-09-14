@@ -255,6 +255,13 @@ p a:hover {
 
 // LAYOUT: ALT
 .hero {
+  .navbar {
+    transition: all 0.6s ease-out;
+    &.is-solid {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      background-color: $black;
+    }
+  }
   .typer-title {
     display: flex;
     @include fullhd {
