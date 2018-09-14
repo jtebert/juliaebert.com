@@ -4,6 +4,7 @@
       <mockup :imgSrc=imgSrc
               :mobileImgSrc=mobileImgSrc></mockup>
     </div>
+    <div v-else-if=isCover class="section-image is-cover"><img :src=imgSrc is-cover></div>
     <img v-else :class="['section-image', {'is-padded': isPadded}]" :src=imgSrc>
 
     <div class="section-content">
@@ -32,7 +33,8 @@ export default {
     title: String,
     subtitle: String,
     isMockup: {type: Boolean, default: false},
-    isPadded: {type: Boolean, default: false}
+    isPadded: {type: Boolean, default: false},
+    isCover: {type: Boolean, default: false}
   },
   components: {
     Mockup
