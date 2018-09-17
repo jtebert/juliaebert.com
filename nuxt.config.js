@@ -7,11 +7,19 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Julia Ebert&apos;s personal website' }
+      { hid: 'description', name: 'description', content: 'Julia Ebert&apos;s personal website' },
+      { name: 'msapplication-TileColor', content: "#03bc25" },
+      { name: 'theme-color', content: '#03bc25' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Space+Mono' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=7ko0RpJWWN' },
+      { rel: 'icon', sizes: '32x32', type: 'image/png', href: '/favicon-32x32.png?v=7ko0RpJWWN' },
+      { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png?v=7ko0RpJWWN' },
+      { rel: 'manifest', href: '/site.webmanifest?v=7ko0RpJWWN' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=7ko0RpJWWN', color: '#03bc25' },
+      { rel: 'shortcut icon', href: '/favicon.ico?v=7ko0RpJWWN' },
     ],
   },
   css: [
