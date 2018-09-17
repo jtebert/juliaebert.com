@@ -274,7 +274,10 @@ p a:hover {
         padding: 0;
         cursor: pointer;
         height: 2* $navbar-height;
-        z-index: -1;
+        z-index: 0;
+        @include mobile {
+          height: $navbar-height;
+        }
       }
     }
     #navMenu {
@@ -293,6 +296,9 @@ p a:hover {
           transform:scaleY(1);
           opacity: 1;
         }
+      }
+      @include mobile {
+        width: 100%;
       }
     }
   }
@@ -432,7 +438,7 @@ p a:hover {
 $icon-block-size: 8rem;
 $icon-block-size-touch: 6rem;
 
-
+// PRIMARYSECTION COMPONENT
 .section.is-block {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -449,7 +455,7 @@ $icon-block-size-touch: 6rem;
     margin-left: $icon-block-size / 2;
     padding: 0;
     padding-top: 3rem;
-    overflow: auto;
+    overflow: hidden;
     @include tablet-only {
       margin-left: $icon-block-size-touch / 2;
     }

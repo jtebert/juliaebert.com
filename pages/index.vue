@@ -1,7 +1,9 @@
 <template>
 <div>
 
-<primary-section title="About Me" subtitle="Beep boop robots" texture="graph-paper">
+<primary-section title="About Me"
+  subtitle="Julia Ebert, apprentice robot herder"
+  texture="graph-paper">
   <div class="block-content content">
     <vue-markdown>
 I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF).
@@ -25,19 +27,22 @@ After my PhD, I plan to pursue a career in academic research.
   </gallery>
 </primary-section>
 
-<primary-section title="CV" subtitle="Curriculum Vitae"
+<primary-section title="CV"
+  subtitle="Curriculum Vitae"
   texture="brick-wall">
   <div class="block-content content">
     <cv :isPaper="false"></cv>
   </div>
 </primary-section>
 
-<primary-section title="Research" subtitle="Robots and Satellites and Humans"
+<primary-section title="Research"
+  subtitle="Robot swarms + humans + space = ???"
   texture="circuit-board">
   <research></research>
 </primary-section>
 
-<primary-section title="Publications" subtitle="I wrote things (with other people, of course)"
+<primary-section title="Publications"
+  subtitle="Making the world a better place, one peer-reviewed article at a time"
   texture="bank-note">
   <div class="block-content content">
     <publications></publications>
@@ -49,7 +54,7 @@ After my PhD, I plan to pursue a career in academic research.
   <programming></programming>
 </primary-section>
 
-<primary-section title="Media" subtitle="It's an ego boost"
+<primary-section title="Media" subtitle="Shameless self-promotion"
   texture="diagonal-lines">
   <media></media>
 </primary-section>
