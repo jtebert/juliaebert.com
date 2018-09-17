@@ -1,10 +1,32 @@
-## Who I Am
+To Do
 
-*Photo of self*
+- Favicons
+- R E S P O N S I V E
+- Smaller self-image
+- square icons
+- Clean up unnecessary components and stuff in main.scss
 
-I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF).
+Sections
 
-*Read my full CV*
+Who I Am: 
+
+CV: 
+
+Research: Humans + robot swarm + space = ???
+
+Publications: Making the world a better place, one peer-reviewed article at a time
+
+Projects: 
+
+Media: Shameless self-promotion
+
+Who I Am
+
+Photo of self
+
+I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF)
+
+Read my full CV
 
 Other highlights:
 
@@ -13,11 +35,11 @@ Other highlights:
 - Research co-op at Max Planck Institute for Intelligent Systems
 - BS in behavioral neuroscience from Northeastern University, where I earned a Goldwater Scholarship, DAAD undergraduate scholarship, and graduated with honors
 
-## What I Do
+What I Do
 
-### For Research
+For Research
 
-*Photo of kilobots*
+Photo of kilobots
 
 I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots.
 
@@ -27,23 +49,23 @@ I also care about science communication and outreach. I've spoken to hundreds of
 
 After my PhD, I plan to pursue a career in academic research.
 
-*Read more about my research*
+Read more about my research
 
-*See my publications*
+See my publications
 
-### For Fun
+For Fun
 
-*Photo of curling*
+Photo of curling
 
-I like to make things in my free time. Need a clickbait headline for your next science project? [I've got you covered.](http://sciencebait.juliaebert.com) Need some robots that climb over each other? [I made them in fun colors.](http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/)
+I like to make things in my free time. Need a clickbait headline for your next science project? I've got you covered. Need some robots that climb over each other? I made them in fun colors.
 
-I am also on the [Harvard curling team](http://harvardcurling.com/), and I bake [awesome cinnamon rolls](http://lazybaker.juliaebert.com/). (I made both those websites, too.)
+I am also on the Harvard curling team, and I bake awesome cinnamon rolls. (I made both those websites, too.)
 
-*See more of my programming projects*
+See more of my programming projects
 
-## Footer
+Footer
 
-**^Go to top ^**
+^Go to top ^
 
 ---
 
@@ -53,35 +75,35 @@ PhD Candidate in Computer Science
 
 Harvard University
 
-[julia@juliaebert.com](mailto:julia@juliaebert.com)
+julia@juliaebert.com
 
 ---
 
-*Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), using [Vue.js](https://vuejs.org/), [Textures.js](https://riccardoscalco.it/textures/), [Bulma](https://bulma.io/) framework, icons by Maxim Basinski and Eucalyp. Typeset in [Space Mono](https://fonts.google.com/specimen/Space+Mono) and [Montserrat](https://fonts.google.com/specimen/Montserrat).*
+Made by Julia Ebert with Nuxt, Vue.js, Bulma, Hero Patterns, and icons from The Noun Project by Maxim Basinski and Eucalyp. Typeset in Montserrat and Space Mono.
 
 ---
 
-## Examples
+Examples
 
-### Personal Pages
+Personal Pages
 
-[Sean Halpin](http://seanhalpin.io/)
+Sean Halpin
 
 - Illustrations
 - Intro on home page
 - Clean, flat, good use of color
 - Pretty mockups
 
-[Pascal van Gemert](http://www.pascalvangemert.nl/)
+Pascal van Gemert
 
 - Resume as a website
 
-[Tim Roussilhe](http://timroussilhe.com/)
+Tim Roussilhe
 
 - Scrolling effects
 - Monospace fonts
 
-[Brandon Johnson](http://brandoncjohnson.com/)
+Brandon Johnson
 
 - Researcher CV
 - Monospace fonts
@@ -89,91 +111,91 @@ Harvard University
 - Scrolling effects + animation
 - Spaaaaaaace
 
-[Devon Stank](https://www.devonstank.com/)
+Devon Stank
 
 - Resume
 
-[Fabian Lasserre](https://www.primative.net/)
+Fabian Lasserre
 
 - Clean/flat
 - Bold single color
 
-[Matthew Williams](http://findmatthew.com/)
+Matthew Williams
 
 - Animation
-
 - Bright color (2 colors)
 - Full-height animated landing hero
 - Hexagons
 
-[Anthony Witkor](http://anthonydesigner.com/)
+Anthony Witkor
 
 - Dark page
 - Slick animation
 
-[Kemie Guaida](http://www.monolinea.com/)
+Kemie Guaida
 
 - Illustrations
 - Playful personality
 
-[Sacha Greif](http://sachagreif.com/)
+Sacha Greif
 
-- Geometric icons/use of icons ([http://ego-icons.com/](http://ego-icons.com/))
-- [Textures](https://riccardoscalco.it/textures/)
+- Geometric icons/use of icons (http://ego-icons.com/)
+- Textures
 - Space Mono!
 - Sense of humor
 
-[Angela Axworthy](http://angelaaxworthy.com/)
+Angela Axworthy
 
 - Clean one-page academic CV
 
-### Academic
+Academic
 
-[Daniel Wolpert](https://wolpertlab.neuroscience.columbia.edu/)
+Daniel Wolpert
 
 - Academic website that doesn't look terrible
 
-[Jessell Lab](http://jesselllab.com/)
+Jessell Lab
 
 - Bold big images + parallax
 - Clean
 
-### Other
+Other
 
-[Pragonauts](http://pragonauts.com/#)
+Pragonauts
 
 - Text typing effect
 - Techy font choice
 - Bold colors, geometric + sharp corners
 - Tags for tech used
 
-[Big Omaha 2017](https://www.typewolf.com/site-of-the-day/big-omaha-2017)
+Big Omaha 2017
 
 - Retro future sci-fi look (Space Mono)
 
-[Built by Buffalo](http://builtbybuffalo.com/)
+Built by Buffalo
 
 - Hexagons
 
-[Ghost Horses](http://www.ghosthorses.co.uk/)
+Ghost Horses
 
 - Pretty animation (but kind of too much)
 - Footer revealed underneath
 
-[HTML5UP Story](https://html5up.net/story)
+HTML5UP Story
 
 - Full width spotlight sections
-- Dark + multiple **styles**
+- Dark + multiple styles
 - Mockups for images
 
-[One Page Love](https://onepagelove.com/gallery/resume)
+One Page Love
 
 - A bunch of one-page resume examples
 
-## Stuff to Use
+Stuff to Use
 
-- [Duotone images with Gimp gradient map](https://photo.stackexchange.com/questions/85291/how-do-i-create-a-split-tone-effect-using-gimp)
-- Modal: [Vue](https://vuejs.org/v2/examples/modal.html) + [Bulma modal](https://bulma.io/documentation/components/modal/)
-- [Vue Toolbox](http://www.vuetoolbox.com/)
-- [SVG Backgrounds](https://www.svgbackgrounds.com/)
-- [Square geometric icons by Maxim Basinski](https://thenounproject.com/basinskimaxim/collection/program-coding/)
+- Duotone images with Gimp gradient map
+- Modal: Vue + Bulma modal
+- Vue Toolbox
+- SVG Backgrounds
+- Square geometric icons by Maxim Basinski
+- Animated height change
