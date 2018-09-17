@@ -280,12 +280,18 @@ p a:hover {
     #navMenu {
       //padding: 0;
       @include touch {
+        position: absolute;
+        top: $navbar-height;
+        right: 0;
+        width: calc(100% - 2 * #{$navbar-height});
         display: block;
-        transition:transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         transform:scaleY(0);
         transform-origin:top;
+        opacity: 0;
         &.is-active {
           transform:scaleY(1);
+          opacity: 1;
         }
       }
     }
