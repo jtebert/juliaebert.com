@@ -8,7 +8,7 @@
     <div class="hero-body">
       <div class="typer-title">
         <h1 class="name-title">Julia Ebert</h1>
-        <vue-typer class="subtitle" id="does-things"
+        <no-ssr><vue-typer class="subtitle" id="does-things"
           :pre-type-delay='600'
           :type-delay='70'
           :pre-erase-delay='2000'
@@ -19,7 +19,8 @@
             'simulates satellites.',
             'writes a blog.',
             'makes things.']">
-        </vue-typer>
+        </vue-typer></no-ssr>
+
       </div>
     </div>
 
