@@ -146,18 +146,28 @@ a.button:hover {
 
 .cv-award {
   @include tablet {
+    display: grid;
     grid-template-columns: [sidebar] 9em [main] 1fr;
   }
   @include mobile {
-  grid-column-gap: $column-gap;
-  grid-template-columns: [sidebar] auto [main] 1fr;
+    padding-left: calc(0.5rem + 1.25em);;
+    text-indent:calc(-0.5rem - 1.25em);;
+    > * {
+      display: inline;
+    }
+    .cv-sidebar:after {
+      content: ":";
+      margin-right: $column-gap;
+    }
+  // grid-column-gap: $column-gap;
+  // grid-template-columns: [sidebar] auto [main] 1fr;
   }
 }
 
 .cv-entry,
 .cv-skill,
 .cv-award {
-  display: grid;
+  // display: grid;
   @include tablet {
     grid-column-gap: $column-gap * 2;
     grid-template-rows: auto;
@@ -202,6 +212,7 @@ a.button:hover {
 }
 .cv-entry,
 .cv-skill {
+  display: grid;
   margin-bottom: 1rem;
   grid-column-gap: $column-gap;
   @include tablet {

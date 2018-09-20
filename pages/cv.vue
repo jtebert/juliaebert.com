@@ -144,7 +144,7 @@
             <h2>Awards</h2>
             <cv-award
                 date=2018
-                award="Distinction in Teaching Award"
+                award="Distinction in Teaching Award, Harvard University"
                 ></cv-award>
             <cv-award
                 date=2016
@@ -253,18 +253,6 @@
             <cv-award
                 date="2010 -- 2011"
                 award="Mentor, Massachusetts General Hospital Youth Program"
-                ></cv-award>
-            <cv-award
-                date=""
-                award=""
-                ></cv-award>
-            <cv-award
-                date=""
-                award=""
-                ></cv-award>
-            <cv-award
-                date=""
-                award=""
                 ></cv-award>
 
             <h2>Skills</h2>

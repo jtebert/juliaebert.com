@@ -55,6 +55,13 @@ After my PhD, I plan to pursue a career in academic research.
 <primary-section title="Publications"
   subtitle="Making the world a better place, one peer-reviewed article at a time"
   texture="bank-note">
+  <div slot="links">
+    <p class="buttons">
+      <icon-button-link
+        to="https://scholar.google.com/citations?user=dsoLpEQAAAAJ&hl=en"
+        icon="school">Google Scholar</icon-button-link>
+    </p>
+  </div>
   <div class="block-content content">
     <publications></publications>
   </div>
@@ -62,15 +69,15 @@ After my PhD, I plan to pursue a career in academic research.
 
 <primary-section title="Projects"
   subtitle="I make a lot of mostly useless things."
-  texture="hexagons">
+  texture="lines-in-motion">
   <div slot="links">
-    <p class="buttons">
+    <!-- <p class="buttons">
       <icon-button-link
         to="https://blog.juliaebert.com"
         icon="pencil">
         Blog
       </icon-button-link>
-    </p>
+    </p> -->
     <p class="buttons">
       <icon-button-link
         to="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/"
@@ -81,7 +88,7 @@ After my PhD, I plan to pursue a career in academic research.
 </primary-section>
 
 <primary-section title="Media" subtitle="Shameless self-promotion"
-  texture="diagonal-lines">
+  texture="plus">
   <media></media>
 </primary-section>
 
