@@ -2,7 +2,12 @@
 <div class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="top-nav">
     <div class="container">
         <div class="navbar-brand">
+            <nuxt-link v-if=isOtherPage to="/">
+                <img src="/imgs/icons/about-me.svg" id='brand-icon'
+                  class="navbar-item">
+            </nuxt-link>
             <img src="/imgs/icons/about-me.svg" id='brand-icon'
+                v-else
                 v-scroll-to="'#header'" class="navbar-item">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -10,8 +15,27 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <scrollactive class="navbar-menu" id="navMenu">
-            <div class="navbar-end" :offset="48">
+
+        <div class="navbar-menu" id="navMenu" v-if=isOtherPage>
+            <div class="navbar-end" :offset="52">
+              <a v-for="(name, slug) in sectionLinks" :key="slug"
+                :href="'/#'+slug" class="navbar-item">
+                {{ name }}
+              </a>
+            </div>
+        </div>
+
+        <scrollactive class="navbar-menu" id="navMenu" v-else>
+            <div class="navbar-end" :offset="52">
+              <a v-for="(name, slug) in sectionLinks" :key="slug"
+                :href="'/#'+slug" class="navbar-item scrollactive-item">
+                {{ name }}
+              </a>
+            </div>
+        </scrollactive>
+
+        <!-- <scrollactive class="navbar-menu" id="navMenu">
+            <div class="navbar-end" :offset="52">
                 <a class="navbar-item scrollactive-item" href="/#about-me">About Me</a>
                 <a class="navbar-item scrollactive-item" href="#cv">CV</a>
                 <a class="navbar-item scrollactive-item" href="#research">Research</a>
@@ -19,55 +43,84 @@
                 <a class="navbar-item scrollactive-item" href="#projects">Projects</a>
                 <a class="navbar-item scrollactive-item" href="#media">Media</a>
             </div>
-        </scrollactive>
+        </scrollactive> -->
+
     </div>
 </div>
 </template>
 
 <script>
-export default {};
+import slugify from "slugify";
 
-// Make navbar opaque on scrolling
-if (process.browser) {
-  let scrollpos = window.scrollY;
-  var header = document.getElementById("top-nav");
-  var header_height = header.offsetHeight;
-  var add_class_on_scroll = () => header.classList.add("is-solid");
-  var remove_class_on_scroll = () => header.classList.remove("is-solid");
-  window.addEventListener("scroll", function() {
-    scrollpos = window.scrollY;
-    if (scrollpos >= header_height * 3) {
-      add_class_on_scroll();
-    } else {
-      remove_class_on_scroll();
+var sectionNames = [
+  "About Me",
+  "CV",
+  "Research",
+  "Publications",
+  "Projects",
+  "Media"
+];
+
+export default {
+  props: { isOtherPage: { default: false } },
+  computed: {
+    sectionLinks: function() {
+      return sectionNames.reduce((accum, section) => {
+        accum[slugify(section, { lower: true })] = section;
+        return accum;
+      }, {});
+    },
+    header: function() {
+      if (process.browser) {
+        return document.getElementById("top-nav");
+      }
     }
-  });
-}
+  },
+  methods: {
+    setOpacity: function() {
+      if (process.browser) {
+        let scrollpos = window.scrollY;
+        var header_height = this.header.offsetHeight;
+        if (scrollpos >= header_height * 3) {
+          this.header.classList.add("is-solid");
+        } else {
+          this.header.classList.remove("is-solid");
+        }
+      }
+    },
+    addBurgerToggles: function() {
+      if (process.browser) {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
 
-// Make hamburger open menu
-if (process.browser) {
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener("click", () => {
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
-      });
-    });
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      }
+    }
+  },
+  created() {
+    if (process.browser) {
+      window.addEventListener("scroll", this.setOpacity);
+      this.addBurgerToggles();
+    }
   }
-}
+};
 </script>
 
 <style lang="scss">
