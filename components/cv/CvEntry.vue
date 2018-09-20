@@ -12,13 +12,13 @@
       <span v-if="subtitle" v-html="subtitle"></span>
   </div>
 
-  <div v-for="(task, id) in tasks" :key="`task-${id}`"
+  <div v-for="(task, id) in tasks" :key="'task-'+uid+'-sidebar-'+`${id}`"
     :class="['cv-sidebar', 'grid-row-'+(id+2)]"
     >
       {{ task.date.replace('--', '–') }}
   </div>
 
-  <div v-for="(task, id) in tasks" :key="`task-${id}`"
+  <div v-for="(task, id) in tasks" :key="'task-'+uid+'-main-'+`${id}`"
     :class="['cv-main', 'grid-row-'+(id+2)]"
     >
       <span class="cv-task">
@@ -32,9 +32,8 @@
 export default {
   props: ["title", "subtitle", "location", "dates", "tasks"],
   computed: {
-    taskss: function() {
-      console.log(this.tasks);
-      return this.tasks;
+    uid: function() {
+      return Math.floor((Math.random() * 2) ^ 32) + 1;
     }
   }
 };

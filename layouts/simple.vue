@@ -2,7 +2,7 @@
 <div class="simple-layout">
   <section class="hero bg-img is-large scroll-section" id="header">
     <div class="hero-head">
-      <nav-bar></nav-bar>
+      <nav-bar :isOtherPage="true"></nav-bar>
     </div>
 
     <div class="hero-body">
