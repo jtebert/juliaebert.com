@@ -24,7 +24,7 @@
         </div>
 
         <div slot="content">
-            <h1>Education</h1>
+            <h2>Education</h2>
             <cv-entry
                 location="Cambridge, MA"
                 dates="2016 --"
@@ -48,7 +48,7 @@
                     Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>"
                 ></cv-entry>
 
-            <h1>Research</h1>
+            <h2>Research</h2>
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University Self-Organizing Systems Research Group"
@@ -111,7 +111,7 @@
                      task: 'Learning and exploration in a novel dimensionality-reduction task'}]"
             ></cv-entry>
 
-            <h1>Grants and Scholarships</h1>
+            <h2>Grants and Scholarships</h2>
             <cv-award
                 date=2016
                 award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
@@ -145,7 +145,11 @@
                 award="Northeastern National Merit Scholarship"
                 ></cv-award>
 
-            <h1>Awards</h1>
+            <h2>Awards</h2>
+            <cv-award
+                date=2018
+                award="Distinction in Teaching Award"
+                ></cv-award>
             <cv-award
                 date=2016
                 award="Finalist, Hertz Fellowship"
@@ -179,36 +183,38 @@
                 award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"
                 ></cv-award>
 
-            <h1 v-if=isPaper>Papers</h1>
+            <h2 v-if=isPaper>Papers</h2>
             <publication-list v-if=isPaper
                 highlight-author="Ebert"
                 :type-filter="['paper']"
                 :showLinks="false">
             </publication-list>
 
-            <h1 v-if=isPaper>Conference Abstracts and Posters</h1>
+            <h2 v-if=isPaper>Conference Abstracts and Posters</h2>
             <publication-list v-if=isPaper
                 highlight-author="Ebert"
                 :type-filter="['poster']"
                 :showLinks="false">
             </publication-list>
 
-            <h1 v-if="!isPaper">Publications</h1>
+            <h2 v-if="!isPaper">Publications</h2>
             <p v-if="!isPaper">See <a v-scroll-to="'#publications'">publications section</a></p>
 
-            <h1>Talks</h1>
+            <!-- <h2>Talks</h2>
             <publication-list
                 highlight-author="Ebert"
                 :type-filter="['talk']"
                 :showLinks="false">
-            </publication-list>
+            </publication-list> -->
 
-            <h1>Teaching</h1>
+            <h2>Teaching</h2>
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
                 :tasks="[
-                    {date: '2018',
+                    {date: 'Fall 2018',
+                     task: '<b>Teaching Staff,</b> How To Make (Almost) Anything, Harvard section'},
+                    {date: 'Spring 2018',
                      task: '<b>Teaching Fellow,</b> CS 189: Autonomous Robot Systems'}]"
                 ></cv-entry>
             <cv-entry
@@ -223,7 +229,7 @@
                      task: '<b>Undergraduate Mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
                 ></cv-entry>
 
-            <h1>Outreach and Service</h1>
+            <h2>Outreach and Service</h2>
             <cv-award
                 date="2018"
                 award="Guest, <i>Brains On!</i> science podcast live show"
@@ -265,7 +271,7 @@
                 award=""
                 ></cv-award>
 
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <cv-skill
                 category="Programming"
                 :skills="[
@@ -287,7 +293,7 @@
                     'Kinematic and EEG data collection in human subjects']"
                 ></cv-skill>
 
-            <h1>Relevant Coursework</h1>
+            <h2>Relevant Coursework</h2>
             <cv-skill
                 category="Computer Science"
                 :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
