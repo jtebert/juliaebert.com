@@ -60,8 +60,23 @@ After my PhD, I plan to pursue a career in academic research.
   </div>
 </primary-section>
 
-<primary-section title="Projects" subtitle="I make a lot of mostly useless things."
+<primary-section title="Projects"
+  subtitle="I make a lot of mostly useless things."
   texture="hexagons">
+  <div slot="links">
+    <p class="buttons">
+      <icon-button-link
+        to="https://blog.juliaebert.com"
+        icon="pencil">
+        Blog
+      </icon-button-link>
+    </p>
+    <p class="buttons">
+      <icon-button-link
+        to="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/"
+        icon="hammer">Julia Makes Things</icon-button-link>
+    </p>
+  </div>
   <programming></programming>
 </primary-section>
 

@@ -100,18 +100,4 @@ export default {
 </script>
 
 <style lang="scss">
-.highlight-author {
-  font-weight: 600;
-}
-.publication.has-download {
-  position: relative;
-  .download-link {
-    position: absolute;
-    left: 0;
-  }
-  .citation {
-    display: block;
-    padding-left: 1.75em;
-  }
-}
 </style>

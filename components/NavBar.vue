@@ -1,5 +1,5 @@
 <template>
-<div class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="top-nav">
+<div class="navbar is-black is-fixed-top is-solid" role="navigation" aria-label="main navigation" id="top-nav">
     <div class="container">
         <div class="navbar-brand">
             <nuxt-link v-if=isOtherPage to="/">

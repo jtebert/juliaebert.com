@@ -225,6 +225,9 @@ a.button:hover {
   background-color: #fff !important;
   color: #000 !important;
   font-size: 11px;
+  a {
+    color: #000;
+  }
   h2 {
     font-size: 2em;
     font-family: $family-subtitle;
@@ -516,7 +519,7 @@ $icon-block-size-touch: 6rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
       margin-left: $column-gap;
       @include mobile {
         margin-top: 2*$column-gap;
@@ -555,7 +558,7 @@ $icon-block-size-touch: 6rem;
   }
 }
 
-// COMPONENT: FULL-PROJECT/FULLPROJECT
+// COMPONENT: PROJECT
 .project-section {
   padding: 0;
   display: flex;
@@ -642,5 +645,25 @@ $icon-block-size-touch: 6rem;
   &:hover {
     color: $white;
     background-color: $dark;
+  }
+}
+
+// COMPONENTS : PUBLICATIONS
+.highlight-author {
+  font-weight: 600;
+}
+.publication.has-download {
+  position: relative;
+  .download-link {
+    position: absolute;
+    left: 0;
+    color: $grey-light;
+    a:hover {
+      color: $text;
+    }
+  }
+  .citation {
+    display: block;
+    padding-left: 1.75em;
   }
 }
