@@ -70,8 +70,6 @@ After my PhD, I plan to pursue a career in academic research.
   <media></media>
 </primary-section>
 
-
-
 </div>
 </template>
 
