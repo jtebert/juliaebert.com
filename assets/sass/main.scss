@@ -503,17 +503,20 @@ $icon-block-size-touch: 6rem;
       @include mobile {
         padding-top: $icon-block-size-touch/2 + 1.5rem;
         flex-direction: column;
+        text-align: center;
       }
     }
     &:nth-child(odd) {
       background-color: $white;
     }
+    .title-block-links {
+      align-self: center;
+    }
     .title-block-links > * {
       display: flex;
       flex-direction: column;
-      text-align: right;
       justify-content: flex-end;
-      align-items: flex-end;
+      align-items: center;
       margin-left: $column-gap;
       @include mobile {
         margin-top: 2*$column-gap;
@@ -547,8 +550,8 @@ $icon-block-size-touch: 6rem;
     @include tablet {font-size: 3rem;}
     @include mobile {font-size: 2rem;}
   }
-  .section-subtitle.subtitle {
-    @include mobile {font-size: 1.5rem;}
+  .section-subtitle.subtitle.is-4 {
+    @include mobile {font-size: 1.25rem;}
   }
 }
 
