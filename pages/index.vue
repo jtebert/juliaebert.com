@@ -4,9 +4,16 @@
 <primary-section title="About Me"
   subtitle="Julia Ebert, apprentice robot herder"
   texture="graph-paper">
+  <div slot='links'>
+    <p class="buttons">
+      <icon-button-link to="https://github.com/jtebert" icon='github-circle'></icon-button-link>
+      <icon-button-link to="mailto:julia@juliaebert.com" icon="email"></icon-button-link>
+      <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin"></icon-button-link>
+    </p>
+  </div>
   <div class="block-content content">
     <vue-markdown>
-I am a PhD candidate in computer science at Harvard University. I am a member of the Self-organizing Systems Research group, where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF).
+I am a PhD candidate in computer science at Harvard University. I am a member of the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/), where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF).
     </vue-markdown>
 
     <p><a v-scroll-to="'#cv'">Read my full CV here.</a></p>
@@ -20,7 +27,6 @@ I also care about science communication and outreach. I've spoken to hundreds of
 
 After my PhD, I plan to pursue a career in academic research.
     </vue-markdown>
-
   </div>
   <gallery
     :img-srcs="['march-for-science.jpg', 'self-csgf.jpg', 'curling.jpg']">
@@ -30,6 +36,11 @@ After my PhD, I plan to pursue a career in academic research.
 <primary-section title="CV"
   subtitle="Curriculum Vitae"
   texture="brick-wall">
+  <div slot="links">
+    <p class="buttons">
+      <icon-button-link to="/pdfs/ebert-julia.cv.pdf" icon="file-pdf">View as PDF</icon-button-link>
+    </p>
+  </div>
   <div class="block-content content">
     <cv :isPaper="false"></cv>
   </div>
@@ -68,6 +79,7 @@ After my PhD, I plan to pursue a career in academic research.
 import VueMarkdown from "vue-markdown";
 import PrimarySection from "~/components/PrimarySection.vue";
 import Gallery from "~/components/Gallery.vue";
+import IconButtonLink from "~/components/IconButtonLink.vue";
 import cv from "~/pages/cv.vue";
 import research from "~/pages/research.vue";
 import programming from "~/pages/programming.vue";
@@ -79,6 +91,7 @@ export default {
     VueMarkdown,
     PrimarySection,
     Gallery,
+    IconButtonLink,
     cv,
     research,
     programming,

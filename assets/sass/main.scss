@@ -90,6 +90,9 @@ $column-gap: 0.75rem;
 p a:hover {
     text-decoration: underline;
 }
+a.button:hover {
+  text-decoration: none;
+}
 
 .is-light {
     background: $light;
@@ -222,7 +225,7 @@ p a:hover {
   background-color: #fff !important;
   color: #000 !important;
   font-size: 11px;
-  h1 {
+  h2 {
     font-size: 2em;
     font-family: $family-subtitle;
     color: $primary !important;
@@ -275,6 +278,9 @@ p a:hover {
         cursor: pointer;
         height: 2* $navbar-height;
         z-index: 0;
+        &:hover {
+          @extend .button.is-primary.is-hovered;
+        }
         @include mobile {
           height: $navbar-height;
         }
@@ -372,6 +378,22 @@ p a:hover {
   }
 }
 
+// LAYOUT: SIMPLE (for error pages, zB)
+.simple-layout {
+  .error-title {
+    text-transform: uppercase;
+    font-size: 80px;
+    letter-spacing: 2px;
+    color: $light;
+    @include mobile {
+      font-size: 13vw;
+    }
+  }
+  .subtitle a:hover {
+    border-bottom: 3px solid $primary;
+  }
+}
+
 // COMPONENT : NAVBAR
 // .square-nav {
 //   .navbar-item {
@@ -454,29 +476,49 @@ $icon-block-size-touch: 6rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-left: $icon-block-size / 2;
     padding: 0;
-    padding-top: 3rem;
     overflow: hidden;
     @include tablet-only {
       margin-left: $icon-block-size-touch / 2;
     }
     @include mobile {
       margin-left: 0;
-      padding-top: $icon-block-size-touch/2 + 1.5rem;
     }
   }
 
   .block-content {
-    padding: 0 1.5rem;
-    margin-bottom: $gap;
+    padding: 1.5rem;
+    //margin-bottom: 2*$column-gap;
     @include desktop {
       padding-left: $icon-block-size / 2 + 2rem;
     }
     @include tablet-only {
       padding-left: $icon-block-size-touch / 2 + 1.5rem;
     }
-    @include mobile {
-      &:first-child {
-        padding-top: 0 !important;
+    &.has-title {
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include mobile {
+        padding-top: $icon-block-size-touch/2 + 1.5rem;
+        flex-direction: column;
+      }
+    }
+    &:nth-child(odd) {
+      background-color: $white;
+    }
+    .title-block-links > * {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-left: $column-gap;
+      @include mobile {
+        margin-top: 2*$column-gap;
+        margin-left: 0;
+        align-items: center;
       }
     }
   }
@@ -496,8 +538,8 @@ $icon-block-size-touch: 6rem;
     }
     @include mobile {
       top: -0.5 * $icon-block-size-touch;
-      // left: calc(50% - #{$icon-block-size-touch}/2);
-      left: 3rem;
+      left: calc(50% - #{$icon-block-size-touch}/2);
+      //left: 3rem;
     }
   }
   .title.is-1 {
@@ -517,12 +559,12 @@ $icon-block-size-touch: 6rem;
   flex-direction: column;
 
   &:nth-child(even) {
+    background-color: $white;
     @include tablet {
       flex-direction: row-reverse;
     }
   }
   &:nth-child(odd) {
-    background-color: $white;
     @include tablet {
       flex-direction: row;
     }
@@ -579,5 +621,23 @@ $icon-block-size-touch: 6rem;
     @include touch {
       padding-bottom: 100%;
     }
+  }
+}
+
+// COMPONENT : SQUAREICONLINK
+.square-icon-link {
+  background-color: $primary;
+  color: $white;
+  font-size: 2rem;
+  line-height: 1em;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0 0.5rem 1rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: $white;
+    background-color: $dark;
   }
 }

@@ -12,7 +12,7 @@
         </div>
         <div class="navbar-menu" id="navMenu">
             <scrollactive class="navbar-end" :offset="48">
-                <a class="navbar-item scrollactive-item" href="#about-me">About Me</a>
+                <a class="navbar-item scrollactive-item" href="/#about-me">About Me</a>
                 <a class="navbar-item scrollactive-item" href="#cv">CV</a>
                 <a class="navbar-item scrollactive-item" href="#research">Research</a>
                 <a class="navbar-item scrollactive-item" href="#publications">Publications</a>
