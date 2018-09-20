@@ -54,7 +54,7 @@
             <icon-link
               icon="newspaper"
               :to="'http://news.northeastern.edu/2014/12/juliaebertmarshallscholarship/'">
-              Read Article
+              Read article
             </icon-link>
           </div>
     </project>
@@ -71,7 +71,7 @@
               <icon-link
                 icon="movie"
                 :to="'https://vimeo.com/108164841'">
-                Watch Video
+                Watch video
               </icon-link>
           </div>
     </project>
@@ -94,7 +94,7 @@
               <icon-link
                 icon="newspaper"
                 :to="'http://news.northeastern.edu/2013/04/honors-student-named-goldwater-scholar'">
-                Read Article
+                Read article
               </icon-link>
           </div>
     </project>

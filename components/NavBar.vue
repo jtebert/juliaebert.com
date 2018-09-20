@@ -17,7 +17,7 @@
         </div>
 
         <div class="navbar-menu" id="navMenu" v-if=isOtherPage>
-            <div class="navbar-end" :offset="52">
+            <div class="navbar-end">
               <a v-for="(name, slug) in sectionLinks" :key="slug"
                 :href="'/#'+slug" class="navbar-item">
                 {{ name }}
@@ -25,25 +25,14 @@
             </div>
         </div>
 
-        <scrollactive class="navbar-menu" id="navMenu" v-else>
-            <div class="navbar-end" :offset="52">
+        <scrollactive class="navbar-menu" id="navMenu" :offset="52" v-else>
+            <div class="navbar-end">
               <a v-for="(name, slug) in sectionLinks" :key="slug"
                 :href="'/#'+slug" class="navbar-item scrollactive-item">
                 {{ name }}
               </a>
             </div>
         </scrollactive>
-
-        <!-- <scrollactive class="navbar-menu" id="navMenu">
-            <div class="navbar-end" :offset="52">
-                <a class="navbar-item scrollactive-item" href="/#about-me">About Me</a>
-                <a class="navbar-item scrollactive-item" href="#cv">CV</a>
-                <a class="navbar-item scrollactive-item" href="#research">Research</a>
-                <a class="navbar-item scrollactive-item" href="#publications">Publications</a>
-                <a class="navbar-item scrollactive-item" href="#projects">Projects</a>
-                <a class="navbar-item scrollactive-item" href="#media">Media</a>
-            </div>
-        </scrollactive> -->
 
     </div>
 </div>
