@@ -10,16 +10,16 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu" id="navMenu">
-            <scrollactive class="navbar-end" :offset="48">
+        <scrollactive class="navbar-menu" id="navMenu">
+            <div class="navbar-end" :offset="48">
                 <a class="navbar-item scrollactive-item" href="/#about-me">About Me</a>
                 <a class="navbar-item scrollactive-item" href="#cv">CV</a>
                 <a class="navbar-item scrollactive-item" href="#research">Research</a>
                 <a class="navbar-item scrollactive-item" href="#publications">Publications</a>
                 <a class="navbar-item scrollactive-item" href="#projects">Projects</a>
                 <a class="navbar-item scrollactive-item" href="#media">Media</a>
-            </scrollactive>
-        </div>
+            </div>
+        </scrollactive>
     </div>
 </div>
 </template>

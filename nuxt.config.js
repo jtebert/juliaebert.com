@@ -1,4 +1,14 @@
 module.exports = {
+
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        return { selector: to.hash }
+      } else {
+        return { x: 0, y: 0 }
+      }
+    }
+  },
   /*
   ** Headers of the page
   */
@@ -57,5 +67,5 @@ module.exports = {
   modules: [
     // Simple usage
     // ['nuxt-sass-resources-loader', './assets/sass/variables.scss'],
-  ]
+  ],
 }
