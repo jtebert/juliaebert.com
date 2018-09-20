@@ -1,9 +1,5 @@
 <template>
     <div>
-        <p slot="intro" v-if="!isPaper">
-            <a href="/pdfs/ebert-julia.cv.pdf" class="mdi mdi-file-pdf"> View as PDF</a>
-        </p>
-
         <div v-if=isPaper class="cv-header">
             <img class="logo" src="/imgs/logos/logo-black.svg">
             <div class="name">
