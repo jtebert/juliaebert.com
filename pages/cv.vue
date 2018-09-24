@@ -144,7 +144,7 @@
             <h2>Awards</h2>
             <cv-award
                 date=2018
-                award="Distinction in Teaching Award, Harvard University"
+                award="Distinction in Teaching, Harvard University"
                 ></cv-award>
             <cv-award
                 date=2016
