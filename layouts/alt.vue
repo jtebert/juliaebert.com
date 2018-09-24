@@ -17,7 +17,7 @@
             'programs a swarm.',
             'builds robots.',
             'simulates satellites.',
-            'writes a blog.',
+            //'writes a blog.',
             'makes things.']">
         </vue-typer></no-ssr>
 

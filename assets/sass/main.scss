@@ -287,7 +287,6 @@ a.button:hover {
       #brand-icon {
         background-color: $primary;
         position: fixed;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         padding: 0;
         cursor: pointer;
         height: 2* $navbar-height;
@@ -297,6 +296,9 @@ a.button:hover {
         }
         @include mobile {
           height: $navbar-height;
+        }
+        @include tablet {
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
       }
     }
