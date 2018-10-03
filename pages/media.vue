@@ -1,6 +1,21 @@
 <template>
 <div>
     <project
+      title="Humans control complex objects by exploiting their stability"
+      subtitle="Physics Today">
+        <div slot="content">
+          <p>
+            A short write-up about our <a href="/pdfs/article/2018_chaos.pdf"><i>Chaos</i> paper</a>:
+            "Concepts from dynamical systems help to elucidate the subtle physics of how we move."
+          </p>
+          <icon-link
+            icon="newspaper"
+            to="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20181001a/full/">
+            Read article
+          </icon-link>
+        </div>
+    </project>
+    <project
       :img-src="'/imgs/media/robotstravaganza.jpg'"
       title="Robotstravaganza"
       subtitle="Brains On! Podcast">
@@ -13,7 +28,7 @@
             </p>
             <icon-link
               icon="radio"
-              :to="'https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza'">
+              to="https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza">
               Listen
             </icon-link>
           </div>
@@ -31,7 +46,7 @@
               </p>
               <icon-link
                 icon="movie"
-                :to="'http://www.healthinnovators.tv/detail/videos/innovation-live/video/4651670881001/interview-with-suture-score-nhs-telhack?autoStart=true'">
+                to="http://www.healthinnovators.tv/detail/videos/innovation-live/video/4651670881001/interview-with-suture-score-nhs-telhack?autoStart=true">
                 Watch Video
               </icon-link>
           </div>
@@ -53,7 +68,7 @@
             </p>
             <icon-link
               icon="newspaper"
-              :to="'http://news.northeastern.edu/2014/12/juliaebertmarshallscholarship/'">
+              to="http://news.northeastern.edu/2014/12/juliaebertmarshallscholarship/">
               Read article
             </icon-link>
           </div>
@@ -93,7 +108,7 @@
             </p>
               <icon-link
                 icon="newspaper"
-                :to="'http://news.northeastern.edu/2013/04/honors-student-named-goldwater-scholar'">
+                to="http://news.northeastern.edu/2013/04/honors-student-named-goldwater-scholar">
                 Read article
               </icon-link>
           </div>
