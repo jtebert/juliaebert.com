@@ -5,15 +5,26 @@
         <i v-else :class="['mdi', iconName]"></i>
     </span>
     <span class="citation">
-        <span class="author" v-html="authorsLastFI"></span>
-        <span class="pubtitle" v-html="articleTitle"></span>
-        <span class="booktitle" v-if="json.booktitle" v-html="bookTitle"></span>
-        <span class="organization" v-if="json.organization">, {{ json.organization }}</span>
-        <span class="year" v-if="json.year" v-html="', '+json.year"></span>
-        <span class="pages" v-if="json.pages" v-html="pages"></span>
-        <span class="note" v-if="json.note" v-html="', '+json.note"></span>
-        <span class="addendum" v-if="json.addendum" v-html="addendum">,</span>
-        <span class="address" v-if="json.address">, {{ json.address }}</span>.
+        <span class="author"
+            v-html="authorsFirstLast+'. '"></span>
+        <span class="year"
+            v-if="json.year"
+            v-html="json.year+'. '"></span>
+        <span class="pubtitle"
+            v-html="json.title+'. '"></span>
+        <span class="publisher-info"
+          v-if="pubInfo"
+          v-html="pubInfo">
+        </span>
+        <span class="address"
+            v-if="json.address"
+            v-html="json.address+'. '"></span>
+        <span class="doi"
+            v-if="json.doi"
+            v-html="doi"></span>
+        <span class="note"
+            v-if="json.note"
+            v-html="json.note+'.'"></span>
     </span>
 </p>
 </template>
@@ -37,17 +48,19 @@ export default {
       switch (this.json.type) {
         case "poster":
           return "mdi-file mdi-rotate-90";
-        case "paper":
+        case "article":
+          return "mdi-book";
+        case "inproceedings":
           return "mdi-book";
       }
     },
     file: function() {
       return "/pdfs/" + this.json.type + "/" + this.json.file;
     },
-    authorsLastFI: function() {
+    authorsFirstLast: function() {
       // Produce string of authors in the form: Last, F. M., Last2, F. M., ...
       var authorList = this.json.author;
-      var authorsFormatted = authorList.map(this.authorLastFI);
+      var authorsFormatted = authorList.map(this.authorFirstLast);
       // Highlight any authors that include the specified string by wrapping
       // it in a span with the class "highlight-author" (which can then be formatted
       // with CSS)
@@ -60,27 +73,74 @@ export default {
           authorsFormatted[highlightAuthorInd] +
           "</span>";
       }
-      return authorsFormatted.join(", ");
+      if (authorsFormatted.length > 1) {
+        var lastAuthor = authorsFormatted.pop();
+        return authorsFormatted.join(", ") + " and " + lastAuthor;
+      } else {
+        return authorsFormatted;
+      }
     },
-    articleTitle: function() {
-      return ', "' + this.json.title + '"';
+    pubInfo: function() {
+      // Journal/bookinfo, volume, issue, pages
+      // All comma separated with a period at the end
+      var pubInfoArr = [
+        this.pubLocation,
+        this.json.volume,
+        this.json.number
+      ].filter(n => n);
+      if (this.issueDate) {
+        pubInfoArr[pubInfoArr.length - 1] += " " + this.issueDate;
+      }
+      if (this.pages) {
+        pubInfoArr.push(this.pages);
+      }
+      if (pubInfoArr.length > 0) {
+        return pubInfoArr.join(", ") + ". ";
+      }
     },
-    bookTitle: function() {
-      return ", in <i>" + this.json.booktitle + "</i>";
+    pubLocation: function() {
+      // Book title, conference, journal, etc.
+      if (this.json.booktitle) {
+        var t = `<i>${this.json.booktitle}</i>`;
+        if (this.json.type === "poster") {
+          return "Poster at " + t;
+        } else if (this.json.type === "inproceedings") {
+          return "In " + t;
+        } else {
+          return t;
+        }
+      } else if (this.json.journal) {
+        return `<i>${this.json.journal}</i>`;
+      }
     },
     pages: function() {
-      return ", pp. " + this.json.pages.replace("--", "–");
+      if (this.json.pages) {
+        return this.json.pages.replace("--", "–");
+      }
     },
     date: function() {
-      return this.json.year.replace("--", "–");
+      if (this.json.year) {
+        return this.json.year.replace("--", "–");
+      }
+    },
+    issueDate: function() {
+      if (this.json.issue_date) {
+        return "(" + this.json.issue_date.replace("--", "–") + ")";
+      }
     },
     addendum: function() {
-      return ", " + this.json.addendum.replace("--", "–");
+      if (this.json.addendum) {
+        return this.json.addendum.replace("--", "–");
+      }
+    },
+    doi: function() {
+      var doiUrl = "https://doi.org/" + this.json.doi;
+      return `DOI: <a href="${doiUrl}">${doiUrl}</a>`;
     }
   },
   methods: {
     authorLastFI: function(name) {
-      // Format an input string "Last, First Middles..." as "Last, F. M."
+      // Format an input string "Last, First Middle..." as "Last, F. M."
       // Includes separation at hyphens ("Last, First-Mid" -> "Last, F.-M.")
       var lastName, firstName;
       var authorSplit = name.split(",");
@@ -94,6 +154,12 @@ export default {
         .map(n => n.charAt(0) + ".")
         .join(".-");
       return lastName + " " + firstInitials;
+    },
+    authorFirstLast(name) {
+      var lastName, firstName;
+      var authorSplit = name.split(",");
+      [lastName, firstName] = authorSplit.map(n => n.trim());
+      return firstName + " " + lastName;
     }
   }
 };

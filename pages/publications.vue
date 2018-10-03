@@ -4,7 +4,7 @@
             <h1>Papers</h1>
             <publication-list
                 highlight-author="Ebert"
-                :type-filter="['paper']">
+                :type-filter="['inproceedings', 'article']">
             </publication-list>
 
             <h1>Conference Abstracts and Posters</h1>
