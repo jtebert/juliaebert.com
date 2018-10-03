@@ -105,6 +105,7 @@ export default {
   },
   created() {
     if (process.browser) {
+      this.setOpacity();
       window.addEventListener("scroll", this.setOpacity);
       this.addBurgerToggles();
     }

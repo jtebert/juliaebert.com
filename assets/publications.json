@@ -1,6 +1,6 @@
 {
     "ebert2018aamas": {
-        "type": "paper",
+        "type": "inproceedings",
         "title": "Multi-feature collective decision making robot swarms",
         "author": [
             "Ebert, Julia",
@@ -10,7 +10,7 @@
         "booktitle": "Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems",
         "pages": "1711--1719",
         "year": 2018,
-        "organization": "International Foundation for Autonomous Agents and Multiagent Systems",
+        "organization": "IFAAMAS",
         "file": "2018_aamas.pdf",
         "keywords": [
             "kilobots",
@@ -20,7 +20,7 @@
         ]
     },
     "bazzi2018icra": {
-        "type": "paper",
+        "type": "inproceedings",
         "title": "Stability and Predictability in Dynamically Complex Physical Interactions",
         "author": [
             "Bazzi, Salah",
@@ -39,8 +39,8 @@
         ]
     },
     "bazzi2018chaos": {
-        "type": "paper",
-        "title": "Stability Analysis of Human Movement: Contraction Theory as a New Tool",
+        "type": "article",
+        "title": "Stability and predictability in human control of complex objects",
         "author": [
             "Bazzi, Salah",
             "Ebert, Julia",
@@ -48,7 +48,12 @@
             "Sternad, Dagmar"
         ],
         "year": 2018,
-        "note": "Accepted to <i>Chaos</i>",
+        "journal": "Chaos",
+        "publisher": "American Institute of Physics",
+        "doi": "10.1063/1.5042090",
+        "volume": 28,
+        "number": 10,
+        "file": "2018_chaos.pdf",
         "keywords": [
             "stability",
             "contraction",
@@ -56,13 +61,13 @@
         ]
     },
     "farkhatdinov2018": {
-        "type": "paper",
+        "type": "article",
         "title": "Experiments on Human Balancing Co-Control in Standing",
         "author": [
             "Farkhatdinov, Ildar",
             "Ebert, Julia",
             "van Oort, Geiss",
-            "van Asseldonk, E",
+            "van Asseldonk, Edwin",
             "Burdet, Etienne"
         ],
         "year": 2018,
@@ -74,7 +79,7 @@
         ]
     },
     "park2018": {
-        "type": "paper",
+        "type": "article",
         "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
         "author": [
             "Park, Se-Woong",
@@ -98,7 +103,8 @@
         ],
         "year": "2018",
         "address": "Livermore, CA",
-        "addendum": "Poster at: <i>Lawrence Livermore National Laboratory Summer Student Poster Symposium,</i> 8 August 2018",
+        "booktitle": "Lawrence Livermore National Laboratory Summer Student Poster Symposium",
+        "issue_date": "8 August 2018",
         "keywords": [
             "satellites"
         ],
@@ -114,7 +120,8 @@
         ],
         "year": 2018,
         "address": "Washington, DC",
-        "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 15--19 July 2018",
+        "booktitle": "DOE CSGF Program Review",
+        "issue_date": "15--19 July 2018",
         "keywords": [
             "kilobots",
             "decision making",
@@ -134,7 +141,8 @@
         ],
         "year": 2018,
         "address": "Washington, DC",
-        "addendum": "Poster at: <i>DOE CSGF Program Review,</i> 24--27 July 2017",
+        "booktitle": "DOE CSGF Program Review",
+        "issue_date": "24--27 July 2017",
         "keywords": [
             "collective behavior"
         ],
@@ -147,12 +155,13 @@
             "Farkhatdinov, Ildar",
             "Ebert, Julia",
             "van Oort, Geiss",
-            "van Asseldonk, E",
+            "van Asseldonk, Edwin",
             "Burdet, Etienne"
         ],
         "year": 2017,
         "address": "London, UK",
-        "addendum": "Extended abstract and poster at: <i>RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy,</i> 17 July 2017",
+        "booktitle": "RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy",
+        "issue_date": "17 July 2017",
         "keywords": [
             "human robot interaction",
             "control",
@@ -165,13 +174,14 @@
         "author": [
             "Ebert, Julia",
             "Farkhatdinov, Ildar",
-            "van Oort, G",
-            "van Asseldonk, E",
+            "van Oort, Geiss",
+            "van Asseldonk, Edwin",
             "Burdet, Etienne"
         ],
         "year": 2016,
         "address": "London, UK",
-        "addendum": "Work in progress paper and poster at: <i>EuroHaptics 2016,</i> 4--7 July 2016",
+        "booktitle": "EuroHaptics 2016",
+        "issue_date": "4--7 July 2016",
         "keywords": [
             "human robot interaction",
             "control",
@@ -190,7 +200,8 @@
         ],
         "year": 2016,
         "address": "Mt. Sterling, OH",
-        "addendum": "Poster at: <i>Biomechanics and Neural Control of Movement 2016,</i> 12--17 June 2016",
+        "booktitle": "Biomechanics and Neural Control of Movement 2016",
+        "issue_date": "12--17 June 2016",
         "keywords": [
             "contraction",
             "stability",
@@ -207,7 +218,8 @@
         ],
         "year": 2015,
         "address": "Charleston, SC",
-        "addendum": "Poster at: <i>Society for the Neural Control of Movement 25th Annual Meeting,</i> 20--24 April 2015",
+        "booktitle": "Society for the Neural Control of Movement 25th Annual Meeting",
+        "issue_date": "20--24 April 2015",
         "keywords": [
             "motor learning",
             "bimanual"
@@ -225,7 +237,8 @@
         ],
         "year": 2015,
         "address": "Boston, MA",
-        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 9 April 2015",
+        "booktitle": "Northeastern University Research, Innovation, and Scholarship Expo (RISE)",
+        "issue_date": "9 April 2015",
         "keywords": [
             "contraction",
             "stability",
@@ -243,7 +256,8 @@
         ],
         "year": 2014,
         "address": "Amsterdam, NL",
-        "addendum": "Poster at: <i>Society for the Neural Control of Movement 24th Annual Meeting,</i> 20--25 April 2014",
+        "booktitle": "Society for the Neural Control of Movement 24th Annual Meeting",
+        "issue_date": "20--25 April 2014",
         "keywords": [
             "motor learning",
             "dimensionality reduction"
@@ -260,7 +274,8 @@
         ],
         "year": 2014,
         "address": "Boston, MA",
-        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 10 April 2014",
+        "booktitle": "Northeastern University Research, Innovation, and Scholarship Expo (RISE)",
+        "issue_date": "10 April 2014",
         "keywords": [
             "motor learning",
             "bimanual"
@@ -277,7 +292,8 @@
         ],
         "year": 2013,
         "address": "Biddeford, ME",
-        "addendum": "Poster at: <i>Northeast Undergraduate Research and Development Symposium,</i> 2--3 March 2013",
+        "booktitle": "Northeast Undergraduate Research and Development Symposium",
+        "issue_date": "2--3 March 2013",
         "keywords": [
             "motor learning",
             "bimanual"
@@ -296,7 +312,8 @@
         ],
         "year": 2012,
         "address": "Boston, MA",
-        "addendum": "Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE),</i> 29 March 2012",
+        "booktitle": "Northeastern University Research, Innovation, and Scholarship Expo (RISE)",
+        "issue_date": "29 March 2012",
         "keywords": [
             "motor control"
         ],
@@ -310,7 +327,7 @@
         ],
         "year": 2018,
         "address": "University of Queensland",
-        "addendum": "14 May 2018"
+        "issue_date": "14 May 2018"
     },
     "ebert2017wyss": {
         "type": "talk",
@@ -322,6 +339,6 @@
         ],
         "year": 2017,
         "address": "Wyss Institute Molecular Robotics Initiative",
-        "addendum": "14 September, 2017"
+        "issue_date": "14 September 2017"
     }
 }

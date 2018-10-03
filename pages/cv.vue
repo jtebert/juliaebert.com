@@ -182,7 +182,7 @@
             <h2 v-if=isPaper>Papers</h2>
             <publication-list v-if=isPaper
                 highlight-author="Ebert"
-                :type-filter="['paper']"
+                :type-filter="['inproceedings', 'article']"
                 :showLinks="false">
             </publication-list>
 
