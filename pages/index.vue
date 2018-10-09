@@ -18,18 +18,19 @@ I am a PhD candidate in computer science at Harvard University. I am a member of
 
     <p><a v-scroll-to="'#cv'">Read my full CV here.</a></p>
 
-    <vue-markdown>
-I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots.
+    <vue-markdown :html="true">
+I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological learning to improve the collective behavior of robots. After my PhD, I plan to pursue a career in academic research.
 
-In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group. Now, I am developing methods to make it easier to create and understand complex swarm behavior -- imagine map reduce for robots.
+In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group.
 
 I also care about science communication and outreach. I've spoken to hundreds of kids about robotics, and this fall I am giving a public talk on robotics through Harvard's Science in the News lecture series.
 
-After my PhD, I plan to pursue a career in academic research.
+In my free time, I play for the [Harvard curling team](http://harvardcurling.com/), bake [awesome cinnamon rolls](http://lazybaker.juliaebert.com/), and [make useless things](#projects).
+
     </vue-markdown>
   </div>
   <gallery
-    :img-srcs="['march-for-science.jpg', 'self-csgf.jpg', 'curling.jpg']">
+    :img-srcs="['march-for-science.jpg', 'project_night_four_web.jpg', 'curling.jpg']">
   </gallery>
 </primary-section>
 

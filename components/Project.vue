@@ -11,7 +11,7 @@
         <h1 class="title is-4">{{ title }}</h1>
         <h4 class="subtitle is-6" v-if="subtitle">{{ subtitle }}</h4>
 
-        <div class="content"><slot name="content"></slot></div>
+        <div class="content"><slot></slot></div>
 
         <div v-if="this.$slots.links"></div>
 
@@ -32,9 +32,9 @@ export default {
     mobileImgSrc: String,
     title: String,
     subtitle: String,
-    isMockup: {type: Boolean, default: false},
-    isPadded: {type: Boolean, default: false},
-    isCover: {type: Boolean, default: false}
+    isMockup: { type: Boolean, default: false },
+    isPadded: { type: Boolean, default: false },
+    isCover: { type: Boolean, default: false }
   },
   components: {
     Mockup

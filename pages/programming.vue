@@ -5,7 +5,7 @@
     img-src="/imgs/programming/lazy-baker-mockup-desktop.png"
     mobile-img-src="/imgs/programming/lazy-baker-mockup-mobile.png"
     title="Lazy Baker">
-    <div slot="content">
+    <div>
       <tags tags="Python, Django, Wagtail CMS"></tags>
       <p>
 It's cookbook-style recipe website using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings.
@@ -29,7 +29,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     img-src="/imgs/programming/owen-tribune-mockup-desktop.png"
     mobile-img-src="/imgs/programming/owen-tribune-mockup-mobile.png"
     title="The Owen Tribune">
-    <div slot="content">
+    <div>
       <tags tags="Python, Django"></tags>
       <p>
         A satirical fake news website, styled after the New York Times
@@ -53,7 +53,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     img-src="/imgs/programming/jekyll-polymer-mockup-desktop.png"
     mobile-img-src="/imgs/programming/jekyll-polymer-mockup-mobile.png"
     title="Jekyll Polymer">
-    <div slot="content">
+    <div>
       <tags tags="HTML, JavaScript, Jekyll, Google Polymer"></tags>
       <p>
         This project combines the static website generation of Jekyll
@@ -76,7 +76,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
   <project is-cover
     img-src="/imgs/programming/suture-score.jpg"
     title="Suture Score">
-    <div slot="content">
+    <div>
       <tags tags="Python, Ruby, Matlab, JavaScript"></tags>
       <p>
         Suture Score is an application to provide instant, objective
@@ -102,7 +102,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
   <project is-mockup
     :img-src="'/imgs/programming/sciencebait-mockup-desktop.png'"
     title="Science Clickbait">
-    <div slot="content">
+    <div>
       <tags tags="Python, Django"></tags>
       <p><i>"Paul Erdös Warned Us About Amino Acids, But Look What's Happening Now."</i></p>
       <p><i>"These Facts About Surface-Wave Tomography Will Change the Way You Look at Deformations in the Space-Time Continuum Forever."</i></p>
@@ -133,7 +133,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
     :img-src="'/imgs/programming/vroom_logo_alt.png'"
     img-align="right"
     title="VROOM: Vacuum Robot Overcoming Obstacles and Messes">
-    <div slot="content">
+    <div>
       <tags tags="Python"></tags>
       <p>
         VROOM was a final project for an artificial intelligence course.
@@ -154,7 +154,7 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
   <project is-mockup
     :img-src="'/imgs/programming/blurber-mockup.png'"
     title="Blurber">
-    <div slot="content">
+    <div>
       <tags tags="Python"></tags>
       <p>
         Blurber is a web app to create fake book blurbs. Using the
