@@ -37,14 +37,7 @@
       title="Cooperative Exoskeleton Control for Human Balance Recovery"
       subtitle="Advisors: Prof. Etienne Burdet and Dr. Ildar Farkhatdinov, Imperial College London">
       <p>
-        Maintaining balance in the face of perpurbations is essential to walking
-        and standing. For my masters thesis, I developed controls for LOPES
-        (LOwer-extremity Powered ExoSkeleton, University of Twente) to assist
-        humans with balance recovery after perturbations, using a combination of
-        feed-forward and feedback control (such as hip torques and a PD
-        controller). We found that even simple, single-joint torques are
-        sufficient to reduce the time to a recovery movement and the energy used
-        by subjects in recovery.
+        Maintaining balance in the face of perpurbations is essential to walking and standing. For my masters thesis, I developed controls for LOPES (LOwer-extremity Powered ExoSkeleton, University of Twente) to assist humans with balance recovery after perturbations, using a combination of feed-forward and feedback control (such as hip torques and a PD controller). We found that even simple, single-joint torques are sufficient to reduce the time to a recovery movement and the energy used by subjects in recovery.
       </p>
       <div slot="results">
         <publication-list
@@ -77,18 +70,11 @@
       subtitle="Advisor: Prof. Dagmar Sternad, Northeastern University">
       <div>
         <p>
-          Participants were asked to perform a task in which one arm is moved
-          rhythmically while the other makes fast, discrete movements when cued.
-          Over 20 sessions of practice, participants learned the task
-          asymmetrically: while they learned to make much faster discrete
-          movements, they failed to attenuate the perturbation these discrete
-          movements caused in the rhythmic arm. After 6 months, subjects retained
-          the skills they learned, including the asymmetry.
+          Participants were asked to perform a task in which one arm is moved rhythmically while the other makes fast, discrete movements when cued.
+          Over 20 sessions of practice, participants learned the task asymmetrically: while they learned to make much faster discrete movements, they failed to attenuate the perturbation these discrete movements caused in the rhythmic arm. After 6 months, subjects retained the skills they learned, including the asymmetry.
         </p>
         <p>
-          I proposed this research in my application the Barry Goldwater
-          Scholarship and conducted the work for my undergraduate honors thesis.
-          It was also funded by two Provost Undergraduate Research Awards.
+          I proposed this research in my application the Barry Goldwater Scholarship and conducted the work for my undergraduate honors thesis. It was also funded by two Provost Undergraduate Research Awards.
         </p>
       </div>
         <div slot="results">
