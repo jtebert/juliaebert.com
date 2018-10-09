@@ -3,7 +3,7 @@
     <project
       title="Humans control complex objects by exploiting their stability"
       subtitle="Physics Today">
-        <div slot="content">
+        <div>
           <p>
             A short write-up about our <a href="/pdfs/article/2018_chaos.pdf"><i>Chaos</i> paper</a>:
             "Concepts from dynamical systems help to elucidate the subtle physics of how we move."
@@ -19,7 +19,7 @@
       :img-src="'/imgs/media/robotstravaganza.jpg'"
       title="Robotstravaganza"
       subtitle="Brains On! Podcast">
-          <div slot="content">
+          <div>
             <p>
               I was a guest on a live show of Brains On! (a science
               podcast for kids) at the Cambridge Science Festival.
@@ -38,7 +38,7 @@
       img-align="right"
       title="Interview at TELHack NHS Hackathon"
       subtitle="Health Innovators TV">
-          <div slot="content">
+          <div>
               <p>
                 "TELHack innovators speak about the inspiration behind
                 their idea, challenges along the way and how their
@@ -55,7 +55,7 @@
       :img-src="'/imgs/media/marshall_1.jpg'"
       title="Honors Student Wins Marshall Scholarship"
       subtitle="Northeastern News, 5 December 2014">
-          <div slot="content">
+          <div>
             <p>
               "Julia Ebert, S’15, has won a Marshall Scholarship to
               pursue a one-​​year master’s of research in bioengineering
@@ -78,7 +78,7 @@
       img-align="right"
       title="Stories to Inspire: Julia Ebert"
       subtitle="Northeastern University Scholars Program">
-          <div slot="content">
+          <div>
             <p>
               "Behavioral neuroscience student and Goldwater Scholar,
               Julia Ebert, discusses her research."
@@ -94,7 +94,7 @@
       :img-src="'/imgs/media/goldwater.jpg'"
       title="Honors Student Named Goldwater Scholar"
       subtitle="Northeastern News, 24 April 2013">
-          <div slot="content">
+          <div>
             <p>
               "Julia Ebert, a third-​​year behavioral neuroscience major,
               has been awarded a prestigious Barry M. Goldwater

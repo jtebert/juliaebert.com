@@ -247,6 +247,10 @@
                 award="Tutor team leader, TechBoston Academy"
                 ></cv-award>
             <cv-award
+                date="2014"
+                award='Teacher, NEU Splash Program (Class: "This is your Brain")'
+                ></cv-award>
+            <cv-award
                 date="2011 -- 2013"
                 award="Volunteer, Brigham and Women's Hospital"
                 ></cv-award>
