@@ -2,11 +2,10 @@
 <div>
     <project
       title="Humans control complex objects by exploiting their stability"
-      subtitle="Physics Today">
+      subtitle="Physics Today, 1 October 2018">
         <div>
           <p>
-            A short write-up about our <a href="/pdfs/article/2018_chaos.pdf"><i>Chaos</i> paper</a>:
-            "Concepts from dynamical systems help to elucidate the subtle physics of how we move."
+            A short write-up about our <a href="/pdfs/article/2018_chaos.pdf"><i>Chaos</i> paper</a>: "Concepts from dynamical systems help to elucidate the subtle physics of how we move."
           </p>
           <icon-link
             icon="newspaper"
@@ -16,15 +15,12 @@
         </div>
     </project>
     <project
-      :img-src="'/imgs/media/robotstravaganza.jpg'"
+      img-src="/imgs/media/robotstravaganza.jpg"
       title="Robotstravaganza"
       subtitle="Brains On! Podcast">
           <div>
             <p>
-              I was a guest on a live show of Brains On! (a science
-              podcast for kids) at the Cambridge Science Festival.
-              I showed off my LARVAbots and talked about bioinspired
-              collective robotics.
+              I was a guest on a live show of Brains On! (a science podcast for kids) at the Cambridge Science Festival. I showed off my LARVAbots and talked about bioinspired collective robotics.
             </p>
             <icon-link
               icon="radio"
@@ -34,15 +30,13 @@
           </div>
     </project>
     <project
-      :img-src="'/imgs/media/health-innovators.png'"
+      img-src="/imgs/media/health-innovators.png"
       img-align="right"
       title="Interview at TELHack NHS Hackathon"
       subtitle="Health Innovators TV">
           <div>
               <p>
-                "TELHack innovators speak about the inspiration behind
-                their idea, challenges along the way and how their
-                innovation will help improve patient care."
+                "TELHack innovators speak about the inspiration behind their idea, challenges along the way and how their innovation will help improve patient care."
               </p>
               <icon-link
                 icon="movie"
@@ -52,19 +46,15 @@
           </div>
     </project>
     <project is-cover
-      :img-src="'/imgs/media/marshall_1.jpg'"
+      img-src="/imgs/media/marshall_1.jpg"
       title="Honors Student Wins Marshall Scholarship"
       subtitle="Northeastern News, 5 December 2014">
           <div>
             <p>
-              "Julia Ebert, S’15, has won a Marshall Scholarship to
-              pursue a one-​​year master’s of research in bioengineering
-              at Imperial College London starting in the fall.</p>
+              "Julia Ebert, S’15, has won a Marshall Scholarship to pursue a one-​​year master’s of research in bioengineering at Imperial College London starting in the fall.
+            </p>
             <p>
-              Founded by the British government in 1953 to commemorate
-              the Marshall Plan, the post­graduate scholarship allows up
-              to 40 intellectually distinguished American students to
-              study in the United Kingdom each year."
+              "Founded by the British government in 1953 to commemorate the Marshall Plan, the post­graduate scholarship allows up to 40 intellectually distinguished American students to study in the United Kingdom each year."
             </p>
             <icon-link
               icon="newspaper"
@@ -74,14 +64,13 @@
           </div>
     </project>
     <project is-cover
-      :img-src="'/imgs/media/research_video_small.png'"
+      img-src="/imgs/media/research_video_small.png"
       img-align="right"
       title="Stories to Inspire: Julia Ebert"
       subtitle="Northeastern University Scholars Program">
           <div>
             <p>
-              "Behavioral neuroscience student and Goldwater Scholar,
-              Julia Ebert, discusses her research."
+              "Behavioral neuroscience student and Goldwater Scholar, Julia Ebert, discusses her research."
             </p>
               <icon-link
                 icon="movie"
@@ -91,20 +80,12 @@
           </div>
     </project>
     <project is-cover
-      :img-src="'/imgs/media/goldwater.jpg'"
+      img-src="/imgs/media/goldwater.jpg"
       title="Honors Student Named Goldwater Scholar"
       subtitle="Northeastern News, 24 April 2013">
           <div>
             <p>
-              "Julia Ebert, a third-​​year behavioral neuroscience major,
-              has been awarded a prestigious Barry M. Goldwater
-              Scholarship. The merit-​​based scholarship is awarded
-              annually to 300 college sophomores and juniors nationwide
-              who are studying science, engineering, or mathematics.
-              Scholarship nominees must demonstrate prior experience in
-              a research setting and submit a proposal to the Foundation
-              Board of Trustees based on work that has advanced their
-              field of study and furthered their career objectives."
+              "Julia Ebert, a third-​​year behavioral neuroscience major, has been awarded a prestigious Barry M. Goldwater Scholarship. The merit-​​based scholarship is awarded annually to 300 college sophomores and juniors nationwide who are studying science, engineering, or mathematics. Scholarship nominees must demonstrate prior experience in a research setting and submit a proposal to the Foundation Board of Trustees based on work that has advanced their sfield of study and furthered their career objectives."
             </p>
               <icon-link
                 icon="newspaper"

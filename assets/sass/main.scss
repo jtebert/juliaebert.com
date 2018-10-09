@@ -577,6 +577,15 @@ $icon-block-size-touch: 6rem;
   display: flex;
   flex-direction: column;
 
+  &.no-image {
+    .section-image {
+      width: 0;
+    }
+    .section-content {
+      width: 100%;
+    }
+  }
+
   &:nth-child(even) {
     background-color: $white;
     @include tablet {

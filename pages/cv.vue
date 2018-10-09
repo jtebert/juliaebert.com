@@ -298,7 +298,7 @@
             <cv-skill
                 category="Mathematics"
                 :skills="[
-                    'Biological Signal Processing', 'Statistics and Data Analysis',
+                    'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
                     'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
                 ></cv-skill>
 

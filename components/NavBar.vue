@@ -46,7 +46,7 @@ var sectionNames = [
   "CV",
   "Research",
   "Publications",
-  "Projects",
+  "Side Projects",
   "Media"
 ];
 

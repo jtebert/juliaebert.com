@@ -1,5 +1,5 @@
 <template>
-<div class="project-section scroll-section">
+<div :class="['project-section', 'scroll-section', {'no-image': !imgSrc}]">
     <div v-if=isMockup class="section-image">
       <mockup :imgSrc=imgSrc
               :mobileImgSrc=mobileImgSrc></mockup>
@@ -41,6 +41,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
