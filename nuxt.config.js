@@ -17,7 +17,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Julia Ebert&apos;s personal website' },
+      { hid: 'description', name: 'description', content: "Julia Ebert, apprentice robot herder. PhD candidate at Harvard University researching collective robotics." },
       { name: 'msapplication-TileColor', content: "#03bc25" },
       { name: 'theme-color', content: '#03bc25' }
     ],

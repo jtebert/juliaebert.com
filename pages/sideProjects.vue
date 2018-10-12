@@ -196,7 +196,6 @@ export default {
     VueMarkdown,
     Project,
     Project
-  },
-  layout: "alt"
+  }
 };
 </script>

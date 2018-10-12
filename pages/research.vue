@@ -33,7 +33,7 @@
     </project>
 
     <project
-      img-src="/imgs/research/lopes_ii.png"
+      video-src="/video/research/lopes.mp4"
       title="Cooperative Exoskeleton Control for Human Balance Recovery"
       subtitle="Advisors: Prof. Etienne Burdet and Dr. Ildar Farkhatdinov, Imperial College London">
       <p>
