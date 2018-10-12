@@ -1,10 +1,18 @@
 <template>
-<div :class="['project-section', 'scroll-section', {'no-image': !imgSrc}]">
+<div :class="['project-section', 'scroll-section', {'no-image': imgless}]">
     <div v-if=isMockup class="section-image">
       <mockup :imgSrc=imgSrc
               :mobileImgSrc=mobileImgSrc></mockup>
     </div>
-    <div v-else-if=isCover class="section-image is-cover"><img :src=imgSrc is-cover></div>
+    <div v-else-if="isCover&&imgSrc" class="section-image is-cover">
+      <img :src=imgSrc is-cover>
+    </div>
+    <div v-else-if=videoSrc :class="['section-image', {'is-cover': isCover}]">
+      <video loop autoplay muted :class="{'is-cover': isCover}">
+        <source :src=videoSrc type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <img v-else :class="['section-image', {'is-padded': isPadded}]" :src=imgSrc>
 
     <div class="section-content">
@@ -29,12 +37,18 @@ import Mockup from "~/components/Mockup.vue";
 export default {
   props: {
     imgSrc: String,
+    videoSrc: String,
     mobileImgSrc: String,
     title: String,
     subtitle: String,
     isMockup: { type: Boolean, default: false },
     isPadded: { type: Boolean, default: false },
     isCover: { type: Boolean, default: false }
+  },
+  computed: {
+    imgless: function() {
+      return !(this.imgSrc || this.videoSrc);
+    }
   },
   components: {
     Mockup

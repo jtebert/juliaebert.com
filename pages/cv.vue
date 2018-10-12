@@ -108,74 +108,57 @@
             ></cv-entry>
 
             <h2>Grants and Scholarships</h2>
-            <cv-award
-                date=2016
+            <cv-award date=2016
                 award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Marshall Scholarship"
                 ></cv-award>
-            <cv-award
-                date=2014
+            <cv-award date=2014
                 award="Northeastern Provost Undergraduate Advanced Research Award"
                 ></cv-award>
-            <cv-award
-                date=2013
+            <cv-award date=2013
                 award="Barry Goldwater Scholarship"
                 ></cv-award>
-            <cv-award
-                date=2013
+            <cv-award date=2013
                 award="Northeastern Provost Undergraduate Research Award"
                 ></cv-award>
-            <cv-award
-                date=2013
+            <cv-award date=2013
                 award="DAAD Undergraduate Scholarship"
                 ></cv-award>
-            <cv-award
-                date=2013
+            <cv-award date=2013
                 award="Northeastern Presidential Global Scholarship"
                 ></cv-award>
-            <cv-award
-                date=2010
+            <cv-award date=2010
                 award="Northeastern National Merit Scholarship"
                 ></cv-award>
 
             <h2>Awards</h2>
-            <cv-award
-                date=2018
+            <cv-award date=2018
                 award="Distinction in Teaching, Harvard University"
                 ></cv-award>
-            <cv-award
-                date=2016
+            <cv-award date=2016
                 award="Finalist, Hertz Fellowship"
                 ></cv-award>
-            <cv-award
-                date=2016
+            <cv-award date=2016
                 award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Northeastern University Honors Program Distinction"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Northeastern Honors in Behavioral Neuroscience"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Northeastern Sears B. Condit Award for academic achievement"
                 ></cv-award>
-            <cv-award
-                date="2010 -- 2015"
+            <cv-award date="2010 -- 2015"
                 award="Northeastern Dean’s List (6 semesters)"
                 ></cv-award>
-            <cv-award
-                date=2015
+            <cv-award date=2015
                 award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"
                 ></cv-award>
 
@@ -302,6 +285,22 @@
                     'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
                 ></cv-skill>
 
+            <h2>Activities and Interests</h2>
+            <cv-skill
+                category='Sport'
+                :skills="[
+                    'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
+                ></cv-skill>
+            <cv-skill
+                category="Music"
+                :skills="[
+                    'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
+                ></cv-skill>
+            <cv-skill
+                category='Other'
+                :skills="[
+                    'Web design and development', 'Graphic design', 'Writing', 'Baking']"
+                ></cv-skill>
         </div>
     </div>
 

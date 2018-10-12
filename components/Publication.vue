@@ -1,7 +1,7 @@
 <template>
 <p :class="['publication', {'has-download': showLink}]">
     <span class="download-link" v-if=showLink>
-        <a v-if="json.file" :class="['mdi', iconName]" :href=file></a>
+        <a v-if="json.file" title="View" :class="['mdi', iconName]" :href=file></a>
         <i v-else :class="['mdi', iconName]"></i>
     </span>
     <span class="citation">
@@ -52,6 +52,8 @@ export default {
           return "mdi-book";
         case "inproceedings":
           return "mdi-book";
+        default:
+          return "mdi-download";
       }
     },
     file: function() {

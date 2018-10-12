@@ -4,11 +4,11 @@
 <primary-section title="About Me"
   subtitle="Julia Ebert, apprentice robot herder"
   texture="graph-paper">
-  <div slot='links'>
+  <div slot='links'>p
     <p class="buttons">
-      <icon-button-link to="https://github.com/jtebert" icon='github-circle'></icon-button-link>
-      <icon-button-link to="mailto:julia@juliaebert.com" icon="email"></icon-button-link>
-      <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin"></icon-button-link>
+      <icon-button-link to="https://github.com/jtebert" icon='github-circle' title="GitHub"></icon-button-link>
+      <icon-button-link to="mailto:julia@juliaebert.com" icon="email" title="Email"></icon-button-link>
+      <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin" title="LinkedIn"></icon-button-link>
     </p>
   </div>
   <div class="block-content content">
@@ -119,7 +119,7 @@ export default {
     publications,
     media
   },
-  layout: "alt"
+  layout: "default"
 };
 </script>
 
