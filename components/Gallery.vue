@@ -1,10 +1,11 @@
 <template>
 <div class="gallery">
-    <img v-for="(imgSrc, id) in imgSrcs"
-    :key="`img-${id}`"
-    :style="{ 'background-image': 'url(' + imgDir + '/' + imgSrc + ')' }">
+  <div v-for="(imgSrc, id) in imgSrcs" class="img-holder"
+      :key="`img-${id}`"
+      :style="{ 'background-image': 'url(' + imgDir + '/' + imgSrc + ')' }">
+      <span class="caption-source">Olivia Nie/SEAS Communications</span>
+  </div>
 </div>
-<!-- :src="imgDir+'/'+imgSrc" -->
 
 </template>
 

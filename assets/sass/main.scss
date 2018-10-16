@@ -640,14 +640,26 @@ $icon-block-size-touch: 6rem;
   //   grid-template-columns: repeat(2, 1fr);
   // }
   grid-gap: -1px;
-  img {
+  .img-holder {
     width: 100%;
     padding-bottom: 75%;  // 4:3
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     @include touch {
       padding-bottom: 100%;
+    }
+    .caption-source {
+      font-size: 0.65rem;
+      font-weight: 500;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: $light;
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 0.25em 0.75em;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
     }
   }
 }
