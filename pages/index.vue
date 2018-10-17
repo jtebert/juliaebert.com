@@ -4,7 +4,7 @@
 <primary-section title="About Me"
   subtitle="Julia Ebert, apprentice robot herder"
   texture="graph-paper">
-  <div slot='links'>p
+  <div slot='links'>
     <p class="buttons">
       <icon-button-link to="https://github.com/jtebert" icon='github-circle' title="GitHub"></icon-button-link>
       <icon-button-link to="mailto:julia@juliaebert.com" icon="email" title="Email"></icon-button-link>
@@ -30,7 +30,11 @@ In my free time, I play for the [Harvard curling team](http://harvardcurling.com
     </vue-markdown>
   </div>
   <gallery
-    :img-srcs="['march-for-science.jpg',  'curling.jpg','project_night_four_web.jpg']">
+    :img-srcs="[
+      'march-for-science.jpg',
+      'curling.jpg',
+      ['project_night_four_web.jpg', 'Olivia Nie/SEAS Communications']
+      ]">
   </gallery>
 </primary-section>
 
