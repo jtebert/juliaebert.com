@@ -2,8 +2,8 @@
 <div class="gallery">
   <div v-for="(imgSrc, id) in imgSrcs" class="img-holder"
       :key="`img-${id}`"
-      :style="{ 'background-image': 'url(' + imgDir + '/' + imgSrc + ')' }">
-      <span class="caption-source">Olivia Nie/SEAS Communications</span>
+      :style="{ 'background-image': 'url(' + imgDir + '/' + img(imgSrc) + ')' }">
+      <span v-if="caption(imgSrc)" class="caption-source">Olivia Nie/SEAS Communications</span>
   </div>
 </div>
 
@@ -16,6 +16,20 @@ export default {
     imgDir: {
       type: String,
       default: "/imgs"
+    }
+  },
+  methods: {
+    img: function(imgSrc) {
+      if (Array.isArray(imgSrc)) {
+        return imgSrc[0];
+      } else {
+        return imgSrc;
+      }
+    },
+    caption: function(imgSrc) {
+      if (Array.isArray(imgSrc)) {
+        return imgSrc[1];
+      }
     }
   }
 };
