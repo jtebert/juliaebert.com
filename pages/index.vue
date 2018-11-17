@@ -23,7 +23,7 @@ I am interested in biology, learning, robotics, and the interface between them, 
 
 In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group.
 
-I also care about science communication and outreach. I've spoken to hundreds of kids about robotics, and this fall I am giving a public talk on robotics through Harvard's Science in the News lecture series.
+I also care about science communication and outreach. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
 
 In my free time, I play for the [Harvard curling team](http://harvardcurling.com/), bake [awesome cinnamon rolls](http://lazybaker.juliaebert.com/), and [make fun things](#side-projects).
 
