@@ -184,7 +184,12 @@
                 highlight-author="Ebert"
                 :type-filter="['talk']"
                 :showLinks="false">
-            </publication-list> -->
+            </publication-list>
+            - UQ lecture
+            - CS 189 guest lecture
+            - AAMAS 2018?
+            - Wyss molecular robotics
+            -->
 
             <h2>Teaching</h2>
             <cv-entry
@@ -211,6 +216,14 @@
             <h2>Outreach and Service</h2>
             <cv-award
                 date="2018"
+                award="Robot Design Judge, FIRST LEGO League Newton Qualifier"
+                ></cv-award>
+            <cv-award
+                date="2018"
+                award='Speaker, Science in the News fall lecture series: "Brains and Bodies: How to Make Smart Robots"'
+                ></cv-award>
+            <cv-award
+                date="2018"
                 award="Guest, <i>Brains On!</i> science podcast live show"
                 ></cv-award>
             <cv-award
@@ -231,7 +244,7 @@
                 ></cv-award>
             <cv-award
                 date="2014"
-                award='Teacher, NEU Splash Program (Class: "This is your Brain")'
+                award='Teacher, NEU Splash Program. Class: "This is your Brain"'
                 ></cv-award>
             <cv-award
                 date="2011 -- 2013"

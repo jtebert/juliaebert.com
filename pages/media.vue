@@ -1,21 +1,44 @@
 <template>
 <div>
-    <project
-      title="Humans control complex objects by exploiting their stability"
-      subtitle="Physics Today, 1 October 2018">
+    <project is-cover
+      img-src="/imgs/media/smart-robots.png"
+      title="Brains and Bodies: How to Make Smart Robots"
+      subtitle="Science in the News fall lecture series, 14 November 2018">
         <div>
           <p>
-            A short write-up about our <a href="/pdfs/article/2018_chaos.pdf"><i>Chaos</i> paper</a>: "Concepts from dynamical systems help to elucidate the subtle physics of how we move."
+            Together with Buse Atkaş, I gave a public lecture on robotics. We covered what it means for a robot to be smart, and how we can use different techniques from mechanics, biology, and learning, and collaboration to build better robots.
+          </p>
+          <p>
+            A video of the lecture will be available soon at the link below!
           </p>
           <icon-link
-            icon="newspaper"
-            to="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20181001a/full/">
-            Read article
+            icon="link"
+            to="http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/">
+            See more
           </icon-link>
         </div>
     </project>
     <project
-      img-src="/imgs/media/robotstravaganza.jpg"
+      title="Humans control complex objects by exploiting their stability"
+      subtitle="Physics Today and Scilight, 1 October 2018">
+        <div>
+          <p>
+            Our <a href="/pdfs/article/2018_chaos.pdf">paper on stability in human movement</a> was an editor's pick in <i>Chaos</i> and was featured by Scilight and Physics Today.
+          </p>
+          <icon-link
+            icon="atom"
+            to="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20181001a/full/">
+            Read Physics Today article
+          </icon-link>
+          <icon-link
+            icon="newspaper"
+            to="https://aip.scitation.org/doi/full/10.1063/1.5063585">
+            Read Scilight article
+          </icon-link>
+        </div>
+    </project>
+    <project is-cover
+      img-src="/imgs/media/robotstravaganza.png"
       title="Robotstravaganza"
       subtitle="Brains On! Podcast">
           <div>
@@ -31,7 +54,6 @@
     </project>
     <project
       img-src="/imgs/media/health-innovators.png"
-      img-align="right"
       title="Interview at TELHack NHS Hackathon"
       subtitle="Health Innovators TV">
           <div>
@@ -65,7 +87,6 @@
     </project>
     <project is-cover
       img-src="/imgs/media/research_video_small.png"
-      img-align="right"
       title="Stories to Inspire: Julia Ebert"
       subtitle="Northeastern University Scholars Program">
           <div>
