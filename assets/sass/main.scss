@@ -276,54 +276,62 @@ a.button:hover {
 }
 
 // LAYOUT: ALT
-.hero {
-  .navbar {
-    transition: all 0.6s ease-out;
-    &.is-solid {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      background-color: $black;
-    }
-    .navbar-brand {
-      #brand-icon {
-        background-color: $primary;
-        position: fixed;
-        padding: 0;
-        cursor: pointer;
-        height: 2* $navbar-height;
-        z-index: 0;
-        &:hover {
-          @extend .button.is-primary.is-hovered;
-        }
-        @include mobile {
-          height: $navbar-height;
-        }
-        @include tablet {
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-      }
-    }
-    #navMenu {
-      //padding: 0;
-      @include touch {
-        position: absolute;
-        top: $navbar-height;
-        right: 0;
-        width: calc(100% - 2 * #{$navbar-height});
-        display: block;
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-        transform:scaleY(0);
-        transform-origin:top;
-        opacity: 0;
-        &.is-active {
-          transform:scaleY(1);
-          opacity: 1;
-        }
+
+.navbar {
+  transition: all 0.6s ease-out;
+  &.is-solid {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: $black;
+  }
+  &#top-nav {
+    background: none;
+    position: relative;
+    // @include desktop {
+    //   margin-bottom:
+    // }
+  }
+  .navbar-brand {
+    #brand-icon {
+      background-color: $primary;
+      position: fixed;
+      padding: 0;
+      cursor: pointer;
+      height: 2* $navbar-height;
+      z-index: 0;
+      &:hover {
+        @extend .button.is-primary.is-hovered;
       }
       @include mobile {
-        width: 100%;
+        height: $navbar-height;
+      }
+      @include tablet {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       }
     }
   }
+  #navMenu {
+    //padding: 0;
+    @include touch {
+      position: absolute;
+      top: $navbar-height;
+      right: 0;
+      width: calc(100% - 2 * #{$navbar-height});
+      display: block;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transform:scaleY(0);
+      transform-origin:top;
+      opacity: 0;
+      &.is-active {
+        transform:scaleY(1);
+        opacity: 1;
+      }
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.hero {
   .typer-title {
     display: flex;
     @include fullhd {
@@ -480,7 +488,7 @@ $icon-block-size-touch: 6rem;
 .section.is-block {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  min-height: 100vh;
+  // min-height: 100vh;
   @include mobile {
     padding-bottom: 3rem;
   }

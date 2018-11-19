@@ -1,14 +1,12 @@
 <template>
-<div class="navbar is-black is-fixed-top is-solid" role="navigation" aria-label="main navigation" id="top-nav">
+<div class="navbar is-black is-transparent" role="navigation" aria-label="main navigation" id="top-nav">
     <div class="container">
         <div class="navbar-brand">
-            <nuxt-link v-if=isOtherPage to="/">
+            <nuxt-link to="/">
                 <img src="/imgs/icons/about-me.svg" id='brand-icon'
                   class="navbar-item">
             </nuxt-link>
-            <img src="/imgs/icons/about-me.svg" id='brand-icon'
-                v-else
-                v-scroll-to="'#header'" class="navbar-item">
+
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -16,23 +14,14 @@
             </a>
         </div>
 
-        <div class="navbar-menu" id="navMenu" v-if=isOtherPage>
+        <div class="navbar-menu" id="navMenu">
             <div class="navbar-end">
-              <a v-for="(name, slug) in sectionLinks" :key="slug"
-                :href="'/#'+slug" class="navbar-item">
+              <nuxt-link v-for="(slug, name) in sectionNames" :key="slug"
+                :to="'/'+slug" class="navbar-item">
                 {{ name }}
-              </a>
+              </nuxt-link>
             </div>
         </div>
-
-        <scrollactive class="navbar-menu" id="navMenu" :offset="52" v-else>
-            <div class="navbar-end">
-              <a v-for="(name, slug) in sectionLinks" :key="slug"
-                :href="'/#'+slug" class="navbar-item scrollactive-item">
-                {{ name }}
-              </a>
-            </div>
-        </scrollactive>
 
     </div>
 </div>
@@ -41,24 +30,22 @@
 <script>
 import slugify from "slugify";
 
-var sectionNames = [
-  "About Me",
-  "CV",
-  "Research",
-  "Publications",
-  "Side Projects",
-  "Media"
-];
-
 export default {
-  props: { isOtherPage: { default: false } },
+  props: {
+    sectionNames: {
+      default: function() {
+        return {
+          "About Me": "",
+          CV: "cv",
+          Research: "research",
+          Publications: "publications",
+          "Side Projects": "sideProjects",
+          Media: "media"
+        };
+      }
+    }
+  },
   computed: {
-    sectionLinks: function() {
-      return sectionNames.reduce((accum, section) => {
-        accum[slugify(section, { lower: true })] = section;
-        return accum;
-      }, {});
-    },
     header: function() {
       if (process.browser) {
         return document.getElementById("top-nav");
@@ -105,8 +92,8 @@ export default {
   },
   created() {
     if (process.browser) {
-      this.setOpacity();
-      window.addEventListener("scroll", this.setOpacity);
+      //this.setOpacity();
+      //window.addEventListener("scroll", this.setOpacity);
       this.addBurgerToggles();
     }
   }

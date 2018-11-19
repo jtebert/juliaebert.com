@@ -1,8 +1,8 @@
 <template>
 <div class="simple-layout">
-  <section class="hero bg-img is-large scroll-section" id="header">
+  <section class="hero bg-img is-large" id="header">
     <div class="hero-head">
-      <nav-bar :isOtherPage="true"></nav-bar>
+      <nav-bar></nav-bar>
     </div>
 
     <div class="hero-body">
@@ -19,7 +19,6 @@
 
 <script>
 import NavBar from "~/components/NavBar.vue";
-import BoxNavBar from "~/components/BoxNavBar.vue";
 import MyFooter from "~/components/MyFooter.vue";
 
 export default {
