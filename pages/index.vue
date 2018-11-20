@@ -108,8 +108,8 @@ I also care about science communication and outreach. I've [spoken to hundreds o
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <button class="button is-medium" type="submit" disabled>
-                Coming Soon
+              <button class="button is-medium is-primary" type="submit">
+                Send Message
               </button>
             </div>
           </div>
