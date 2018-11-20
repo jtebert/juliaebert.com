@@ -6,9 +6,8 @@
   texture="graph-paper">
   <div slot='links'>
     <p class="buttons">
-      <icon-button-link to="https://github.com/jtebert" icon='github-circle' title="GitHub"></icon-button-link>
-      <icon-button-link to="mailto:julia@juliaebert.com" icon="email" title="Email"></icon-button-link>
-      <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin" title="LinkedIn"></icon-button-link>
+      <icon-button-link to="https://github.com/jtebert" icon='github-circle' title="GitHub">GitHub</icon-button-link>
+      <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin" title="LinkedIn">LinkedIn</icon-button-link>
     </p>
   </div>
   <div class="block-content content">
@@ -43,12 +42,85 @@ In my free time, I play for the [Harvard curling team](http://harvardcurling.com
   subtitle="Hello World."
   >
   <div class="block-content">
-    <p class="buttons">
+    <!-- <p class="buttons">
       <icon-button-link to="https://github.com/jtebert" icon='github-circle' title="GitHub">GitHub</icon-button-link>
       <icon-button-link to="mailto:julia@juliaebert.com" icon="email" title="Email">Email</icon-button-link>
       <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin" title="LinkedIn">LinkedIn</icon-button-link>
-    </p>
+    </p> -->
+
+
+
+    <form name="contact" action="" method="post" netlify>
+      <input type="hidden" name="form-name" value="contact" />
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">From</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" placeholder="Name" id="name">
+              <span class="icon is-small is-left">
+                <i class="mdi mdi-account"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="email" placeholder="Email" id="email">
+              <span class="icon is-small is-left">
+                <i class="mdi mdi-at"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Subject</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" id="subject">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Message</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" id="message"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
+
+
+
 </primary-section>
 
 </div>
