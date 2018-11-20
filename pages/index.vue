@@ -51,7 +51,9 @@ I also care about science communication and outreach. I've [spoken to hundreds o
   subtitle="Hello, World."
   >
   <div class="block-content">
-    <form name="contact" action="" method="post" netlify>
+    <!-- <form name="contact" action="https://formspree.io/julia@juliaebert.com" method="post"> -->
+    <form name="contact" action="/" method="post" netlify>
+    <input type="hidden" name="_gotcha">
       <input type="hidden" name="form-name" value="contact" />
       <div class="field is-horizontal">
         <div class="field-label is-normal">
