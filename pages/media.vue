@@ -1,4 +1,8 @@
 <template>
+<primary-section
+  title="Media"
+  subtitle="Shameless self-promotion"
+  texture="plus">
 <div>
     <project is-cover
       img-src="/imgs/media/smart-robots.png"
@@ -116,15 +120,17 @@
           </div>
     </project>
 </div>
-
+</primary-section>
 </template>
 
 <script>
 import IconLink from "~/components/IconLink.vue";
 import Project from "~/components/Project.vue";
+import PrimarySection from "~/components/PrimarySection.vue";
 
 export default {
   components: {
+    PrimarySection,
     Project,
     IconLink
   }

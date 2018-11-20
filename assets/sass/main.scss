@@ -276,54 +276,61 @@ a.button:hover {
 }
 
 // LAYOUT: ALT
-.hero {
-  .navbar {
-    transition: all 0.6s ease-out;
-    &.is-solid {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      background-color: $black;
+
+.navbar {
+  transition: all 0.6s ease-out;
+  &.is-solid {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: $black;
+  }
+  &#top-nav {
+    background: none;
+    @include desktop {
+      margin-bottom: -$navbar-height;
     }
-    .navbar-brand {
-      #brand-icon {
-        background-color: $primary;
-        position: fixed;
-        padding: 0;
-        cursor: pointer;
-        height: 2* $navbar-height;
-        z-index: 0;
-        &:hover {
-          @extend .button.is-primary.is-hovered;
-        }
-        @include mobile {
-          height: $navbar-height;
-        }
-        @include tablet {
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-      }
-    }
-    #navMenu {
-      //padding: 0;
-      @include touch {
-        position: absolute;
-        top: $navbar-height;
-        right: 0;
-        width: calc(100% - 2 * #{$navbar-height});
-        display: block;
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-        transform:scaleY(0);
-        transform-origin:top;
-        opacity: 0;
-        &.is-active {
-          transform:scaleY(1);
-          opacity: 1;
-        }
+  }
+  .navbar-brand {
+    #brand-icon {
+      background-color: $primary;
+      position: fixed;
+      padding: 0;
+      cursor: pointer;
+      height: 2* $navbar-height;
+      z-index: 0;
+      &:hover {
+        @extend .button.is-primary.is-hovered;
       }
       @include mobile {
-        width: 100%;
+        height: $navbar-height;
+      }
+      @include tablet {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       }
     }
   }
+  #navMenu {
+    //padding: 0;
+    @include touch {
+      position: absolute;
+      top: $navbar-height;
+      right: 0;
+      width: calc(100% - 2 * #{$navbar-height});
+      display: block;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transform:scaleY(0);
+      transform-origin:top;
+      opacity: 0;
+      &.is-active {
+        transform:scaleY(1);
+        opacity: 1;
+      }
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.hero {
   .typer-title {
     display: flex;
     @include fullhd {
@@ -478,9 +485,9 @@ $icon-block-size-touch: 6rem;
 
 // PRIMARYSECTION COMPONENT
 .section.is-block {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  min-height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  // min-height: 100vh;
   @include mobile {
     padding-bottom: 3rem;
   }
@@ -502,13 +509,19 @@ $icon-block-size-touch: 6rem;
   }
 
   .block-content {
-    padding: 1.5rem;
+    padding: $gap/2 $gap;
     //margin-bottom: 2*$column-gap;
-    @include desktop {
-      padding-left: $icon-block-size / 2 + 2rem;
+    // @include desktop {
+    //   padding-left: $icon-block-size / 2 + 2rem;
+    // }
+    // @include tablet-only {
+    //   padding-left: $icon-block-size-touch / 2 + 1.5rem;
+    // }
+    @include touch {
+      padding: 1.5rem;
     }
-    @include tablet-only {
-      padding-left: $icon-block-size-touch / 2 + 1.5rem;
+    &.content {
+      margin-bottom: 0;
     }
     &.has-title {
       padding-bottom: 3rem;
@@ -520,6 +533,13 @@ $icon-block-size-touch: 6rem;
         padding-top: $icon-block-size-touch/2 + 1.5rem;
         flex-direction: column;
         text-align: center;
+      }
+      @include tablet-only {
+        padding-left: $icon-block-size-touch / 2 + 1.5rem;
+      }
+      @include desktop {
+        min-height: $icon-block-size + 4rem;
+        padding-left: $icon-block-size / 2 + 2rem;
       }
     }
     &:nth-child(odd) {
@@ -547,7 +567,7 @@ $icon-block-size-touch: 6rem;
     position: absolute;
     width: $icon-block-size;
     height: $icon-block-size;
-    top: 3rem;
+    top: 2rem;
     left: 0;
     background-color: $primary;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -558,7 +578,6 @@ $icon-block-size-touch: 6rem;
     @include mobile {
       top: -0.5 * $icon-block-size-touch;
       left: calc(50% - #{$icon-block-size-touch}/2);
-      //left: 3rem;
     }
   }
   .title.is-1 {
@@ -568,6 +587,41 @@ $icon-block-size-touch: 6rem;
   }
   .section-subtitle.subtitle.is-4 {
     @include mobile {font-size: 1.25rem;}
+  }
+}
+
+.has-flex-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-button {
+  width: $icon-block-size;
+  margin: 2rem;
+  margin-top: 0.5rem;
+  @include touch {
+    width: $icon-block-size-touch;
+    margin: 1.5rem;
+    margin-bottom: 0;
+  }
+  &:hover {
+    img {background-color: darken($primary, 2.5%);}
+    // h2 {color: darken($primary, 2.5%);}
+  }
+  h2 {
+    text-align: center;
+    margin: 0.5rem -1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  img {
+    background-color: $primary;
+    width: $icon-block-size;
+    height: $icon-block-size;
+    @include touch {
+      width: $icon-block-size-touch;
+      height: $icon-block-size-touch;
+    }
   }
 }
 
@@ -590,11 +644,17 @@ $icon-block-size-touch: 6rem;
     background-color: $white;
     @include tablet {
       flex-direction: row-reverse;
+      .section-content {
+        padding-left: 4*$column-gap;
+      }
     }
   }
   &:nth-child(odd) {
     @include tablet {
       flex-direction: row;
+      .section-content {
+        padding-right: 4*$column-gap;
+      }
     }
   }
   .section-image {
