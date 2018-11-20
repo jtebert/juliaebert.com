@@ -1,4 +1,7 @@
 <template>
+<primary-section title="Research"
+  subtitle="Robot swarms + humans + space = ???"
+  texture="circuit-board">
 <div>
     <project is-cover
       img-src="/imgs/research/kilobots3.jpg"
@@ -84,23 +87,21 @@
           </publication-list>
         </div>
     </project>
-
 </div>
+</primary-section>
 </template>
 
 <script>
 import Project from "~/components/Project.vue";
 import PublicationList from "~/components/PublicationList.vue";
+import PrimarySection from "~/components/PrimarySection.vue";
 
 export default {
   components: {
+    PrimarySection,
     Project,
     PublicationList,
     Project
   }
 };
 </script>
-
-
-<style lang="scss">
-</style>

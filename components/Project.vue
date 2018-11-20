@@ -1,5 +1,5 @@
 <template>
-<div :class="['project-section', 'scroll-section', {'no-image': imgless}]">
+<div :class="['project-section', {'no-image': imgless}]">
     <div v-if=isMockup class="section-image">
       <mockup :imgSrc=imgSrc
               :mobileImgSrc=mobileImgSrc></mockup>

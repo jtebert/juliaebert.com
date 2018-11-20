@@ -1,6 +1,24 @@
 <template>
-<div>
 
+<primary-section title="Side Projects"
+  subtitle="I make a lot of mostly useless things."
+  texture="lines-in-motion">
+  <div slot="links">
+    <!-- <p class="buttons">
+      <icon-button-link
+        to="https://blog.juliaebert.com"
+        icon="pencil">
+        Blog
+      </icon-button-link>
+    </p> -->
+    <p class="buttons">
+      <icon-button-link
+        to="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/"
+        icon="hammer">Julia Makes Things</icon-button-link>
+    </p>
+  </div>
+
+<div>
   <project is-mockup
     img-src="/imgs/programming/lazy-baker-mockup-desktop.png"
     mobile-img-src="/imgs/programming/lazy-baker-mockup-mobile.png"
@@ -181,21 +199,26 @@ I was bad at keeping track of recipes from various cookbooks, websites, and a ve
 
 </div>
 
+</primary-section>
 </template>
 
 <script>
 import Tags from "~/components/Tags.vue";
 import IconLink from "~/components/IconLink.vue";
+import IconButtonLink from "~/components/IconButtonLink.vue";
 import Project from "~/components/Project.vue";
 import VueMarkdown from "vue-markdown";
+import PrimarySection from "~/components/PrimarySection.vue";
 
 export default {
   components: {
     Tags,
     IconLink,
+    IconButtonLink,
     VueMarkdown,
     Project,
-    Project
+    Project,
+    PrimarySection
   }
 };
 </script>
