@@ -156,9 +156,8 @@
                 :showLinks="false"
             ></publication-list>
             <h2 v-if="!isPaper">Publications</h2>
-            <p v-if="!isPaper">
-                See
-                <a v-scroll-to="'#publications'">publications section</a>
+            <p v-if="!isPaper">See
+                <nuxt-link to="/publications">publications section</nuxt-link>
             </p>
             <!-- <h2>Talks</h2>
             <publication-list
