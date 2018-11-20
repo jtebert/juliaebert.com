@@ -1,11 +1,9 @@
 <template>
-<p class="tags">
-    <span class="tag is-primary"
-        v-for="(tag, id) in tagList"
-        :key="`tag-${id}`">
-        {{ tag }}
+  <p class="tags">
+    <span class="tag is-primary" v-for="(tag, id) in tagList" :key="`tag-${id}`">
+      {{ tag }}
     </span>
-</p>
+  </p>
 </template>
 
 <script>

@@ -1,16 +1,14 @@
 <template>
-<primary-section title="CV"
-  subtitle="Curriculum Vitae"
-  texture="brick-wall">
-  <div slot="links">
-    <p class="buttons">
-      <icon-button-link to="/pdfs/ebert-julia.cv.pdf" icon="file-pdf">View as PDF</icon-button-link>
-    </p>
-  </div>
-  <div class="block-content content">
-    <cv-content :isPaper="false"></cv-content>
-  </div>
-</primary-section>
+  <primary-section title="CV" subtitle="Curriculum Vitae" texture="brick-wall">
+    <div slot="links">
+      <p class="buttons">
+        <icon-button-link to="/pdfs/ebert-julia.cv.pdf" icon="file-pdf">View as PDF</icon-button-link>
+      </p>
+    </div>
+    <div class="block-content content">
+      <cv-content :isPaper="false"></cv-content>
+    </div>
+  </primary-section>
 </template>
 
 <script>

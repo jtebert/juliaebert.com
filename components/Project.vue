@@ -1,34 +1,30 @@
 <template>
-<div :class="['project-section', {'no-image': imgless}]">
-    <div v-if=isMockup class="section-image">
-      <mockup :imgSrc=imgSrc
-              :mobileImgSrc=mobileImgSrc></mockup>
+  <div :class="['project-section', {'no-image': imgless}]">
+    <div v-if="isMockup" class="section-image">
+      <mockup :imgSrc="imgSrc" :mobileImgSrc="mobileImgSrc"></mockup>
     </div>
     <div v-else-if="isCover&&imgSrc" class="section-image is-cover">
-      <img :src=imgSrc is-cover>
+      <img :src="imgSrc" is-cover>
     </div>
-    <div v-else-if=videoSrc :class="['section-image', {'is-cover': isCover}]">
+    <div v-else-if="videoSrc" :class="['section-image', {'is-cover': isCover}]">
       <video loop autoplay muted :class="{'is-cover': isCover}">
-        <source :src=videoSrc type="video/mp4">
-        Your browser does not support the video tag.
+        <source :src="videoSrc" type="video/mp4">Your browser does not support the video tag.
       </video>
     </div>
-    <img v-else :class="['section-image', {'is-padded': isPadded}]" :src=imgSrc>
-
+    <img v-else :class="['section-image', {'is-padded': isPadded}]" :src="imgSrc">
     <div class="section-content">
-        <h1 class="title is-4">{{ title }}</h1>
-        <h4 class="subtitle is-6" v-if="subtitle">{{ subtitle }}</h4>
-
-        <div class="content"><slot></slot></div>
-
-        <div v-if="this.$slots.links"></div>
-
-        <div v-if="this.$slots.results">
-            <h3 class="results-title title is-5">Some Results</h3>
-            <slot name="results"></slot>
-        </div>
+      <h1 class="title is-4">{{ title }}</h1>
+      <h4 class="subtitle is-6" v-if="subtitle">{{ subtitle }}</h4>
+      <div class="content">
+        <slot></slot>
+      </div>
+      <div v-if="this.$slots.links"></div>
+      <div v-if="this.$slots.results">
+        <h3 class="results-title title is-5">Some Results</h3>
+        <slot name="results"></slot>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>

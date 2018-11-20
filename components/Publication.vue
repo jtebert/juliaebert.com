@@ -1,32 +1,19 @@
 <template>
-<p :class="['publication', {'has-download': showLink}]">
-    <span class="download-link" v-if=showLink>
-        <a v-if="json.file" title="View" :class="['mdi', iconName]" :href=file></a>
-        <i v-else :class="['mdi', iconName]"></i>
+  <p :class="['publication', {'has-download': showLink}]">
+    <span class="download-link" v-if="showLink">
+      <a v-if="json.file" title="View" :class="['mdi', iconName]" :href="file"></a>
+      <i v-else :class="['mdi', iconName]"></i>
     </span>
     <span class="citation">
-        <span class="author"
-            v-html="authorsFirstLast+'. '"></span>
-        <span class="year"
-            v-if="json.year"
-            v-html="json.year+'. '"></span>
-        <span class="pubtitle"
-            v-html="json.title+'. '"></span>
-        <span class="publisher-info"
-          v-if="pubInfo"
-          v-html="pubInfo">
-        </span>
-        <span class="address"
-            v-if="json.address"
-            v-html="json.address+'. '"></span>
-        <span class="doi"
-            v-if="json.doi"
-            v-html="doi"></span>
-        <span class="note"
-            v-if="json.note"
-            v-html="json.note+'.'"></span>
+      <span class="author" v-html="authorsFirstLast+'. '"></span>
+      <span class="year" v-if="json.year" v-html="json.year+'. '"></span>
+      <span class="pubtitle" v-html="json.title+'. '"></span>
+      <span class="publisher-info" v-if="pubInfo" v-html="pubInfo"></span>
+      <span class="address" v-if="json.address" v-html="json.address+'. '"></span>
+      <span class="doi" v-if="json.doi" v-html="doi"></span>
+      <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
     </span>
-</p>
+  </p>
 </template>
 
 <script>

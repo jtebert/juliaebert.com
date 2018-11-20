@@ -1,30 +1,39 @@
 <template>
-<div class="navbar is-black is-transparent" role="navigation" aria-label="main navigation" id="top-nav">
+  <div
+    class="navbar is-black is-transparent"
+    role="navigation"
+    aria-label="main navigation"
+    id="top-nav"
+  >
     <div class="container">
-        <div class="navbar-brand">
-            <nuxt-link to="/">
-                <img src="/imgs/icons/about-me.svg" id='brand-icon'
-                  class="navbar-item">
-            </nuxt-link>
-
-            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+      <div class="navbar-brand">
+        <nuxt-link to="/">
+          <img src="/imgs/icons/about-me.svg" id="brand-icon" class="navbar-item">
+        </nuxt-link>
+        <a
+          role="button"
+          class="navbar-burger"
+          data-target="navMenu"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end">
+          <nuxt-link
+            v-for="(slug, name) in sectionNames"
+            :key="slug"
+            :to="'/'+slug"
+            class="navbar-item"
+          >{{ name }}</nuxt-link>
         </div>
-
-        <div class="navbar-menu" id="navMenu">
-            <div class="navbar-end">
-              <nuxt-link v-for="(slug, name) in sectionNames" :key="slug"
-                :to="'/'+slug" class="navbar-item">
-                {{ name }}
-              </nuxt-link>
-            </div>
-        </div>
-
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>

@@ -1,12 +1,13 @@
 <template>
-    <div class="publication-list">
-        <publication
-            v-for="pub in publications"
-            :json=pub :key=pub.key
-            :highlightAuthor=highlightAuthor
-            :showLink=showLinks>
-        </publication>
-    </div>
+  <div class="publication-list">
+    <publication
+      v-for="pub in publications"
+      :json="pub"
+      :key="pub.key"
+      :highlightAuthor="highlightAuthor"
+      :showLink="showLinks"
+    ></publication>
+  </div>
 </template>
 
 <script>

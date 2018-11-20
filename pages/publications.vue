@@ -1,31 +1,24 @@
 <template>
-
-<primary-section title="Publications"
-  subtitle="Making the world a better place, one peer-reviewed article at a time"
-  texture="bank-note">
-  <div slot="links">
-    <p class="buttons">
-      <icon-button-link
-        to="https://scholar.google.com/citations?user=dsoLpEQAAAAJ&hl=en"
-        icon="school">Google Scholar</icon-button-link>
-    </p>
-  </div>
-  <div class="block-content content">
-        <h1>Papers</h1>
-        <publication-list
-            highlight-author="Ebert"
-            :type-filter="['inproceedings', 'article']">
-        </publication-list>
-
-        <h1>Conference Abstracts and Posters</h1>
-        <publication-list
-            highlight-author="Ebert"
-            :type-filter="['poster']">
-        </publication-list>
+  <primary-section
+    title="Publications"
+    subtitle="Making the world a better place, one peer-reviewed article at a time"
+    texture="bank-note"
+  >
+    <div slot="links">
+      <p class="buttons">
+        <icon-button-link
+          to="https://scholar.google.com/citations?user=dsoLpEQAAAAJ&hl=en"
+          icon="school"
+        >Google Scholar</icon-button-link>
+      </p>
     </div>
-
-</primary-section>
-
+    <div class="block-content content">
+      <h1>Papers</h1>
+      <publication-list highlight-author="Ebert" :type-filter="['inproceedings', 'article']"></publication-list>
+      <h1>Conference Abstracts and Posters</h1>
+      <publication-list highlight-author="Ebert" :type-filter="['poster']"></publication-list>
+    </div>
+  </primary-section>
 </template>
 
 <script>

@@ -1,8 +1,7 @@
 <template>
-    <a :class="['icon-link', 'mdi', iconSize, 'mdi-'+icon]" :href="to">
-        &nbsp;&nbsp;<slot></slot>
-    </a>
-
+  <a :class="['icon-link', 'mdi', iconSize, 'mdi-'+icon]" :href="to">&nbsp;&nbsp;
+    <slot></slot>
+  </a>
 </template>
 
 <script>

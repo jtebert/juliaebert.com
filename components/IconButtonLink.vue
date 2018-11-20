@@ -1,11 +1,12 @@
 <template>
-    <a :class="['button', 'is-primary', {'is-large': !hasText}, {'is-medium': hasText}]" :href="to">
-        <span class="icon">
-          <i :class="['mdi', 'mdi-'+icon, 'mdi-'+iconSize+'px']"></i>
-        </span>
-        <span v-if=hasText><slot></slot></span>
-      </a>
-
+  <a :class="['button', 'is-primary', {'is-large': !hasText}, {'is-medium': hasText}]" :href="to">
+    <span class="icon">
+      <i :class="['mdi', 'mdi-'+icon, 'mdi-'+iconSize+'px']"></i>
+    </span>
+    <span v-if="hasText">
+      <slot></slot>
+    </span>
+  </a>
 </template>
 
 <script>
