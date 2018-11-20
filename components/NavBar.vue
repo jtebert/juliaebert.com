@@ -39,7 +39,7 @@ export default {
           CV: "cv",
           Research: "research",
           Publications: "publications",
-          "Side Projects": "sideProjects",
+          "Side Projects": "side-projects",
           Media: "media"
         };
       }
