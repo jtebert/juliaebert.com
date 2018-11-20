@@ -1,5 +1,5 @@
 <template>
-<cv-content :isPaper="true"></cv-content>
+  <cv-content :isPaper="true"></cv-content>
 </template>
 
 <script>

@@ -1,13 +1,11 @@
 <template>
-<div class="cv-skill">
-    <div class="cv-sidebar">
-        <b>{{ category }}</b>
+    <div class="cv-skill">
+        <div class="cv-sidebar">
+            <b>{{ category }}</b>
+        </div>
+        <div class="cv-bar"></div>
+        <div class="cv-main">{{ skills.join(' &bull; ') }}</div>
     </div>
-    <div class="cv-bar"></div>
-    <div class="cv-main">
-        {{ skills.join(' &bull; ') }}
-    </div>
-</div>
 </template>
 
 <script>

@@ -1,12 +1,14 @@
 <template>
-<div class="gallery">
-  <div v-for="(imgSrc, id) in imgSrcs" class="img-holder"
+  <div class="gallery">
+    <div
+      v-for="(imgSrc, id) in imgSrcs"
+      class="img-holder"
       :key="`img-${id}`"
-      :style="{ 'background-image': 'url(' + imgDir + '/' + img(imgSrc) + ')' }">
+      :style="{'background-image': 'url(' + imgDir + '/' + img(imgSrc) + ')' }"
+    >
       <span v-if="caption(imgSrc)" class="caption-source">Olivia Nie/SEAS Communications</span>
+    </div>
   </div>
-</div>
-
 </template>
 
 <script>
