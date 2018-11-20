@@ -10,24 +10,6 @@
       <icon-button-link to="https://www.linkedin.com/in/ebertjulia/" icon="linkedin" title="LinkedIn">LinkedIn</icon-button-link>
     </p>
   </div>
-  <div class="block-content content">
-    <vue-markdown>
-I am a PhD candidate in computer science at Harvard University. I am a member of the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/), where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
-    </vue-markdown>
-
-    <p><nuxt-link to="cv">Read my full CV here.</nuxt-link></p>
-
-    <vue-markdown :html="true">
-I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological behavior to improve the collective behavior of robots. After my PhD, I plan to pursue a career in academic research.
-
-In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group.
-
-I also care about science communication and outreach. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
-    </vue-markdown>
-    <p>
-      In my free time, I play for the <a href="http://harvardcurling.com/">Harvard curling team</a>, bake <a href="http://lazybaker.juliaebert.com/">awesome cinnamon rolls</a>, and <nuxt-link to="sideProjects">make fun things</nuxt-link>.
-    </p>
-  </div>
   <gallery
     :img-srcs="[
       'march-for-science.jpg',
@@ -35,17 +17,34 @@ I also care about science communication and outreach. I've [spoken to hundreds o
       ['project_night_four_web.jpg', 'Olivia Nie/SEAS Communications']
       ]">
   </gallery>
-</primary-section>
+  <div class="block-content content">
+    <vue-markdown>
+I am a PhD candidate in computer science at Harvard University. I am a member of the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/), where I study bio-inspired collective robotics with Prof. Radhika Nagpal. I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
 
-<div class="section has-texture-falling-triangles">
-  <div class="container has-flex-items">
+I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. During my PhD, my goal is to apply concepts from neuroscience and biological behavior to improve the collective behavior of robots. After my PhD, I plan to pursue a career in academic research.
+
+In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group.
+
+I also care about science communication and outreach. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
+    </vue-markdown>
+    <p>
+      In my free time, I play for the <a href="http://harvardcurling.com/">Harvard curling team</a>, bake <a href="http://lazybaker.juliaebert.com/">awesome cinnamon rolls</a>, and <nuxt-link to="side-projects">make fun things</nuxt-link>.
+    </p>
+  </div>
+
+  <div class="block-content">
+    <h1 class="title is-2 has-text-centered">See More</h1>
+    <div class="has-flex-items">
       <image-block-link title="CV"></image-block-link>
       <image-block-link title="Research"></image-block-link>
       <image-block-link title="Publications"></image-block-link>
       <image-block-link title="Side Projects"></image-block-link>
       <image-block-link title="Media"></image-block-link>
     </div>
-</div>
+  </div>
+
+</primary-section>
+
 
 <primary-section texture="hexagons"
   title="Contact Me"
@@ -110,7 +109,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           <div class="field">
             <div class="control">
               <button class="button is-primary is-medium" type="submit">
-                Send message
+                Send Message
               </button>
             </div>
           </div>

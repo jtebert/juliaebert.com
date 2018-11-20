@@ -509,13 +509,19 @@ $icon-block-size-touch: 6rem;
   }
 
   .block-content {
-    padding: 1.5rem;
+    padding: $gap/2 $gap;
     //margin-bottom: 2*$column-gap;
-    @include desktop {
-      padding-left: $icon-block-size / 2 + 2rem;
+    // @include desktop {
+    //   padding-left: $icon-block-size / 2 + 2rem;
+    // }
+    // @include tablet-only {
+    //   padding-left: $icon-block-size-touch / 2 + 1.5rem;
+    // }
+    @include touch {
+      padding: 1.5rem;
     }
-    @include tablet-only {
-      padding-left: $icon-block-size-touch / 2 + 1.5rem;
+    &.content {
+      margin-bottom: 0;
     }
     &.has-title {
       padding-bottom: 3rem;
@@ -528,8 +534,12 @@ $icon-block-size-touch: 6rem;
         flex-direction: column;
         text-align: center;
       }
+      @include tablet-only {
+        padding-left: $icon-block-size-touch / 2 + 1.5rem;
+      }
       @include desktop {
         min-height: $icon-block-size + 4rem;
+        padding-left: $icon-block-size / 2 + 2rem;
       }
     }
     &:nth-child(odd) {
@@ -588,7 +598,7 @@ $icon-block-size-touch: 6rem;
 .img-button {
   width: $icon-block-size;
   margin: 2rem;
-  margin-bottom: 0;
+  margin-top: 0.5rem;
   @include touch {
     width: $icon-block-size-touch;
     margin: 1.5rem;
@@ -596,11 +606,11 @@ $icon-block-size-touch: 6rem;
   }
   &:hover {
     img {background-color: darken($primary, 2.5%);}
+    // h2 {color: darken($primary, 2.5%);}
   }
   h2 {
     text-align: center;
-    color: $white;
-    margin: .5rem -1.5rem;
+    margin: 0.5rem -1.5rem;
     font-size: 1.4rem;
     font-weight: 400;
   }
@@ -634,11 +644,17 @@ $icon-block-size-touch: 6rem;
     background-color: $white;
     @include tablet {
       flex-direction: row-reverse;
+      .section-content {
+        padding-left: 4*$column-gap;
+      }
     }
   }
   &:nth-child(odd) {
     @include tablet {
       flex-direction: row;
+      .section-content {
+        padding-right: 4*$column-gap;
+      }
     }
   }
   .section-image {
