@@ -52,9 +52,15 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           <image-block-link title="Media"></image-block-link>
         </div>
       </div>
+      <div class="block-content">
+        <h1 class="title is-2 has-text-centered">Contact Me</h1>
+        <div class="buttons is-centered">
+          <a class="button is-large is-primary" href="mailto:julia@juliaebert.com">julia@juliaebert.com</a>
+        </div>
+      </div>
     </primary-section>
 
-    <primary-section texture="hexagons" title="Contact Me" subtitle="Hello, World.">
+    <!-- <primary-section texture="hexagons" title="Contact Me" subtitle="Hello, World.">
       <div class="block-content">
         <form name="contact" action="/" method="post" netlify>
           <input type="hidden" name="_gotcha">
@@ -118,7 +124,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           </div>
         </form>
       </div>
-    </primary-section>
+    </primary-section> -->
   </div>
 </template>
 
