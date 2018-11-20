@@ -285,10 +285,9 @@ a.button:hover {
   }
   &#top-nav {
     background: none;
-    position: relative;
-    // @include desktop {
-    //   margin-bottom:
-    // }
+    @include desktop {
+      margin-bottom: -$navbar-height;
+    }
   }
   .navbar-brand {
     #brand-icon {
@@ -486,8 +485,8 @@ $icon-block-size-touch: 6rem;
 
 // PRIMARYSECTION COMPONENT
 .section.is-block {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   // min-height: 100vh;
   @include mobile {
     padding-bottom: 3rem;
@@ -529,6 +528,9 @@ $icon-block-size-touch: 6rem;
         flex-direction: column;
         text-align: center;
       }
+      @include desktop {
+        min-height: $icon-block-size + 4rem;
+      }
     }
     &:nth-child(odd) {
       background-color: $white;
@@ -555,7 +557,7 @@ $icon-block-size-touch: 6rem;
     position: absolute;
     width: $icon-block-size;
     height: $icon-block-size;
-    top: 3rem;
+    top: 2rem;
     left: 0;
     background-color: $primary;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -566,7 +568,6 @@ $icon-block-size-touch: 6rem;
     @include mobile {
       top: -0.5 * $icon-block-size-touch;
       left: calc(50% - #{$icon-block-size-touch}/2);
-      //left: 3rem;
     }
   }
   .title.is-1 {
@@ -576,6 +577,41 @@ $icon-block-size-touch: 6rem;
   }
   .section-subtitle.subtitle.is-4 {
     @include mobile {font-size: 1.25rem;}
+  }
+}
+
+.has-flex-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-button {
+  width: $icon-block-size;
+  margin: 2rem;
+  margin-bottom: 0;
+  @include touch {
+    width: $icon-block-size-touch;
+    margin: 1.5rem;
+    margin-bottom: 0;
+  }
+  &:hover {
+    img {background-color: darken($primary, 2.5%);}
+  }
+  h2 {
+    text-align: center;
+    color: $white;
+    margin: .5rem -1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  img {
+    background-color: $primary;
+    width: $icon-block-size;
+    height: $icon-block-size;
+    @include touch {
+      width: $icon-block-size-touch;
+      height: $icon-block-size-touch;
+    }
   }
 }
 
