@@ -60,7 +60,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
         <div class="field-body">
           <div class="field">
             <p class="control is-expanded has-icons-left">
-              <input class="input" type="text" placeholder="Name" id="name">
+              <input class="input" type="text" placeholder="Name" id="name" name="name">
               <span class="icon is-small is-left">
                 <i class="mdi mdi-account"></i>
               </span>
@@ -68,7 +68,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           </div>
           <div class="field">
             <p class="control is-expanded has-icons-left">
-              <input class="input" type="email" placeholder="Email" id="email">
+              <input class="input" type="email" placeholder="Email" id="email" name="email">
               <span class="icon is-small is-left">
                 <i class="mdi mdi-at"></i>
               </span>
@@ -84,7 +84,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <input class="input" type="text" id="subject">
+              <input class="input" type="text" id="subject" name="subject">
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ I also care about science communication and outreach. I've [spoken to hundreds o
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <textarea class="textarea" id="message"></textarea>
+              <textarea class="textarea" id="message" name="message"></textarea>
             </div>
           </div>
         </div>
