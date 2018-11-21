@@ -54,6 +54,9 @@ export default {
       }
     }
   },
+  data() {
+    return { isActive: false };
+  },
   computed: {
     header: function() {
       if (process.browser) {
