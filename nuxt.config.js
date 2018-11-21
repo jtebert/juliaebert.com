@@ -24,12 +24,12 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Space+Mono' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=OmJMPAq7rQ' },
-      { rel: 'icon', sizes: '32x32', type: 'image/png', href: '/favicon-32x32.png?v=OmJMPAq7rQ' },
-      { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png?v=OmJMPAq7rQ' },
-      { rel: 'manifest', href: '/site.webmanifest?v=OmJMPAq7rQ' },
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=OmJMPAq7rQ', color: '#03bc25' },
-      { rel: 'shortcut icon', href: '/favicon.ico?v=OmJMPAq7rQ' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=OmJMPAq7rX' },
+      { rel: 'icon', sizes: '32x32', type: 'image/png', href: '/favicon-32x32.png?v=OmJMPAq7rX' },
+      { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png?v=OmJMPAq7rX' },
+      { rel: 'manifest', href: '/site.webmanifest?v=OmJMPAq7rX' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=OmJMPAq7rX', color: '#03bc25' },
+      { rel: 'shortcut icon', href: '/favicon.ico?v=OmJMPAq7rX' },
     ],
   },
   css: [
