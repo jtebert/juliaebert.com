@@ -205,70 +205,69 @@
             <cv-award
                 date="2014"
                 award="Teacher, NEU Splash Program. Class: &quot;This is your Brain&quot;"
-            >
-                <cv-award date="2011 -- 2013" award="Volunteer, Brigham and Women's Hospital"></cv-award>
-                <cv-award
-                    date="2010 -- 2011"
-                    award="Mentor, Massachusetts General Hospital Youth Program"
-                ></cv-award>
-                <h2>Skills</h2>
-                <cv-skill
-                    category="Programming"
-                    :skills="[
-                    'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
-                    'HTML/CSS', 'LaTeX', 'JavaScript', 'Java']"
-                ></cv-skill>
-                <cv-skill
-                    category="Fabrication"
-                    :skills="[
-                    'Laser cutting', '3D printing', 'Vinyl cutting', 'CNC milling, ShopBot',
-                    'Electronics design (Eagle) and production', 'Soldering', 'Sewing',
-                    'Molding and casting']"
-                ></cv-skill>
-                <cv-skill
-                    category="Other"
-                    :skills="[
-                    'Computer-aided design (OnShape)', 'Database design', 'Linux',
-                    'Embedded programming', '3D motion capture',
-                    'Kinematic and EEG data collection in human subjects']"
-                ></cv-skill>
-                <h2>Relevant Coursework</h2>
-                <cv-skill
-                    category="Computer Science"
-                    :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
-                    'Machine Learning', 'Network Algorithms', 'Computational Neurodynamics',
-                    'Artificial Intelligence', 'Robotics']"
-                ></cv-skill>
-                <cv-skill
-                    category="Science and Engineering"
-                    :skills="[
-                    'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
-                    'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
-                    'Organic Chemistry']"
-                ></cv-skill>
-                <cv-skill
-                    category="Mathematics"
-                    :skills="[
-                    'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
-                    'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
-                ></cv-skill>
-                <h2>Activities and Interests</h2>
-                <cv-skill
-                    category="Sport"
-                    :skills="[
-                    'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
-                ></cv-skill>
-                <cv-skill
-                    category="Music"
-                    :skills="[
-                    'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
-                ></cv-skill>
-                <cv-skill
-                    category="Other"
-                    :skills="[
-                    'Web design and development', 'Graphic design', 'Writing', 'Baking']"
-                ></cv-skill>
-            </cv-award>
+            ></cv-award>
+            <cv-award date="2011 -- 2013" award="Volunteer, Brigham and Women's Hospital"></cv-award>
+            <cv-award
+                date="2010 -- 2011"
+                award="Mentor, Massachusetts General Hospital Youth Program"
+            ></cv-award>
+            <h2>Skills</h2>
+            <cv-skill
+                category="Programming"
+                :skills="[
+                'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
+                'HTML/CSS', 'LaTeX', 'JavaScript', 'Java']"
+            ></cv-skill>
+            <cv-skill
+                category="Fabrication"
+                :skills="[
+                'Laser cutting', '3D printing', 'Vinyl cutting', 'CNC milling, ShopBot',
+                'Electronics design (Eagle) and production', 'Soldering', 'Sewing',
+                'Molding and casting']"
+            ></cv-skill>
+            <cv-skill
+                category="Other"
+                :skills="[
+                'Computer-aided design (OnShape)', 'Database design', 'Linux',
+                'Embedded programming', '3D motion capture',
+                'Kinematic and EEG data collection in human subjects']"
+            ></cv-skill>
+            <h2>Relevant Coursework</h2>
+            <cv-skill
+                category="Computer Science"
+                :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
+                'Machine Learning', 'Network Algorithms', 'Computational Neurodynamics',
+                'Artificial Intelligence', 'Robotics']"
+            ></cv-skill>
+            <cv-skill
+                category="Science and Engineering"
+                :skills="[
+                'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
+                'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
+                'Organic Chemistry']"
+            ></cv-skill>
+            <cv-skill
+                category="Mathematics"
+                :skills="[
+                'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
+                'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
+            ></cv-skill>
+            <h2>Activities and Interests</h2>
+            <cv-skill
+                category="Sport"
+                :skills="[
+                'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
+            ></cv-skill>
+            <cv-skill
+                category="Music"
+                :skills="[
+                'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
+            ></cv-skill>
+            <cv-skill
+                category="Other"
+                :skills="[
+                'Web design and development', 'Graphic design', 'Writing', 'Baking']"
+            ></cv-skill>
         </div>
     </div>
 </template>
