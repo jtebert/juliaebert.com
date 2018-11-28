@@ -520,45 +520,55 @@ $icon-block-size-touch: 6rem;
     @include touch {
       padding: 1.5rem;
     }
+    @include mobile {
+      padding-top: $icon-block-size-touch/2 + 1.5rem !important;
+    }
+    @include tablet-only {
+      padding-left: $icon-block-size-touch / 2 + 1.5rem;
+    }
+    @include desktop {
+      min-height: $icon-block-size + 4rem;
+      padding-left: $icon-block-size / 2 + 2rem;
+    }
     &.content {
       margin-bottom: 0;
     }
     &.has-title {
       padding-bottom: 3rem;
       padding-top: 3rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      @include mobile {
-        padding-top: $icon-block-size-touch/2 + 1.5rem;
-        flex-direction: column;
-        text-align: center;
+      .title-block {
+        @include mobile {
+          flex-direction: column;
+          text-align: center;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .title-block-links {
+          align-self: center;
+        }
+        .title-block-links > * {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin-left: 2*$column-gap;
+          @include mobile {
+            margin-top: 2*$column-gap;
+            margin-left: 0;
+            align-items: center;
+          }
+        }
       }
-      @include tablet-only {
-        padding-left: $icon-block-size-touch / 2 + 1.5rem;
-      }
-      @include desktop {
-        min-height: $icon-block-size + 4rem;
-        padding-left: $icon-block-size / 2 + 2rem;
+      .intro {
+        margin-top: 3rem;
+        p:last-child {
+          margin-bottom: 0;
+        }
       }
     }
     &:nth-child(odd) {
       background-color: $white;
-    }
-    .title-block-links {
-      align-self: center;
-    }
-    .title-block-links > * {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-left: $column-gap;
-      @include mobile {
-        margin-top: 2*$column-gap;
-        margin-left: 0;
-        align-items: center;
-      }
     }
   }
 

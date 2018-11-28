@@ -1,5 +1,5 @@
 <template>
-  <primary-section title="Media" subtitle="Shameless self-promotion" texture="plus">
+  <primary-section :title="title" subtitle="Shameless self-promotion" texture="plus">
     <div>
       <project
         is-cover
@@ -116,6 +116,15 @@ export default {
     PrimarySection,
     Project,
     IconLink
+  },
+  data() {
+    return { title: "Media" };
+  },
+  head() {
+    return {
+      title: this.title + " - " + process.env.siteTitle,
+      meta: [{ hid: "media" }]
+    };
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <primary-section
-    title="Side Projects"
+    :title="title"
     subtitle="I make a lot of mostly useless things."
     texture="lines-in-motion"
   >
@@ -19,6 +19,7 @@
         >Julia Makes Things</icon-button-link>
       </p>
     </div>
+    <p slot="intro">From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
     <div>
       <project
         is-mockup
@@ -141,6 +142,15 @@ export default {
     Project,
     Project,
     PrimarySection
+  },
+  data() {
+    return { title: "Side Projects" };
+  },
+  head() {
+    return {
+      title: this.title + " - " + process.env.siteTitle,
+      meta: [{ hid: "side-projects" }]
+    };
   }
 };
 </script>

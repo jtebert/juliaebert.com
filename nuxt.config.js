@@ -1,5 +1,17 @@
 module.exports = {
 
+
+  env: {
+    siteTitle: 'Julia Ebert',
+    navItems: {
+      "About Me": "",
+      CV: "cv",
+      Research: "research",
+      Publications: "publications",
+      "Side Projects": "side-projects",
+      Media: "media"
+    }
+  },
   router: {
     scrollBehavior(to, from, savedPosition) {
       if (to.hash) {
@@ -66,5 +78,5 @@ module.exports = {
   modules: [
     // Simple usage
     // ['nuxt-sass-resources-loader', './assets/sass/variables.scss'],
-  ],
+  ]
 }
