@@ -1,6 +1,6 @@
 <template>
   <primary-section
-    title="Publications"
+    :title="title"
     subtitle="Making the world a better place, one peer-reviewed article at a time"
     texture="bank-note"
   >
@@ -31,6 +31,15 @@ export default {
     IconButtonLink,
     PrimarySection,
     PublicationList
+  },
+  data() {
+    return { title: "Publications" };
+  },
+  head() {
+    return {
+      title: this.title + " - " + process.env.siteTitle,
+      meta: [{ hid: "publications" }]
+    };
   }
 };
 </script>

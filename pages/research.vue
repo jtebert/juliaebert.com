@@ -1,9 +1,16 @@
 <template>
   <primary-section
-    title="Research"
-    subtitle="Robot swarms + humans + space = ???"
+    :title="title"
+    subtitle="Robot swarms + biology + space = ???"
     texture="circuit-board"
   >
+    <div slot="intro">
+      <vue-markdown>
+I am interested in using bioinspiration to improve robotics. Biological systems, from cellular organization to ant colonies to human society, are able to produce complex behavior and structures at scales unachievable by a (relatively simple) individual. In addition, humans and animals are able to learn and adapt much quicker than state-of-the-art robots.
+
+I want to develop robots that draw from biology to learn and work collectively. Striving for minimal systems, can also help us understand the fundamental principles underlying behavior. A budding interest is connecting these approaches to distributed problems outside robotics, such as in satellite constellations.
+      </vue-markdown>
+    </div>
     <div>
       <project
         is-cover
@@ -11,7 +18,9 @@
         title="Collective Perception and Decision Making in a Robot Swarm"
         subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
       >
-        <p>This research aims to improve the ability of a large group of robots to perceive and understand their environment by employing agents with different perceptual skills.</p>
+        <p>This research aims to improve the ability of a large group of robots to perceive and classify their environment by employing robots with different perceptual skills. The ability to make collective decisions is a critical component to developing complex collective behavior and intelligence and can contribute to the broader challenge of translating global goals to local rules.</p>
+        <p>In a first paper, we demonstrated that a bio-inspired algorithm that allowed a collective of Kilobots to discriminate between multiple binary-state features simultaneously. We also explored strategies for allocating robots between features, finding approaches that proved successful even when the initial distribution of robots across features was poor.</p>
+        <p>Currently, I am developing a more general framework for distributed Bayesian decision-making in robots.</p>
         <div slot="results">
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2018aamas']"></publication-list>
         </div>
@@ -77,13 +86,24 @@
 import Project from "~/components/Project.vue";
 import PublicationList from "~/components/PublicationList.vue";
 import PrimarySection from "~/components/PrimarySection.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     PrimarySection,
     Project,
     PublicationList,
-    Project
+    Project,
+    VueMarkdown
+  },
+  data() {
+    return { title: "Research" };
+  },
+  head() {
+    return {
+      title: this.title + " - " + process.env.siteTitle,
+      meta: [{ hid: "research" }]
+    };
   }
 };
 </script>

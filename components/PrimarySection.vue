@@ -4,12 +4,17 @@
       <img class="icon-block" :src="'/imgs/icons/'+slug+'.svg'">
       <div class="section is-light is-unpadded">
         <div class="block-content has-title">
-          <div class="title-block-title">
-            <h1 class="title is-1">{{ title }}</h1>
-            <h3 class="section-subtitle subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
+          <div class="title-block">
+            <div class="title-block-title">
+              <h1 class="title is-1">{{ title }}</h1>
+              <h3 class="section-subtitle subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
+            </div>
+            <div class="title-block-links">
+              <slot name="links" class="title-block-links"></slot>
+            </div>
           </div>
-          <div class="title-block-links">
-            <slot name="links" class="title-block-links"></slot>
+          <div class="intro content" v-if="this.$slots.intro">
+            <slot name="intro"></slot>
           </div>
         </div>
         <slot></slot>

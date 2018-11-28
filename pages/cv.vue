@@ -1,5 +1,5 @@
 <template>
-  <primary-section title="CV" subtitle="Curriculum Vitae" texture="brick-wall">
+  <primary-section :title="title" subtitle="Curriculum Vitae" texture="brick-wall">
     <div slot="links">
       <p class="buttons">
         <icon-button-link to="/pdfs/ebert-julia.cv.pdf" icon="file-pdf">View as PDF</icon-button-link>
@@ -21,6 +21,15 @@ export default {
     PrimarySection,
     IconButtonLink,
     cvContent
+  },
+  data() {
+    return { title: "CV" };
+  },
+  head() {
+    return {
+      title: this.title + " - " + process.env.siteTitle,
+      meta: [{ hid: "cv" }]
+    };
   }
 };
 </script>

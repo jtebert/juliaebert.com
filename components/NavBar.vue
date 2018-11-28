@@ -40,22 +40,12 @@
 import slugify from "slugify";
 
 export default {
-  props: {
-    sectionNames: {
-      default: function() {
-        return {
-          "About Me": "",
-          CV: "cv",
-          Research: "research",
-          Publications: "publications",
-          "Side Projects": "side-projects",
-          Media: "media"
-        };
-      }
-    }
-  },
+  props: {},
   data() {
-    return { isActive: false };
+    return {
+      isActive: false,
+      sectionNames: process.env.navItems
+    };
   },
   computed: {
     header: function() {
