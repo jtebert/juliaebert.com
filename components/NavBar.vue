@@ -12,17 +12,17 @@
         </nuxt-link>
         <a
           role="button"
-          class="navbar-burger"
-          data-target="navMenu"
+          :class="['navbar-burger', {'is-active': isActive}]"
           aria-label="menu"
           aria-expanded="false"
+          v-on:click="menuToggle"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div class="navbar-menu" id="navMenu">
+      <div :class="['navbar-menu', {'is-active': isActive}]" id="navMenu">
         <div class="navbar-end">
           <nuxt-link
             v-for="(slug, name) in sectionNames"
@@ -47,56 +47,16 @@ export default {
       sectionNames: process.env.navItems
     };
   },
-  computed: {
-    header: function() {
-      if (process.browser) {
-        return document.getElementById("top-nav");
-      }
-    }
-  },
   methods: {
-    setOpacity: function() {
-      if (process.browser) {
-        let scrollpos = window.scrollY;
-        var header_height = this.header.offsetHeight;
-        if (scrollpos >= header_height * 3) {
-          this.header.classList.add("is-solid");
-        } else {
-          this.header.classList.remove("is-solid");
-        }
-      }
-    },
-    addBurgerToggles: function() {
-      if (process.browser) {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
-
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-          // Add a click event on each of them
-          $navbarBurgers.forEach(el => {
-            el.addEventListener("click", () => {
-              // Get the target from the "data-target" attribute
-              const target = el.dataset.target;
-              const $target = document.getElementById(target);
-
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              el.classList.toggle("is-active");
-              $target.classList.toggle("is-active");
-            });
-          });
-        }
-      }
+    menuToggle: function() {
+      this.isActive = !this.isActive;
+      console.log(this.isActive);
     }
   },
-  created() {
-    if (process.browser) {
-      //this.setOpacity();
-      //window.addEventListener("scroll", this.setOpacity);
-      this.addBurgerToggles();
+  watch: {
+    $route: function() {
+      this.isActive = false;
+      console.log("route changed");
     }
   }
 };
