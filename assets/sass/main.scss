@@ -377,10 +377,13 @@ a.button:hover {
   .to-rest {
     color: $white;
     opacity: .4;
-    font-size: 72px;
+    font-size: 92px;
     cursor: pointer;
+    transition: opacity 0.2s linear;
+    display: inline-block;
+    padding-bottom: $gap/2;
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
   &.bg-img {

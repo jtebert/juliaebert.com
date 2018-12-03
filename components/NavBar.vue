@@ -50,13 +50,12 @@ export default {
   methods: {
     menuToggle: function() {
       this.isActive = !this.isActive;
-      console.log(this.isActive);
     }
   },
   watch: {
     $route: function() {
+      // Close the menu when the route changes (aka switch pages)
       this.isActive = false;
-      console.log("route changed");
     }
   }
 };
