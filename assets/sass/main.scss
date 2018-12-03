@@ -520,9 +520,6 @@ $icon-block-size-touch: 6rem;
     @include touch {
       padding: 1.5rem;
     }
-    @include mobile {
-      padding-top: $icon-block-size-touch/2 + 1.5rem !important;
-    }
     @include tablet-only {
       padding-left: $icon-block-size-touch / 2 + 1.5rem;
     }
@@ -536,6 +533,9 @@ $icon-block-size-touch: 6rem;
     &.has-title {
       padding-bottom: 3rem;
       padding-top: 3rem;
+      @include mobile {
+        padding-top: $icon-block-size-touch/2 + 1.5rem !important;
+      }
       .title-block {
         @include mobile {
           flex-direction: column;
