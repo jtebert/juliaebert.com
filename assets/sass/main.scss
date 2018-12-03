@@ -76,6 +76,12 @@ $column-gap: 0.75rem;
 // @import "~bulma/sass/utilities/mixins";
 @import "~bulma/bulma";
 
+html {
+  @include mobile {
+    font-size: 14px !important;
+  }
+}
+
 
 
 p a:hover {
