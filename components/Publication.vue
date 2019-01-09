@@ -124,7 +124,7 @@ export default {
     },
     doi: function() {
       var doiUrl = "https://doi.org/" + this.json.doi;
-      return `DOI: <a href="${doiUrl}">${doiUrl}</a>`;
+      return `DOI: <a href="${doiUrl}">${this.json.doi}</a>`;
     }
   },
   methods: {

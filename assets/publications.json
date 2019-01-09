@@ -1,4 +1,28 @@
 {
+    "farkhatdinov2019": {
+        "type": "article",
+        "title": "Assisting Human Balance in Standing with a Robotic Exoskeleton",
+        "author": [
+            "Farkhatdinov, Ildar",
+            "Ebert, Julia",
+            "van Oort, Gijs",
+            "Vlutter, Mark",
+            "van Asseldonk, Edwin",
+            "Burdet, Etienne"
+        ],
+        "year": 2019,
+        "journal": "IEEE Robotics and Automation Letters",
+        "publisher": "IEEE",
+        "doi": "10.1109/LRA.2018.2890671",
+        "pages": "1--8",
+        "number": 99,
+        "file": "2019_ral.pdf",
+        "keywords": [
+            "Prosthetics and Exoskeletons",
+            "Physically Assistive Devices",
+            "Human Performance Augmentation"
+        ]
+    },
     "ebert2018aamas": {
         "type": "inproceedings",
         "title": "Multi-feature collective decision making in robot swarms",
@@ -58,24 +82,6 @@
             "stability",
             "contraction",
             "motor learning"
-        ]
-    },
-    "farkhatdinov2018": {
-        "type": "article",
-        "title": "Experiments on Human Balancing Co-Control in Standing",
-        "author": [
-            "Farkhatdinov, Ildar",
-            "Ebert, Julia",
-            "van Oort, Geiss",
-            "van Asseldonk, Edwin",
-            "Burdet, Etienne"
-        ],
-        "year": 2018,
-        "note": "Submitted to <i>IEEE RA-L</i>",
-        "keywords": [
-            "human robot interaction",
-            "control",
-            "exoskeleton"
         ]
     },
     "park2018": {
@@ -154,7 +160,7 @@
         "author": [
             "Farkhatdinov, Ildar",
             "Ebert, Julia",
-            "van Oort, Geiss",
+            "van Oort, Gijs",
             "van Asseldonk, Edwin",
             "Burdet, Etienne"
         ],
@@ -174,7 +180,7 @@
         "author": [
             "Ebert, Julia",
             "Farkhatdinov, Ildar",
-            "van Oort, Geiss",
+            "van Oort, Gijs",
             "van Asseldonk, Edwin",
             "Burdet, Etienne"
         ],
