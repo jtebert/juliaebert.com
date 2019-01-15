@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="isPaper" class="cv-header">
+        <div v-if="isPaper" class="cv-header is-print-only">
             <img class="logo" src="/imgs/logos/logo-black.svg">
             <div class="name">
                 <h1>Julia Ebert</h1>
@@ -107,40 +107,44 @@
                     {date: 'July -- Dec. 2013',
                      task: 'Learning and exploration in a novel dimensionality-reduction task'}]"
             ></cv-entry>
-            <h2>Grants and Scholarships</h2>
-            <cv-award
-                date="2016"
-                award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
-            ></cv-award>
-            <cv-award date="2015" award="Marshall Scholarship"></cv-award>
-            <cv-award
-                date="2014"
-                award="Northeastern Provost Undergraduate Advanced Research Award"
-            ></cv-award>
-            <cv-award date="2013" award="Barry Goldwater Scholarship"></cv-award>
-            <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
-            <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
-            <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
-            <cv-award date="2010" award="Northeastern National Merit Scholarship"></cv-award>
-            <h2>Awards</h2>
-            <cv-award date="2018" award="Distinction in Teaching, Harvard University"></cv-award>
-            <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
-            <cv-award
-                date="2016"
-                award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
-            ></cv-award>
-            <cv-award date="2015" award="Northeastern University Honors Program Distinction"></cv-award>
-            <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience"></cv-award>
-            <cv-award
-                date="2015"
-                award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
-            ></cv-award>
-            <cv-award
-                date="2015"
-                award="Northeastern Sears B. Condit Award for academic achievement"
-            ></cv-award>
-            <cv-award date="2010 -- 2015" award="Northeastern Dean’s List (6 semesters)"></cv-award>
-            <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
+
+            <div class="is-unbroken">
+                <h2>Grants and Scholarships</h2>
+                <cv-award
+                    date="2016"
+                    award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+                ></cv-award>
+                <cv-award date="2015" award="Marshall Scholarship"></cv-award>
+                <cv-award
+                    date="2014"
+                    award="Northeastern Provost Undergraduate Advanced Research Award"
+                ></cv-award>
+                <cv-award date="2013" award="Barry Goldwater Scholarship"></cv-award>
+                <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
+                <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
+                <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
+                <cv-award date="2010" award="Northeastern National Merit Scholarship"></cv-award>
+                <h2>Awards</h2>
+                <cv-award date="2018" award="Distinction in Teaching, Harvard University"></cv-award>
+                <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
+                <cv-award
+                    date="2016"
+                    award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
+                ></cv-award>
+                <cv-award date="2015" award="Northeastern University Honors Program Distinction"></cv-award>
+                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience"></cv-award>
+                <cv-award
+                    date="2015"
+                    award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
+                ></cv-award>
+                <cv-award
+                    date="2015"
+                    award="Northeastern Sears B. Condit Award for academic achievement"
+                ></cv-award>
+                <cv-award date="2010 -- 2015" award="Northeastern Dean’s List (6 semesters)"></cv-award>
+                <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
+            </div>
+
             <h2 v-if="isPaper">Papers</h2>
             <publication-list
                 v-if="isPaper"
@@ -232,26 +236,30 @@
                 'Embedded programming', '3D motion capture',
                 'Kinematic and EEG data collection in human subjects']"
             ></cv-skill>
-            <h2>Relevant Coursework</h2>
-            <cv-skill
-                category="Computer Science"
-                :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
-                'Machine Learning', 'Network Algorithms', 'Computational Neurodynamics',
-                'Artificial Intelligence', 'Robotics']"
-            ></cv-skill>
-            <cv-skill
-                category="Science and Engineering"
-                :skills="[
-                'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
-                'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
-                'Organic Chemistry']"
-            ></cv-skill>
-            <cv-skill
-                category="Mathematics"
-                :skills="[
-                'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
-                'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
-            ></cv-skill>
+
+            <div class="is-unbroken">
+                <h2>Relevant Coursework</h2>
+                <cv-skill
+                    category="Computer Science"
+                    :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
+                    'Machine Learning', 'Network Algorithms', 'Computational Neurodynamics',
+                    'Artificial Intelligence', 'Robotics']"
+                ></cv-skill>
+                <cv-skill
+                    category="Science and Engineering"
+                    :skills="[
+                    'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
+                    'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
+                    'Organic Chemistry']"
+                ></cv-skill>
+                <cv-skill
+                    category="Mathematics"
+                    :skills="[
+                    'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
+                    'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
+                ></cv-skill>
+            </div>
+
             <h2>Activities and Interests</h2>
             <cv-skill
                 category="Sport"
