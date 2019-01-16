@@ -229,48 +229,72 @@ a.button:hover {
   }
 }
 // Printable CV
-.paper {
-  background-color: #fff !important;
-  color: #000 !important;
-  font-size: 11px;
-  a {
-    color: #000;
-  }
-  h2 {
-    font-size: 2em;
-    font-family: $family-subtitle;
-    color: $primary !important;
-  }
-  .cv-bar {
-      border-left: 1px solid black;
-      background: none;
-  }
-  .cv-header {
-    display: grid;
-    grid-template-columns: 9em auto auto;
-    grid-template-areas: "logo name links";
-    grid-column-gap: $column-gap * 2;
-    margin-bottom: 2em;
-    .logo {
-      grid-area: logo;
-      justify-self: right;
-      height: 7em;
+@page {
+  size: 8.5in 11in;
+  margin: 0.5in;
+}
+.is-print-only {display: none;}
+
+@media print {
+  // Resets
+  .is-print-only {display: inherit}
+  footer {display: none}
+  img.icon-block {display: none}
+  .navbar {display: none}
+  .is-printable {
+    &.section.is-block {padding: 0 !important;}
+    * {box-shadow: none !important}
+    .container {margin: 0 !important;}
+    .block-content.has-title {display: none;}
+    .block-content {padding: 0 !important;}
+    .section {margin: 0 !important;}
+
+    .is-unbroken {page-break-inside: avoid;}
+
+    font-size: 11px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    a {
+      color: #000;
     }
-    .name {
-      grid-area: name;
-      h1 {
-        font-size: 4em;
-        font-weight: 600;
-        color: black !important;
-        margin-bottom: 0;
-        font-family: $family-title;
+    h2 {
+      font-size: 2em;
+      font-family: $family-subtitle;
+      color: $primary !important;
+    }
+    .cv-award { page-break-after: avoid;}
+    .cv-bar {
+        border-left: 1px solid black;
+        background: none;
+    }
+    .cv-header {
+      display: grid;
+      grid-template-columns: 9em auto auto;
+      grid-template-areas: "logo name links";
+      grid-column-gap: $column-gap * 2;
+      margin-bottom: 2em;
+      .logo {
+        grid-area: logo;
+        justify-self: right;
+        height: 7em;
       }
-      .subtitle {
-        font-size: 1.25em;
+      .name {
+        grid-area: name;
+        h1 {
+          font-size: 4em;
+          font-weight: 600;
+          color: black !important;
+          margin-bottom: 0;
+          font-family: $family-title;
+        }
+        .subtitle {
+          font-size: 1.25em;
+        }
       }
     }
   }
 }
+
 
 // LAYOUT: ALT
 
