@@ -9,7 +9,7 @@
       <span class="year" v-if="json.year" v-html="json.year+'. '"></span>
       <span class="pubtitle" v-html="json.title+'. '"></span>
       <span class="publisher-info" v-if="pubInfo" v-html="pubInfo"></span>
-      <span class="address" v-if="json.address" v-html="json.address+'. '"></span>
+      <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
       <span class="doi" v-if="json.doi" v-html="doi"></span>
       <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
     </span>

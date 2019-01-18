@@ -234,6 +234,10 @@ a.button:hover {
   margin: 0.5in;
 }
 .is-print-only {display: none;}
+.is-unbroken h2:first-child {
+  // Dealing with margin removed by Bulma .content h2:not(first-child)
+  margin-top: 1.1428em;
+}
 
 @media print {
   // Resets
