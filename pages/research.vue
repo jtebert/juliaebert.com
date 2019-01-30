@@ -43,7 +43,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
       >
         <p>Maintaining balance in the face of perpurbations is essential to walking and standing. For my masters thesis, I developed controls for LOPES (LOwer-extremity Powered ExoSkeleton, University of Twente) to assist humans with balance recovery after perturbations, using a combination of feed-forward and feedback control (such as hip torques and a PD controller). We found that even simple, single-joint torques are sufficient to reduce the time to a recovery movement and the energy used by subjects in recovery.</p>
         <div slot="results">
-          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2016eurohaptics']"></publication-list>
+          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2016eurohaptics', 'farkhatdinov2019']"></publication-list>
         </div>
       </project>
       <project

@@ -23,7 +23,7 @@
         <div>
           <p>Our
             <a href="/pdfs/article/2018_chaos.pdf">paper on stability in human movement</a> was an editor's pick in
-            <i>Chaos</i>and was featured by Scilight and Physics Today.
+            <i>Chaos</i> and was featured by Scilight and Physics Today.
           </p>
           <icon-link
             icon="atom"
