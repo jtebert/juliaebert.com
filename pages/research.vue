@@ -14,7 +14,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
     <div>
       <project
         is-cover
-        img-src="/imgs/research/kilobots3.jpg"
+        img-src="/imgs/research/kilobot-decisions.jpg"
         title="Collective Perception and Decision Making in a Robot Swarm"
         subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
       >

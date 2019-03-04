@@ -13,6 +13,10 @@ PhD Candidate in Computer Science
 
 School of Engineering and Applied Sciences, Harvard University
 
+238 Maxwell Dworkin
+33 Oxford St
+Cambridge, MA 02138
+
 [julia@juliaebert.com](mailto:julia@juliaebert.com)
         </vue-markdown>
       </div>
@@ -20,7 +24,7 @@ School of Engineering and Applied Sciences, Harvard University
         <vue-markdown class="content">
 *Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), [Vue.js](https://vuejs.org/), [Bulma](https://bulma.io/), [Hero Patterns](https://www.heropatterns.com/), and icons from [The Noun Project](https://thenounproject.com/) by Maxim Basinski and Eucalyp. Typeset in [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Space Mono](https://fonts.google.com/specimen/Space+Mono).*
 
-*Source code available on [GitHub](https://github.com/jtebert/juliaebert.com) under [MIT license](https://github.com/jtebert/juliaebert.com/blob/master/LICENSE.txt).*
+*Source code available on [GitHub](https://github.com/jtebert/juliaebert.com) under the [MIT license](https://github.com/jtebert/juliaebert.com/blob/master/LICENSE.txt).*
         </vue-markdown>
       </div>
     </div>
