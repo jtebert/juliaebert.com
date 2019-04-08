@@ -24,9 +24,11 @@
             <h2>Education</h2>
             <cv-entry
                 location="Cambridge, MA"
-                dates="2016 --"
+                dates="2016 --<br>
+                       2019"
                 title="Harvard University"
                 subtitle="PhD Candidate in Computer Science<br>
+                          SM in Computer Science<br>
                           Advisor: Prof. Radhika Nagpal"
             ></cv-entry>
             <cv-entry
