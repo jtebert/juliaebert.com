@@ -4,7 +4,7 @@
     <div class="cv-sidebar entry-primary">
       <b v-if="location" v-html="location" class="location"></b>
       <br v-if="dates || subtitle" class="location">
-      <span v-if="dates">{{ dates.replace('--', '–') }}</span>
+      <span v-if="dates" v-html="dates.replace('--', '–')"></span>
     </div>
     <div class="cv-main entry-primary">
       <b>{{ title }}</b>
@@ -39,6 +39,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-</style>
