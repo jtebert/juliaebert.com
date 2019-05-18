@@ -4,18 +4,21 @@
 // $green: #00B140;
 $green: #03BC25;
 $green-invert: findColorInvert($green);
-
-$blue: #3689e1;
+$blue: #3A93F2 ;
 $blue-invert: findColorInvert($blue);
-$orange: #ea9e00;
+$orange: #F18F01;
 $orange-invert: findColorInvert($orange);
+$purple: #9246F4;
+$purple-invert: findColorInvert($purple);
+$red: #F23C2B;
+$red-invert: findColorInvert($red);
 
 // $text: $white-ter;
 $text: $grey-darker;
 
 $primary: $green;
 $link: $primary;
-$link-invert: $green-invert;
+$link-invert: findColorInvert($primary);
 $link-hover: inherit;
 $link-focus: $white;
 $link-active: $white;
@@ -75,6 +78,19 @@ $column-gap: 0.75rem;
 
 // @import "~bulma/sass/utilities/mixins";
 @import "~bulma/bulma";
+
+
+
+// TESTING TRANSITIONS
+
+.page-enter-active, .page-leave-active {
+  transition: all 0.5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform: scale(0);
+}
+
 
 html {
   @include mobile {

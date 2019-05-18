@@ -127,7 +127,7 @@
                 <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
                 <cv-award date="2010" award="Northeastern National Merit Scholarship"></cv-award>
                 <h2>Awards</h2>
-                <cv-award date="2018" award="Distinction in Teaching, Harvard University"></cv-award>
+                <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
                 <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
                 <cv-award
                     date="2016"
