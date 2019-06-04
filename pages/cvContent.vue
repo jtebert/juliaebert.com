@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="isPaper" class="cv-header is-print-only">
+        <div class="cv-header is-print-only">
             <img class="logo" src="/imgs/logos/logo-black.svg">
             <div class="name">
                 <h1>Julia Ebert</h1>
@@ -147,22 +147,22 @@
                 <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
             </div>
 
-            <h2 v-if="isPaper">Papers</h2>
+            <h2 class="is-print-only">Papers</h2>
             <publication-list
-                v-if="isPaper"
+                class="is-print-only"
                 highlight-author="Ebert"
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="false"
             ></publication-list>
-            <h2 v-if="isPaper">Conference Abstracts and Posters</h2>
+            <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
-                v-if="isPaper"
+                class="is-print-only"
                 highlight-author="Ebert"
                 :type-filter="['poster']"
                 :showLinks="false"
             ></publication-list>
-            <h2 v-if="!isPaper">Publications</h2>
-            <p v-if="!isPaper">See
+            <h2 class="is-screen-only">Publications</h2>
+            <p class="is-screen-only">See
                 <nuxt-link to="/publications">publications section</nuxt-link>
             </p>
             <!-- <h2>Talks</h2>
@@ -296,9 +296,6 @@ export default {
     CvAward,
     CvSkill,
     IconLink
-  },
-  props: {
-    isPaper: { default: false }
   }
 };
 </script>

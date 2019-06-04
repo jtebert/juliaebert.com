@@ -1,5 +1,7 @@
-module.exports = {
+import pkg from './package'
 
+export default {
+  mode: 'universal',
 
   env: {
     siteTitle: 'Julia Ebert',
@@ -12,15 +14,7 @@ module.exports = {
       Media: "media"
     }
   },
-  router: {
-    scrollBehavior(to, from, savedPosition) {
-      if (to.hash) {
-        return { selector: to.hash }
-      } else {
-        return { x: 0, y: 0 }
-      }
-    }
-  },
+
   /*
   ** Headers of the page
   */
@@ -42,41 +36,56 @@ module.exports = {
       { rel: 'manifest', href: '/site.webmanifest?v=OmJMPAq7rX' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=OmJMPAq7rX', color: '#03bc25' },
       { rel: 'shortcut icon', href: '/favicon.ico?v=OmJMPAq7rX' },
-    ],
+    ]
   },
+
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#fff' },
+
+  /*
+  ** Global CSS
+  */
   css: [
     'assets/sass/main.scss',
     'assets/sass/texture.scss',
     '@mdi/font/css/materialdesignicons.min.css'
+
   ],
+
   /*
-  ** Customize the progress bar color
+  ** Plugins to load before mounting the App
   */
-  loading: { color: '#03BC25' },
+  plugins: [
+    { src: '~/plugins/vue-typer.js', ssr: false },
+    { src: '~/plugins/directives.js' }
+
+  ],
+
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    // '@nuxtjs/bulma',
+  ],
+
   /*
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
       }
+    },
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {
     }
-  },
-  plugins: [
-    { src: '~/plugins/vue-typer.js', ssr: false },
-    { src: '~/plugins/directives.js' }
-  ],
-  modules: [
-    // Simple usage
-    // ['nuxt-sass-resources-loader', './assets/sass/variables.scss'],
-  ]
+  }
 }

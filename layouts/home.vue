@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body-content">
     <section class="hero is-fullheight bg-img" id="header">
       <div class="hero-head">
         <nav-bar></nav-bar>
