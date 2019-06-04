@@ -1,9 +1,11 @@
 <template>
-  <div class="default-layout">
-    <nav-bar></nav-bar>
-    <nuxt/>
-    <my-footer></my-footer>
-  </div>
+    <div class="default-layout">
+      <nav-bar></nav-bar>
+      <div class="body-content">
+      <nuxt/>
+      </div>
+      <my-footer></my-footer>
+    </div>
 </template>
 
 <script>

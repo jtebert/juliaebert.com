@@ -6,7 +6,7 @@
       </p>
     </div>
     <div class="block-content content">
-      <cv-content :isPaper="true"></cv-content>
+      <cv-content></cv-content>
     </div>
   </primary-section>
 </template>

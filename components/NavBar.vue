@@ -5,7 +5,7 @@
     aria-label="main navigation"
     id="top-nav"
   >
-    <div class="container">
+    <div class="container nav-container">
       <div class="navbar-brand">
         <nuxt-link to="/">
           <img src="/imgs/icons/about-me.svg" id="brand-icon" class="navbar-item">
