@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
+    "babel-runtime": "^6.26.0",
     "bulma": "^0.7.5",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
