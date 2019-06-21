@@ -23,7 +23,7 @@
         :img-srcs="[
       ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
       ['curling.jpg', '2017 college curling national championship (Harvard took 4th place!)'],
-      ['project_night_four_web.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications']
+      ['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications']
       ]"
       ></gallery>
       <div class="block-content content">
