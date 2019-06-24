@@ -54,9 +54,11 @@
                 subtitle="Prof. Radhika Nagpal"
                 :tasks="[
                     {date: '2017 --',
-                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation'},
+                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
+                     description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},
                     {date: '2016 --',
-                     task: 'Multi-feature perception and decision making in robot collectives'}]"
+                     task: 'Multi-feature perception and decision making in robot collectives',
+                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'}]"
             ></cv-entry>
             <cv-entry
                 location="Livermore, CA"
@@ -64,7 +66,8 @@
                 subtitle="Dr. Michael Schneider"
                 :tasks="[
                     {date: '2018 --',
-                     task: 'Collaborative Autonomy for Space Situational Awareness'}]"
+                     task: 'Collaborative Autonomy for Space Situational Awareness',
+                     description: 'Developing a simulator for testing collective observation by low earth orbit satellite constellations.'}]"
             ></cv-entry>
             <cv-entry
                 location="London, UK"
@@ -72,7 +75,8 @@
                 subtitle="Prof. Etienne Burdet and Dr. Ildar Farkhatdinov"
                 :tasks="[
                     {date: '2015 -- 2016',
-                     task: 'Co-control of balance recovery in a lower limb exoskeleton'}]"
+                     task: 'Co-control of balance recovery in a lower limb exoskeleton',
+                     description: 'Developed algorithms for human-robot co-control of the LOPES exoskeleton in both standing a walking balance recovery, and tested with human participants.'}]"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
@@ -80,26 +84,32 @@
                 subtitle="Prof. Dagmar Sternad"
                 :tasks="[
                     {date: '2014 -- 2015',
-                     task: 'Prediction and stability in control of objects with complex dynamics'},
+                     task: 'Prediction and stability in control of objects with complex dynamics',
+                     description: 'Programmed HapticMaster robot (C++) for human-subject experiments and conducted pilot experiments.'},
                     {date: '2012 -- 2015',
-                     task: 'Learning and long-term retention of an asymmetric bimanual task'},
+                     task: 'Learning and long-term retention of an asymmetric bimanual task',
+                     description: 'Designed and programmed experiments to assess ability of humans to learn a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analysed results (Matlab) for Honors thesis.'},
                     {date: '2011 -- 2012',
-                     task: 'Effects of central fatigue on cognitive and motor performance'},]"
+                     task: 'Effects of central fatigue on cognitive and motor performance',
+                     description: 'Analyzed data (Matlab) to assess the effect of a prolonged motor experiment on cognitive fatigue in human subjects.'},]"
             ></cv-entry>
+            <span class="page-break"></span>
             <cv-entry
                 location="Nahant, MA"
                 title="Northeastern University Marine Science Center"
                 subtitle="Prof. Joseph Ayers"
                 :tasks="[
                     {date: 'May -- Aug. 2015',
-                     task: 'Neuro-inspired rheotaxis and antenna design in a robotic lobster'}]"
+                     task: 'Neuro-inspired rheotaxis and antenna design in a robotic lobster',
+                     description: 'Contributed to development of flex-sensing antennae for lobster-inspired robot. Developed neuron-based biomimetic control (LabView) for using antennae to adjust robot control in response to water currents.'}]"
             ></cv-entry>
             <cv-entry
                 location="Watertown, MA"
                 title="Interactive Motion Technologies"
                 :tasks="[
                     {date: 'July -- Sept. 2014',
-                     task: 'Integrated stroke assessment software in rehabilitation robotics'}]"
+                     task: 'Integrated stroke assessment software in rehabilitation robotics',
+                     description: 'Developed a backend and interface (Python + Django) for integrating stroke assesment tools for clinicians into the rehabilitation robot interface.'}]"
             ></cv-entry>
             <cv-entry
                 location="Tübingen, DE"
@@ -107,7 +117,8 @@
                 subtitle="Prof. Stefan Schaal"
                 :tasks="[
                     {date: 'July -- Dec. 2013',
-                     task: 'Learning and exploration in a novel dimensionality-reduction task'}]"
+                     task: 'Learning and exploration in a novel dimensionality-reduction task',
+                     description: 'Designed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, and conducted pilot experiments.'}]"
             ></cv-entry>
 
             <div class="is-unbroken">
@@ -154,6 +165,7 @@
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="false"
             ></publication-list>
+            <span class="page-break"></span>
             <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
                 class="is-print-only"

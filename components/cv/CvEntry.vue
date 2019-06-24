@@ -23,7 +23,8 @@
     >
       <span class="cv-task">
         <i class="mdi mdi-chevron-right"></i>
-        <span v-html="task.task"></span>
+        <span v-html="task.task"></span><br>
+        <i><span class="cv-description" v-html="task.description"></span></i>
       </span>
     </div>
   </div>
@@ -31,7 +32,7 @@
 
 <script>
 export default {
-  props: ["title", "subtitle", "location", "dates", "tasks"],
+  props: ["title", "subtitle", "location", "dates", "tasks", "description"],
   computed: {
     uid: function() {
       return Math.floor((Math.random() * 2) ^ 32) + 1;
@@ -39,3 +40,10 @@ export default {
   }
 };
 </script>
+
+<style>
+.cv-description {
+  font-size: 0.85em;
+  line-height: 1em;
+}
+</style>
