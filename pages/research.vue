@@ -1,7 +1,7 @@
 <template>
   <primary-section
     :title="title"
-    subtitle="Robot swarms + biology + space = ???"
+    subtitle="Full Stack Robotics"
     texture="circuit-board"
   >
     <div slot="intro">
