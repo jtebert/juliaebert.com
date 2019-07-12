@@ -103,6 +103,27 @@
             "bimanual"
         ]
     },
+    "ebert2019csgf": {
+        "type": "poster",
+        "title": "Bayes Bots: Bayesian Decision-Making for Robot Swarms",
+        "author": [
+            "Ebert, Julia",
+            "Gauci, Melvin",
+            "Nagpal, Radhika"
+        ],
+        "year": "2019",
+        "location": "Washington, DC",
+        "booktitle": "DOE CSGF Program Review",
+        "issue_date": "14--18 July 2019",
+        "keywords": [
+            "kilobots",
+            "decision making",
+            "swarms",
+            "robotics",
+            "collective behavior"
+        ],
+        "file": "2019_csgf.pdf"
+    },
     "ebert2018llnl": {
         "type": "poster",
         "title": "Collaborative Autonomy for Space Situational Awareness",
