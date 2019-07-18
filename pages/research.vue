@@ -22,8 +22,18 @@ I want to develop robots that draw from biology to learn and work collectively. 
         <p>In a first paper, we demonstrated that a bio-inspired algorithm that allowed a collective of Kilobots to discriminate between multiple binary-state features simultaneously. We also explored strategies for allocating robots between features, finding approaches that proved successful even when the initial distribution of robots across features was poor.</p>
         <p>Currently, I am developing a more general framework for distributed Bayesian decision-making in robots.</p>
         <div slot="results">
-          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2018aamas']"></publication-list>
+          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2018aamas', 'ebert2019csgf']"></publication-list>
         </div>
+      </project>
+      <project
+        is-cover
+        img-src="/imgs/research/larvabots.jpg"
+        title="LARVAbots: Locomotion of Autonomous Robots Via Aggregation"
+        subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
+      >
+        <p>Sawfly larva move together in a large aggregate, possibly giving them energetic advantages for reduced movement effort, exploiting the sensing of a few individuals, avoiding losing members of the collective, or overcoming obstacles.</p>
+        <p>I am desiging and building a group of larva-inspired robots capable of similar collective movement. These LARVAbots can maintain an aggregate as they move and overcome obstacles by exploiting the shape of the group. Currently, I am investigating whether their collective behavior can result in greater movement efficiency than the movement of individual robots.</p>
+        <p>This started as a project in the MIT course How To Make (Almost) Anything. You can <a href="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/">read more about the inital project development here.</a></p>
       </project>
       <project
         is-cover
