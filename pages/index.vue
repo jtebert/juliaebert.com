@@ -21,9 +21,10 @@
       </div>
       <gallery
         :img-srcs="[
-      ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
+      ['csgf.jpg'],
+      //['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications'],
       ['curling.jpg', '2017 college curling national championship (Harvard took 4th place!)'],
-      ['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications']
+      ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
       ]"
       ></gallery>
       <div class="block-content content">
