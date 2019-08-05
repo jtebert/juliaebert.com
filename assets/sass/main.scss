@@ -386,7 +386,14 @@ a.button:hover {
       width: 100%;
     }
   }
+  .navbar-item.nuxt-link-exact-active {
+    // Hacky highlighting of current page
+    // color: $primary !important;
+    border-top: 4px solid $primary !important;
+    padding-top: calc(0.5rem - 4px);
+  }
 }
+
 .hero {
   .typer-title {
     display: flex;
