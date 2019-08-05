@@ -2,6 +2,19 @@
   <primary-section :title="title" subtitle="Shameless self-promotion" texture="plus">
     <div>
       <project
+        img-src="/imgs/media/deixis-kilobots.jpg"
+        title="Robot Whisperer"
+        subtitle="Deixis magazine, July 2019"
+      >
+        <div>
+          <p>"A DOE computational science fellow combines biology, technology and ￼more to explore behavior, swarms and space."</p>
+          <icon-link
+            icon="newspaper"
+            to="https://deixismagazine.org/2019/07/robot-whisperer/"
+          >Read article</icon-link>
+        </div>
+      </project>
+      <project
         is-cover
         img-src="/imgs/media/smart-robots.png"
         title="Brains and Bodies: How to Make Smart Robots"
