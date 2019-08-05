@@ -67,6 +67,9 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-54476418-1'
+    }],
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     // '@nuxtjs/bulma',
   ],
