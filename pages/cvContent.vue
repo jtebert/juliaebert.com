@@ -194,20 +194,22 @@
                 title="Harvard University"
                 :tasks="[
                     {date: 'Fall 2018',
-                     task: '<b>Teaching Staff,</b> How To Make (Almost) Anything, Harvard section'},
+                     task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
+                    {date: 'Fall 2018',
+                     task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
                     {date: 'Spring 2018',
-                     task: '<b>Teaching Fellow,</b> CS 189: Autonomous Robot Systems'}]"
+                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems'}]"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
                 title="Northeastern University"
                 :tasks="[
                     {date: '2014 -- 2015',
-                     task: '<b>Teaching Assistant,</b> CS 2510: Fundamentals of Computer Science (2 semesters)'},
+                     task: '<b>Teaching assistant,</b> CS 2510: Fundamentals of Computer Science (2 semesters)'},
                     {date: '2012 -- 2014',
                      task: '<b>Tutor,</b> CS 2510: Fundamentals of Computer Science (3 semesters)'},
                     {date: '2011 -- 2013',
-                     task: '<b>Undergraduate Mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
+                     task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
             <h2>Outreach and Service</h2>
             <cv-award date="2018" award="Robot Design Judge, FIRST LEGO League Newton Qualifier"></cv-award>
