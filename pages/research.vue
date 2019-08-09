@@ -22,7 +22,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
         <p>In a first paper, we demonstrated that a bio-inspired algorithm that allowed a collective of Kilobots to discriminate between multiple binary-state features simultaneously. We also explored strategies for allocating robots between features, finding approaches that proved successful even when the initial distribution of robots across features was poor.</p>
         <p>Currently, I am developing a more general framework for distributed Bayesian decision-making in robots.</p>
         <div slot="results">
-          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2018aamas', 'ebert2019csgf']"></publication-list>
+          <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2019csgf', 'ebert2018aamas']"></publication-list>
         </div>
       </project>
       <project
