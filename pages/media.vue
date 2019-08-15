@@ -8,6 +8,7 @@
       >
         <div>
           <p>"A DOE computational science fellow combines biology, technology and ￼more to explore behavior, swarms and space."</p>
+          <p>My fellowship wrote a profile of me and my research in their annual magazine. Check out this abbreviated version available online.</p>
           <icon-link
             icon="newspaper"
             to="https://deixismagazine.org/2019/07/robot-whisperer/"

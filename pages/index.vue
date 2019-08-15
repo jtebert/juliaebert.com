@@ -29,7 +29,7 @@
       ></gallery>
       <div class="block-content content">
         <vue-markdown>
-I am a PhD candidate in computer science at Harvard University, where I study bio-inspired collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
+I am a PhD candidate in computer science at Harvard University, where I study bio-inspired collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am also a Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
 
 I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. I also consider myself a full-stack roboticist, working on both hardware (mechanical and electronic design) and software (algorithms and control). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
