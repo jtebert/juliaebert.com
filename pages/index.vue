@@ -42,6 +42,12 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           <a href="http://lazybaker.juliaebert.com/">awesome cinnamon rolls</a>, and
           <nuxt-link to="side-projects">make fun things</nuxt-link>.
         </p>
+        <vue-markdown>
+
+## Recent News
+
+I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together with [Richard Barnes](http://rbarnes.org/), I've been developing this scalable, high performance simulator for Kilobot robots that makes it easy to transfer code between simulation and physical robots. Although it's still in pre-release, it has been used to simulate up to 10,000 robots at a time and conduct parameter sweeps covering almost a million trials.
+        </vue-markdown>
       </div>
       <div class="block-content">
         <h1 class="title is-2 has-text-centered">See More</h1>
