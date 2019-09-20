@@ -45,15 +45,19 @@ export default {
       // Filter the citation keys based on all the specified filters
       // Then map these keys to their corresponding values
       //   console.log(this.citations);
+      console.log("hello");
+      //sorted = this.publicationsByYear();
       return Object.keys(this.citations)
         .filter(key => this.pubFilter(key, this.citations[key]))
         .map(key => {
           var val = this.citations[key];
           val.key = key;
           return val;
-        });
+        })
+        .sort((a, b) => b.year - a.year);
     },
     publicationsByYear: function() {
+      console.log("Hello, world");
       // Key the publications into an object by year (to be used if showYears is true)
       var pub_year_obj = this.publications.reduce((o, val) => {
         o[val.year] += [val];
