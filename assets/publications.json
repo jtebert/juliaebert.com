@@ -1,4 +1,16 @@
 {
+    "ebert2019": {
+        "type": "inproceedings",
+        "title": "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms",
+        "year": 2019,
+        "author": [
+            "Ebert, Julia",
+            "Gauci, Melvin",
+            "Mallmann-Trenn, Frederik",
+            "Nagpal, Radhika"
+        ],
+        "note": "Submitted to <i>ICRA 2020</i>"
+    },
     "farkhatdinov2019": {
         "type": "article",
         "title": "Assisting Human Balance in Standing with a Robotic Exoskeleton",
@@ -88,18 +100,6 @@
             "contraction",
             "motor learning"
         ]
-    },
-    "ebert2019": {
-        "type": "inproceedings",
-        "title": "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms",
-        "year": 2019,
-        "author": [
-            "Ebert, Julia",
-            "Gauci, Melvin",
-            "Mallmann-Trenn, Frederik",
-            "Nagpal, Radhika"
-        ],
-        "note": "Submitted to <i>ICRA 2020</i>"
     },
     "park2018": {
         "type": "article",

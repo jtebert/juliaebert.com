@@ -193,10 +193,10 @@
                 location="Cambridge, MA"
                 title="Harvard University"
                 :tasks="[
+                {date: 'Fall 2018, Fall 2019',
+                     task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
                     {date: 'Fall 2018',
                      task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
-                    {date: 'Fall 2018',
-                     task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
                     {date: 'Spring 2018',
                      task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems'}]"
             ></cv-entry>

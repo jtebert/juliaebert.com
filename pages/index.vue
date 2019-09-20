@@ -21,7 +21,7 @@
       </div>
       <gallery
         :img-srcs="[
-      ['csgf.jpg'],
+      ['csgf-robots.jpg'],
       //['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications'],
       ['curling.jpg', '2017 college curling national championship (Harvard took 4th place!)'],
       ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
