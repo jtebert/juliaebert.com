@@ -53,12 +53,12 @@
                 title="Harvard University Self-Organizing Systems Research Group"
                 subtitle="Prof. Radhika Nagpal"
                 :tasks="[
-                    {date: '2017 --',
-                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
-                     description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},
                     {date: '2016 --',
                      task: 'Multi-feature perception and decision making in robot collectives',
-                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'}]"
+                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'},
+                    {date: '2017 --',
+                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
+                     description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},]"
             ></cv-entry>
             <cv-entry
                 location="Livermore, CA"
@@ -124,19 +124,19 @@
             <div class="is-unbroken">
                 <h2>Grants and Scholarships</h2>
                 <cv-award
-                    date="2016"
+                    date="2016 -- 2020"
                     award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
                 ></cv-award>
-                <cv-award date="2015" award="Marshall Scholarship"></cv-award>
+                <cv-award date="2015 -- 2016" award="Marshall Scholarship"></cv-award>
                 <cv-award
                     date="2014"
                     award="Northeastern Provost Undergraduate Advanced Research Award"
                 ></cv-award>
-                <cv-award date="2013" award="Barry Goldwater Scholarship"></cv-award>
+                <cv-award date="2013 -- 2015" award="Barry Goldwater Scholarship"></cv-award>
                 <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
                 <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
                 <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
-                <cv-award date="2010" award="Northeastern National Merit Scholarship"></cv-award>
+                <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
                 <h2>Awards</h2>
                 <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
                 <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
@@ -158,14 +158,14 @@
                 <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
             </div>
 
-            <h2 class="is-print-only">Papers</h2>
+            <h2 class="is-print-only">Publications</h2>
             <publication-list
                 class="is-print-only"
                 highlight-author="Ebert"
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="false"
             ></publication-list>
-            <span class="page-break"></span>
+            <!-- <span class="page-break"></span> -->
             <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
                 class="is-print-only"
@@ -188,12 +188,14 @@
             - AAMAS 2018?
             - Wyss molecular robotics
             -->
-            <h2>Teaching</h2>
+            <h2>Teaching and Mentoring</h2>
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
                 :tasks="[
-                {date: 'Fall 2018, Fall 2019',
+                    {date: 'Summer 2019',
+                     task: '<b>REU mentor</b> for Kilobot research and outreach project'},
+                    {date: 'Fall 2018, Fall 2019',
                      task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
                     {date: 'Fall 2018',
                      task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
@@ -211,8 +213,11 @@
                     {date: '2011 -- 2013',
                      task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
+
+            <span class="page-break"></span>
+
             <h2>Outreach and Service</h2>
-            <cv-award date="2018" award="Robot Design Judge, FIRST LEGO League Newton Qualifier"></cv-award>
+            <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League Newton Qualifier"></cv-award>
             <cv-award
                 date="2018"
                 award="Speaker, Science in the News fall lecture series: &quot;Brains and Bodies: How to Make Smart Robots&quot;"
@@ -221,6 +226,7 @@
             <cv-award date="2017, 2018" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
             <cv-award date="2016" award="Volunteer, EuroHaptics 2016"></cv-award>
             <cv-award date="2010 -- 2015" award="Volunteer, Northeastern Civic Engagement Program"></cv-award>
+            <cv-award date="2014 -- 2015" award="Student Ambassador, Northeastern College of Science"></cv-award>
             <cv-award date="2014" award="Tutor team leader, TechBoston Academy"></cv-award>
             <cv-award
                 date="2014"
