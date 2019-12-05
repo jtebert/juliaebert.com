@@ -23,29 +23,35 @@
         <div slot="content">
             <h2>Education</h2>
             <cv-entry
+                tasksFirst
                 location="Cambridge, MA"
-                dates="2016 --<br>
-                       2019"
                 title="Harvard University"
-                subtitle="PhD Candidate in Computer Science<br>
-                          SM in Computer Science<br>
-                          Advisor: Prof. Radhika Nagpal"
+                subtitle="Advisor: Prof. Radhika Nagpal"
+                :tasks="[
+                    {date: '2016 --',
+                     task: 'PhD Candidate in Computer Science'},
+                    {date: '2019',
+                     task: 'SM in Computer Science'}]"
             ></cv-entry>
             <cv-entry
-                dates="2016"
+                tasksFirst
                 location="London, UK"
                 title="Imperial College London"
-                subtitle="Master of Research in Bioengineering, with Distinction<br>
-                    Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
+                subtitle="Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
                     Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>"
+                :tasks="[
+                    {date: '2016',
+                     task: 'Master of Research in Bioengineering, with Distinction'}]"
             ></cv-entry>
             <cv-entry
+                tasksFirst
                 location="Boston, MA"
-                dates="2015"
                 title="Northeastern University"
-                subtitle="BS in Behavioral Neuroscience, Minor in Computer Science<br>
-                    GPA: 3.98 / 4.0, summa cum laude<br>
+                subtitle="GPA: 3.98 / 4.0, summa cum laude<br>
                     Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>"
+                :tasks="[
+                    {date: '2015',
+                    task: 'BS in Behavioral Neuroscience, Minor in Computer Science'}]"
             ></cv-entry>
             <h2>Research</h2>
             <cv-entry
@@ -144,8 +150,8 @@
                     date="2016"
                     award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
                 ></cv-award>
-                <cv-award date="2015" award="Northeastern University Honors Program Distinction"></cv-award>
-                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience"></cv-award>
+                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience (for thesis)"></cv-award>
+                <cv-award date="2015" award="Northeastern University Honors Program Distinction (for coursework)"></cv-award>
                 <cv-award
                     date="2015"
                     award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
@@ -197,7 +203,7 @@
                      task: '<b>REU mentor</b> for Kilobot research and outreach project'},
                     {date: 'Fall 2018, Fall 2019',
                      task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
-                    {date: 'Fall 2018',
+                    {date: 'Fall 2018, Fall 2019',
                      task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
                     {date: 'Spring 2018',
                      task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems'}]"
@@ -214,10 +220,10 @@
                      task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
 
-            <span class="page-break"></span>
+            <!-- <span class="page-break"></span> -->
 
             <h2>Outreach and Service</h2>
-            <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League Newton Qualifier"></cv-award>
+            <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League"></cv-award>
             <cv-award
                 date="2018"
                 award="Speaker, Science in the News fall lecture series: &quot;Brains and Bodies: How to Make Smart Robots&quot;"
@@ -270,14 +276,14 @@
                 <cv-skill
                     category="Science and Engineering"
                     :skills="[
-                    'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
+                    'Laboratory Electronics', 'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
                     'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
                     'Organic Chemistry']"
                 ></cv-skill>
                 <cv-skill
                     category="Mathematics"
                     :skills="[
-                    'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
+                    'Stochastic Methods for Data Analysis, Inference, and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
                     'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
                 ></cv-skill>
             </div>
