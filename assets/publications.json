@@ -123,7 +123,7 @@
             "Gauci, Melvin",
             "Nagpal, Radhika"
         ],
-        "year": "2019",
+        "year": 2019,
         "location": "Washington, DC",
         "booktitle": "DOE CSGF Program Review",
         "issue_date": "14--18 July 2019",
@@ -145,7 +145,7 @@
             "Dawson, William",
             "Schneider, Michael"
         ],
-        "year": "2018",
+        "year": 2018,
         "location": "Livermore, CA",
         "booktitle": "Lawrence Livermore National Laboratory Summer Student Poster Symposium",
         "issue_date": "8 August 2018",
@@ -153,6 +153,24 @@
             "satellites"
         ],
         "file": "2018_llnl.pdf"
+    },
+    "ebert2017csgf": {
+        "type": "poster",
+        "title": "Infotaxis in a Multi-agent Sensor Network",
+        "author": [
+            "Ebert, Julia",
+            "Teeple, Clark",
+            "Steinhardt, Emma",
+            "Ramanathan, Sharad"
+        ],
+        "year": 2017,
+        "location": "Washington, DC",
+        "booktitle": "DOE CSGF Program Review",
+        "issue_date": "24--27 July 2017",
+        "keywords": [
+            "collective behavior"
+        ],
+        "file": "2017_csgf.pdf"
     },
     "ebert2018csgf": {
         "type": "poster",
@@ -173,24 +191,6 @@
             "collective behavior"
         ],
         "file": "2018_csgf.pdf"
-    },
-    "ebert2017csgf": {
-        "type": "poster",
-        "title": "Infotaxis in a Multi-agent Sensor Network",
-        "author": [
-            "Ebert, Julia",
-            "Teeple, Clark",
-            "Steinhardt, Emma",
-            "Ramanathan, Sharad"
-        ],
-        "year": 2018,
-        "location": "Washington, DC",
-        "booktitle": "DOE CSGF Program Review",
-        "issue_date": "24--27 July 2017",
-        "keywords": [
-            "collective behavior"
-        ],
-        "file": "2017_csgf.pdf"
     },
     "ebert2017rehabweek": {
         "type": "poster",

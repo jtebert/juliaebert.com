@@ -157,7 +157,7 @@ a.button:hover {
   }
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
     .cv-sidebar.grid-row-#{$i} {
       @include sidebar-rows($i);
     }
@@ -172,14 +172,15 @@ a.button:hover {
     grid-template-columns: [sidebar] 9em [main] 1fr;
   }
   @include mobile {
-    padding-left: calc(0.5rem + 1.25em);;
-    text-indent:calc(-0.5rem - 1.25em);;
+    padding-left: calc(0.5rem + 2.15em);;
+    text-indent:calc(-0.5rem - 2.15em);
+    margin-bottom: .5em;
     > * {
       display: inline;
     }
     .cv-sidebar:after {
-      content: ":";
-      margin-right: $column-gap;
+      content: "\202F:";
+      //margin-right: $column-gap/2;
     }
   // grid-column-gap: $column-gap;
   // grid-template-columns: [sidebar] auto [main] 1fr;
@@ -210,6 +211,11 @@ a.button:hover {
         grid-row: 2;
       }
     }
+    &.entry-subtitle {
+      // @include mobile {
+      //   grid-row: 2
+      // }
+    }
   }
   .cv-main {
     @include tablet {
@@ -220,11 +226,16 @@ a.button:hover {
         grid-row: 1;
       }
     }
+    &.entry-subtitle {
+      //grid-row: 2
+    }
   }
   .cv-task {
     display: block;
     position: relative;
-    padding-left: calc(0.5rem + 1.25em);
+    &.bulleted {
+      padding-left: calc(0.5rem + 1.25em);
+    }
     .mdi,
     .fa {
       position: absolute;
@@ -248,7 +259,7 @@ a.button:hover {
       width: 2px;
       height: 100%;
       grid-column: bar;
-      grid-row: 1 / 5;
+      grid-row: 1 / 100; // Hacky; make at least as many rows as there are
       background-color: $primary;
     }
   }
@@ -285,7 +296,12 @@ a.button:hover {
 
     .is-unbroken {page-break-inside: avoid;}
 
-    .page-break {page-break-after: always;}
+    .page-break {
+      page-break-after: always;
+      //break-before: page;
+      display: block;
+      float: none;
+    }
 
     font-size: 11px !important;
     background-color: #fff !important;
@@ -389,7 +405,9 @@ a.button:hover {
   .navbar-item.nuxt-link-exact-active {
     // Hacky highlighting of current page
     // color: $primary !important;
-    border-top: 4px solid $primary !important;
+    @include desktop {
+      border-top: 4px solid $primary !important;
+    }
     padding-top: calc(0.5rem - 4px);
   }
 }
@@ -551,7 +569,9 @@ $icon-block-size-touch: 6rem;
       // padding: $gap/2 $gap !important;
       padding-bottom: 3rem;
       padding-top: 3rem;
-      padding-left: $icon-block-size / 2 + 2rem;
+      @include tablet {
+        padding-left: $icon-block-size / 2 + 2rem;
+      }
       @include mobile {
         padding-top: $icon-block-size-touch/2 + 1.5rem !important;
       }

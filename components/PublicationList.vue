@@ -14,6 +14,7 @@
 import Publication from "~/components/Publication";
 // https://stackoverflow.com/a/47958533
 import citations from "~/assets/publications.json";
+import _ from "lodash";
 
 export default {
   props: {
@@ -45,19 +46,18 @@ export default {
       // Filter the citation keys based on all the specified filters
       // Then map these keys to their corresponding values
       //   console.log(this.citations);
-      console.log("hello");
       //sorted = this.publicationsByYear();
-      return Object.keys(this.citations)
+      var ret = Object.keys(this.citations)
         .filter(key => this.pubFilter(key, this.citations[key]))
         .map(key => {
           var val = this.citations[key];
           val.key = key;
           return val;
-        })
-        .sort((a, b) => b.year - a.year);
+        });
+      var ret_sorted = _.sortBy(ret, [pub => -pub.year]);
+      return ret_sorted;
     },
     publicationsByYear: function() {
-      console.log("Hello, world");
       // Key the publications into an object by year (to be used if showYears is true)
       var pub_year_obj = this.publications.reduce((o, val) => {
         o[val.year] += [val];
@@ -66,6 +66,7 @@ export default {
       // Then return a sorted list by year, in descending order (newest to oldest)
       return Object.keys(pub_year_obj)
         .map(year => {
+          console.log(pub_year_obj);
           var p = {};
           p["publications"] = pub_year_obj[year];
           p["year"] = year;
