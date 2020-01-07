@@ -21,9 +21,22 @@
     </div>
     <p slot="intro">From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
     <div>
+
+      <project
+        is-cover
+        img-src="/imgs/projects/keyboard.jpg"
+        title="Handwired Computer Keyboard"
+      >
+        <div>
+          <tags tags="C++, 3D Printing, Electronics"></tags>
+          <p>When I couldn't find <i>exactly</i> the kind of computer keyboard I wanted, it was a great excuse to build my own from sratch (ostensibly as a project for my electronics class). Together with my class partner, I designed the layout, handwired the keyboard, and built the firmware. And I went completely overboard 3D printing the case and all the keycaps. And I wrote way too much documentation along the way.</p>
+          <icon-link icon="web" to="https://docs.juliaebert.com/projects/keyboard">Read everything</icon-link>
+        </div>
+      </project>
+
       <project
         is-mockup
-        img-src="/imgs/programming/documentation-mockup.png"
+        img-src="/imgs/projects/documentation-mockup.png"
         title="Document Everything"
       >
         <div>
@@ -36,21 +49,21 @@
 
       <project
         is-mockup
-        img-src="/imgs/programming/lazy-baker-mockup-desktop.png"
-        mobile-img-src="/imgs/programming/lazy-baker-mockup-mobile.png"
-        title="Lazy Baker"
+        img-src="/imgs/projects/lazy-baker-mockup-desktop.png"
+        mobile-img-src="/imgs/projects/lazy-baker-mockup-mobile.png"
+        title="Reckless Ham"
       >
         <div>
           <tags tags="Python, Django, Wagtail CMS"></tags>
           <p>It's cookbook-style recipe website using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings. I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to build an entire website from scratch.</p>
-          <icon-link icon="web" to="http://lazybaker.juliaebert.com/">Find a tasty recipe</icon-link>
+          <icon-link icon="web" to="http://recklessham.com/">Find a tasty recipe</icon-link>
           <icon-link icon="github-circle" to="https://github.com/jtebert/lazy-baker">View on GitHub</icon-link>
         </div>
       </project>
       <project
         is-mockup
-        img-src="/imgs/programming/owen-tribune-mockup-desktop.png"
-        mobile-img-src="/imgs/programming/owen-tribune-mockup-mobile.png"
+        img-src="/imgs/projects/owen-tribune-mockup-desktop.png"
+        mobile-img-src="/imgs/projects/owen-tribune-mockup-mobile.png"
         title="The Owen Tribune"
       >
         <div>
@@ -69,8 +82,8 @@
       </project>
       <project
         is-mockup
-        img-src="/imgs/programming/jekyll-polymer-mockup-desktop.png"
-        mobile-img-src="/imgs/programming/jekyll-polymer-mockup-mobile.png"
+        img-src="/imgs/projects/jekyll-polymer-mockup-desktop.png"
+        mobile-img-src="/imgs/projects/jekyll-polymer-mockup-mobile.png"
         title="Jekyll Polymer"
       >
         <div>
@@ -83,7 +96,7 @@
           >View on GitHub</icon-link>
         </div>
       </project>
-      <project is-cover img-src="/imgs/programming/suture-score.jpg" title="Suture Score">
+      <project is-cover img-src="/imgs/projects/suture-score.jpg" title="Suture Score">
         <div>
           <tags tags="Python, Ruby, Matlab, JavaScript"></tags>
           <p>Suture Score is an application to provide instant, objective feedback on suturing technique to surgical trainees. To prepare for assessments and surgery, students need as much practice as possible. Using innovative image recognition techniques, Suture Score aims to enhance trainees' practice to improve their suturing skills.</p>
@@ -93,7 +106,7 @@
       </project>
       <project
         is-mockup
-        :img-src="'/imgs/programming/sciencebait-mockup-desktop.png'"
+        :img-src="'/imgs/projects/sciencebait-mockup-desktop.png'"
         title="Science Clickbait"
       >
         <div>
@@ -115,7 +128,7 @@
       </project>
       <project
         is-padded
-        :img-src="'/imgs/programming/vroom_logo_alt.png'"
+        :img-src="'/imgs/projects/vroom_logo_alt.png'"
         img-align="right"
         title="VROOM: Vacuum Robot Overcoming Obstacles and Messes"
       >
@@ -125,7 +138,7 @@
           <icon-link icon="github-circle" :to="'https://github.com/jtebert/vroom'">View on GitHub</icon-link>
         </div>
       </project>
-      <project is-mockup :img-src="'/imgs/programming/blurber-mockup.png'" title="Blurber">
+      <project is-mockup :img-src="'/imgs/projects/blurber-mockup.png'" title="Blurber">
         <div>
           <tags tags="Python"></tags>
           <p>Blurber is a web app to create fake book blurbs. Using the titles and descriptions of the top 300 books in every category on Amazon, this app will generate randomly generate new book blurbs with the power of Markov chains.</p>
