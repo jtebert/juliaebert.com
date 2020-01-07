@@ -21,7 +21,7 @@
       </div>
       <gallery
         :img-srcs="[
-      ['csgf.jpg'],
+      ['csgf-robots.jpg'],
       //['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications'],
       ['curling.jpg', '2017 college curling national championship (Harvard took 4th place!)'],
       ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
@@ -29,7 +29,7 @@
       ></gallery>
       <div class="block-content content">
         <vue-markdown>
-I am a PhD candidate in computer science at Harvard University, where I study bio-inspired collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am also a Department of Energy Computational Science Graduate Fellow (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
+I am a PhD candidate in computer science at Harvard University, where I study bio-inspired collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am also a Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
 
 I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. I also consider myself a full-stack roboticist, working on both hardware (mechanical and electronic design) and software (algorithms and control). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
@@ -42,6 +42,12 @@ I also care about science communication and outreach. I've [spoken to hundreds o
           <a href="http://lazybaker.juliaebert.com/">awesome cinnamon rolls</a>, and
           <nuxt-link to="side-projects">make fun things</nuxt-link>.
         </p>
+        <vue-markdown>
+
+## Recent News
+
+I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together with [Richard Barnes](http://rbarnes.org/), I've been developing this scalable, high performance simulator for Kilobot robots that makes it easy to transfer code between simulation and physical robots. Although it's still in pre-release, it has been used to simulate up to 10,000 robots at a time and conduct parameter sweeps covering almost a million trials.
+        </vue-markdown>
       </div>
       <div class="block-content">
         <h1 class="title is-2 has-text-centered">See More</h1>

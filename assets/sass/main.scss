@@ -157,7 +157,7 @@ a.button:hover {
   }
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
     .cv-sidebar.grid-row-#{$i} {
       @include sidebar-rows($i);
     }
@@ -172,14 +172,15 @@ a.button:hover {
     grid-template-columns: [sidebar] 9em [main] 1fr;
   }
   @include mobile {
-    padding-left: calc(0.5rem + 1.25em);;
-    text-indent:calc(-0.5rem - 1.25em);;
+    padding-left: calc(0.5rem + 2.15em);;
+    text-indent:calc(-0.5rem - 2.15em);
+    margin-bottom: .5em;
     > * {
       display: inline;
     }
     .cv-sidebar:after {
-      content: ":";
-      margin-right: $column-gap;
+      content: "\202F:";
+      //margin-right: $column-gap/2;
     }
   // grid-column-gap: $column-gap;
   // grid-template-columns: [sidebar] auto [main] 1fr;
@@ -210,6 +211,11 @@ a.button:hover {
         grid-row: 2;
       }
     }
+    &.entry-subtitle {
+      // @include mobile {
+      //   grid-row: 2
+      // }
+    }
   }
   .cv-main {
     @include tablet {
@@ -220,11 +226,16 @@ a.button:hover {
         grid-row: 1;
       }
     }
+    &.entry-subtitle {
+      //grid-row: 2
+    }
   }
   .cv-task {
     display: block;
     position: relative;
-    padding-left: calc(0.5rem + 1.25em);
+    &.bulleted {
+      padding-left: calc(0.5rem + 1.25em);
+    }
     .mdi,
     .fa {
       position: absolute;
@@ -248,7 +259,7 @@ a.button:hover {
       width: 2px;
       height: 100%;
       grid-column: bar;
-      grid-row: 1 / 5;
+      grid-row: 1 / 100; // Hacky; make at least as many rows as there are
       background-color: $primary;
     }
   }
@@ -285,7 +296,12 @@ a.button:hover {
 
     .is-unbroken {page-break-inside: avoid;}
 
-    .page-break {page-break-after: always;}
+    .page-break {
+      page-break-after: always;
+      //break-before: page;
+      display: block;
+      float: none;
+    }
 
     font-size: 11px !important;
     background-color: #fff !important;
@@ -389,7 +405,9 @@ a.button:hover {
   .navbar-item.nuxt-link-exact-active {
     // Hacky highlighting of current page
     // color: $primary !important;
-    border-top: 4px solid $primary !important;
+    @include desktop {
+      border-top: 4px solid $primary !important;
+    }
     padding-top: calc(0.5rem - 4px);
   }
 }
@@ -484,59 +502,6 @@ a.button:hover {
   }
 }
 
-// COMPONENT : NAVBAR
-// .square-nav {
-//   .navbar-item {
-//     padding: 0;
-//     margin: 0 0.5rem;
-//     background-color: $primary;
-//     // http://tobiasahlin.com/blog/how-to-animate-box-shadow/
-//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-//     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       z-index: -1;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-//       opacity: 0;
-//       transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-//     }
-//     &:hover {
-//       transform: scale(1.15, 1.15);
-//     }
-
-//     &:hover::after {
-//         opacity: 1;
-//     }
-//     img {
-//       transition: all 0.3s ease-in-out;
-//       height: $navbar-item-img-max-height;
-//       @include touch {
-//         height: $navbar-height-touch;
-//       }
-//       // &:hover {transform: scale(1.1, 1.1);}
-//     }
-//   }
-
-//   &.navbar .container,
-//   &.navbar .container .navbar-brand {
-//     flex-direction: row-reverse;
-//     @include touch {flex-direction: row-reverse;}
-//   }
-//   .tabs.is-boxed {
-//     align-items: flex-start !important;
-//     padding: 0 1rem;
-//     a {
-//       border: none !important;
-//       &:hover {border: none !important;}
-//     }
-//   }
-// }
-
 // COMPONENT : MOCKUP
 .mockup {
   margin: 2* $column-gap;
@@ -576,7 +541,8 @@ $icon-block-size-touch: 6rem;
   }
 
   .block-content {
-    padding: $gap/2 $gap;
+    // padding: $gap/2 $gap;
+
     //margin-bottom: 2*$column-gap;
     // @include desktop {
     //   padding-left: $icon-block-size / 2 + 2rem;
@@ -592,14 +558,20 @@ $icon-block-size-touch: 6rem;
     }
     @include desktop {
       min-height: $icon-block-size + 4rem;
-      padding-left: $icon-block-size / 2 + 2rem;
+      // padding-left: $icon-block-size / 2 + 2rem;
+      padding: 3*$column-gap 4*$column-gap;
     }
     &.content {
       margin-bottom: 0;
+      // padding: 3*$column-gap 4*$column-gap;
     }
     &.has-title {
+      // padding: $gap/2 $gap !important;
       padding-bottom: 3rem;
       padding-top: 3rem;
+      @include tablet {
+        padding-left: $icon-block-size / 2 + 2rem;
+      }
       @include mobile {
         padding-top: $icon-block-size-touch/2 + 1.5rem !important;
       }
@@ -674,7 +646,7 @@ $icon-block-size-touch: 6rem;
 }
 .img-button {
   width: $icon-block-size;
-  margin: 2rem;
+  margin: 0.5rem 2rem;
   margin-top: 0.5rem;
   @include touch {
     width: $icon-block-size-touch;
