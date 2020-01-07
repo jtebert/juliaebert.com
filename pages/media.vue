@@ -2,12 +2,14 @@
   <primary-section :title="title" subtitle="Shameless self-promotion" texture="plus">
     <div>
       <project
+        is-cover
         img-src="/imgs/media/deixis-kilobots.jpg"
         title="Robot Whisperer"
         subtitle="Deixis magazine, July 2019"
       >
         <div>
-          <p>"A DOE computational science fellow combines biology, technology and ￼more to explore behavior, swarms and space."</p>
+          <p>"A DOE computational science fellow combines biology, technology and more to explore behavior, swarms and space."</p>
+          <p>My fellowship wrote a profile of me and my research in their annual magazine. Check out this abbreviated version available online. It also got a <a href="https://twitter.com/ScienceUnderSec/status/1156982660553687042">Twitter shout out</a> from the DOE Under Secratary for Science</p>
           <icon-link
             icon="newspaper"
             to="https://deixismagazine.org/2019/07/robot-whisperer/"

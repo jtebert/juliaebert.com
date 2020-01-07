@@ -23,29 +23,35 @@
         <div slot="content">
             <h2>Education</h2>
             <cv-entry
+                tasksFirst
                 location="Cambridge, MA"
-                dates="2016 --<br>
-                       2019"
                 title="Harvard University"
-                subtitle="PhD Candidate in Computer Science<br>
-                          SM in Computer Science<br>
-                          Advisor: Prof. Radhika Nagpal"
+                subtitle="Advisor: Prof. Radhika Nagpal"
+                :tasks="[
+                    {date: '2016 --',
+                     task: 'PhD Candidate in Computer Science'},
+                    {date: '2019',
+                     task: 'SM in Computer Science'}]"
             ></cv-entry>
             <cv-entry
-                dates="2016"
+                tasksFirst
                 location="London, UK"
                 title="Imperial College London"
-                subtitle="Master of Research in Bioengineering, with Distinction<br>
-                    Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
+                subtitle="Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
                     Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>"
+                :tasks="[
+                    {date: '2016',
+                     task: 'Master of Research in Bioengineering, with Distinction'}]"
             ></cv-entry>
             <cv-entry
+                tasksFirst
                 location="Boston, MA"
-                dates="2015"
                 title="Northeastern University"
-                subtitle="BS in Behavioral Neuroscience, Minor in Computer Science<br>
-                    GPA: 3.98 / 4.0, summa cum laude<br>
+                subtitle="GPA: 3.98 / 4.0, summa cum laude<br>
                     Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>"
+                :tasks="[
+                    {date: '2015',
+                    task: 'BS in Behavioral Neuroscience, Minor in Computer Science'}]"
             ></cv-entry>
             <h2>Research</h2>
             <cv-entry
@@ -53,12 +59,12 @@
                 title="Harvard University Self-Organizing Systems Research Group"
                 subtitle="Prof. Radhika Nagpal"
                 :tasks="[
-                    {date: '2017 --',
-                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
-                     description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},
                     {date: '2016 --',
                      task: 'Multi-feature perception and decision making in robot collectives',
-                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'}]"
+                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'},
+                    {date: '2017 --',
+                     task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
+                     description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},]"
             ></cv-entry>
             <cv-entry
                 location="Livermore, CA"
@@ -124,19 +130,19 @@
             <div class="is-unbroken">
                 <h2>Grants and Scholarships</h2>
                 <cv-award
-                    date="2016"
+                    date="2016 -- 2020"
                     award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
                 ></cv-award>
-                <cv-award date="2015" award="Marshall Scholarship"></cv-award>
+                <cv-award date="2015 -- 2016" award="Marshall Scholarship"></cv-award>
                 <cv-award
                     date="2014"
                     award="Northeastern Provost Undergraduate Advanced Research Award"
                 ></cv-award>
-                <cv-award date="2013" award="Barry Goldwater Scholarship"></cv-award>
+                <cv-award date="2013 -- 2015" award="Barry Goldwater Scholarship"></cv-award>
                 <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
                 <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
                 <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
-                <cv-award date="2010" award="Northeastern National Merit Scholarship"></cv-award>
+                <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
                 <h2>Awards</h2>
                 <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
                 <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
@@ -144,8 +150,8 @@
                     date="2016"
                     award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
                 ></cv-award>
-                <cv-award date="2015" award="Northeastern University Honors Program Distinction"></cv-award>
-                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience"></cv-award>
+                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience (for thesis)"></cv-award>
+                <cv-award date="2015" award="Northeastern University Honors Program Distinction (for coursework)"></cv-award>
                 <cv-award
                     date="2015"
                     award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
@@ -158,14 +164,14 @@
                 <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
             </div>
 
-            <h2 class="is-print-only">Papers</h2>
+            <h2 class="is-print-only">Publications</h2>
             <publication-list
                 class="is-print-only"
                 highlight-author="Ebert"
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="false"
             ></publication-list>
-            <span class="page-break"></span>
+            <!-- <span class="page-break"></span> -->
             <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
                 class="is-print-only"
@@ -188,29 +194,36 @@
             - AAMAS 2018?
             - Wyss molecular robotics
             -->
-            <h2>Teaching</h2>
+            <h2>Teaching and Mentoring</h2>
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
                 :tasks="[
-                    {date: 'Fall 2018',
-                     task: '<b>Teaching Staff,</b> How To Make (Almost) Anything, Harvard section'},
+                    {date: 'Summer 2019',
+                     task: '<b>REU mentor</b> for Kilobot research and outreach project'},
+                    {date: 'Fall 2018, Fall 2019',
+                     task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'},
+                    {date: 'Fall 2018, Fall 2019',
+                     task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
                     {date: 'Spring 2018',
-                     task: '<b>Teaching Fellow,</b> CS 189: Autonomous Robot Systems'}]"
+                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems'}]"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
                 title="Northeastern University"
                 :tasks="[
                     {date: '2014 -- 2015',
-                     task: '<b>Teaching Assistant,</b> CS 2510: Fundamentals of Computer Science (2 semesters)'},
+                     task: '<b>Teaching assistant,</b> CS 2510: Fundamentals of Computer Science (2 semesters)'},
                     {date: '2012 -- 2014',
                      task: '<b>Tutor,</b> CS 2510: Fundamentals of Computer Science (3 semesters)'},
                     {date: '2011 -- 2013',
-                     task: '<b>Undergraduate Mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
+                     task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
+
+            <!-- <span class="page-break"></span> -->
+
             <h2>Outreach and Service</h2>
-            <cv-award date="2018" award="Robot Design Judge, FIRST LEGO League Newton Qualifier"></cv-award>
+            <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League"></cv-award>
             <cv-award
                 date="2018"
                 award="Speaker, Science in the News fall lecture series: &quot;Brains and Bodies: How to Make Smart Robots&quot;"
@@ -219,6 +232,7 @@
             <cv-award date="2017, 2018" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
             <cv-award date="2016" award="Volunteer, EuroHaptics 2016"></cv-award>
             <cv-award date="2010 -- 2015" award="Volunteer, Northeastern Civic Engagement Program"></cv-award>
+            <cv-award date="2014 -- 2015" award="Student Ambassador, Northeastern College of Science"></cv-award>
             <cv-award date="2014" award="Tutor team leader, TechBoston Academy"></cv-award>
             <cv-award
                 date="2014"
@@ -262,14 +276,14 @@
                 <cv-skill
                     category="Science and Engineering"
                     :skills="[
-                    'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
+                    'Laboratory Electronics', 'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
                     'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
                     'Organic Chemistry']"
                 ></cv-skill>
                 <cv-skill
                     category="Mathematics"
                     :skills="[
-                    'Stochastic Methods for Data Analysis, Inference and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
+                    'Stochastic Methods for Data Analysis, Inference, and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
                     'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
                 ></cv-skill>
             </div>
