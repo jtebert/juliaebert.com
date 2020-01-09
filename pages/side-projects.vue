@@ -19,7 +19,8 @@
         >Julia Makes Things</icon-button-link>
       </p>
     </div>
-    <p slot="intro">From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
+    <div slot="intro"><p>From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
+    <p>Recently, I have also gotten into the habit of <a href="https://docs.juliaebert.com/projects">documenting my projects</a> as I go, so you can also check out what I'm currently working on.</p></div>
     <div>
 
       <project
@@ -29,8 +30,8 @@
       >
         <div>
           <tags tags="C++, 3D Printing, Electronics"></tags>
-          <p>When I couldn't find <i>exactly</i> the kind of computer keyboard I wanted, it was a great excuse to build my own from sratch (ostensibly as a project for my electronics class). Together with my class partner, I designed the layout, handwired the keyboard, and built the firmware. And I went completely overboard 3D printing the case and all the keycaps. And I wrote way too much documentation along the way.</p>
-          <icon-link icon="web" to="https://docs.juliaebert.com/projects/keyboard">Read everything</icon-link>
+          <p>When I couldn't find <i>exactly</i> the kind of computer keyboard I wanted, it was a great excuse to design and build my own from sratch (ostensibly as a project for my electronics class). Together with my class partner, I designed the layout, handwired the keyboard, and built the firmware. I also went completely overboard 3D printing the case and all the keycaps. And I wrote way too much documentation along the way.</p>
+          <icon-link icon="file-document-box-multiple" to="https://docs.juliaebert.com/projects/keyboard">Read everything</icon-link>
         </div>
       </project>
 
@@ -42,7 +43,7 @@
         <div>
           <tags tags="Jekyll"></tags>
           <p>To get into good habits about documenting things I work on, and to avoid Googling the same StackOverflow answers over and over, I made a website to document everything I do. I wanted it to be as easy to maintain as possible; all I have to do is write some Markdown and push it to Github.</p>
-          <icon-link icon="web" to="https://docs.juliaebert.com/">Read my docs</icon-link>
+          <icon-link icon="file-document-box-multiple" to="https://docs.juliaebert.com/">Read my docs</icon-link>
           <icon-link icon="github-circle" to="https://github.com/jtebert/document-everything">View on GitHub</icon-link>
         </div>
       </project>
@@ -55,8 +56,8 @@
       >
         <div>
           <tags tags="Python, Django, Wagtail CMS"></tags>
-          <p>It's cookbook-style recipe website using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings. I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to build an entire website from scratch.</p>
-          <icon-link icon="web" to="http://recklessham.com/">Find a tasty recipe</icon-link>
+          <p>It's cookbook-style recipe website (formerly called Lazy Baker) using the Wagtail CMS framework for Django. It was a fun challenge for myself to build the whole thing in a weekend and a week's worth of evenings. I was bad at keeping track of recipes from various cookbooks, websites, and a very poorly organized recipe box. Clearly, the easiest solution to this problem was to build an entire website from scratch.</p>
+          <icon-link icon="food-fork-drink" to="http://recklessham.com/">Find a tasty recipe</icon-link>
           <icon-link icon="github-circle" to="https://github.com/jtebert/lazy-baker">View on GitHub</icon-link>
         </div>
       </project>
@@ -89,7 +90,7 @@
         <div>
           <tags tags="HTML, JavaScript, Jekyll, Google Polymer"></tags>
           <p>This project combines the static website generation of Jekyll with the web components framework of Google Polymer to create a full-featured material design blog template.</p>
-          <icon-link icon="web" :to="'http://juliaebert.com/jekyll-polymer'">View demo</icon-link>
+          <icon-link icon="web" :to="'https://jtebert.github.io/jekyll-polymer/'">View demo</icon-link>
           <icon-link
             icon="github-circle"
             :to="'https://github.com/jtebert/jekyll-polymer'"
