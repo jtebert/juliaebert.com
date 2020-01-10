@@ -141,7 +141,7 @@ Finally, the Project has a slot for `results`, which is a formatted section to i
 
 ### Publication List
 
-A publication list is a formatted set of publications with links, drawn from `/assets/publications.json`. It will generate a reverse-chronological list of citations with links to the PDFs on the left side (if a file is provided).
+A publication list is a formatted set of publications with links, drawn from `/assets/publications.json`. It will generate a reverse-chronological list of citations with links to the PDFs on the left side (if a file is provided). When a publication list is printed (as in the CV), it is formatted as a more typical list of publications -- i.e., without the links to PDFs on the left.
 
 To highlight yourself, you can specify the `highlight-author` prop. Any author names containing this as a substring will be shown in bold.
 
@@ -151,7 +151,7 @@ There are also three types of filters you can specify to the list of publication
 - `type-filter` lets you include only publications of a certain `type`, such as posters. Ex: `<publication-list :type-filter="['inproceedings', 'article']"></publication-list>`
 - `keyword-filter` is useful to get all papers on a particular topic, without having to explicitly include all their publication keys. Ex: `<publication-list :type-filter="['kilobots']"></publication-list>`
 
-### CV Components
+### CV/Resume Components
 
 There is no "parent" CV component; it's just putting a bunch of these sub-components together sequentially. All of these elements are responsive, and designed to be printable (as described above).
 
@@ -160,6 +160,8 @@ However, if you look at `cvContent.vue`, there is an item with the class `cv-hea
 Separate sections with H2 headers, as these are what is used for making nice formatting on the page, and especially in the print version.
 
 For all components, date ranges should be separated with `--`, which will be re-formatted to the "correct" endash.
+
+*Note: The CV components are all done with CSS `flex`. It's supported fine by all current major browsers except Internet Explorer. IMO, if you're still using IE, that's on you and you don't get to see a nice-looking CV.*
 
 #### CV Award
 
