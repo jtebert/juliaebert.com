@@ -13,6 +13,10 @@
       </icon-button-link>
       </p>-->
         <icon-button-link
+          to="https://docs.juliaebert.com"
+          icon="file-document-box-multiple"
+        >Julia's Docs</icon-button-link>
+        <icon-button-link
           to="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/"
           icon="hammer"
         >Julia Makes Things</icon-button-link>
@@ -48,8 +52,20 @@
 
       <project
         is-mockup
-        img-src="/imgs/projects/lazy-baker-mockup-desktop.png"
-        mobile-img-src="/imgs/projects/lazy-baker-mockup-mobile.png"
+        img-src="/imgs/projects/juliaebert.com-mockup-desktop.png"
+        title="juliaebert.com"
+      >
+        <div>
+          <tags tags="Nuxt, Vue.js"></tags>
+          <p>I made this website from scratch, too! I wanted to learn a JavaScript framework, and while I was at it, a new static website generator. It was the perfect opportunity to go overboard, including building my own backend to manage publications.</p>
+          <icon-link icon="github-circle" to="https://github.com/jtebert/juliaebert.com">View on GitHub</icon-link>
+        </div>
+      </project>
+
+      <project
+        is-mockup
+        img-src="/imgs/projects/reckless-ham-mockup-desktop.png"
+        mobile-img-src="/imgs/projects/reckless-ham-mockup-mobile.png"
         title="Reckless Ham"
       >
         <div>
@@ -59,6 +75,7 @@
           <icon-link icon="github-circle" to="https://github.com/jtebert/lazy-baker">View on GitHub</icon-link>
         </div>
       </project>
+
       <project
         is-mockup
         img-src="/imgs/projects/owen-tribune-mockup-desktop.png"
