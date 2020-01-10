@@ -248,7 +248,7 @@
                 category="Programming"
                 :skills="[
                 'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
-                'HTML/CSS', 'LaTeX', 'JavaScript (including Vue)', 'Java']"
+                'HTML/CSS', 'LaTeX', 'JavaScript (including Vue.js)', 'Java']"
             ></cv-skill>
             <cv-skill
                 category="Fabrication"
