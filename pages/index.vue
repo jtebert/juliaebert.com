@@ -6,7 +6,6 @@
       texture="graph-paper"
     >
       <div slot="links">
-        <p class="buttons">
           <icon-button-link
             to="https://github.com/jtebert"
             icon="github-circle"
@@ -17,7 +16,6 @@
             icon="linkedin"
             title="LinkedIn"
           >LinkedIn</icon-button-link>
-        </p>
       </div>
       <gallery
         :img-srcs="[

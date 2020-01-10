@@ -23,7 +23,7 @@
         <div slot="content">
             <h2>Education</h2>
             <cv-entry
-                tasksFirst
+                tasks-first
                 location="Cambridge, MA"
                 title="Harvard University"
                 subtitle="Advisor: Prof. Radhika Nagpal"
@@ -34,7 +34,7 @@
                      task: 'SM in Computer Science'}]"
             ></cv-entry>
             <cv-entry
-                tasksFirst
+                tasks-first
                 location="London, UK"
                 title="Imperial College London"
                 subtitle="Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
@@ -44,7 +44,7 @@
                      task: 'Master of Research in Bioengineering, with Distinction'}]"
             ></cv-entry>
             <cv-entry
-                tasksFirst
+                tasks-first
                 location="Boston, MA"
                 title="Northeastern University"
                 subtitle="GPA: 3.98 / 4.0, summa cum laude<br>
@@ -248,7 +248,7 @@
                 category="Programming"
                 :skills="[
                 'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
-                'HTML/CSS', 'LaTeX', 'JavaScript', 'Java']"
+                'HTML/CSS', 'LaTeX', 'JavaScript (including Vue)', 'Java']"
             ></cv-skill>
             <cv-skill
                 category="Fabrication"
