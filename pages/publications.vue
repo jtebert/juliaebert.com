@@ -5,12 +5,10 @@
     texture="bank-note"
   >
     <div slot="links">
-      <p class="buttons">
         <icon-button-link
           to="https://scholar.google.com/citations?user=dsoLpEQAAAAJ&hl=en"
           icon="school"
         >Google Scholar</icon-button-link>
-      </p>
     </div>
     <div class="block-content content">
       <h1>Papers</h1>

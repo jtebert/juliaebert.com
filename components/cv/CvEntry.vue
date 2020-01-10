@@ -17,7 +17,7 @@
       v-for="(task, id) in tasks"
       :key="'task-'+uid+'-sidebar-'+`${id}`"
       :class="['cv-sidebar', 'grid-row-'+(id+rowOffset)]"
-    >{{ task.date.replace('--', '–') }}</div>
+    ><span v-if="task.date">{{ task.date.replace('--', '–') }}</span></div>
     <div
       v-for="(task, id) in tasks"
       :key="'task-'+uid+'-main-'+`${id}`"
@@ -25,7 +25,8 @@
     >
       <span class="cv-task" v-bind:class="{ bulleted: bulleted }">
         <i v-if="bulleted" class="mdi mdi-chevron-right"></i>
-        <span v-html="task.task"></span><br>
+        <span v-if="!task.date&!task.description" v-html="task"></span>
+        <span v-else v-html="task.task"></span><br>
         <i><span class="cv-description" v-html="task.description"></span></i>
       </span>
     </div>
