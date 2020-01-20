@@ -27,7 +27,7 @@
         <i v-if="bulleted" class="mdi mdi-chevron-right"></i>
         <span v-if="!task.date&!task.description" v-html="task"></span>
         <span v-else v-html="task.task"></span><br>
-        <i><span class="cv-description" v-html="task.description"></span></i>
+        <i class="cv-description"><span v-html="task.description"></span></i>
       </span>
     </div>
   </div>

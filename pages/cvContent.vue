@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="cv-header is-print-only">
-            <img class="logo" src="/imgs/logos/logo-black.svg">
             <div class="name">
                 <h1>Julia Ebert</h1>
                 <p class="subtitle">PhD Candidate &bull; Robotics Researcher</p>
@@ -99,7 +98,7 @@
                      task: 'Effects of central fatigue on cognitive and motor performance',
                      description: 'Analyzed data (Matlab) to assess the effect of a prolonged motor experiment on cognitive fatigue in human subjects.'},]"
             ></cv-entry>
-            <span class="page-break"></span>
+            <!-- <span class="page-break"></span> -->
             <cv-entry
                 location="Nahant, MA"
                 title="Northeastern University Marine Science Center"
@@ -142,7 +141,6 @@
                 <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
                 <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
                 <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
-                <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
                 <h2>Awards</h2>
                 <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
                 <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
@@ -172,11 +170,12 @@
                 :showLinks="false"
             ></publication-list>
             <!-- <span class="page-break"></span> -->
-            <h2 class="is-print-only">Conference Abstracts and Posters</h2>
+            <h2 class="is-print-only">Selected Conference Abstracts and Posters</h2>
             <publication-list
                 class="is-print-only"
                 highlight-author="Ebert"
                 :type-filter="['poster']"
+                :pub-key-filter="['ebert2019csgf', 'ebert2018llnl', 'ebert2018csgf', 'ebert2017csgf', 'ebert2016eurohaptics', 'ebert2015ncm']"
                 :showLinks="false"
             ></publication-list>
             <h2 class="is-screen-only">Publications</h2>
@@ -231,79 +230,8 @@
             <cv-award date="2018" award="Guest, <i>Brains On!</i> science podcast live show"></cv-award>
             <cv-award date="2017, 2018" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
             <cv-award date="2016" award="Volunteer, EuroHaptics 2016"></cv-award>
-            <cv-award date="2010 -- 2015" award="Volunteer, Northeastern Civic Engagement Program"></cv-award>
-            <cv-award date="2014 -- 2015" award="Student Ambassador, Northeastern College of Science"></cv-award>
             <cv-award date="2014" award="Tutor team leader, TechBoston Academy"></cv-award>
-            <cv-award
-                date="2014"
-                award="Teacher, NEU Splash Program. Class: &quot;This is your Brain&quot;"
-            ></cv-award>
-            <cv-award date="2011 -- 2013" award="Volunteer, Brigham and Women's Hospital"></cv-award>
-            <cv-award
-                date="2010 -- 2011"
-                award="Mentor, Massachusetts General Hospital Youth Program"
-            ></cv-award>
-            <h2>Skills</h2>
-            <cv-skill
-                category="Programming"
-                :skills="[
-                'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
-                'HTML/CSS', 'LaTeX', 'JavaScript (including Vue.js)', 'Java']"
-            ></cv-skill>
-            <cv-skill
-                category="Fabrication"
-                :skills="[
-                'Laser cutting', '3D printing', 'Vinyl cutting', 'CNC milling, ShopBot',
-                'Electronics design (Eagle) and production', 'Soldering', 'Sewing',
-                'Molding and casting']"
-            ></cv-skill>
-            <cv-skill
-                category="Other"
-                :skills="[
-                'Computer-aided design (OnShape)', 'Database design', 'Linux',
-                'Embedded programming', '3D motion capture',
-                'Kinematic and EEG data collection in human subjects']"
-            ></cv-skill>
 
-            <div class="is-unbroken">
-                <h2>Relevant Coursework</h2>
-                <cv-skill
-                    category="Computer Science"
-                    :skills="['Biologically-inspired Multi-agent Systems', 'Distributed Systems',
-                    'Machine Learning', 'Network Algorithms', 'Computational Neurodynamics',
-                    'Artificial Intelligence', 'Robotics']"
-                ></cv-skill>
-                <cv-skill
-                    category="Science and Engineering"
-                    :skills="[
-                    'Laboratory Electronics', 'How to Make (Almost) Anything', 'Biomimetics', 'Comparative Neurobiology',
-                    'Human Neuroanatomy', 'Biochemistry', 'Genetics and Molecular Biology',
-                    'Organic Chemistry']"
-                ></cv-skill>
-                <cv-skill
-                    category="Mathematics"
-                    :skills="[
-                    'Stochastic Methods for Data Analysis, Inference, and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
-                    'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
-                ></cv-skill>
-            </div>
-
-            <h2>Activities and Interests</h2>
-            <cv-skill
-                category="Sport"
-                :skills="[
-                'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
-            ></cv-skill>
-            <cv-skill
-                category="Music"
-                :skills="[
-                'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
-            ></cv-skill>
-            <cv-skill
-                category="Other"
-                :skills="[
-                'Web design and development', 'Graphic design', 'Writing', 'Baking']"
-            ></cv-skill>
         </div>
     </div>
 </template>

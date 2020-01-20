@@ -294,7 +294,9 @@ a.button:hover {
     .block-content {padding: 0 !important;}
     .section {margin: 0 !important;}
 
-    .is-unbroken {page-break-inside: avoid;}
+    .is-unbroken {
+      //page-break-inside: avoid;
+    }
 
     .page-break {
       page-break-after: always;
@@ -310,30 +312,45 @@ a.button:hover {
       color: #000;
     }
     h2 {
-      font-size: 2em;
+      font-size: 1.5em;
       font-family: $family-subtitle;
       color: $primary !important;
+      margin-top: 0.5em !important;
+      margin-bottom: 0.25em !important;
     }
-    .cv-award { page-break-after: avoid;}
+    .cv-award {
+      page-break-after: avoid;
+      line-height: 1.35em;
+    }
     .cv-bar {
         border-left: 1px solid black;
         background: none;
     }
+    .cv-entry {
+      margin-bottom: 0.5rem;
+      line-height: 1.35em !important;
+      .cv-description {
+        display: block;
+        line-height: 1.35em;
+      }
+    }
+    .publication {
+      line-height: 1.35em !important;
+      margin-bottom: 0.5em !important;
+    }
+    .icon-link {
+      font-weight: 400;
+    }
     .cv-header {
       display: grid;
-      grid-template-columns: 9em auto auto;
-      grid-template-areas: "logo name links";
+      grid-template-columns: auto auto;
+      grid-template-areas: "name links";
       grid-column-gap: $column-gap * 2;
-      margin-bottom: 2em;
-      .logo {
-        grid-area: logo;
-        justify-self: right;
-        height: 7em;
-      }
+      margin-bottom: 0;
       .name {
         grid-area: name;
         h1 {
-          font-size: 4em;
+          font-size: 2.5em;
           font-weight: 600;
           color: black !important;
           margin-bottom: 0;
@@ -345,6 +362,7 @@ a.button:hover {
       }
     }
   }
+
 }
 
 
