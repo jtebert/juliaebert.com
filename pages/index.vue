@@ -3,7 +3,7 @@
     <primary-section
       title="About Me"
       subtitle="Julia Ebert, apprentice robot herder"
-      texture="graph-paper"
+      texture="plus"
     >
       <div slot="links">
           <icon-button-link

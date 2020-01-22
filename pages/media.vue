@@ -1,5 +1,5 @@
 <template>
-  <primary-section :title="title" subtitle="Shameless self-promotion" texture="plus">
+  <primary-section :title="title" subtitle="Shameless self-promotion" texture="graph-paper">
     <div>
       <project
         is-cover

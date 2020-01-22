@@ -42,9 +42,13 @@ Particularly for this site setup are the `navItems` found under `env`. This uses
 
 The icons that appear throughout the site are determined by matching the slug of the page (hacky, I know). Icons are pulled from `/static/imgs/icons`, so you just need to put in SVG file there with a name matching the page slug. To see the details or change this, look at `/components/PrimarySection.vue`. (You could probably modify this to specify the icon filename in the page's `data` section.)
 
-### Home Page Text
+### Home
 
 The options for the typewriter text on the home page are currently stored in the home page layout (`/layouts/home.vue`), which I plan to eventually change.
+
+The background image for the text is specified in the CSS (`main.scss` `.bg-img`).
+
+The particles specifications are in `assets/particles.json`. You can generate/customize a configuration [here](https://vincentgarreau.com/particles.js/).
 
 ### Managing Publication Records
 
