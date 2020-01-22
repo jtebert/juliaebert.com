@@ -413,7 +413,9 @@ a.button:hover {
 }
 
 .hero {
+
   .typer-title {
+    z-index: 4;
     display: flex;
     @include fullhd {
       flex-direction: row;
@@ -478,13 +480,37 @@ a.button:hover {
     }
   }
   &.bg-img {
-    background-image: url(/imgs/stars.jpg);
+    // background-image: url(/imgs/stars.jpg);
+    background-image: url(/imgs/bg.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    //background-attachment: fixed;
     background-size: cover;
   }
+  &:not(.bg-img) {
+    background: linear-gradient(to top, #121212, #13142a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 }
+
+#particles-js {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  //background: #000000;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+// #particles-js {
+//   width: 100%;
+//   height: 100%;
+//   background: cornflowerblue;
+// }
 
 // LAYOUT: SIMPLE (for error pages, zB)
 .simple-layout {

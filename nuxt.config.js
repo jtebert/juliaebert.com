@@ -60,7 +60,6 @@ export default {
   plugins: [
     { src: '~/plugins/vue-typer.js', ssr: false },
     { src: '~/plugins/directives.js' }
-
   ],
 
   /*
