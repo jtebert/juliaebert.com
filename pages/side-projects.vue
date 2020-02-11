@@ -21,8 +21,10 @@
           icon="hammer"
         >Julia Makes Things</icon-button-link>
     </div>
-    <div slot="intro"><p>From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
-    <p>Recently, I have also gotten into the habit of <a href="https://docs.juliaebert.com/projects">documenting my projects</a> as I go, so you can also check out what I'm currently working on.</p></div>
+    <div slot="intro">
+      <p>From building a Lego model of the lab to making a quilt out of conference t-shirts to building a an entire website, I enjoy making stuff. While a lot of these side projects might be superficially useless to most people, these projects taught me skills like web development, programming with domain experts, and how to survive the incredible frustration of learning new things on my own.</p>
+      <p>Recently, I have also gotten into the habit of <a href="https://docs.juliaebert.com/projects">documenting my projects</a> as I go, so you can also check out what I'm currently working on.</p>
+    </div>
     <div>
 
       <project

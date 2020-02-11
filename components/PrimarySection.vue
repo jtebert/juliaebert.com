@@ -10,9 +10,9 @@
               <h3 class="section-subtitle subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
             </div>
             <div class="title-block-links">
-              <p class="buttons">
-                <slot name="links" class="title-block-links"></slot>
-              </p>
+              <div class="buttons">
+                <slot name="links"></slot>
+              </div>
             </div>
           </div>
           <div class="intro content" v-if="this.$slots.intro">
