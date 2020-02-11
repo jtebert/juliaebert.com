@@ -55,6 +55,7 @@ I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together 
           <image-block-link title="Publications"></image-block-link>
           <image-block-link title="Side Projects"></image-block-link>
           <image-block-link title="Media"></image-block-link>
+          <image-block-link title="Docs" link="https://docs.juliaebert.com"></image-block-link>
         </div>
       </div>
       <div class="block-content">

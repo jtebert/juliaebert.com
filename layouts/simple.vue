@@ -1,6 +1,8 @@
 <template>
   <div class="simple-layout">
-    <section class="hero bg-img is-large" id="header">
+    <particlesJS/>
+
+    <section class="hero bg-img is-fullheight" id="header">
       <div class="hero-head">
         <nav-bar></nav-bar>
       </div>
@@ -15,11 +17,13 @@
 <script>
 import NavBar from "~/components/NavBar.vue";
 import MyFooter from "~/components/MyFooter.vue";
+import ParticlesJS from "~/components/ParticlesJS.vue";
 
 export default {
   components: {
     NavBar,
-    MyFooter
+    MyFooter,
+    ParticlesJS
   }
 };
 </script>

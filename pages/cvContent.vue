@@ -37,7 +37,8 @@
                 tasks-first
                 location="London, UK"
                 title="Imperial College London"
-                subtitle="Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
+                subtitle="Marshall Scholar<br>
+                    Advisors: Prof. Etienne Burdet, Dr. Ildar Farkhatdinov<br>
                     Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>"
                 :tasks="[
                     {date: '2016',
@@ -53,7 +54,64 @@
                     {date: '2015',
                     task: 'BS in Behavioral Neuroscience, Minor in Computer Science'}]"
             ></cv-entry>
+
+            <h2 class="is-print-only">Peer-Reviewed Publications</h2>
+            <publication-list
+                class="is-print-only"
+                highlight-author="Ebert"
+                :type-filter="['inproceedings', 'article']"
+                :showLinks="false"
+            ></publication-list>
+            <h2 class="is-screen-only">Publications</h2>
+            <p class="is-screen-only">See my
+                <nuxt-link to="/publications">publications page</nuxt-link>.
+            </p>
+
+            <!-- <div class="is-unbroken"> -->
+            <h2>Grants and Scholarships</h2>
+            <cv-award
+                date="2016 -- 2020"
+                award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+            ></cv-award>
+            <cv-award date="2015 -- 2016" award="Marshall Scholarship"></cv-award>
+            <cv-award
+                date="2014"
+                award="Northeastern Provost Undergraduate Advanced Research Award"
+            ></cv-award>
+            <cv-award date="2013 -- 2015" award="Barry Goldwater Scholarship"></cv-award>
+            <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
+            <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
+            <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
+            <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
+
+            <span class="page-break"></span>
+
+            <h2>Awards</h2>
+            <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
+            <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
+            <cv-award
+                date="2016"
+                award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
+            ></cv-award>
+            <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience (for thesis)"></cv-award>
+            <cv-award date="2015" award="Northeastern University Honors Program Distinction (for coursework)"></cv-award>
+            <cv-award
+                date="2015"
+                award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
+            ></cv-award>
+            <cv-award
+                date="2015"
+                award="Northeastern Sears B. Condit Award for academic achievement"
+            ></cv-award>
+            <cv-award date="2010 -- 2015" award="Northeastern Dean’s List (6 semesters)"></cv-award>
+            <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
+            <!-- </div> -->
+
             <h2>Research</h2>
+            <p class="is-screen-only">For more information, see my
+                <nuxt-link to="/research">research page</nuxt-link>.
+            </p>
+
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University Self-Organizing Systems Research Group"
@@ -99,7 +157,6 @@
                      task: 'Effects of central fatigue on cognitive and motor performance',
                      description: 'Analyzed data (Matlab) to assess the effect of a prolonged motor experiment on cognitive fatigue in human subjects.'},]"
             ></cv-entry>
-            <span class="page-break"></span>
             <cv-entry
                 location="Nahant, MA"
                 title="Northeastern University Marine Science Center"
@@ -117,6 +174,7 @@
                      task: 'Integrated stroke assessment software in rehabilitation robotics',
                      description: 'Developed a backend and interface (Python + Django) for integrating stroke assesment tools for clinicians into the rehabilitation robot interface.'}]"
             ></cv-entry>
+            <span class="page-break"></span>
             <cv-entry
                 location="Tübingen, DE"
                 title="Max Planck Institute for Intelligent Systems"
@@ -127,51 +185,8 @@
                      description: 'Designed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, and conducted pilot experiments.'}]"
             ></cv-entry>
 
-            <div class="is-unbroken">
-                <h2>Grants and Scholarships</h2>
-                <cv-award
-                    date="2016 -- 2020"
-                    award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
-                ></cv-award>
-                <cv-award date="2015 -- 2016" award="Marshall Scholarship"></cv-award>
-                <cv-award
-                    date="2014"
-                    award="Northeastern Provost Undergraduate Advanced Research Award"
-                ></cv-award>
-                <cv-award date="2013 -- 2015" award="Barry Goldwater Scholarship"></cv-award>
-                <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
-                <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
-                <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
-                <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
-                <h2>Awards</h2>
-                <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
-                <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
-                <cv-award
-                    date="2016"
-                    award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
-                ></cv-award>
-                <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience (for thesis)"></cv-award>
-                <cv-award date="2015" award="Northeastern University Honors Program Distinction (for coursework)"></cv-award>
-                <cv-award
-                    date="2015"
-                    award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
-                ></cv-award>
-                <cv-award
-                    date="2015"
-                    award="Northeastern Sears B. Condit Award for academic achievement"
-                ></cv-award>
-                <cv-award date="2010 -- 2015" award="Northeastern Dean’s List (6 semesters)"></cv-award>
-                <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
-            </div>
-
-            <h2 class="is-print-only">Publications</h2>
-            <publication-list
-                class="is-print-only"
-                highlight-author="Ebert"
-                :type-filter="['inproceedings', 'article']"
-                :showLinks="false"
-            ></publication-list>
             <!-- <span class="page-break"></span> -->
+
             <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
                 class="is-print-only"
@@ -179,10 +194,7 @@
                 :type-filter="['poster']"
                 :showLinks="false"
             ></publication-list>
-            <h2 class="is-screen-only">Publications</h2>
-            <p class="is-screen-only">See
-                <nuxt-link to="/publications">publications section</nuxt-link>
-            </p>
+
             <!-- <h2>Talks</h2>
             <publication-list
                 highlight-author="Ebert"
@@ -194,6 +206,7 @@
             - AAMAS 2018?
             - Wyss molecular robotics
             -->
+
             <h2>Teaching and Mentoring</h2>
             <cv-entry
                 location="Cambridge, MA"
@@ -289,6 +302,10 @@
             </div>
 
             <h2>Activities and Interests</h2>
+            <p class="is-screen-only">See more of what I'm doing for fun on my
+                <nuxt-link to="/side-projects">projects page</nuxt-link>.
+            </p>
+
             <cv-skill
                 category="Sport"
                 :skills="[
