@@ -1,5 +1,5 @@
 <template>
-  <p :class="['publication', {'has-download': showLink}]">
+  <p :class="['publication', {'has-download': showLink}]" :id="json.key">
     <span class="download-link" v-if="showLink">
       <a v-if="json.file" title="View" :class="['mdi', iconName]" :href="file"></a>
       <i v-else :class="['mdi', iconName]"></i>
@@ -10,8 +10,9 @@
       <span class="pubtitle" v-html="json.title+'. '"></span>
       <span class="publisher-info" v-if="pubInfo" v-html="pubInfo"></span>
       <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
-      <span class="doi" v-if="json.doi" v-html="doi"></span>
+      <span class="doi is-screen-only" v-if="json.doi" v-html="doi"></span>
       <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
+      <i class="is-print-only"><a v-if="json.file" :href="file" class="link mdi mdi-link mdi-rotate-315"></a></i>
     </span>
   </p>
 </template>

@@ -187,6 +187,13 @@ a.button:hover {
   }
 }
 
+.link.mdi {
+  // For displaying inline links at the end of lines/entries. This prevents extra space/line height
+  display: inline-block;
+  line-height: 1em;
+  vertical-align: middle;
+}
+
 .cv-entry,
 .cv-skill,
 .cv-award {
@@ -236,8 +243,8 @@ a.button:hover {
     &.bulleted {
       padding-left: calc(0.5rem + 1.25em);
     }
-    .mdi,
-    .fa {
+    .mdi.bullet,
+    .fa.bullet {
       position: absolute;
       left: 0.5rem;
     }

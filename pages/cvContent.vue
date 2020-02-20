@@ -31,7 +31,7 @@
                     {date: '2016 --',
                      task: 'PhD Candidate in Computer Science'},
                     {date: '2019',
-                     task: 'SM in Computer Science'}]"
+                     task: 'Master of Science in Computer Science'}]"
             ></cv-entry>
             <cv-entry
                 tasks-first
@@ -52,7 +52,7 @@
                     Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>"
                 :tasks="[
                     {date: '2015',
-                    task: 'BS in Behavioral Neuroscience, Minor in Computer Science'}]"
+                    task: 'Bachelor of Science in Behavioral Neuroscience, Minor in Computer Science'}]"
             ></cv-entry>
 
             <h2 class="is-print-only">Peer-Reviewed Publications</h2>
@@ -72,8 +72,12 @@
             <cv-award
                 date="2016 -- 2020"
                 award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+                link="https://www.krellinst.org/csgf/"
             ></cv-award>
-            <cv-award date="2015 -- 2016" award="Marshall Scholarship"></cv-award>
+            <cv-award
+                date="2015 -- 2016"
+                award="Marshall Scholarship"
+                link="https://www.marshallscholarship.org/"></cv-award>
             <cv-award
                 date="2014"
                 award="Northeastern Provost Undergraduate Advanced Research Award"
@@ -81,20 +85,36 @@
             <cv-award date="2013 -- 2015" award="Barry Goldwater Scholarship"></cv-award>
             <cv-award date="2013" award="Northeastern Provost Undergraduate Research Award"></cv-award>
             <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
-            <cv-award date="2013" award="Northeastern Presidential Global Scholarship"></cv-award>
+            <cv-award
+                date="2013"
+                award="Northeastern Presidential Global Scholarship"
+                link="https://studentfinance.northeastern.edu/applying-for-aid/undergraduate/types-of-aid/scholarships/presidential-global-scholars-program/"></cv-award>
             <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
 
             <span class="page-break"></span>
 
             <h2>Awards</h2>
-            <cv-award date="2018" award="Certificate of Distinction in Teaching, Harvard University Bok Center"></cv-award>
-            <cv-award date="2016" award="Finalist, Hertz Fellowship"></cv-award>
+            <cv-award
+                date="2018"
+                award="Certificate of Distinction in Teaching, Harvard University Bok Center"
+                link="https://bokcenter.harvard.edu/teaching-awards"></cv-award>
+            <cv-award
+                date="2016"
+                award="Finalist, Hertz Fellowship"
+                link="https://hertzfoundation.org/"></cv-award>
             <cv-award
                 date="2016"
                 award="Honorable Mention, National Science Foundation Graduate Research Fellowship Program (NSF GRFP)"
+                link="https://www.nsfgrfp.org/"
             ></cv-award>
-            <cv-award date="2015" award="Northeastern Honors in Behavioral Neuroscience (for thesis)"></cv-award>
-            <cv-award date="2015" award="Northeastern University Honors Program Distinction (for coursework)"></cv-award>
+            <cv-award
+                date="2015"
+                award="Northeastern Honors in Behavioral Neuroscience (for thesis)"
+                link="https://cos.northeastern.edu/college-honors/"></cv-award>
+            <cv-award
+                date="2015"
+                award="Northeastern University Honors Program Distinction (for coursework)"
+                link="https://undergraduate.northeastern.edu/honors/academics/requirements-earning-university-honors-distinction/"></cv-award>
             <cv-award
                 date="2015"
                 award="Northeastern Alex Skavenski Award for Behavioral Neuroscience"
@@ -103,7 +123,10 @@
                 date="2015"
                 award="Northeastern Sears B. Condit Award for academic achievement"
             ></cv-award>
-            <cv-award date="2010 -- 2015" award="Northeastern Dean’s List (6 semesters)"></cv-award>
+            <cv-award
+                date="2010 -- 2015"
+                award="Northeastern Dean’s List (6 semesters)"
+                link="http://catalog.northeastern.edu/undergraduate/academic-policies-procedures/honors/"></cv-award>
             <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
             <!-- </div> -->
 
@@ -119,9 +142,11 @@
                 :tasks="[
                     {date: '2016 --',
                      task: 'Multi-feature perception and decision making in robot collectives',
-                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.'},
+                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.',
+                     to: '/research#collective-perception-and-decision-making-in-a-robot-swarm'},
                     {date: '2017 --',
                      task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
+                     to: '/research#larvabots:-locomotion-of-autonomous-robots-via-aggregation',
                      description: 'Designing and manufacturing a collective of 3D-printed robots to perform aggregate locomotion, inspired by the movement of sawfly larvae.'},]"
             ></cv-entry>
             <cv-entry
@@ -131,7 +156,8 @@
                 :tasks="[
                     {date: '2018 --',
                      task: 'Collaborative Autonomy for Space Situational Awareness',
-                     description: 'Developing a simulator for testing collective observation by low earth orbit satellite constellations.'}]"
+                     description: 'Developing a simulator for testing collective observation by low earth orbit satellite constellations.',
+                     to: '/research#collaborative-autonomy-for-space-situational-awareness'}]"
             ></cv-entry>
             <cv-entry
                 location="London, UK"
@@ -140,7 +166,8 @@
                 :tasks="[
                     {date: '2015 -- 2016',
                      task: 'Co-control of balance recovery in a lower limb exoskeleton',
-                     description: 'Developed algorithms for human-robot co-control of the LOPES exoskeleton in both standing a walking balance recovery, and tested with human participants.'}]"
+                     description: 'Developed algorithms for human-robot co-control of the LOPES exoskeleton in both standing a walking balance recovery, and tested with human participants.',
+                     to: '/research#cooperative-exoskeleton-control-for-human-balance-recovery'}]"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
@@ -149,10 +176,12 @@
                 :tasks="[
                     {date: '2014 -- 2015',
                      task: 'Prediction and stability in control of objects with complex dynamics',
-                     description: 'Programmed HapticMaster robot (C++) for human-subject experiments and conducted pilot experiments.'},
+                     description: 'Programmed HapticMaster robot (C++) for human-subject experiments and conducted pilot experiments.',
+                     to: '/research#stability-and-predictability-in-human-control-of-complex-objects'},
                     {date: '2012 -- 2015',
                      task: 'Learning and long-term retention of an asymmetric bimanual task',
-                     description: 'Designed and programmed experiments to assess ability of humans to learn a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analysed results (Matlab) for Honors thesis.'},
+                     description: 'Designed and programmed experiments to assess ability of humans to learn a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analysed results (Matlab) for Honors thesis.',
+                     to: '/research#bimanual-learning-and-retention'},
                     {date: '2011 -- 2012',
                      task: 'Effects of central fatigue on cognitive and motor performance',
                      description: 'Analyzed data (Matlab) to assess the effect of a prolonged motor experiment on cognitive fatigue in human subjects.'},]"
@@ -172,9 +201,8 @@
                 :tasks="[
                     {date: 'July -- Sept. 2014',
                      task: 'Integrated stroke assessment software in rehabilitation robotics',
-                     description: 'Developed a backend and interface (Python + Django) for integrating stroke assesment tools for clinicians into the rehabilitation robot interface.'}]"
+                     description: 'Developed a backend and interface (Python + Django) for integrating stroke assesment tools for clinicians into the rehabilitation robot.'}]"
             ></cv-entry>
-            <span class="page-break"></span>
             <cv-entry
                 location="Tübingen, DE"
                 title="Max Planck Institute for Intelligent Systems"
@@ -219,16 +247,17 @@
                     {date: 'Fall 2018, Fall 2019',
                      task: '<b>Guest lecture</b>, CS 289: Biologically-inspired Multi-agent Systems'},
                     {date: 'Spring 2018',
-                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems'}]"
+                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems',
+                     link: 'https://canvas.harvard.edu/courses/37276'}]"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
                 title="Northeastern University"
                 :tasks="[
                     {date: '2014 -- 2015',
-                     task: '<b>Teaching assistant,</b> CS 2510: Fundamentals of Computer Science (2 semesters)'},
+                     task: '<b>Teaching assistant,</b> CS 2500: Fundamentals of Computer Science (2 semesters)'},
                     {date: '2012 -- 2014',
-                     task: '<b>Tutor,</b> CS 2510: Fundamentals of Computer Science (3 semesters)'},
+                     task: '<b>Tutor,</b> CS 2500: Fundamentals of Computer Science (3 semesters)'},
                     {date: '2011 -- 2013',
                      task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
@@ -236,13 +265,17 @@
             <!-- <span class="page-break"></span> -->
 
             <h2>Outreach and Service</h2>
+            <cv-award date="2017, 2018, 2020" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
             <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League"></cv-award>
             <cv-award
                 date="2018"
                 award="Speaker, Science in the News fall lecture series: &quot;Brains and Bodies: How to Make Smart Robots&quot;"
+                link="http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/"
             ></cv-award>
-            <cv-award date="2018" award="Guest, <i>Brains On!</i> science podcast live show"></cv-award>
-            <cv-award date="2017, 2018" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
+            <cv-award
+            date="2018"
+            award="Guest, <i>Brains On!</i> science podcast live show"
+            link="https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza"></cv-award>
             <cv-award date="2016" award="Volunteer, EuroHaptics 2016"></cv-award>
             <cv-award date="2010 -- 2015" award="Volunteer, Northeastern Civic Engagement Program"></cv-award>
             <cv-award date="2014 -- 2015" award="Student Ambassador, Northeastern College of Science"></cv-award>
@@ -260,21 +293,20 @@
             <cv-skill
                 category="Programming"
                 :skills="[
-                'Python (including Django, NumPy)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
+                'Python (including NumPy, Pandas, Django)', 'MATLAB', 'C/C++ (including OpenMP, AVR, Arduino)',
                 'HTML/CSS', 'LaTeX', 'JavaScript (including Vue.js)', 'Java']"
             ></cv-skill>
             <cv-skill
                 category="Fabrication"
                 :skills="[
-                'Laser cutting', '3D printing', 'Vinyl cutting', 'CNC milling, ShopBot',
+                'Laser cutting', '3D printing', 'Vinyl cutting', 'CNC milling',
                 'Electronics design (Eagle) and production', 'Soldering', 'Sewing',
                 'Molding and casting']"
             ></cv-skill>
             <cv-skill
                 category="Other"
                 :skills="[
-                'Computer-aided design (OnShape)', 'Database design', 'Linux',
-                'Embedded programming', '3D motion capture',
+                'Computer-aided design (OnShape)', 'Database design', 'Linux', '3D motion capture',
                 'Kinematic and EEG data collection in human subjects']"
             ></cv-skill>
 
@@ -319,7 +351,7 @@
             <cv-skill
                 category="Other"
                 :skills="[
-                'Web design and development', 'Graphic design', 'Writing', 'Baking']"
+                '3D printing', 'Web design and development', 'Graphic design', 'Writing', 'Baking']"
             ></cv-skill>
         </div>
     </div>
