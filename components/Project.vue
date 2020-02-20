@@ -1,5 +1,5 @@
 <template>
-  <div :class="['project-section', {'no-image': imgless}]">
+  <div :class="['project-section', {'no-image': imgless}]" :id="slug">
     <div v-if="isMockup" class="section-image">
       <mockup :imgSrc="imgSrc" :mobileImgSrc="mobileImgSrc"></mockup>
     </div>
@@ -29,6 +29,7 @@
 
 <script>
 import Mockup from "~/components/Mockup.vue";
+import slugify from "slugify";
 
 export default {
   props: {
@@ -44,6 +45,9 @@ export default {
   computed: {
     imgless: function() {
       return !(this.imgSrc || this.videoSrc);
+    },
+    slug: function() {
+      return slugify(this.title, { lower: true });
     }
   },
   components: {
