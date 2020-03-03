@@ -44,7 +44,9 @@ I also care about science communication and outreach. I've [spoken to hundreds o
 
 ## Recent News
 
-I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together with [Richard Barnes](http://rbarnes.org/), I've been developing this scalable, high performance simulator for Kilobot robots that makes it easy to transfer code between simulation and physical robots. Although it's still in pre-release, it has been used to simulate up to 10,000 robots at a time and conduct parameter sweeps covering almost a million trials.
+**March 2020:** My latest paper has been accepted to ICRA 2020: "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms" You can [read the preprint here.](/pdfs/inproceedings/2020_icra.pdf)
+
+**September 2019:** I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together with [Richard Barnes](http://rbarnes.org/), I've been developing this scalable, high performance simulator for Kilobot robots that makes it easy to transfer code between simulation and physical robots. Although it's still in pre-release, it has been used to simulate up to 10,000 robots at a time and conduct parameter sweeps covering almost a million trials.
         </vue-markdown>
       </div>
       <div class="block-content">
