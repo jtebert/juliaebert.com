@@ -2,15 +2,16 @@
     "ebert2020icra": {
         "type": "inproceedings",
         "title": "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms",
-        "year": 2019,
+        "year": 2020,
         "author": [
             "Ebert, Julia",
             "Gauci, Melvin",
             "Mallmann-Trenn, Frederik",
             "Nagpal, Radhika"
         ],
+        "pages": "7186-7192",
         "file": "2020_icra.pdf",
-        "note": "Accepted to <i>ICRA 2020</i>"
+        "booktitle": "2020 IEEE International Conference on Robotics and Automation (ICRA)"
     },
     "farkhatdinov2019": {
         "type": "article",
@@ -100,20 +101,6 @@
             "stability",
             "contraction",
             "motor learning"
-        ]
-    },
-    "park2018": {
-        "type": "article",
-        "title": "Asymmetric Learning in an Asymmetric Bimanual Task",
-        "author": [
-            "Park, Se-Woong",
-            "Ebert, Julia",
-            "Sternad, Dagmar"
-        ],
-        "note": "In preparation",
-        "keywords": [
-            "motor learning",
-            "bimanual"
         ]
     },
     "ebert2019csgf": {

@@ -13,7 +13,6 @@ export default {
       if (this.link) {
         // var tmp = `<a href='${this.link}'>${this.award}</a>`;
         var tmp = `${this.award} <a href='${this.link}'><i class="link mdi mdi-rotate-315 mdi-link"></i></a>`;
-        console.log(tmp);
         return tmp;
       } else {
         return this.award;

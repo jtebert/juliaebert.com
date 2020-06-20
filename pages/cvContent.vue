@@ -91,7 +91,7 @@
                 link="https://studentfinance.northeastern.edu/applying-for-aid/undergraduate/types-of-aid/scholarships/presidential-global-scholars-program/"></cv-award>
             <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
 
-            <span class="page-break"></span>
+            <!-- <span class="page-break"></span> -->
 
             <h2>Awards</h2>
             <cv-award
@@ -221,6 +221,7 @@
                 highlight-author="Ebert"
                 :type-filter="['poster']"
                 :showLinks="false"
+                absoluteFile="https://juliaebert.com"
             ></publication-list>
 
             <!-- <h2>Talks</h2>
@@ -266,6 +267,7 @@
 
             <h2>Outreach and Service</h2>
             <cv-award date="2017, 2018, 2020" award="Volunteer, Boston Public Schools Science Fair"></cv-award>
+            <cv-award date="2019" award="Marshall Scholarship Reading Committee"></cv-award>
             <cv-award date="2018, 2019" award="Robot Design Judge, FIRST LEGO League"></cv-award>
             <cv-award
                 date="2018"
