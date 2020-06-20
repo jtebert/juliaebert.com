@@ -28,6 +28,10 @@ export default {
     showLink: {
       type: Boolean,
       default: true
+    },
+    absoluteFile: {
+      type: String,
+      default: ""
     }
   },
   computed: {
@@ -45,12 +49,17 @@ export default {
       }
     },
     file: function() {
-      return "/pdfs/" + this.json.type + "/" + this.json.file;
+      var baseFilename = "/pdfs/" + this.json.type + "/" + this.json.file;
+      if (this.absoluteFile) {
+        return this.absoluteFile + baseFilename;
+      } else {
+        return baseFilename;
+      }
     },
     authorsFirstLast: function() {
       // Produce string of authors in the form: Last, F. M., Last2, F. M., ...
       var authorList = this.json.author;
-      var authorsFormatted = authorList.map(this.authorFirstLast);
+      var authorsFormatted = authorList.map(this.authorFILast);
       // Highlight any authors that include the specified string by wrapping
       // it in a span with the class "highlight-author" (which can then be formatted
       // with CSS)
@@ -65,7 +74,7 @@ export default {
       }
       if (authorsFormatted.length > 1) {
         var lastAuthor = authorsFormatted.pop();
-        return authorsFormatted.join(", ") + " and " + lastAuthor;
+        return authorsFormatted.join(", ") + ", and " + lastAuthor;
       } else {
         return authorsFormatted;
       }
@@ -144,6 +153,21 @@ export default {
         .map(n => n.charAt(0) + ".")
         .join(".-");
       return lastName + " " + firstInitials;
+    },
+    authorFILast(name) {
+      // Format the input string "Last, First MidlDle" as "F M Last"
+      var lastName, firstName;
+      var authorSplit = name.split(",");
+      [lastName, firstName] = authorSplit.map(n => n.trim());
+      var initialsSpaced = firstName
+        .split(" ")
+        .map(n => n.charAt(0))
+        .join(". ");
+      var firstInitials = initialsSpaced
+        .split("-")
+        .map(n => n.charAt(0))
+        .join("-");
+      return firstInitials + " " + lastName;
     },
     authorFirstLast(name) {
       var lastName, firstName;

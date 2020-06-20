@@ -6,6 +6,7 @@
       :key="pub.key"
       :highlightAuthor="highlightAuthor"
       :showLink="showLinks"
+      :absoluteFile="absoluteFile"
     ></publication>
   </div>
 </template>
@@ -29,6 +30,10 @@ export default {
     showLinks: {
       type: Boolean,
       default: true
+    },
+    absoluteFile: {
+      type: String,
+      default: ""
     }
   },
   data() {
@@ -66,7 +71,6 @@ export default {
       // Then return a sorted list by year, in descending order (newest to oldest)
       return Object.keys(pub_year_obj)
         .map(year => {
-          console.log(pub_year_obj);
           var p = {};
           p["publications"] = pub_year_obj[year];
           p["year"] = year;
