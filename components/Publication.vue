@@ -12,7 +12,7 @@
       <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
       <span class="doi is-screen-only" v-if="json.doi" v-html="doi"></span>
       <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
-      <i class="is-print-only"><a v-if="json.file" :href="file" class="link mdi mdi-link mdi-rotate-315"></a></i>
+      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link mdi-rotate-315"></a></i>
     </span>
   </p>
 </template>
@@ -28,10 +28,6 @@ export default {
     showLink: {
       type: Boolean,
       default: true
-    },
-    absoluteFile: {
-      type: String,
-      default: ""
     }
   },
   computed: {
@@ -48,13 +44,11 @@ export default {
           return "mdi-download";
       }
     },
+    absoluteFile() {
+      return process.env.baseURL + this.file;
+    },
     file: function() {
-      var baseFilename = "/pdfs/" + this.json.type + "/" + this.json.file;
-      if (this.absoluteFile) {
-        return this.absoluteFile + baseFilename;
-      } else {
-        return baseFilename;
-      }
+      return "/pdfs/" + this.json.type + "/" + this.json.file;
     },
     authorsFirstLast: function() {
       // Produce string of authors in the form: Last, F. M., Last2, F. M., ...
