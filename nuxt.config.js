@@ -12,7 +12,8 @@ export default {
       Publications: "publications",
       "Side Projects": "side-projects",
       Media: "media"
-    }
+    },
+    baseURL: 'https://juliaebert.com'
   },
 
   /*

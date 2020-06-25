@@ -221,7 +221,6 @@
                 highlight-author="Ebert"
                 :type-filter="['poster']"
                 :showLinks="false"
-                absoluteFile="https://juliaebert.com"
             ></publication-list>
 
             <!-- <h2>Talks</h2>
@@ -312,7 +311,7 @@
                 'Kinematic and EEG data collection in human subjects']"
             ></cv-skill>
 
-            <div class="is-unbroken">
+            <div class="is-unbroken is-screen-only">
                 <h2>Relevant Coursework</h2>
                 <cv-skill
                     category="Computer Science"
@@ -333,28 +332,30 @@
                     'Stochastic Methods for Data Analysis, Inference, and Optimization', 'Biological Signal Processing', 'Statistics and Data Analysis',
                     'Multivariable Calculus', 'Linear Algebra', 'Differential Equations']"
                 ></cv-skill>
+
+                <h2>Activities and Interests</h2>
+                <p class="is-screen-only">See more of what I'm doing for fun on my
+                    <nuxt-link to="/side-projects">projects page</nuxt-link>.
+                </p>
+
+                <cv-skill
+                    category="Sport"
+                    :skills="[
+                    'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
+                ></cv-skill>
+                <cv-skill
+                    category="Music"
+                    :skills="[
+                    'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
+                ></cv-skill>
+                <cv-skill
+                    category="Other"
+                    :skills="[
+                    '3D printing', 'Web design and development', 'Graphic design', 'Writing', 'Baking']"
+                ></cv-skill>
             </div>
 
-            <h2>Activities and Interests</h2>
-            <p class="is-screen-only">See more of what I'm doing for fun on my
-                <nuxt-link to="/side-projects">projects page</nuxt-link>.
-            </p>
 
-            <cv-skill
-                category="Sport"
-                :skills="[
-                'Harvard University curling team', 'Imperial College and Goodenough College fencing clubs', 'Cycling']"
-            ></cv-skill>
-            <cv-skill
-                category="Music"
-                :skills="[
-                'Northeastern University pep band, drumline, and wind ensemble', 'Clarinet', 'Saxophone', 'Percussion']"
-            ></cv-skill>
-            <cv-skill
-                category="Other"
-                :skills="[
-                '3D printing', 'Web design and development', 'Graphic design', 'Writing', 'Baking']"
-            ></cv-skill>
         </div>
     </div>
 </template>

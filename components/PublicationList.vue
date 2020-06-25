@@ -6,7 +6,6 @@
       :key="pub.key"
       :highlightAuthor="highlightAuthor"
       :showLink="showLinks"
-      :absoluteFile="absoluteFile"
     ></publication>
   </div>
 </template>
@@ -30,10 +29,6 @@ export default {
     showLinks: {
       type: Boolean,
       default: true
-    },
-    absoluteFile: {
-      type: String,
-      default: ""
     }
   },
   data() {
