@@ -70,6 +70,11 @@
             <!-- <div class="is-unbroken"> -->
             <h2>Grants and Scholarships</h2>
             <cv-award
+                date="2020 -- 2021"
+                award="Siebel Scholar"
+                link="https://www.siebelscholars.com/"
+            ></cv-award>
+            <cv-award
                 date="2016 -- 2020"
                 award="Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
                 link="https://www.krellinst.org/csgf/"
@@ -373,7 +378,7 @@ export default {
     CvEntry,
     CvAward,
     CvSkill,
-    IconLink
-  }
+    IconLink,
+  },
 };
 </script>

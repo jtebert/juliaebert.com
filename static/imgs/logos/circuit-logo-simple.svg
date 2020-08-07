@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 32 31.999999"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="circuit-logo-simple.svg"
+   inkscape:export-filename="/home/jtebert/google-drive/Projects/Programming/html/juliaebert.com/static/imgs/logos/circuit-logo-simple.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="13.796876"
+     inkscape:cx="2.6270781"
+     inkscape:cy="25.054312"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4509"
+     showgrid="false"
+     inkscape:object-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:window-width="1800"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:snap-smooth-nodes="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:snap-bbox-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4136"
+       empspacing="4"
+       spacingx="1"
+       spacingy="0.99999997"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10,-410.3622)">
+    <g
+       id="g4509"
+       transform="matrix(1.2,0,0,1.2,-36.5,-69.972415)"
+       style="fill:none;stroke:#03bc25;stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         id="path4511"
+         style="fill:none;fill-rule:evenodd;stroke:#03bc25;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 45,422.36218 2.5,2.50001 H 55 l 3.232231,-3.23225 M 49.583333,407.36219 H 55 l 10e-7,10.42895 -2.071015,2.07103 h -3.357961 l -3.535496,-3.53551 -1.767765,1.76776 4.267744,4.26777 h 3.547825 M 57.5,404.44551 v 14.38116 l -3.347355,3.53551 m 1.264022,-17.49999 H 47.5 v 2.5 2.5 H 45 v -7.5 h 15 v 17.91666"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccccccccccccccccc" />
+    </g>
+    <path
+       cx="206.25"
+       cy="416.11218"
+       rx="6.2499986"
+       ry="6.2499928"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#808080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4743"
+       d=""
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

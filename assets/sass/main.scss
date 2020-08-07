@@ -76,6 +76,10 @@ $column-gap: 0.75rem;
 
 // Custom CSS
 
+table.table, table {
+  background: none;
+}
+
 // @import "~bulma/sass/utilities/mixins";
 @import "~bulma/bulma";
 
@@ -116,6 +120,7 @@ a.button:hover {
   text-decoration: none;
 }
 
+// Manually setting the text or background color of things
 .is-light {
     background: $light;
 }
@@ -128,6 +133,44 @@ a.button:hover {
 .is-success {
     background: $success;
 }
+.is-green {
+  background: $green;
+  color: $green-invert;
+  &:before {content: "#{$green}";}
+}
+.is-blue {
+  background: $blue;
+  color: $blue-invert;
+  &:before {content: "#{$blue}";}
+}
+.is-orange {
+  background: $orange;
+  color: $orange-invert;
+  &:before {content: "#{$orange}";}
+}
+.is-purple {
+  background: $purple;
+  color: $purple-invert;
+  &:before {content: "#{$purple}";}}
+.is-red {
+  background: $red;
+  color: $red-invert;
+  &:before {content: "#{$red}";}}
+
+.color-block {
+  width: 96px;
+  height: 72px;
+  display: inline-block;
+  margin: 1em 1em 1em 0;
+  &:before {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    //padding: .75em;
+    line-height: 2.5em;
+  }
+}
+
 
 .section.is-content {
     padding: 3rem 2rem;

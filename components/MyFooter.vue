@@ -22,7 +22,7 @@ Cambridge, MA 02138
       </div>
       <div class="column">
         <vue-markdown class="content">
-*Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), [Vue.js](https://vuejs.org/), [Bulma](https://bulma.io/), [Hero Patterns](https://www.heropatterns.com/), and icons from [The Noun Project](https://thenounproject.com/) by Maxim Basinski and Eucalyp. Typeset in [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Space Mono](https://fonts.google.com/specimen/Space+Mono).*
+*Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), [Vue.js](https://vuejs.org/), [Bulma](https://bulma.io/), [Hero Patterns](https://www.heropatterns.com/), and icons from [The Noun Project](https://thenounproject.com/) by Maxim Basinski, Becris, and Eucalyp. Typeset in [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Space Mono](https://fonts.google.com/specimen/Space+Mono).*
 
 *Source code available on [GitHub](https://github.com/jtebert/juliaebert.com) under the [MIT license](https://github.com/jtebert/juliaebert.com/blob/master/LICENSE.txt).*
         </vue-markdown>
@@ -38,8 +38,8 @@ import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
-    VueMarkdown
-  }
+    VueMarkdown,
+  },
 };
 </script>
 

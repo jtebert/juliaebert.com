@@ -1,7 +1,7 @@
 <template>
   <div class="section is-block" :class="textureClass" :id="slug">
     <div class="container">
-      <img class="icon-block" :src="'/imgs/icons/'+slug+'.svg'">
+      <img class="icon-block" :src="'/imgs/icons/'+iconSlug+'.svg'">
       <div class="section is-light is-unpadded">
         <div class="block-content has-title">
           <div class="title-block">
@@ -29,18 +29,25 @@
 import slugify from "slugify";
 
 export default {
-  props: ["texture", "title", "subtitle"],
+  props: ["texture", "title", "subtitle", "icon"],
   computed: {
-    slug: function() {
+    slug: function () {
       return slugify(this.title, { lower: true });
     },
-    textureClass: function() {
+    iconSlug: function () {
+      if (this.icon) {
+        return this.icon;
+      } else {
+        return this.slug;
+      }
+    },
+    textureClass: function () {
       if (this.texture) {
         return "has-texture-" + this.texture;
       } else {
         return "";
       }
-    }
-  }
+    },
+  },
 };
 </script>
