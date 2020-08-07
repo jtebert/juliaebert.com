@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" fill="none" stroke="#ffffff" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="matrix(1,0,0,-1,0,32)" stroke="#363636">
+  <polyline points="18.75 26.5 10.5 26.5 10.5 20.5 7.5 20.5 7.5 29.5 25.5 29.5 25.5 9.25"/>
+  <polyline points="22.5 25.75 22.5 9.743 19 6.045"/>
+  <polyline points="14.25 23.5 19.5 23.5 19.5 10.985 17.015 8.5 12.985 8.5 8.743 12.743 6.621 10.621 11.743 5.5 14.733 5.5"/>
+  <polyline points="8.03 4.97 10.5 2.5 19.5 2.5 22.848 5.848"/>
+ </g>
+ <g transform="matrix(1,0,0,-1,0,32)" stroke="#363636" stroke-width=".8">
+  <circle cx="19.5" cy="26.5" r=".9"/>
+  <circle cx="22.5" cy="26.5" r=".9"/>
+  <circle cx="13.5" cy="23.5" r=".9"/>
+  <circle cx="25.5" cy="8.5" r=".9"/>
+  <circle cx="23.379" cy="6.379" r=".9"/>
+  <circle cx="18.483" cy="5.5" r=".9"/>
+  <circle cx="15.5" cy="5.5" r=".9"/>
+  <circle cx="7.5" cy="5.5" r=".9"/>
+ </g>
+</svg>

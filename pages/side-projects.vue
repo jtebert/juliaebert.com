@@ -77,27 +77,6 @@
           <icon-link icon="github-circle" to="https://github.com/jtebert/lazy-baker">View on GitHub</icon-link>
         </div>
       </project>
-
-      <project
-        is-mockup
-        img-src="/imgs/projects/owen-tribune-mockup-desktop.png"
-        mobile-img-src="/imgs/projects/owen-tribune-mockup-mobile.png"
-        title="The Owen Tribune"
-      >
-        <div>
-          <tags tags="Python, Django"></tags>
-          <p>
-            A satirical fake news website, styled after the New York Times
-            and New Yorker. I made it as a Christmas present (for someone
-            named Owen).
-          </p>
-          <icon-link icon="web" :to="'http://owen-tribune.herokuapp.com/'">Read fake news</icon-link>
-          <icon-link
-            icon="github-circle"
-            :to="'https://github.com/jtebert/owen-tribune'"
-          >View on GitHub</icon-link>
-        </div>
-      </project>
       <project
         is-mockup
         img-src="/imgs/projects/jekyll-polymer-mockup-desktop.png"
@@ -185,7 +164,7 @@ export default {
     VueMarkdown,
     Project,
     Project,
-    PrimarySection
+    PrimarySection,
   },
   data() {
     return { title: "Side Projects" };
@@ -193,8 +172,8 @@ export default {
   head() {
     return {
       title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "side-projects" }]
+      meta: [{ hid: "side-projects" }],
     };
-  }
+  },
 };
 </script>
