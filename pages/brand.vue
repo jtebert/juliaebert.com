@@ -29,7 +29,6 @@ The color palette and font choices are a reference old phosphorous displays (gre
       <div class="color-block is-purple"></div>
       <div class="color-block is-red"></div>
 
-
       <vue-markdown>
 
 # Logo
