@@ -40,7 +40,7 @@ Particularly for this site setup are the `navItems` found under `env`. This uses
 
 ### Icons
 
-The icons that appear throughout the site are determined by matching the slug of the page (hacky, I know). Icons are pulled from `/static/imgs/icons`, so you just need to put in SVG file there with a name matching the page slug. To see the details or change this, look at `/components/PrimarySection.vue`. (You could probably modify this to specify the icon filename in the page's `data` section.)
+By default, the icons that appear throughout the site are determined by matching the slug of the section title (hacky, I know). Icons are pulled from `/static/imgs/icons`, so you just need to put in SVG file there with a name matching the page slug. To see the details or change this, look at `/components/PrimarySection.vue`. Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/static/imgs/icons/hello.svg`.
 
 ### Home
 
@@ -91,6 +91,8 @@ The source for each of these can be found in `/components`, for additional detai
 The primary section is (as described above), basically the root component of the default layout. As seen in the existing pages, you can use it to specify a displayed page title, subtitle, and intro text.
 
 The title and subtitle are specified as props in the `<primary-section>` component. This component also specifies the background texture of the page with the `texture` prop. If no texture is given, it will be a plain color.
+
+Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/static/imgs/icons/hello.svg`. If you don't specify the `icon`, it will match the slug of the section title.
 
 The intro text is a slot within the component, used as `<div slot="intro">...` This lets you do multiple paragraphs or longer text content.
 
