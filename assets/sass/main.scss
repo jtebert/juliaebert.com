@@ -4,13 +4,27 @@
 // $green: #00B140;
 $green: #03BC25;
 $green-invert: findColorInvert($green);
-$blue: #3A93F2 ;
+$green-light: #43E660;
+$green-light-invert: findColorInvert($green-light);
+
+$cyan: #2FD7DA;
+$cyan-light: #78E9EB;
+$cyan-invert: findColorInvert($cyan);
+
+$blue: #3A93F2;
+$blue-light: #71B7FC;
 $blue-invert: findColorInvert($blue);
+
 $orange: #F18F01;
+$orange-light: #FFAC30;
 $orange-invert: findColorInvert($orange);
+
 $purple: #9246F4;
+$purple-light: #B569FA;
 $purple-invert: findColorInvert($purple);
+
 $red: #F23C2B;
+$red-light: #F56558;
 $red-invert: findColorInvert($red);
 
 // $text: $white-ter;
@@ -133,35 +147,14 @@ a.button:hover {
 .is-success {
     background: $success;
 }
-.is-green {
-  background: $green;
-  color: $green-invert;
-  &:before {content: "#{$green}";}
-}
-.is-blue {
-  background: $blue;
-  color: $blue-invert;
-  &:before {content: "#{$blue}";}
-}
-.is-orange {
-  background: $orange;
-  color: $orange-invert;
-  &:before {content: "#{$orange}";}
-}
-.is-purple {
-  background: $purple;
-  color: $purple-invert;
-  &:before {content: "#{$purple}";}}
-.is-red {
-  background: $red;
-  color: $red-invert;
-  &:before {content: "#{$red}";}}
 
+.color-block-wrapper {
+  display: inline-block;
+  margin: 1em 1em 1em 0;
+}
 .color-block {
   width: 96px;
   height: 72px;
-  display: inline-block;
-  margin: 1em 1em 1em 0;
   &:before {
     display: inline-block;
     width: 100%;
@@ -169,6 +162,39 @@ a.button:hover {
     //padding: .75em;
     line-height: 2.5em;
   }
+  &.is-green {
+    background: $green;
+    color: $green-invert;
+    &:before {content: "#{$green}";}
+  }
+  &.is-green-light {
+    background: $green-light;
+    color: $green-light-invert;
+    &:before {content: "#{$green-light}";}
+  }
+  &.is-cyan {
+    background: $cyan;
+    color: $cyan-invert;
+    &:before {content: "#{$cyan}";}
+  }
+  &.is-blue {
+    background: $blue;
+    color: $blue-invert;
+    &:before {content: "#{$blue}";}
+  }
+  &.is-orange {
+    background: $orange;
+    color: $orange-invert;
+    &:before {content: "#{$orange}";}
+  }
+  &.is-purple {
+    background: $purple;
+    color: $purple-invert;
+    &:before {content: "#{$purple}";}}
+  &.is-red {
+    background: $red;
+    color: $red-invert;
+    &:before {content: "#{$red}";}}
 }
 
 

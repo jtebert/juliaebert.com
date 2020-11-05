@@ -27,26 +27,27 @@
       ></gallery>
       <div class="block-content content">
         <vue-markdown>
-I am a PhD candidate in computer science at Harvard University, where I study bio-inspired collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am also a Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF). Previously, I earned an MRes in bioengineering from Imperial College London and a BS in behavioral neuroscience from Northeastern University.
+I am a PhD candidate in computer science at Harvard University, where I study collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am a currently 2021 [Siebel Scholar](https://www.siebelscholars.com/). I was also a Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF), through which I interned at Lawrence Livermore National Laboratory. Previously, I earned an MRes in Bioengineering at Imperial College London as a Marshall Scholar and a BS in Behavioral Neuroscience at Northeastern University.
 
-I am interested in biology, learning, robotics, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. I also consider myself a full-stack roboticist, working on both hardware (mechanical and electronic design) and software (algorithms and control). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
+I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. I also consider myself a full-stack roboticist, working on both hardware (mechanical and electronic design) and software (algorithms and control). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
-During my PhD, my goal is to apply concepts from neuroscience and biological behavior to improve the collective behavior of robots. In the first years of my PhD, I developed an algorithm for a swarm of simple Kilobot robots to make decisions about multiple features of their environment, and I designed and built a set of larva-inspired robots that climb over each to move faster as a group. Currently, I am developing a more general framework for Bayesian decision-making in robot collectives. After my PhD, I plan to pursue a career in academic research.
+My current research focuses on creating algorithms for distributed decision-making in robot swarms. Specifically, I am developing a modular framework for allowing robots to collectively solve a variety of environmental classification and localization problems. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab. After my PhD, I plan to pursue a career in academic research.
 
-I also care about science communication and outreach. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
+I am also excited about science communication and outreach – especially when it can be used to expand excitement and access to STEM for traditionally under-representend groups, including women and people of color. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
         </vue-markdown>
         <p>In my free time, I play for the
           <a href="http://harvardcurling.com/">Harvard curling team</a>, bake
-          <a href="http://lazybaker.juliaebert.com/">awesome cinnamon rolls</a>, and
+          <a href="http://recklessham.com/">awesome cinnamon rolls</a>, and
           <nuxt-link to="side-projects">make fun things</nuxt-link>.
         </p>
         <vue-markdown>
-
 ## Recent News
 
-**August 2020:** I've been selected as a [Siebel Scholar](https://www.siebelscholars.com/) for the Class of 2021!
+**September 2020:** I've been selected as a [Siebel Scholar](https://www.siebelscholars.com/) for the [Class of 2021](https://www.siebelscholars.com/articles/welcome-class-of-2021-siebel-scholars/)!
 
-**March 2020:** My latest paper has been accepted to ICRA 2020: "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms" You can [read the preprint here.](/pdfs/inproceedings/2020_icra.pdf)
+**August 2020:** I presented my research at the 2020 DOE CSGF Annual Program Review. You can [watch the recording here](https://www.krellinst.org/csgf/conf/2020/video/ebert2016).
+
+**May 2020:** My latest paper was published at ICRA 2020: "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms." You can [read the preprint here](/pdfs/inproceedings/2020_icra.pdf) and [watch a recording of my talk here.](https://www.youtube.com/watch?v=cvDgHfGTbOQ)
 
 **September 2019:** I just made [Kilosim](https://github.com/jtebert/kilosim) open source! Together with [Richard Barnes](http://rbarnes.org/), I've been developing this scalable, high performance simulator for Kilobot robots that makes it easy to transfer code between simulation and physical robots. Although it's still in pre-release, it has been used to simulate up to 10,000 robots at a time and conduct parameter sweeps covering almost a million trials.
         </vue-markdown>

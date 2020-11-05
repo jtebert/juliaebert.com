@@ -23,11 +23,14 @@ The color palette and font choices are a reference old phosphorous displays (gre
 
 # Colors
       </vue-markdown>
+      <color-block color=green></color-block>
+
       <div class="color-block is-green"></div>
+      <div class="color-block is-cyan"></div>
       <div class="color-block is-blue"></div>
-      <div class="color-block is-orange"></div>
       <div class="color-block is-purple"></div>
       <div class="color-block is-red"></div>
+      <div class="color-block is-orange"></div>
 
       <vue-markdown>
 
@@ -66,11 +69,13 @@ It is available as a vector (SVG) or raster (PNG) image. Never use it as a JPG i
 <script>
 import VueMarkdown from "vue-markdown";
 import PrimarySection from "~/components/PrimarySection.vue";
+import ColorBlock from "~/components/ColorBlock.vue";
 
 export default {
   components: {
     VueMarkdown,
     PrimarySection,
+    ColorBlock,
   },
 };
 </script>

@@ -31,7 +31,7 @@
                     {date: '2016 --',
                      task: 'PhD Candidate in Computer Science'},
                     {date: '2019',
-                     task: 'Master of Science in Computer Science'}]"
+                     task: 'MS in Computer Science'}]"
             ></cv-entry>
             <cv-entry
                 tasks-first
@@ -48,11 +48,11 @@
                 tasks-first
                 location="Boston, MA"
                 title="Northeastern University"
-                subtitle="GPA: 3.98 / 4.0, summa cum laude<br>
+                subtitle="GPA: 3.98, summa cum laude<br>
                     Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>"
                 :tasks="[
                     {date: '2015',
-                    task: 'Bachelor of Science in Behavioral Neuroscience, Minor in Computer Science'}]"
+                    task: 'BS in Behavioral Neuroscience, Minor in Computer Science'}]"
             ></cv-entry>
 
             <h2 class="is-print-only">Peer-Reviewed Publications</h2>
@@ -71,7 +71,7 @@
             <h2>Grants and Scholarships</h2>
             <cv-award
                 date="2020 -- 2021"
-                award="Siebel Scholar"
+                award="Siebel Scholar, Class of 2021"
                 link="https://www.siebelscholars.com/"
             ></cv-award>
             <cv-award
@@ -92,9 +92,8 @@
             <cv-award date="2013" award="DAAD Undergraduate Scholarship"></cv-award>
             <cv-award
                 date="2013"
-                award="Northeastern Presidential Global Scholarship"
-                link="https://studentfinance.northeastern.edu/applying-for-aid/undergraduate/types-of-aid/scholarships/presidential-global-scholars-program/"></cv-award>
-            <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award>
+                award="Northeastern Presidential Global Scholarship"></cv-award>
+            <!-- <cv-award date="2010 -- 2015" award="Northeastern National Merit Scholarship"></cv-award> -->
 
             <!-- <span class="page-break"></span> -->
 
@@ -146,8 +145,8 @@
                 subtitle="Prof. Radhika Nagpal"
                 :tasks="[
                     {date: '2016 --',
-                     task: 'Multi-feature perception and decision making in robot collectives',
-                     description: 'Developing Bayesian and bio-inspired algorithms for collective decision-making in Kilobot robots, in both simulation and physical robots, including developing a parallelized, high-throughput Kilobot simulator.',
+                     task: 'Perception and decision making in robot collectives',
+                     description: 'Developing a framework for collective spatial decision-making in both simulation and physical robot platforms, including developing a parallelized, high-throughput robot simulator.',
                      to: '/research#collective-perception-and-decision-making-in-a-robot-swarm'},
                     {date: '2017 --',
                      task: 'LARVAbot: Locomotion of autonomous robots via aggregation',
@@ -161,8 +160,11 @@
                 :tasks="[
                     {date: '2018 --',
                      task: 'Collaborative Autonomy for Space Situational Awareness',
-                     description: 'Developing a simulator for testing collective observation by low earth orbit satellite constellations.',
-                     to: '/research#collaborative-autonomy-for-space-situational-awareness'}]"
+                     description: 'Designing multi-agent algorithms for orbit tracking and maneuver detection with satellite constellations.',
+                     to: '/research#collaborative-autonomy-for-space-situational-awareness'},
+                    {date: 'May -- Aug. 2018',
+                     task: 'Internship: Simulating Space Situational Awareness',
+                     description: 'Developed a simulator for testing collective orbit observation by low earth orbit satellite constellations.'}]"
             ></cv-entry>
             <cv-entry
                 location="London, UK"
@@ -206,7 +208,7 @@
                 :tasks="[
                     {date: 'July -- Sept. 2014',
                      task: 'Integrated stroke assessment software in rehabilitation robotics',
-                     description: 'Developed a backend and interface (Python + Django) for integrating stroke assesment tools for clinicians into the rehabilitation robot.'}]"
+                     description: 'Developed a backend and interface (Python + Django) for integrating clinical stroke assesment tools into a rehabilitation robot.'}]"
             ></cv-entry>
             <cv-entry
                 location="Tübingen, DE"
@@ -218,7 +220,7 @@
                      description: 'Designed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, and conducted pilot experiments.'}]"
             ></cv-entry>
 
-            <!-- <span class="page-break"></span> -->
+            <span class="page-break"></span>
 
             <h2 class="is-print-only">Conference Abstracts and Posters</h2>
             <publication-list
