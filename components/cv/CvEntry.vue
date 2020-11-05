@@ -13,11 +13,15 @@
     <div :class="['cv-main', 'entry-subtitle', 'grid-row-'+subtitleRow]">
       <span v-if="subtitle" v-html="subtitle"></span>
     </div>
+
     <div
       v-for="(task, id) in tasks"
       :key="'task-'+uid+'-sidebar-'+`${id}`"
       :class="['cv-sidebar', 'grid-row-'+(id+rowOffset)]"
-    ><span v-if="task.date">{{ task.date.replace('--', '–') }}</span></div>
+    >
+      <span v-if="task.date">{{ task.date.replace('--', '–') }}</span>
+    </div>
+
     <div
       v-for="(task, id) in tasks"
       :key="'task-'+uid+'-main-'+`${id}`"
@@ -29,9 +33,11 @@
         <span v-else v-html="task.task"></span>
         <a v-if="task.link" :href="task.link"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a>
         <nuxt-link class="is-screen-only" v-else-if="task.to" :to="task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></nuxt-link>
+        <i v-if="task.description"><span class="cv-description" v-html="task.description"></span></i>
         <!-- <a v-else-if="task.to" :href="'https://juliaebert.com'+task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a> -->
       </span>
     </div>
+
   </div>
 </template>
 
@@ -60,13 +66,13 @@ export default {
     // Whether or not the tasks are bulleted
     bulleted: {
       type: Boolean,
-      default: true
+      default: true,
     },
     // Whether to show the task items before the description/subtitle
     tasksFirst: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     rowOffset() {
@@ -83,15 +89,16 @@ export default {
       } else {
         return this.rowOffset - 1;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
 .cv-description {
-  display: inline-block;
+  display: block;
   font-size: 0.85em;
   line-height: 1.25em;
+  margin-bottom: 0.5em;
 }
 </style>
