@@ -298,6 +298,7 @@ a.button:hover {
       grid-column: main;
     }
     &.entry-primary {
+      span {font-weight: normal;}
       @include mobile {
         grid-row: 1;
       }
@@ -362,6 +363,10 @@ a.button:hover {
   footer {display: none}
   img.icon-block {display: none}
   .navbar {display: none}
+  .cv-entry,
+  .cv-skill {
+    margin-bottom: 0.5rem;
+  }
   .is-printable {
     &.section.is-block {padding: 0 !important;}
     * {box-shadow: none !important}
@@ -395,7 +400,7 @@ a.button:hover {
         border-left: 1px solid black;
         background: none;
     }
-    .cv-header {
+    .cv-header, .resume-header {
       display: grid;
       grid-template-columns: 9em auto auto;
       grid-template-areas: "logo name links";
@@ -418,6 +423,31 @@ a.button:hover {
         .subtitle {
           font-size: 1.25em;
         }
+      }
+    }
+    .resume-header {
+      grid-template-areas: "name links";
+      grid-template-columns: auto auto;
+      margin-bottom: -1.2em; // IDK why there's so much space here by default
+      .name  {
+        h1 {
+          font-size: 3em;
+        }
+        .subtitle {
+          font-family: $family-sans-serif;
+          color: $black;
+          font-size: 1em;
+        }
+      }
+    }
+    .resume {
+      h2 {
+        color: $black !important;
+        font-family: $family-sans-serif;
+        margin-top: 1em;
+        font-size: 1.75em;
+        border-bottom: 1px solid black;
+        padding-bottom: 0.35em;
       }
     }
   }

@@ -5,7 +5,7 @@
       <b v-if="location" v-html="location" class="location"></b>
     </div>
     <div class="cv-main entry-primary">
-      <b>{{ title }}</b>
+      <b v-html="title"></b>
     </div>
     <div :class="['cv-sidebar', 'entry-subtitle', 'grid-row-'+subtitleRow]">
       <span v-if="dates" v-html="dates.replace('--', '–')"></span>
@@ -29,12 +29,11 @@
     >
       <span class="cv-task" v-bind:class="{ bulleted: bulleted }">
         <i v-if="bulleted" class="bullet mdi mdi-chevron-right"></i>
-        <span v-if="!task.date&!task.description" v-html="task"></span>
-        <span v-else v-html="task.task"></span>
-        <a v-if="task.link" :href="task.link"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a>
-        <nuxt-link class="is-screen-only" v-else-if="task.to" :to="task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></nuxt-link>
-        <i v-if="task.description"><span class="cv-description" v-html="task.description"></span></i>
-        <!-- <a v-else-if="task.to" :href="'https://juliaebert.com'+task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a> -->
+        <span v-if="typeof(task)=='string'" v-html="task"></span> <!--If it's just a string -->
+        <span v-else v-html="task.task"></span> <!-- If it's an object -->
+        <a v-if="task.hasOwnProperty('link')" :href="task.link"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a>
+        <nuxt-link class="is-screen-only" v-else-if="task.hasOwnProperty('to')" :to="task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></nuxt-link>
+        <i v-if="task.hasOwnProperty('description')"><span class="cv-description" v-html="task.description"></span></i>
       </span>
     </div>
 
