@@ -33,7 +33,7 @@
                 subtitle='PhD Candidate in Computer Science<br>MS in Computer Science'
                 dates='2021 (expected)<br>2019'
                 :tasks="[
-                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF), Siebel Scholar, 3.96 GPA',
+                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar &bull; 3.96 GPA',
                     'Thesis: <i>A Framework for Distributed Perception and Decision-making in Autonomous Robot Collectives</i>']"
             ></cv-entry>
             <cv-entry
@@ -51,7 +51,7 @@
                 subtitle="BS in Behavioral Neuroscience, Minor in Computer Science"
                 dates='2015'
                 :tasks="[
-                    'Goldwater Scholar, summa cum laude, 3.98 GPA',
+                    'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA',
                     'Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>']"
             ></cv-entry>
 
@@ -65,7 +65,7 @@
             <cv-skill
                 category="Engineering & Fabrication"
                 :skills="[
-                'Computer-aided design (OnShape)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Sewing', 'Molding and casting', 'Vinyl cutting']"
+                'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Sewing', 'Molding and casting', 'Vinyl cutting']"
             ></cv-skill>
 
             <h2>Experience</h2>
@@ -137,6 +137,7 @@
             ></cv-entry>
 
             <h2>Teaching & Outreach</h2>
+            <cv-award date='2021' award='<b>Co-supervisor,</b> ETH masters student thesis'></cv-award>
             <cv-award date='Summer 2019' award='<b>REU mentor</b> for Kilobot research and outreach project'></cv-award>
             <cv-award date='Fall 2018, Fall 2019' award='<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'></cv-award>
             <cv-award

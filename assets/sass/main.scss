@@ -441,6 +441,9 @@ a.button:hover {
       }
     }
     .resume {
+      .cv-bar {
+        border-left: none;
+      }
       h2 {
         color: $black !important;
         font-family: $family-sans-serif;
