@@ -13,9 +13,9 @@ PhD Candidate in Computer Science
 
 School of Engineering and Applied Sciences, Harvard University
 
-238 Maxwell Dworkin
-33 Oxford St
-Cambridge, MA 02138
+4.101 Science and Engineering Complex
+150 Western Ave
+Boston, MA 02134
 
 [julia@juliaebert.com](mailto:julia@juliaebert.com)
         </vue-markdown>
