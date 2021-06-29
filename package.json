@@ -16,11 +16,11 @@
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.5",
     "cross-env": "^5.2.1",
-    "nuxt": "^2.14.4",
+    "nuxt": "^2.15.7",
     "particles.js": "^2.0.0",
-    "slugify": "^1.4.5",
+    "slugify": "^1.5.3",
     "vue-markdown": "^2.2.4",
-    "vue-scrollto": "^2.18.2",
+    "vue-scrollto": "^2.20.0",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
