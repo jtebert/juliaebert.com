@@ -78,6 +78,7 @@
                 :tasks="[
                     'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
                     'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
+                    'Contributing to implementation of heterogeneous robot swarm in microgravity.',
                     'Designing and manufacturing LARVAbot: a collective of robots to perform aggregate locomotion, inspired by the movement of sawfly larvae. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.'
                      ]"></cv-entry>
 
@@ -117,7 +118,8 @@
                 dates='May -- Aug. 2015'
                 subtitle='Summer research assistant'
                 :tasks="[
-                     'Contributed to development of flex-sensing antennae for lobster-inspired robot. Developed neuron-based biomimetic control (LabView) for using antennae to adjust robot control in response to water currents (rheotaxis).']"
+                     'Contributed to development of flex-sensing antennae for lobster-inspired robot.',
+                     'Developed neuron-based biomimetic control (LabView) for using antennae to adjust robot control in response to water currents (rheotaxis).']"
             ></cv-entry>
             <cv-entry
                 location="Watertown, MA"
