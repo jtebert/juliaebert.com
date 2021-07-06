@@ -31,7 +31,7 @@
                 location="Cambridge, MA"
                 title="Harvard University"
                 subtitle='PhD Candidate in Computer Science<br>MS in Computer Science'
-                dates='2021 (expected)<br>2019'
+                dates='2022 (expected)<br>2019'
                 :tasks="[
                     'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar &bull; 3.96 GPA',
                     'Thesis: <i>A Framework for Distributed Perception and Decision-making in Autonomous Robot Collectives</i>']"
@@ -40,7 +40,7 @@
                 location="London, UK"
                 title="Imperial College London"
                 dates='2016'
-                subtitle='Master of Research in Bioengineering, with Distinction'
+                subtitle='Master of Research (MRes) in Bioengineering, with Distinction'
                 :tasks="[
                     'Marshall Scholar',
                     'Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>']"
@@ -60,12 +60,12 @@
             <cv-skill
                 category="Computer Science"
                 :skills="[
-                'Linux', 'Python (including NumPy, Pandas, Django)', 'C/C++ (including OpenMP, AVR, Arduino, embedded programming)', 'Database design', 'MATLAB', 'JavaScript (including Vue.js)', 'LaTeX', 'Java']"
+                'Algorithm development', 'Python (including NumPy, Pandas, Django)', 'C/C++ (including embedded programming,AVR, Arduino, OpenMP)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript (including Vue.js)', 'Java']"
             ></cv-skill>
             <cv-skill
                 category="Engineering & Fabrication"
                 :skills="[
-                'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Sewing', 'Molding and casting', 'Vinyl cutting']"
+                'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Molding and casting']"
             ></cv-skill>
 
             <h2>Experience</h2>
@@ -78,15 +78,15 @@
                 :tasks="[
                     'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
                     'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
-                    'Contributing to implementation of heterogeneous robot swarm in microgravity.',
-                    'Designing and manufacturing LARVAbot: a collective of robots to perform aggregate locomotion, inspired by the movement of sawfly larvae. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.'
+                    'Collaborating with MIT researchers to create heterogeneous robot swarm for inspection on space stations.',
+                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.'
                      ]"></cv-entry>
 
             <cv-entry
                 location="Livermore, CA"
                 dates='2018 --'
                 title="Lawrence Livermore National Laboratory, <span>Dr. Michael Schneider</span>"
-                subtitle="Summer practicum, ongoing collaboration"
+                subtitle="Summer internship, ongoing collaboration"
                 :tasks="[
                     'Designing multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
                     'Programmed, refactored, and documented research codebase (Python) for SSA, now used extensively by SSA researchers at LLNL.',
@@ -101,7 +101,7 @@
                 :tasks="[
                     'Developed algorithms for human-robot co-control of the LOPES exoskeleton in standing a walking balance recovery. Tested with human participants and modeled in Simulink.']"
             ></cv-entry>
-            <!-- <span class="page-break"></span> -->
+            <span class="page-break"></span>
             <cv-entry
                 location="Boston, MA"
                 title="Northeastern University Action Lab, <span>Prof. Dagmar Sternad</span>"
