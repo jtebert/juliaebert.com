@@ -20,20 +20,21 @@
       <gallery
         :img-srcs="[
       ['csgf-robots.jpg'],
+      ['zero-g-rad.jpg', 'ZERO-G research flight', 'Stephen Boxall/ZERO-G'],
       //['project_night.jpg', 'Laser cutting a dishwasher sign at Project Night', 'Olivia Nie/SEAS Communications'],
       ['curling.jpg', '2017 college curling national championship (Harvard took 4th place!)'],
-      ['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
+      //['march-for-science.jpg', '2017 Boston March for Science with SSR labmates'],
       ]"
       ></gallery>
       <div class="block-content content">
         <vue-markdown>
-I am a PhD candidate in computer science at Harvard University, where I study collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am a currently 2021 [Siebel Scholar](https://www.siebelscholars.com/). I was also a Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF), through which I interned at Lawrence Livermore National Laboratory. Previously, I earned an MRes in Bioengineering at Imperial College London as a Marshall Scholar and a BS in Behavioral Neuroscience at Northeastern University.
+I am a PhD candidate in computer science at Harvard University, where I study collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). During my PhD, I have been a [Siebel Scholar](https://www.siebelscholars.com/) and Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF), and I interned at Lawrence Livermore National Laboratory. Previously, I earned an MRes in Bioengineering at Imperial College London as a Marshall Scholar and a BS in Behavioral Neuroscience at Northeastern University.
 
-I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, cooperative robot control, and artificial intelligence. I also consider myself a full-stack roboticist, working on both hardware (mechanical and electronic design) and software (algorithms and control). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
+I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, cooperative robot control, artificial intelligence, and multi-agent systems. I also consider myself a full-stack roboticist, working on both software (algorithms and control) and hardware (mechanical and electronic design). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
-My current research focuses on creating algorithms for distributed decision-making in robot swarms. Specifically, I am developing a modular framework for allowing robots to collectively solve a variety of environmental classification and localization problems. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab. After my PhD, I plan to pursue a career in academic research.
+My current research focuses on creating algorithms for distributed decision-making in robot swarms. Specifically, I am developing a modular framework for allowing robots to collectively solve a variety of environmental classification and localization problems. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab. After my PhD, I plan to pursue a career in academic or industry research.
 
-I am also excited about science communication and outreach – especially when it can be used to expand excitement and access to STEM for traditionally under-representend groups, including women and people of color. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), [given a public lecture](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) on robotics through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
+I am also excited about science communication and outreach – especially when it can be used to expand excitement and access to STEM for traditionally under-representend groups, including women and people of color. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), given a [public lecture on robotics](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
         </vue-markdown>
         <p>In my free time, I play for the
           <a href="http://harvardcurling.com/">Harvard curling team</a>, bake

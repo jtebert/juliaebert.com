@@ -1,7 +1,6 @@
 import pkg from './package'
 
 export default {
-  mode: 'universal',
 
   generate: {
     fallback: "404.html"
