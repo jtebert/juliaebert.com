@@ -4,7 +4,8 @@
             <b>{{ category }}</b>
         </div>
         <div class="cv-bar"></div>
-        <div class="cv-main">{{ skills.join(' &bull; ') }}</div>
+        <div class="cv-main" v-html="skillsHTML"></div>
+        <!-- <div class="cv-main">{{ skills.join(' &bull; ') }}</div> -->
     </div>
 </template>
 
@@ -12,8 +13,13 @@
 export default {
   props: {
     category: { type: String },
-    skills: { type: Array }
-  }
+    skills: { type: Array },
+  },
+  computed: {
+    skillsHTML() {
+      return this.skills.join(" &bull; ");
+    },
+  },
 };
 </script>
 

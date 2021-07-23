@@ -31,16 +31,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2020icra', 'ebert2018aamas']"></publication-list>
         </div>
       </project>
-      <project
-        is-cover
-        img-src="/imgs/research/larvabots.jpg"
-        title="LARVAbots: Locomotion of Autonomous Robots Via Aggregation"
-        subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
-      >
-        <p>Sawfly larva move together in a large aggregate, possibly giving them energetic advantages for reduced movement effort, exploiting the sensing of a few individuals, avoiding losing members of the collective, or overcoming obstacles.</p>
-        <p>I am desiging and building a group of larva-inspired robots capable of similar collective movement. These LARVAbots can maintain an aggregate as they move and overcome obstacles by exploiting the shape of the group. Currently, I am investigating whether their collective behavior can result in greater movement efficiency than the movement of individual robots.</p>
-        <p>This started as a project in the MIT course How To Make (Almost) Anything. You can <a href="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/">read more about the inital project development here.</a></p>
-      </project>
+
       <project
         is-cover
         img-src="/imgs/research/llnl.svg"
@@ -52,6 +43,18 @@ I want to develop robots that draw from biology to learn and work collectively. 
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2018llnl']"></publication-list>
         </div>
       </project>
+
+      <project
+        is-cover
+        img-src="/imgs/research/larvabots.jpg"
+        title="LARVAbots: Locomotion of Autonomous Robots Via Aggregation"
+        subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
+      >
+        <p>Sawfly larva move together in a large aggregate, possibly giving them energetic advantages for reduced movement effort, exploiting the sensing of a few individuals, avoiding losing members of the collective, or overcoming obstacles.</p>
+        <p>I am desiging and building a group of larva-inspired robots capable of similar collective movement. These LARVAbots can maintain an aggregate as they move and overcome obstacles by exploiting the shape of the group. Currently, I am investigating whether their collective behavior can result in greater movement efficiency than the movement of individual robots.</p>
+        <p>This started as a project in the MIT course How To Make (Almost) Anything. You can <a href="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/">read more about the inital project development here.</a></p>
+      </project>
+
       <project
         video-src="/video/research/lopes.mp4"
         title="Cooperative Exoskeleton Control for Human Balance Recovery"
@@ -62,6 +65,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2016eurohaptics', 'farkhatdinov2019']"></publication-list>
         </div>
       </project>
+
       <project
         is-padded
         img-src="/imgs/research/contraction-stability.png"
@@ -78,6 +82,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
           ></publication-list>
         </div>
       </project>
+
       <project
         img-src="/imgs/research/bimanual_small.jpg"
         title="Bimanual Learning and Retention"
@@ -94,6 +99,7 @@ I want to develop robots that draw from biology to learn and work collectively. 
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2015ncm']"></publication-list>
         </div>
       </project>
+
     </div>
   </primary-section>
 </template>
@@ -112,7 +118,7 @@ export default {
     PublicationList,
     Project,
     VueMarkdown,
-    IconButtonLink
+    IconButtonLink,
   },
   data() {
     return { title: "Research" };
@@ -120,8 +126,8 @@ export default {
   head() {
     return {
       title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "research" }]
+      meta: [{ hid: "research" }],
     };
-  }
+  },
 };
 </script>

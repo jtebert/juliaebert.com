@@ -24,7 +24,9 @@
               'simulates satellites.',
               //'writes a blog.',
               'makes things.',
-              '3D prints everything.']"
+              'develops algorithms.',
+              //'3D prints everything.'
+              ]"
             ></vue-typer>
           </client-only>
         </div>
@@ -53,8 +55,8 @@ export default {
   components: {
     NavBar,
     MyFooter,
-    ParticlesJS
-  }
+    ParticlesJS,
+  },
 };
 </script>
 

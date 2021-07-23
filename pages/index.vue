@@ -12,7 +12,7 @@
             title="GitHub"
           >GitHub</icon-button-link>
           <icon-button-link
-            to="https://www.linkedin.com/in/ebertjulia/"
+            to="https://www.linkedin.com/in/jtebert/"
             icon="linkedin"
             title="LinkedIn"
           >LinkedIn</icon-button-link>
@@ -56,7 +56,8 @@ I am also excited about science communication and outreach – especially when i
       <div class="block-content">
         <h1 class="title is-2 has-text-centered">See More</h1>
         <div class="has-flex-items">
-          <image-block-link title="CV"></image-block-link>
+          <!-- <image-block-link title="CV"></image-block-link> -->
+          <image-block-link title="Resume" icon="cv"></image-block-link>
           <image-block-link title="Research"></image-block-link>
           <image-block-link title="Publications"></image-block-link>
           <image-block-link title="Side Projects"></image-block-link>

@@ -5,7 +5,7 @@
             <div class="name">
                 <h1>Julia Ebert</h1>
                 <p class="subtitle">
-                    PhD candidate in computer science, seeking to create robust, autonomous multi-robot systems.
+                    PhD Candidate &bull; Robotics Researcher &bull; Cambridge, MA
                 </p>
             </div>
             <div class="links">
@@ -20,6 +20,11 @@
                     icon="github-circle"
                     size=""
                 >github.com/jtebert</icon-link>
+                <icon-link
+                    to="https://linkedin.com/in/jtebert"
+                    icon="linkedin"
+                    size=""
+                >linkedin.com/in/jtebert</icon-link>
             </div>
         </div>
 
@@ -51,8 +56,7 @@
                 subtitle="BS in Behavioral Neuroscience, Minor in Computer Science"
                 dates='2015'
                 :tasks="[
-                    'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA',
-                    'Honors Thesis: <i>Asymmetric Learning in an Asymmetric Bimanual Task</i>']"
+                    'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA']"
             ></cv-entry>
 
             <h2>Skills</h2>
@@ -79,7 +83,8 @@
                     'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
                     'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
                     'Collaborating with MIT researchers to create heterogeneous robot swarm for inspection on space stations.',
-                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.'
+                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.',
+                    'Teaching and mentoring: Supervised REU summer project and ETH masters thesis. Served as teaching fellow for undergraduate robotics course (ROS, Turtlebots).'
                      ]"></cv-entry>
 
             <cv-entry
@@ -108,26 +113,8 @@
                 dates='2011 -- 2015'
                 subtitle='Undergraduate research assistant, including 6-month co-op'
                 :tasks="[
-                     'Programmed HapticMaster robot (C++) for human-subject experiments on prediction and stability in control of objects with complex dynamics; conducted pilot experiments.',
-                     'Designed and programmed (Matlab) experiments to assess ability of humans to learn and retain a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analyzed results for Honors thesis.',
-                     'Analyzed data (Matlab) to assess the effect of a prolonged motor experiment on cognitive fatigue in human subjects.',]"
-            ></cv-entry>
-            <cv-entry
-                location="Nahant, MA"
-                title="Northeastern University Marine Science Center, <span>Prof. Joseph Ayers</span>"
-                dates='May -- Aug. 2015'
-                subtitle='Summer research assistant'
-                :tasks="[
-                     'Contributed to development of flex-sensing antennae for lobster-inspired robot.',
-                     'Developed neuron-based biomimetic control (LabView) for using antennae to adjust robot control in response to water currents (rheotaxis).']"
-            ></cv-entry>
-            <cv-entry
-                location="Watertown, MA"
-                title="Interactive Motion Technologies"
-                dates='July -- Sept. 2014'
-                subtitle='Software development co-op'
-                :tasks="[
-                    'Developed a backend and interface (Python + Django) for integrating clinical stroke assesment tools into a rehabilitation robot.']"
+                     'Programmed HapticMaster robot (C++) and conducted human-subject experiments control of objects with complex dynamics, resulting in two publications.',
+                     'Designed and programmed (Matlab) experiments to assess ability of humans to learn and retain a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analyzed results for Honors thesis.']"
             ></cv-entry>
             <cv-entry
                 location="Tübingen, DE"
@@ -135,27 +122,18 @@
                 subtitle='Research co-op'
                 dates='July -- Dec. 2013'
                 :tasks="[
-                     'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, and conducted pilot experiments.']"
+                     'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, conducted pilot experiments, and presented results at conference.']"
             ></cv-entry>
 
-            <h2>Teaching & Outreach</h2>
-            <cv-award date='2021' award='<b>Co-supervisor,</b> ETH masters student thesis'></cv-award>
-            <cv-award date='Summer 2019' award='<b>REU mentor</b> for Kilobot research and outreach project'></cv-award>
-            <cv-award date='Fall 2018, Fall 2019' award='<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section'></cv-award>
-            <cv-award
-                date="Nov. 2018"
-                award="<b>Speaker,</b> Science in the News fall lecture series: &quot;Brains and Bodies: How to Make Smart Robots&quot;"
-                link="http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/"
-            ></cv-award>
-            <cv-award
-                date='Spring 2018'
-                award='<b>Teaching fellow,</b> Harvard CS 189: Autonomous Robot Systems'
-                link='https://canvas.harvard.edu/courses/37276'></cv-award>
-            <cv-award
-                date="April 2018"
-                award="<b>Guest,</b> <i>Brains On!</i> science podcast live show"
-                link="https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza"></cv-award>
-            <cv-award date='2014 -- 2015' award='<b>Teaching assistant,</b> Northeastern CS 2500: Fundamentals of Computer Science (2 semesters)'></cv-award>
+            <h2>Interests & Activities</h2>
+            <cv-skill
+                category="Outreach"
+                :skills="['NPR <i>Brains On</i> podcast guest', 'FIRST Lego League judge', 'Harvard <i>Science in the News</i> public lecture']"
+            ></cv-skill>
+            <cv-skill
+                category="Personal"
+                :skills="['Curling (Harvard club curling team)', 'Web design & development', 'Open source 3D print models']"
+            ></cv-skill>
 
 
             <h2>Publications</h2>
@@ -192,6 +170,7 @@ export default {
     CvAward,
     CvSkill,
     IconLink,
+    CvAward,
   },
 };
 </script>
