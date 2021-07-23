@@ -10,7 +10,8 @@ export default {
     siteTitle: 'Julia Ebert',
     navItems: {
       "About Me": "",
-      CV: "cv",
+      // CV: "cv",
+      Resume: "resume",
       Research: "research",
       Publications: "publications",
       "Side Projects": "side-projects",

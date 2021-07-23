@@ -427,7 +427,7 @@ a.button:hover {
     }
     .resume-header {
       grid-template-areas: "name links";
-      grid-template-columns: auto auto;
+      grid-template-columns: auto 18em;
       margin-bottom: -1.2em; // IDK why there's so much space here by default
       .name  {
         h1 {

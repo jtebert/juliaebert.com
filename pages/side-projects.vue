@@ -1,7 +1,7 @@
 <template>
   <primary-section
     :title="title"
-    subtitle="I make a lot of mostly useless things."
+    subtitle="I make a lot of mostly useless things"
     texture="lines-in-motion"
   >
     <div slot="links">

@@ -1,7 +1,8 @@
 <template>
-  <primary-section :title="title" subtitle="Curriculum Vitae" texture="brick-wall" class="is-printable">
+  <primary-section :title="title" subtitle="Academic Curriculum Vitae" texture="brick-wall" class="is-printable">
     <div slot="links">
         <icon-button-link to="/pdfs/ebert-julia.cv.pdf" icon="file-pdf">View as PDF</icon-button-link>
+        <icon-button-link to="/resume" icon="file-account" is-internal>Industry Resume</icon-button-link>
     </div>
     <div class="block-content content">
       <cv-content></cv-content>
@@ -18,7 +19,7 @@ export default {
   components: {
     PrimarySection,
     IconButtonLink,
-    cvContent
+    cvContent,
   },
   data() {
     return { title: "CV" };
@@ -26,8 +27,8 @@ export default {
   head() {
     return {
       title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "cv" }]
+      meta: [{ hid: "cv" }],
     };
-  }
+  },
 };
 </script>
