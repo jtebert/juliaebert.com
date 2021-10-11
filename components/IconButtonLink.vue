@@ -40,11 +40,6 @@ export default {
       } else {
         classes += " is-medium";
       }
-      if (this.isInternal) {
-        console.log("internal");
-      } else {
-        console.log("external");
-      }
       return classes;
     },
   },

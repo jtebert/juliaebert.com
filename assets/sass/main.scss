@@ -311,12 +311,12 @@ a.button:hover {
     display: block;
     position: relative;
     &.bulleted {
-      padding-left: calc(0.5rem + 1.25em);
+      padding-left: calc(0.25rem + 1.25em);
     }
     .mdi.bullet,
     .fa.bullet {
       position: absolute;
-      left: 0.5rem;
+      left: 0.25rem;
     }
   }
 }
@@ -342,10 +342,6 @@ a.button:hover {
   }
 }
 // Printable CV
-@page {
-  size: 8.5in 11in;
-  margin: 0.5in;
-}
 .is-print-only {display: none;}
 .is-unbroken h2:first-child {
   // Dealing with margin removed by Bulma .content h2:not(first-child)
@@ -400,6 +396,16 @@ a.button:hover {
         border-left: 1px solid black;
         background: none;
     }
+
+    .cv-entry,
+    .cv-skill,
+    .cv-award {
+      // Fixes too-wide gap for paged.js printing
+      @include tablet {
+        grid-column-gap: $column-gap;
+      }
+    }
+
     .cv-header, .resume-header {
       display: grid;
       grid-template-columns: 9em auto auto;
@@ -427,7 +433,7 @@ a.button:hover {
     }
     .resume-header {
       grid-template-areas: "name links";
-      grid-template-columns: auto 18em;
+      grid-template-columns: auto 15em;
       margin-bottom: -1.2em; // IDK why there's so much space here by default
       .name  {
         h1 {
@@ -453,6 +459,7 @@ a.button:hover {
         padding-bottom: 0.35em;
       }
     }
+    .hide-links-in-print .is-link-only {display: none;}
   }
 }
 
@@ -980,4 +987,30 @@ $icon-block-size-touch: 6rem;
     display: block;
     padding-left: 1.75em;
   }
+}
+
+@page {
+  // size: 148mm 210mm;
+  size: 8.5in 11in;
+  margin: 0.6in;
+  margin-bottom: .8in;
+
+  @bottom-right {
+    // vertical-align: top;
+    content: "Page " counter(page) "/" counter(pages);
+    font-size: 11px;
+    color: #000;
+  }
+
+  @bottom-left {
+    // vertical-align: top;
+    content: string(title);
+    font-size: 11px;
+    color: #000;
+    // text-transform: uppercase;
+  }
+}
+
+h1#title {
+  string-set: title content(text);
 }

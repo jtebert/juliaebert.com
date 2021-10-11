@@ -46,7 +46,7 @@
       >
         <div>
           <tags tags="Jekyll"></tags>
-          <p>To get into good habits about documenting things I work on, and to avoid Googling the same StackOverflow answers over and over, I made a website to document everything I do. I wanted it to be as easy to maintain as possible; all I have to do is write some Markdown and push it to Github.</p>
+          <p>To get into good habits about documenting things I work on, and to avoid Googling the same StackOverflow answers over and over, I made a website to document everything I do. I wanted it to be as easy to maintain as possible; all I have to do is write some Markdown and push it to GitHub.</p>
           <icon-link icon="file-document-box-multiple" to="https://docs.juliaebert.com/">Read my docs</icon-link>
           <icon-link icon="github-circle" to="https://github.com/jtebert/document-everything">View on GitHub</icon-link>
         </div>
