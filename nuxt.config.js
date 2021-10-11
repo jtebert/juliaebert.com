@@ -41,13 +41,15 @@ export default {
       { rel: 'manifest', href: '/site.webmanifest?v=OmJMPAq7rX' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=OmJMPAq7rX', color: '#03bc25' },
       { rel: 'shortcut icon', href: '/favicon.ico?v=OmJMPAq7rX' },
-    ]
+    ],
   },
 
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#03bc25' },
+
+  ignore: ['**/*.test.*', process.env.NODE_ENV === 'production' && 'pages/dev/**'],
 
   /*
   ** Global CSS

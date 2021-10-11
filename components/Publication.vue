@@ -12,7 +12,7 @@
       <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
       <span class="doi is-screen-only" v-if="json.doi" v-html="doi"></span>
       <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
-      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link mdi-rotate-315"></a></i>
+      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link mdi-rotate-315 is-link-only"></a></i>
     </span>
   </p>
 </template>
@@ -27,11 +27,11 @@ export default {
     highlightAuthor: String,
     showLink: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   computed: {
-    iconName: function() {
+    iconName: function () {
       // Get the name of the MDI icon depending on the file type
       switch (this.json.type) {
         case "poster":
@@ -47,10 +47,10 @@ export default {
     absoluteFile() {
       return process.env.baseURL + this.file;
     },
-    file: function() {
+    file: function () {
       return "/pdfs/" + this.json.type + "/" + this.json.file;
     },
-    authorsFirstLast: function() {
+    authorsFirstLast: function () {
       // Produce string of authors in the form: Last, F. M., Last2, F. M., ...
       var authorList = this.json.author;
       var authorsFormatted = authorList.map(this.authorFILast);
@@ -58,7 +58,7 @@ export default {
       // it in a span with the class "highlight-author" (which can then be formatted
       // with CSS)
       if (this.highlightAuthor) {
-        var highlightAuthorInd = authorList.findIndex(n =>
+        var highlightAuthorInd = authorList.findIndex((n) =>
           n.includes(this.highlightAuthor)
         );
         authorsFormatted[highlightAuthorInd] =
@@ -73,14 +73,14 @@ export default {
         return authorsFormatted;
       }
     },
-    pubInfo: function() {
+    pubInfo: function () {
       // Journal/bookinfo, volume, issue, pages
       // All comma separated with a period at the end
       var pubInfoArr = [
         this.pubLocation,
         this.json.volume,
-        this.json.number
-      ].filter(n => n);
+        this.json.number,
+      ].filter((n) => n);
       if (this.issueDate) {
         pubInfoArr[pubInfoArr.length - 1] += " " + this.issueDate;
       }
@@ -91,7 +91,7 @@ export default {
         return pubInfoArr.join(", ") + ". ";
       }
     },
-    pubLocation: function() {
+    pubLocation: function () {
       // Book title, conference, journal, etc.
       if (this.json.booktitle) {
         var t = `<i>${this.json.booktitle}</i>`;
@@ -106,45 +106,45 @@ export default {
         return `<i>${this.json.journal}</i>`;
       }
     },
-    pages: function() {
+    pages: function () {
       if (this.json.pages) {
         return this.json.pages.replace("--", "–");
       }
     },
-    date: function() {
+    date: function () {
       if (this.json.year) {
         return this.json.year.replace("--", "–");
       }
     },
-    issueDate: function() {
+    issueDate: function () {
       if (this.json.issue_date) {
         return "(" + this.json.issue_date.replace("--", "–") + ")";
       }
     },
-    addendum: function() {
+    addendum: function () {
       if (this.json.addendum) {
         return this.json.addendum.replace("--", "–");
       }
     },
-    doi: function() {
+    doi: function () {
       var doiUrl = "https://doi.org/" + this.json.doi;
       return `DOI: <a href="${doiUrl}">${this.json.doi}</a>`;
-    }
+    },
   },
   methods: {
-    authorLastFI: function(name) {
+    authorLastFI: function (name) {
       // Format an input string "Last, First Middle..." as "Last, F. M."
       // Includes separation at hyphens ("Last, First-Mid" -> "Last, F.-M.")
       var lastName, firstName;
       var authorSplit = name.split(",");
-      [lastName, firstName] = authorSplit.map(n => n.trim());
+      [lastName, firstName] = authorSplit.map((n) => n.trim());
       var initialsSpaced = firstName
         .split(" ")
-        .map(n => n.charAt(0))
+        .map((n) => n.charAt(0))
         .join(". ");
       var firstInitials = initialsSpaced
         .split("-")
-        .map(n => n.charAt(0) + ".")
+        .map((n) => n.charAt(0) + ".")
         .join(".-");
       return lastName + " " + firstInitials;
     },
@@ -152,24 +152,24 @@ export default {
       // Format the input string "Last, First MidlDle" as "F M Last"
       var lastName, firstName;
       var authorSplit = name.split(",");
-      [lastName, firstName] = authorSplit.map(n => n.trim());
+      [lastName, firstName] = authorSplit.map((n) => n.trim());
       var initialsSpaced = firstName
         .split(" ")
-        .map(n => n.charAt(0))
+        .map((n) => n.charAt(0))
         .join(". ");
       var firstInitials = initialsSpaced
         .split("-")
-        .map(n => n.charAt(0))
+        .map((n) => n.charAt(0))
         .join("-");
       return firstInitials + " " + lastName;
     },
     authorFirstLast(name) {
       var lastName, firstName;
       var authorSplit = name.split(",");
-      [lastName, firstName] = authorSplit.map(n => n.trim());
+      [lastName, firstName] = authorSplit.map((n) => n.trim());
       return firstName + " " + lastName;
-    }
-  }
+    },
+  },
 };
 </script>
 

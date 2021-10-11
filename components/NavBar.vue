@@ -8,7 +8,7 @@
     <div class="container nav-container">
       <div class="navbar-brand">
         <nuxt-link to="/">
-          <img src="/imgs/icons/about-me.svg" id="brand-icon" class="navbar-item">
+          <img src="/imgs/icons/about-me.svg" id="brand-icon" class="navbar-item is-screen-only">
         </nuxt-link>
         <a
           role="button"
@@ -44,20 +44,20 @@ export default {
   data() {
     return {
       isActive: false,
-      sectionNames: process.env.navItems
+      sectionNames: process.env.navItems,
     };
   },
   methods: {
-    menuToggle: function() {
+    menuToggle: function () {
       this.isActive = !this.isActive;
-    }
+    },
   },
   watch: {
-    $route: function() {
+    $route: function () {
       // Close the menu when the route changes (aka switch pages)
       this.isActive = false;
-    }
-  }
+    },
+  },
 };
 </script>
 

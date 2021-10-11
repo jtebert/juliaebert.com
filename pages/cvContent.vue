@@ -3,7 +3,7 @@
         <div class="cv-header is-print-only">
             <img class="logo" src="/imgs/logos/logo-black.svg">
             <div class="name">
-                <h1>Julia Ebert</h1>
+                <h1 id="title">Julia Ebert</h1>
                 <p class="subtitle">PhD Candidate &bull; Robotics Researcher</p>
             </div>
             <div class="links">

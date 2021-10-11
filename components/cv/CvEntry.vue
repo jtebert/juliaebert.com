@@ -31,8 +31,8 @@
         <i v-if="bulleted" class="bullet mdi mdi-chevron-right"></i>
         <span v-if="typeof(task)=='string'" v-html="task"></span> <!--If it's just a string -->
         <span v-else v-html="task.task"></span> <!-- If it's an object -->
-        <a v-if="task.hasOwnProperty('link')" :href="task.link"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></a>
-        <nuxt-link class="is-screen-only" v-else-if="task.hasOwnProperty('to')" :to="task.to"><i class="link mdi mdi-rotate-315 mdi-link"></i><br></nuxt-link>
+        <a v-if="task.hasOwnProperty('link')" :href="task.link"><i class="link mdi mdi-rotate-315 mdi-link is-link-only"></i><br></a>
+        <nuxt-link class="is-screen-only" v-else-if="task.hasOwnProperty('to')" :to="task.to"><i class="link mdi mdi-rotate-315 mdi-link is-link-only"></i><br></nuxt-link>
         <i v-if="task.hasOwnProperty('description')"><span class="cv-description" v-html="task.description"></span></i>
       </span>
     </div>

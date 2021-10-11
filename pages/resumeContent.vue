@@ -1,32 +1,17 @@
 <template>
+    <!-- <div class="resume hide-links-in-print"> -->
     <div class="resume">
-        <div class="resume-header is-print-only">
-            <!-- <img class="logo" src="/imgs/logos/logo-black.svg"> -->
-            <div class="name">
-                <h1>Julia Ebert</h1>
-                <p class="subtitle">
-                    PhD Candidate &bull; Robotics Researcher &bull; Cambridge, MA
-                </p>
-            </div>
-            <div class="links">
-                <icon-link to="https://juliaebert.com" icon="web" size="">juliaebert.com</icon-link>
-                <icon-link
-                    to="mailto:julia@juliaebert.com"
-                    icon="email"
-                    size=""
-                >julia@juliaebert.com</icon-link>
-                <icon-link
-                    to="https://github.com/jtebert"
-                    icon="github-circle"
-                    size=""
-                >github.com/jtebert</icon-link>
-                <icon-link
-                    to="https://linkedin.com/in/jtebert"
-                    icon="linkedin"
-                    size=""
-                >linkedin.com/in/jtebert</icon-link>
-            </div>
-        </div>
+        <resume-header
+            name="Julia Ebert"
+            subtitle="PhD Candidate &bull; Robotics Researcher &bull; Boston, MA"
+            :links='[
+                {to: "https://juliaebert.com", icon: "web", text:"juliaebert.com"},
+                {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
+                {to: "https://github.com/jtebert", icon: "github-circle", text:"github.com/jtebert"},
+                {to: "https://linkedin.com/in/jtebert", icon: "linkedin", text:"linkedin.com/in/jtebert"},
+                //{icon: "phone", text:"617-949-0214"}
+            ]'
+        ></resume-header>
 
         <div slot="content">
 
@@ -35,11 +20,11 @@
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
-                subtitle='PhD Candidate in Computer Science<br>MS in Computer Science'
-                dates='2022 (expected)<br>2019'
+                subtitle='PhD Candidate in Computer Science'
+                dates='Expected 2022'
                 :tasks="[
                     'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar &bull; 3.96 GPA',
-                    'Thesis: <i>A Framework for Distributed Perception and Decision-making in Autonomous Robot Collectives</i>']"
+                    'Thesis: <i>Distributed Perception and Decision-making for Inspection by Autonomous Robot Collectives</i>']"
             ></cv-entry>
             <cv-entry
                 location="London, UK"
@@ -64,7 +49,7 @@
             <cv-skill
                 category="Computer Science"
                 :skills="[
-                'Algorithm development', 'Python (including NumPy, Pandas, Django)', 'C/C++ (including embedded programming,AVR, Arduino, OpenMP)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript (including Vue.js)', 'Java']"
+                'Algorithm development', 'Python', 'C/C++ (including embedded programming and Arduino)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
             ></cv-skill>
             <cv-skill
                 category="Engineering & Fabrication"
@@ -72,7 +57,7 @@
                 'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Molding and casting']"
             ></cv-skill>
 
-            <h2>Experience</h2>
+            <h2>Research Experience</h2>
 
             <cv-entry
                 location="Cambridge, MA"
@@ -82,9 +67,8 @@
                 :tasks="[
                     'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
                     'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
-                    'Collaborating with MIT researchers to create heterogeneous robot swarm for inspection on space stations.',
-                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes designing custom PCB, embedded programming, CAD and 3D printing of robot, and algorithm design for aggregate movement.',
-                    'Teaching and mentoring: Supervised REU summer project and ETH masters thesis. Served as teaching fellow for undergraduate robotics course (ROS, Turtlebots).'
+                    'Collaborating with MIT Media Lab to create heterogeneous robot swarm for inspection on space stations, including algorithm development and hardware testing in microgravity (Zero-G flights).',
+                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes electronic, mechanical, and algorithm design.'
                      ]"></cv-entry>
 
             <cv-entry
@@ -122,7 +106,36 @@
                 subtitle='Research co-op'
                 dates='July -- Dec. 2013'
                 :tasks="[
-                     'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor, conducted pilot experiments, and presented results at conference.']"
+                     'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor.',
+                     'Conducted human subjects experiments and presented results at Neural Control of Movement conference.']"
+            ></cv-entry>
+
+            <h2>Teaching & Mentoring Experience</h2>
+
+            <cv-entry
+                location="Cambridge, MA"
+                title="Harvard University"
+                :tasks="[
+                    {date: '2021',
+                     task: '<b>Co-supervisor,</b> ETH masters thesis on swarm inspection algorithms'},
+                    {date: '2018 -- 2021',
+                     task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section (3 semesters)'},
+                    {date: 'Summer 2019',
+                     task: '<b>REU mentor</b> for Kilobot research and outreach project'},
+                    {date: 'Spring 2018',
+                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems',
+                     link: 'https://canvas.harvard.edu/courses/37276'}]"
+            ></cv-entry>
+            <cv-entry
+                location="Boston, MA"
+                title="Northeastern University"
+                :tasks="[
+                    {date: '2014 -- 2015',
+                     task: '<b>Teaching assistant,</b> CS 2500: Fundamentals of Computer Science (2 semesters)'},
+                    {date: '2012 -- 2014',
+                     task: '<b>Tutor,</b> CS 2500: Fundamentals of Computer Science (3 semesters)'},
+                    {date: '2011 -- 2013',
+                     task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
             ></cv-entry>
 
             <h2>Interests & Activities</h2>
@@ -162,6 +175,7 @@ import CvEntry from "~/components/cv/CvEntry.vue";
 import CvAward from "~/components/cv/CvAward.vue";
 import CvSkill from "~/components/cv/CvSkill.vue";
 import IconLink from "~/components/IconLink.vue";
+import ResumeHeader from "~/components/cv/ResumeHeader.vue";
 
 export default {
   components: {
@@ -170,6 +184,7 @@ export default {
     CvAward,
     CvSkill,
     IconLink,
+    ResumeHeader,
     CvAward,
   },
 };
