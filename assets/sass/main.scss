@@ -939,7 +939,7 @@ $icon-block-size-touch: 6rem;
       }
       color: white;
       position: absolute;
-      width: calc(100%-2em);
+      width: calc(100% - 2em);
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
@@ -989,28 +989,35 @@ $icon-block-size-touch: 6rem;
   }
 }
 
+
 @page {
-  // size: 148mm 210mm;
+  /* size: 148mm 210mm; */
   size: 8.5in 11in;
   margin: 0.6in;
   margin-bottom: .8in;
+  background-color: white;
 
   @bottom-right {
-    // vertical-align: top;
+    /* vertical-align: top; */
     content: "Page " counter(page) "/" counter(pages);
     font-size: 11px;
     color: #000;
   }
 
   @bottom-left {
-    // vertical-align: top;
+    /* vertical-align: top; */
     content: string(title);
     font-size: 11px;
     color: #000;
-    // text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 
 h1#title {
   string-set: title content(text);
+}
+
+.pagedjs_sheet {
+  background-color: #fff;
+  border-bottom: 1px solid #666;
 }

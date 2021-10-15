@@ -6,6 +6,7 @@
 
 <script>
 import resumeContent from "~/pages/resumeContent.vue";
+import { Previewer } from "pagedjs";
 
 export default {
   components: {
@@ -18,21 +19,22 @@ export default {
     return {
       title: this.title + " - " + process.env.siteTitle,
       meta: [{ hid: "resume" }],
-      script: [
-        {
-          // Using CDN is slow, but this is just for local printing, so it's fine.
-          hid: "paged",
-          src: "https://unpkg.com/pagedjs/dist/paged.polyfill.js",
-        },
-      ],
     };
   },
 };
-</script>
 
-<style>
-.pagedjs_sheet {
-  background-color: #fff;
-  border-bottom: 1px solid #666;
+if (process.client) {
+  let paged = new Previewer();
+  document.addEventListener("DOMContentLoaded", function () {
+    let flow = paged
+      .preview(
+        "", // use everything/default
+        "", // use inline css (which is where main.scss ends up (in <style></style>))
+        document.body // output
+      )
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+  });
 }
-</style>
+</script>
