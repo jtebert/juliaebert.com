@@ -17,6 +17,7 @@
     "bulma": "^0.7.5",
     "cross-env": "^5.2.1",
     "nuxt": "^2.15.7",
+    "pagedjs": "^0.2.0",
     "particles.js": "^2.0.0",
     "slugify": "^1.5.3",
     "vue-markdown": "^2.2.4",
@@ -24,8 +25,9 @@
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
+    "fibers": "^5.0.0",
     "node-sass": "^4.14.1",
     "nodemon": "^1.19.4",
-    "sass-loader": "^7.3.1"
+    "sass-loader": "^10.2.0"
   }
 }

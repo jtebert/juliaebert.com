@@ -1,6 +1,5 @@
 <template>
-  <primary-section :title="title" subtitle="Hire me! Available Spring 2022" texture="brick-wall" icon='cv' class="is-printable">
-    <div class="block-content content has-margin-large">
+    <div class="content is-printable" id="cover-letter">
         <resume-header
             name="Julia Ebert"
             subtitle="PhD Candidate &bull; Robotics Researcher &bull; Cambridge, MA"
@@ -12,7 +11,6 @@
                 {icon: "phone", text:"617-949-0214"}
             ]'
         ></resume-header>
-        <hr>
 
         <div id="cover-letter-content">
             <p>{{ date }}</p>
@@ -25,16 +23,12 @@
         </div>
 
     </div>
-    <!-- This is a hacky way to set the page print margins on this page only -->
-    <style>
-        @page { margin: .75in 1in;}
-    </style>
-  </primary-section>
 </template>
 
 <script>
 import PrimarySection from "~/components/PrimarySection.vue";
 import ResumeHeader from "~/components/cv/ResumeHeader.vue";
+import { Previewer } from "pagedjs";
 
 export default {
   components: {
@@ -54,12 +48,29 @@ export default {
     };
   },
 };
+
+if (process.client) {
+  let paged = new Previewer();
+  document.addEventListener("DOMContentLoaded", function () {
+    let flow = paged
+      .preview(
+        "", // use everything/default
+        // document.getElementsByClassName("content is-printable")[0],
+        // ["/assets/sass/main.scss"],
+        // ["/paged.css"], // css
+        "", // use inline css (which is where main.scss ends up (in <style></style>))
+        document.body // output
+      )
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+  });
+}
 </script>
 
-<style scoped>
-@media print {
-  #cover-letter-content {
-    font-size: 1.1em;
-  }
+<style>
+#cover-letter-content {
+  margin-top: 4em;
+  font-size: 10pt !important;
 }
 </style>
