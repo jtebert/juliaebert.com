@@ -28,13 +28,17 @@
       ></gallery>
       <div class="block-content content">
         <vue-markdown>
-I am a PhD candidate in computer science at Harvard University, where I study collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). During my PhD, I have been a [Siebel Scholar](https://www.siebelscholars.com/) and Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF), and I interned at Lawrence Livermore National Laboratory. Previously, I earned an MRes in Bioengineering at Imperial College London as a Marshall Scholar and a BS in Behavioral Neuroscience at Northeastern University.
+I am a PhD candidate in computer science at Harvard University, where I research collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am interested in developing algorithms for a variety of multi-agent systems, from robots to satellite constellations. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab.
+
+**I am currently seeking research-oriented full-time jobs starting May 2022,** in the Boston, MA area or remote. If you are looking for a fast-learning roboticist with the skills to translate research to reality, [get in touch](mailto:julia@juliaebert.com).
 
 I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, cooperative robot control, artificial intelligence, and multi-agent systems. I also consider myself a full-stack roboticist, working on both software (algorithms and control) and hardware (mechanical and electronic design). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
-My current research focuses on creating algorithms for distributed decision-making in robot swarms. Specifically, I am developing a modular framework for allowing robots to collectively solve a variety of environmental classification and localization problems. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab. After my PhD, I plan to pursue a career in academic or industry research.
+My dissertation research focuses on the creating algorithms for distributed decision-making in robots swarms. Specifically, I am developing algorithms for a variety of inspection tasks, where groups of robots with decentralized computation and communication must collectively investigate and classify their environment. This includes *global* inspection tasks, where the robots classify an environment, and *local* inspection, where the robots determine the presence and location of faults in their environment.
 
-I am also excited about science communication and outreach – especially when it can be used to expand excitement and access to STEM for traditionally under-representend groups, including women and people of color. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), given a [public lecture on robotics](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
+During my PhD, I have been a [Siebel Scholar](https://www.siebelscholars.com/) and Department of Energy [Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) (DOE CSGF), and I interned at Lawrence Livermore National Laboratory. Previously, I earned an MRes in Bioengineering at Imperial College London as a Marshall Scholar and a BS in Behavioral Neuroscience at Northeastern University.
+
+Outside the lab, I am excited about science communication and outreach – especially when it can be used to expand excitement and access to STEM for traditionally under-representend groups, including women and people of color. I've [spoken to hundreds of kids about robots](https://www.brainson.org/shows/2018/05/08/what-was-the-first-robot-and-more-from-robotstravaganza), given a [public lecture on robotics](http://sitn.hms.harvard.edu/seminars/2018/november-14-brains-bodies-make-smart-robots/) through Harvard's Science in the News lecture series, and demonstrated our lab's Kilobots at a variety of outreach events.
         </vue-markdown>
         <p>In my free time, I play for the
           <a href="http://harvardcurling.com/">Harvard curling team</a>, bake
@@ -43,6 +47,8 @@ I am also excited about science communication and outreach – especially when i
         </p>
         <vue-markdown>
 ## Recent News
+
+**January 2022:** We have a new paper out: "A Swarm Robotic Approach to Inspection of 2.5D Surfaces in Orbit." You can [read the preprint here.](/pdfs/inproceedings/2022_swarm.pdf)
 
 **September 2020:** I've been selected as a [Siebel Scholar](https://www.siebelscholars.com/) for the [Class of 2021](https://www.siebelscholars.com/articles/welcome-class-of-2021-siebel-scholars/)!
 

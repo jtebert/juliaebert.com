@@ -209,6 +209,7 @@ a.button:hover {
 
 // CV STUFF
 
+// This adjusts the order of rows for mobile (single-column) vs. tablet+ (two-column)
 @mixin sidebar-rows($var) {
   @include tablet {
     grid-row: $var;
@@ -993,19 +994,20 @@ $icon-block-size-touch: 6rem;
 @page {
   /* size: 148mm 210mm; */
   size: 8.5in 11in;
-  margin: 0.6in;
-  margin-bottom: .8in;
+  margin: 0.5in;
+  // margin-bottom: .5in;
+  margin-top: 0.45in;
   background-color: white;
 
   @bottom-right {
-    /* vertical-align: top; */
+    vertical-align: top;
     content: "Page " counter(page) "/" counter(pages);
     font-size: 11px;
     color: #000;
   }
 
   @bottom-left {
-    /* vertical-align: top; */
+    vertical-align: top;
     content: string(title);
     font-size: 11px;
     color: #000;
@@ -1020,4 +1022,49 @@ h1#title {
 .pagedjs_sheet {
   background-color: #fff;
   border-bottom: 1px solid #666;
+}
+
+
+.one-page-resume.is-printable {
+  line-height: 1.35em;
+  .resume-header{
+    margin-bottom: 0;
+    .name h1 {
+      font-size: 2.5em;
+      margin-bottom: .1em;
+    }
+  }
+  .resume {
+    h2 {
+      margin-top: .5em;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+    }
+    .publication {
+      margin-bottom: 0.5em;
+    }
+    .cv-entry, .cv-skill {
+      margin-bottom: 0.5em;
+    }
+  }
+  .cv-entry {
+    @include tablet {
+      grid-template-columns: [main] 1fr [bar] auto [sidebar] 9em;
+    }
+    .cv-main {
+      &.entry-primary {
+          grid-row: 1;
+      }
+    }
+    .cv-sidebar {
+      text-align: left;
+    }
+  }
+  .cv-skill {
+    .cv-sidebar {
+      text-align: left;
+    }
+  }
+
+
 }

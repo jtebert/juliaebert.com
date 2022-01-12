@@ -1,4 +1,19 @@
 {
+    "haghighat2022": {
+        "type": "inproceedings",
+        "title": "A Swarm Robotic Approach to Inspection of 2.5D Surfaces in Orbit",
+        "year": 2022,
+        "author": [
+            "Haghighat, Bahar",
+            "Ebert, Julia",
+            "Boghaert, Johannes",
+            "Ekblaw, Ariel",
+            "Nagpal, Radhika"
+        ],
+        "file": "2022_swarm.pdf",
+        "booktitle": "5th International Symposium on Swarm Behavior and Bio-Inspired Robotics (SWARM5)",
+        "short_booktitle": "SWARM5"
+    },
     "ebert2020icra": {
         "type": "inproceedings",
         "title": "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms",
@@ -11,7 +26,8 @@
         ],
         "pages": "7186-7192",
         "file": "2020_icra.pdf",
-        "booktitle": "2020 IEEE International Conference on Robotics and Automation (ICRA)"
+        "booktitle": "2020 IEEE International Conference on Robotics and Automation (ICRA)",
+        "short_booktitle": "ICRA 2020"
     },
     "farkhatdinov2019": {
         "type": "article",
@@ -27,6 +43,7 @@
         "year": 2019,
         "month": "April",
         "journal": "IEEE Robotics and Automation Letters",
+        "short_journal": "IEEE RA-L",
         "publisher": "IEEE",
         "doi": "10.1109/LRA.2018.2890671",
         "pages": "414--421",
@@ -50,6 +67,7 @@
         "series": "AAMAS '18",
         "location": "Stockholm, Sweden",
         "booktitle": "Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems",
+        "short_booktitle": "AAMAS 2018",
         "pages": "1711--1719",
         "year": 2018,
         "organization": "IFAAMAS",
