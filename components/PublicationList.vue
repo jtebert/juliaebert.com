@@ -5,6 +5,7 @@
       :json="pub"
       :key="pub.key"
       :highlightAuthor="highlightAuthor"
+      :format="format"
       :showLink="showLinks"
     ></publication>
   </div>
@@ -23,24 +24,28 @@ export default {
     keywordFilter: Array,
     showYears: {
       type: Boolean,
-      default: false
+      default: false,
     },
     highlightAuthor: String,
     showLinks: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
+    format: {
+      type: String,
+      default: "full",
+    },
   },
   data() {
     return {
-      citations: citations
+      citations: citations,
     };
   },
   components: {
-    Publication
+    Publication,
   },
   computed: {
-    publications: function() {
+    publications: function () {
       // Get an array of all the publications from the file that match the specification
       // NB: The output does not retain the pubKeys
       // Filter the citation keys based on all the specified filters
@@ -48,16 +53,16 @@ export default {
       //   console.log(this.citations);
       //sorted = this.publicationsByYear();
       var ret = Object.keys(this.citations)
-        .filter(key => this.pubFilter(key, this.citations[key]))
-        .map(key => {
+        .filter((key) => this.pubFilter(key, this.citations[key]))
+        .map((key) => {
           var val = this.citations[key];
           val.key = key;
           return val;
         });
-      var ret_sorted = _.sortBy(ret, [pub => -pub.year]);
+      var ret_sorted = _.sortBy(ret, [(pub) => -pub.year]);
       return ret_sorted;
     },
-    publicationsByYear: function() {
+    publicationsByYear: function () {
       // Key the publications into an object by year (to be used if showYears is true)
       var pub_year_obj = this.publications.reduce((o, val) => {
         o[val.year] += [val];
@@ -65,14 +70,14 @@ export default {
       }, {});
       // Then return a sorted list by year, in descending order (newest to oldest)
       return Object.keys(pub_year_obj)
-        .map(year => {
+        .map((year) => {
           var p = {};
           p["publications"] = pub_year_obj[year];
           p["year"] = year;
           return p;
         })
         .sort((a, b) => b.year - a.year);
-    }
+    },
   },
   methods: {
     pubFilter(key, pub) {
@@ -86,11 +91,11 @@ export default {
           (pub.keywords && // ... the pub must have keywords and ...
             // ...there must be a non-empty intersection between the keyword filter
             //    and the pub's keywords
-            this.keywordFilter.filter(v => pub.keywords.includes(v)).length >
+            this.keywordFilter.filter((v) => pub.keywords.includes(v)).length >
               0))
       );
-    }
-  }
+    },
+  },
 };
 </script>
 

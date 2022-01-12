@@ -24,7 +24,7 @@
                 dates='Expected 2022'
                 :tasks="[
                     'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar &bull; 3.96 GPA',
-                    'Thesis: <i>Distributed Decision-making for Inspection by Autonomous Robot Collectives</i>']"
+                    'Thesis: <i>Distributed Perception and Decision-making for Inspection by Autonomous Robot Collectives</i>']"
             ></cv-entry>
             <cv-entry
                 location="London, UK"
@@ -32,8 +32,7 @@
                 dates='2016'
                 subtitle='Master of Research (MRes) in Bioengineering, with Distinction'
                 :tasks="[
-                    'Marshall Scholar',
-                    'Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>']"
+                    'Marshall Scholar &bull; Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>']"
             ></cv-entry>
             <cv-entry
                 location="Boston, MA"
@@ -52,62 +51,41 @@
                 'Algorithm development', 'Python', 'C/C++ (including embedded programming and Arduino)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
             ></cv-skill>
             <cv-skill
-                category="Engineering & Fabrication"
+                category="Engineering"
                 :skills="[
-                'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Molding and casting']"
+                'Computer-aided design (OnShape, Fusion)', 'Circuit design (Eagle)', '3D printing', 'CNC milling', 'Laser cutting']"
             ></cv-skill>
 
             <h2>Research Experience</h2>
 
             <cv-entry
                 location="Cambridge, MA"
-                title="Harvard University Self-Organizing Systems Research Group, <span>Prof. Radhika Nagpal</span>"
+                title="Harvard University Self-Organizing Systems Research Group"
                 dates='2016 --'
-                subtitle='Doctoral Researcher'
+                subtitle='Doctoral researcher'
                 :tasks="[
-                    'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
+                    'Developing algorithms for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms in low-bandwidth communication regimes.',
                     'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
                     'Collaborating with MIT Media Lab to create heterogeneous robot swarm for inspection on space stations, including algorithm development and hardware testing in microgravity (Zero-G flights).',
-                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes electronic, mechanical, and algorithm design.'
                      ]"></cv-entry>
 
             <cv-entry
                 location="Livermore, CA"
-                dates='Summer 2018'
-                title="Lawrence Livermore National Laboratory, <span>Dr. Michael Schneider</span>"
-                subtitle="Computational Science Research Intern"
+                dates='2018 --'
+                title="Lawrence Livermore National Laboratory"
+                subtitle="Summer intern, ongoing collaboration"
                 :tasks="[
-                    'Designed multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
-                    'Programmed, refactored, and documented research codebase (Python) for SSA, now used extensively by SSA researchers at LLNL.',
-                    'Developed a simulator and visualization tools (Python) for collective orbit observation by low earth orbit satellites.',
+                    'Designing multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
+                    'Programmed, refactored, and documented research codebase (Python) for SSA, now used extensively by SSA researchers at LLNL. Developed accompanying simulator and visualization tools (Python).',
                 ]"></cv-entry>
 
             <cv-entry
                 location="London, UK"
-                title="Imperial College Human Robotics Group, <span>Prof. Etienne Burdet and Dr. Ildar Farkhatdinov</span>"
+                title="Imperial College Human Robotics Group"
                 subtitle='Post-graduate research assistant'
                 dates='2015 -- 2016'
                 :tasks="[
                     'Developed algorithms for human-robot co-control of the LOPES exoskeleton in standing a walking balance recovery. Tested with human participants and modeled in Simulink.']"
-            ></cv-entry>
-            <span class="page-break"></span>
-            <cv-entry
-                location="Boston, MA"
-                title="Northeastern University Action Lab, <span>Prof. Dagmar Sternad</span>"
-                dates='2011 -- 2015'
-                subtitle='Undergraduate research assistant, including 6-month co-op'
-                :tasks="[
-                     'Programmed HapticMaster robot (C++) and conducted human-subject experiments control of objects with complex dynamics, resulting in two publications.',
-                     'Designed and programmed (Matlab) experiments to assess ability of humans to learn and retain a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analyzed results for Honors thesis.']"
-            ></cv-entry>
-            <cv-entry
-                location="Tübingen, DE"
-                title="Max Planck Institute for Intelligent Systems, <span>Prof. Stefan Schaal</span>"
-                subtitle='Research co-op'
-                dates='July -- Dec. 2013'
-                :tasks="[
-                     'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor.',
-                     'Conducted human subjects experiments and presented results at Neural Control of Movement conference.']"
             ></cv-entry>
 
             <h2>Teaching & Mentoring Experience</h2>
@@ -121,22 +99,21 @@
                     {date: '2018 -- 2021',
                      task: '<b>Teaching staff,</b> How To Make (Almost) Anything, Harvard section (3 semesters)'},
                     {date: 'Summer 2019',
-                     task: '<b>REU mentor</b> for Kilobot research and outreach project'},
+                     task: '<b>Research Experience for Undergraduates (REU) mentor</b> for Kilobot research and outreach project'},
                     {date: 'Spring 2018',
-                     task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems',
+                     task: '<b>Teaching fellow,</b> Autonomous Robot Systems',
                      link: 'https://canvas.harvard.edu/courses/37276'}]"
             ></cv-entry>
-            <cv-entry
-                location="Boston, MA"
-                title="Northeastern University"
-                :tasks="[
-                    {date: '2014 -- 2015',
-                     task: '<b>Teaching assistant,</b> CS 2500: Fundamentals of Computer Science (2 semesters)'},
-                    {date: '2012 -- 2014',
-                     task: '<b>Tutor,</b> CS 2500: Fundamentals of Computer Science (3 semesters)'},
-                    {date: '2011 -- 2013',
-                     task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
-            ></cv-entry>
+
+            <h2>Selected Publications</h2>
+
+            <publication-list
+                class="is-print-only"
+                highlight-author="Ebert"
+                format="short"
+                :pub-key-filter="['ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
+                :showLinks="false"
+            ></publication-list>
 
             <h2>Interests & Activities</h2>
             <cv-skill
@@ -147,22 +124,6 @@
                 category="Personal"
                 :skills="['Curling (Harvard club curling team)', 'Web design & development', 'Open source 3D print models']"
             ></cv-skill>
-
-
-            <h2>Publications</h2>
-
-            <publication-list
-                class="is-print-only"
-                highlight-author="Ebert"
-                :type-filter="['inproceedings', 'article']"
-                :showLinks="false"
-            ></publication-list>
-            <publication-list
-                class="is-screen-only"
-                highlight-author="Ebert"
-                :type-filter="['inproceedings', 'article']"
-                :showLinks="true"
-            ></publication-list>
 
         </div>
     </div>

@@ -1,5 +1,4 @@
 <template>
-<div>
     <div class="resume-header is-print-only">
         <!-- <img class="logo" src="/imgs/logos/logo-black.svg"> -->
         <div class="name">
@@ -15,7 +14,6 @@
             </icon-link>
         </div>
     </div>
-</div>
 </template>
 
 <script>
