@@ -30,7 +30,7 @@
         <vue-markdown>
 I am a PhD candidate in computer science at Harvard University, where I research collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). I am interested in developing algorithms for a variety of multi-agent systems, from robots to satellite constellations. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab.
 
-**I am currently seeking research-oriented full-time jobs starting May 2022,** in the Boston, MA area or remote. If you are looking for a fast-learning roboticist with the skills to translate research to reality, [get in touch](mailto:julia@juliaebert.com).
+**I am currently seeking research-oriented full-time jobs starting June 2022,** in the Boston, MA area or remote. If you are looking for a fast-learning roboticist with the skills to translate research to reality, [get in touch](mailto:julia@juliaebert.com).
 
 I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, cooperative robot control, artificial intelligence, and multi-agent systems. I also consider myself a full-stack roboticist, working on both software (algorithms and control) and hardware (mechanical and electronic design). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 

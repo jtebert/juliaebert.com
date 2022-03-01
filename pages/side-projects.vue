@@ -29,12 +29,24 @@
 
       <project
         is-cover
+        img-src="/imgs/projects/brain-3d-print.jpg"
+        title="My 3D Printed Brain"
+      >
+        <div>
+          <tags tags="3D Printing, Blender"></tags>
+          <p>After a degree in neuroscience, I've always wanted to hold my own brain in my hands. Thanks to an MRI, some research software, and my first foray into Blender, I finally made it happen. (Bonus: the hemispheres are held together with magnets!)</p>
+          <icon-link icon="file-document-box-multiple" to="https://docs.juliaebert.com/projects/3d-print-brain">Read everything</icon-link>
+        </div>
+      </project>
+
+      <project
+        is-cover
         img-src="/imgs/projects/keyboard.jpg"
         title="Handwired Computer Keyboard"
       >
         <div>
           <tags tags="C++, 3D Printing, Electronics"></tags>
-          <p>When I couldn't find <i>exactly</i> the kind of computer keyboard I wanted, it was a great excuse to design and build my own from sratch (ostensibly as a project for my electronics class). Together with my class partner, I designed the layout, handwired the keyboard, and built the firmware. I also went completely overboard 3D printing the case and all the keycaps. And I wrote way too much documentation along the way.</p>
+          <p>When I couldn't find <i>exactly</i> the kind of computer keyboard I wanted, it was a great excuse to design and build my own from scratch (ostensibly as a project for my electronics class). Together with my class partner, I designed the layout, handwired the keyboard, and built the firmware. I also went completely overboard 3D printing the case and all the keycaps. And I wrote way too much documentation along the way.</p>
           <icon-link icon="file-document-box-multiple" to="https://docs.juliaebert.com/projects/keyboard">Read everything</icon-link>
         </div>
       </project>
