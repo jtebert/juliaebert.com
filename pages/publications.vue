@@ -11,7 +11,7 @@
         >Google Scholar</icon-button-link>
     </div>
     <div class="block-content content">
-      <h1>Peer-Reviewed Publications</h1>
+      <h1>Papers</h1>
       <publication-list highlight-author="Ebert" :type-filter="['inproceedings', 'article']"></publication-list>
       <h1>Conference Abstracts and Posters</h1>
       <publication-list highlight-author="Ebert" :type-filter="['poster']"></publication-list>
@@ -28,7 +28,7 @@ export default {
   components: {
     IconButtonLink,
     PrimarySection,
-    PublicationList
+    PublicationList,
   },
   data() {
     return { title: "Publications" };
@@ -36,8 +36,8 @@ export default {
   head() {
     return {
       title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "publications" }]
+      meta: [{ hid: "publications" }],
     };
-  }
+  },
 };
 </script>
