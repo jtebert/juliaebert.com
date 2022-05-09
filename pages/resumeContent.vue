@@ -3,7 +3,7 @@
     <div class="resume">
         <resume-header
             name="Julia Ebert"
-            subtitle="PhD Candidate &bull; Robotics Researcher &bull; Boston, MA"
+            subtitle="Robotics Researcher &bull; Software Engineer &bull; Boston, MA"
             :links='[
                 {to: "https://juliaebert.com", icon: "web", text:"juliaebert.com"},
                 {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
@@ -20,10 +20,10 @@
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
-                subtitle='PhD Candidate in Computer Science'
-                dates='Expected 2022'
+                subtitle='PhD in Computer Science'
+                dates='2022'
                 :tasks="[
-                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar &bull; 3.96 GPA',
+                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar',
                     'Thesis: <i>Distributed Decision-making for Inspection by Autonomous Robot Collectives</i>']"
             ></cv-entry>
             <cv-entry
@@ -57,12 +57,23 @@
                 'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Molding and casting']"
             ></cv-skill>
 
-            <h2>Research Experience</h2>
+            <h2>Experience</h2>
+
+            <!-- <cv-entry
+                location="Golden, CO"
+                title="Outrider"
+                dates='2022 --'
+                subtitle='Software Engineer, Mission Planning (Remote)'
+                :tasks="[
+                    'Implement mission planning software for unmanned trucks in a distribution yard.',
+                    'Develop algorithms to coordinate multiple vehicles completing tasks.'
+                ]"
+            ></cv-entry> -->
 
             <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University Self-Organizing Systems Research Group, <span>Prof. Radhika Nagpal</span>"
-                dates='2016 --'
+                dates='2016 -- 2022'
                 subtitle='Doctoral Researcher'
                 :tasks="[
                     'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
@@ -78,14 +89,14 @@
                 subtitle="Computational Science Research Intern"
                 :tasks="[
                     'Designed multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
-                    'Programmed, refactored, and documented research codebase (Python) for SSA, now used extensively by SSA researchers at LLNL.',
-                    'Developed a simulator and visualization tools (Python) for collective orbit observation by low earth orbit satellites.',
+                    'Programmed, refactored, and documented research codebase (Python) for SSA, since used extensively by SSA researchers at LLNL.',
+                    'Developed a simulator and visualization tools (Python) for orbit observation by low earth orbit satellites.',
                 ]"></cv-entry>
 
             <cv-entry
                 location="London, UK"
                 title="Imperial College Human Robotics Group, <span>Prof. Etienne Burdet and Dr. Ildar Farkhatdinov</span>"
-                subtitle='Post-graduate research assistant'
+                subtitle='Post-graduate Research Assistant'
                 dates='2015 -- 2016'
                 :tasks="[
                     'Developed algorithms for human-robot co-control of the LOPES exoskeleton in standing a walking balance recovery. Tested with human participants and modeled in Simulink.']"
@@ -95,20 +106,20 @@
                 location="Boston, MA"
                 title="Northeastern University Action Lab, <span>Prof. Dagmar Sternad</span>"
                 dates='2011 -- 2015'
-                subtitle='Undergraduate research assistant, including 6-month co-op'
+                subtitle='Undergraduate Research Assistant, including 6-month co-op'
                 :tasks="[
                      'Programmed HapticMaster robot (C++) and conducted human-subject experiments control of objects with complex dynamics, resulting in two publications.',
                      'Designed and programmed (Matlab) experiments to assess ability of humans to learn and retain a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analyzed results for Honors thesis.']"
             ></cv-entry>
-            <cv-entry
+            <!-- <cv-entry
                 location="Tübingen, DE"
                 title="Max Planck Institute for Intelligent Systems, <span>Prof. Stefan Schaal</span>"
-                subtitle='Research co-op'
+                subtitle='Research Co-op'
                 dates='July -- Dec. 2013'
                 :tasks="[
                      'Designed and programmed a learning task in which subjects learned to map high-dimensional hand joint movements to move a 2D cursor.',
                      'Conducted human subjects experiments and presented results at Neural Control of Movement conference.']"
-            ></cv-entry>
+            ></cv-entry> -->
 
             <h2>Teaching & Mentoring Experience</h2>
 
@@ -126,7 +137,7 @@
                      task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems',
                      link: 'https://canvas.harvard.edu/courses/37276'}]"
             ></cv-entry>
-            <cv-entry
+            <!-- <cv-entry
                 location="Boston, MA"
                 title="Northeastern University"
                 :tasks="[
@@ -136,7 +147,7 @@
                      task: '<b>Tutor,</b> CS 2500: Fundamentals of Computer Science (3 semesters)'},
                     {date: '2011 -- 2013',
                      task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
-            ></cv-entry>
+            ></cv-entry> -->
 
             <h2>Interests & Activities</h2>
             <cv-skill
@@ -149,17 +160,19 @@
             ></cv-skill>
 
 
-            <h2>Publications</h2>
+            <h2>Select Publications</h2>
 
             <publication-list
                 class="is-print-only"
                 highlight-author="Ebert"
+                :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="false"
             ></publication-list>
             <publication-list
                 class="is-screen-only"
                 highlight-author="Ebert"
+                :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
                 :type-filter="['inproceedings', 'article']"
                 :showLinks="true"
             ></publication-list>

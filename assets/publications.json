@@ -1,4 +1,22 @@
 {
+    "haghighat2022-ants": {
+        "type": "inproceedings",
+        "title": "An Approach Based on Particle Swarm Optimization for Inspection of Spacecraft Hulls by a Swarm of Miniaturized Robots",
+        "year": 2022,
+        "author": [
+            "Haghighat, Bahar",
+            "Boghaert, Johannes",
+            "Minsky-Primus, Zev",
+            "Ebert, Julia",
+            "Liu, Fanghzheng",
+            "Nisser, Martin",
+            "Ekblaw, Ariel",
+            "Nagpal, Radhika"
+        ],
+        "booktitle": "13th International Conference on Swarm Intelligence (ANTS 2022)",
+        "short_booktitle": "ANTS 2022",
+        "note": "[Submitted]"
+    },
     "ebert2022": {
         "type": "inproceedings",
         "title": "A Hybrid PSO Algorithm for Multi-robot Target Search and Decision Awareness",
@@ -6,6 +24,7 @@
         "author": [
             "Ebert, Julia",
             "Berlinger, Florian",
+            "Haghighat, Bahar",
             "Nagpal, Radhika"
         ],
         "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",

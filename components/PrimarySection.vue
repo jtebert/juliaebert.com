@@ -7,7 +7,7 @@
           <div class="title-block">
             <div class="title-block-title">
               <h1 class="title is-1">{{ title }}</h1>
-              <h3 class="section-subtitle subtitle is-4" v-if="subtitle">{{ subtitle }}</h3>
+              <h3 class="section-subtitle subtitle is-4" v-if="subtitle" v-html="subtitle"></h3>
             </div>
             <div class="title-block-links">
               <div class="buttons">

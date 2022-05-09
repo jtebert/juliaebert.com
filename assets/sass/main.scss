@@ -72,13 +72,15 @@ $tabs-boxed-link-hover-background-color: $primary;
 
 $footer-background-color: $black;
 
-.subtitle, .content .subtitle {
-    font-family: $family-subtitle;
-    // text-transform: uppercase;
-    //letter-spacing: 1px;
-    font-weight: 400;
-    color: $primary;
+.subtitle,
+.content .subtitle {
+  font-family: $family-subtitle;
+  // text-transform: uppercase;
+  //letter-spacing: 1px;
+  font-weight: 400;
+  color: $primary;
 }
+
 .content p:last-child {
   margin-bottom: 1em;
 }
@@ -90,7 +92,8 @@ $column-gap: 0.75rem;
 
 // Custom CSS
 
-table.table, table {
+table.table,
+table {
   background: none;
 }
 
@@ -101,16 +104,23 @@ table.table, table {
 
 // TESTING TRANSITIONS
 
-.page-enter-active, .page-leave-active, .layout-enter-active, .layout-leave-active {
-    transition: opacity .2s ease;
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity .2s ease;
 
   .container:not(.nav-container) {
     transition: all .2s ease;
     // transition-property: opacity, transform;
   }
 }
-.page-enter, .page-leave-active, .layout-enter, .layout-leave-to {
-    opacity: 0;
+
+.page-enter,
+.page-leave-active,
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
 
   .container:not(.nav-container) {
     transform: scale(0.98);
@@ -125,36 +135,58 @@ html {
   }
 }
 
+.strikethrough {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.strikethrough:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid;
+}
 
 
 p a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 a.button:hover {
   text-decoration: none;
 }
 
 // Manually setting the text or background color of things
 .is-light {
-    background: $light;
+  background: $light;
 }
+
 .is-white {
-    background: $white;
+  background: $white;
 }
+
 .is-primary {
-    background: $primary;
+  background: $primary;
 }
+
 .is-success {
-    background: $success;
+  background: $success;
 }
 
 .color-block-wrapper {
   display: inline-block;
   margin: 1em 1em 1em 0;
 }
+
 .color-block {
   width: 96px;
   height: 72px;
+
   &:before {
     display: inline-block;
     width: 100%;
@@ -162,48 +194,78 @@ a.button:hover {
     //padding: .75em;
     line-height: 2.5em;
   }
+
   &.is-green {
     background: $green;
     color: $green-invert;
-    &:before {content: "#{$green}";}
+
+    &:before {
+      content: "#{$green}";
+    }
   }
+
   &.is-green-light {
     background: $green-light;
     color: $green-light-invert;
-    &:before {content: "#{$green-light}";}
+
+    &:before {
+      content: "#{$green-light}";
+    }
   }
+
   &.is-cyan {
     background: $cyan;
     color: $cyan-invert;
-    &:before {content: "#{$cyan}";}
+
+    &:before {
+      content: "#{$cyan}";
+    }
   }
+
   &.is-blue {
     background: $blue;
     color: $blue-invert;
-    &:before {content: "#{$blue}";}
+
+    &:before {
+      content: "#{$blue}";
+    }
   }
+
   &.is-orange {
     background: $orange;
     color: $orange-invert;
-    &:before {content: "#{$orange}";}
+
+    &:before {
+      content: "#{$orange}";
+    }
   }
+
   &.is-purple {
     background: $purple;
     color: $purple-invert;
-    &:before {content: "#{$purple}";}}
+
+    &:before {
+      content: "#{$purple}";
+    }
+  }
+
   &.is-red {
     background: $red;
     color: $red-invert;
-    &:before {content: "#{$red}";}}
+
+    &:before {
+      content: "#{$red}";
+    }
+  }
 }
 
 
 .section.is-content {
-    padding: 3rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .tag {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 
@@ -214,26 +276,30 @@ a.button:hover {
   @include tablet {
     grid-row: $var;
   }
+
   @include mobile {
     grid-row: (2*$var)-1;
   }
 }
+
 @mixin main-rows($var) {
   @include tablet {
     grid-row: $var;
   }
+
   @include mobile {
     grid-row: 2*$var;
   }
 }
 
 @for $i from 1 through 10 {
-    .cv-sidebar.grid-row-#{$i} {
-      @include sidebar-rows($i);
-    }
-    .cv-main.grid-row-#{$i} {
-      @include main-rows($i);
-    }
+  .cv-sidebar.grid-row-#{$i} {
+    @include sidebar-rows($i);
+  }
+
+  .cv-main.grid-row-#{$i} {
+    @include main-rows($i);
+  }
 }
 
 .cv-award {
@@ -241,19 +307,24 @@ a.button:hover {
     display: grid;
     grid-template-columns: [sidebar] 9em [main] 1fr;
   }
+
   @include mobile {
-    padding-left: calc(0.5rem + 2.15em);;
-    text-indent:calc(-0.5rem - 2.15em);
+    padding-left: calc(0.5rem + 2.15em);
+    ;
+    text-indent: calc(-0.5rem - 2.15em);
     margin-bottom: .5em;
-    > * {
+
+    >* {
       display: inline;
     }
+
     .cv-sidebar:after {
       content: "\202F:";
       //margin-right: $column-gap/2;
     }
-  // grid-column-gap: $column-gap;
-  // grid-template-columns: [sidebar] auto [main] 1fr;
+
+    // grid-column-gap: $column-gap;
+    // grid-template-columns: [sidebar] auto [main] 1fr;
   }
 }
 
@@ -267,53 +338,68 @@ a.button:hover {
 .cv-entry,
 .cv-skill,
 .cv-award {
+
   // display: grid;
   @include tablet {
     grid-column-gap: $column-gap * 2;
     grid-template-rows: auto;
   }
+
   .location {
     @include mobile {
-       display: none;
+      display: none;
     }
   }
+
   .cv-sidebar {
     text-align: left;
+
     @include tablet {
       grid-column: sidebar;
       text-align: right;
     }
+
     &.entry-primary {
       @include mobile {
         grid-row: 2;
       }
     }
+
     &.entry-subtitle {
       // @include mobile {
       //   grid-row: 2
       // }
     }
   }
+
   .cv-main {
     @include tablet {
       grid-column: main;
     }
+
     &.entry-primary {
-      span {font-weight: normal;}
+      span {
+        font-weight: normal;
+      }
+
       @include mobile {
         grid-row: 1;
       }
     }
+
     &.entry-subtitle {
       //grid-row: 2
     }
   }
+
   .cv-task {
     display: block;
     position: relative;
+
     &.bulleted {
       padding-left: calc(0.25rem + 1.25em);
     }
+
     .mdi.bullet,
     .fa.bullet {
       position: absolute;
@@ -321,17 +407,21 @@ a.button:hover {
     }
   }
 }
+
 .cv-entry,
 .cv-skill {
   display: grid;
   margin-bottom: 1rem;
   grid-column-gap: $column-gap;
+
   @include tablet {
     grid-template-columns: [sidebar] 9em [bar] auto [main] 1fr;
   }
+
   @include mobile {
     grid-template-columns: 1fr;
   }
+
   .cv-bar {
     @include tablet {
       width: 2px;
@@ -342,8 +432,12 @@ a.button:hover {
     }
   }
 }
+
 // Printable CV
-.is-print-only {display: none;}
+.is-print-only {
+  display: none;
+}
+
 .is-unbroken h2:first-child {
   // Dealing with margin removed by Bulma .content h2:not(first-child)
   margin-top: 1.1428em;
@@ -354,25 +448,61 @@ a.button:hover {
 }
 
 @media print {
+
   // Resets
-  .is-print-only {display: inherit}
-  .is-screen-only {display: none}
-  footer {display: none}
-  img.icon-block {display: none}
-  .navbar {display: none}
+  .is-print-only {
+    display: inherit
+  }
+
+  .is-screen-only {
+    display: none
+  }
+
+  footer {
+    display: none
+  }
+
+  img.icon-block {
+    display: none
+  }
+
+  .navbar {
+    display: none
+  }
+
   .cv-entry,
   .cv-skill {
     margin-bottom: 0.5rem;
   }
-  .is-printable {
-    &.section.is-block {padding: 0 !important;}
-    * {box-shadow: none !important}
-    .container {margin: 0 !important;}
-    .block-content.has-title {display: none;}
-    .block-content {padding: 0 !important;}
-    .section {margin: 0 !important;}
 
-    .is-unbroken {page-break-inside: avoid;}
+  .is-printable {
+    &.section.is-block {
+      padding: 0 !important;
+    }
+
+    * {
+      box-shadow: none !important
+    }
+
+    .container {
+      margin: 0 !important;
+    }
+
+    .block-content.has-title {
+      display: none;
+    }
+
+    .block-content {
+      padding: 0 !important;
+    }
+
+    .section {
+      margin: 0 !important;
+    }
+
+    .is-unbroken {
+      page-break-inside: avoid;
+    }
 
     .page-break {
       page-break-after: always;
@@ -384,42 +514,53 @@ a.button:hover {
     font-size: 11px !important;
     background-color: #fff !important;
     color: #000 !important;
+
     a {
       color: #000;
     }
+
     h2 {
       font-size: 2em;
       font-family: $family-subtitle;
-      color: $primary !important;
+      color: $primary  !important;
     }
-    .cv-award { page-break-after: avoid;}
+
+    .cv-award {
+      page-break-after: avoid;
+    }
+
     .cv-bar {
-        border-left: 1px solid black;
-        background: none;
+      border-left: 1px solid black;
+      background: none;
     }
 
     .cv-entry,
     .cv-skill,
     .cv-award {
+
       // Fixes too-wide gap for paged.js printing
       @include tablet {
         grid-column-gap: $column-gap;
       }
     }
 
-    .cv-header, .resume-header {
+    .cv-header,
+    .resume-header {
       display: grid;
       grid-template-columns: 9em auto auto;
       grid-template-areas: "logo name links";
       grid-column-gap: $column-gap * 2;
       margin-bottom: 2em;
+
       .logo {
         grid-area: logo;
         justify-self: right;
         height: 7em;
       }
+
       .name {
         grid-area: name;
+
         h1 {
           font-size: 4em;
           font-weight: 600;
@@ -427,19 +568,23 @@ a.button:hover {
           margin-bottom: 0;
           font-family: $family-title;
         }
+
         .subtitle {
           font-size: 1.25em;
         }
       }
     }
+
     .resume-header {
       grid-template-areas: "name links";
       grid-template-columns: auto 15em;
       margin-bottom: -1.2em; // IDK why there's so much space here by default
-      .name  {
+
+      .name {
         h1 {
           font-size: 3em;
         }
+
         .subtitle {
           font-family: $family-sans-serif;
           color: $black;
@@ -447,12 +592,14 @@ a.button:hover {
         }
       }
     }
+
     .resume {
       .cv-bar {
         border-left: none;
       }
+
       h2 {
-        color: $black !important;
+        color: $black  !important;
         font-family: $family-sans-serif;
         margin-top: 1em;
         font-size: 1.75em;
@@ -460,7 +607,10 @@ a.button:hover {
         padding-bottom: 0.35em;
       }
     }
-    .hide-links-in-print .is-link-only {display: none;}
+
+    .hide-links-in-print .is-link-only {
+      display: none;
+    }
   }
 }
 
@@ -469,16 +619,20 @@ a.button:hover {
 
 .navbar {
   transition: all 0.6s ease-out;
+
   &.is-solid {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     background-color: $black;
   }
+
   &#top-nav {
     background: none;
+
     @include desktop {
       margin-bottom: -$navbar-height;
     }
   }
+
   .navbar-brand {
     #brand-icon {
       background-color: $primary;
@@ -487,18 +641,23 @@ a.button:hover {
       cursor: pointer;
       height: 2* $navbar-height;
       z-index: 0;
+
       &:hover {
         @extend .button.is-primary.is-hovered;
       }
+
       @include mobile {
         height: $navbar-height;
       }
+
       @include tablet {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       }
     }
   }
+
   #navMenu {
+
     //padding: 0;
     @include touch {
       position: absolute;
@@ -507,24 +666,29 @@ a.button:hover {
       width: calc(100% - 2 * #{$navbar-height});
       display: block;
       transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-      transform:scaleY(0);
-      transform-origin:top;
+      transform: scaleY(0);
+      transform-origin: top;
       opacity: 0;
+
       &.is-active {
-        transform:scaleY(1);
+        transform: scaleY(1);
         opacity: 1;
       }
     }
+
     @include mobile {
       width: 100%;
     }
   }
+
   .navbar-item.nuxt-link-exact-active {
+
     // Hacky highlighting of current page
     // color: $primary !important;
     @include desktop {
-      border-top: 4px solid $primary !important;
+      border-top: 4px solid $primary  !important;
     }
+
     padding-top: calc(0.5rem - 4px);
   }
 }
@@ -534,26 +698,32 @@ a.button:hover {
   .typer-title {
     z-index: 4;
     display: flex;
+
     @include fullhd {
       flex-direction: row;
     }
+
     flex-direction: column;
 
-    > * {
+    >* {
       margin: 3rem $gap 0 $gap;
       line-height: 1em;
+
       @include fullhd {
         margin-right: 0;
       }
+
       @include tablet-only {
         margin-left: $gap / 2;
         margin-right: $gap / 2;
       }
+
       @include mobile {
         margin-left: $column-gap;
         margin-right: $column-gap;
       }
     }
+
     //align-items: flex-end;
     .name-title {
       text-transform: uppercase;
@@ -561,20 +731,25 @@ a.button:hover {
       display: inline-block;
       letter-spacing: 2px;
       color: $light;
+
       @include mobile {
         font-size: 13vw;
       }
     }
+
     #does-things.subtitle.vue-typer {
       display: flex;
       align-items: center;
       font-size: 50px;
+
       @include mobile {
         font-size: 6.5vw;
       }
+
       .custom.char {
         color: $primary;
       }
+
       .custom.caret {
         background-color: $primary;
         width: 0.5em;
@@ -584,6 +759,7 @@ a.button:hover {
       }
     }
   }
+
   .to-rest {
     color: $white;
     opacity: .4;
@@ -592,10 +768,12 @@ a.button:hover {
     transition: opacity 0.2s linear;
     display: inline-block;
     padding-bottom: $gap/2;
+
     &:hover {
       opacity: 0.7;
     }
   }
+
   &.bg-img {
     // background-image: url(/imgs/stars.jpg);
     background-image: url(/imgs/bg.svg);
@@ -604,8 +782,10 @@ a.button:hover {
     //background-attachment: fixed;
     background-size: cover;
   }
+
   &:not(.bg-img) {
-    background: linear-gradient(to top, #121212, #13142a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #121212, #13142a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 }
 
@@ -636,10 +816,12 @@ a.button:hover {
     font-size: 80px;
     letter-spacing: 2px;
     color: $light;
+
     @include mobile {
       font-size: 13vw;
     }
   }
+
   .subtitle a:hover {
     border-bottom: 3px solid $primary;
   }
@@ -648,6 +830,7 @@ a.button:hover {
 // COMPONENT : MOCKUP
 .mockup {
   margin: 2* $column-gap;
+
   svg {
     width: 100%;
     height: 100%;
@@ -662,6 +845,7 @@ $icon-block-size-touch: 6rem;
 .section.is-block {
   padding-top: 8rem;
   padding-bottom: 8rem;
+
   // min-height: 100vh;
   @include mobile {
     padding-bottom: 3rem;
@@ -675,9 +859,11 @@ $icon-block-size-touch: 6rem;
     margin-left: $icon-block-size / 2;
     padding: 0;
     overflow: hidden;
+
     @include tablet-only {
       margin-left: $icon-block-size-touch / 2;
     }
+
     @include mobile {
       margin-left: 0;
     }
@@ -696,45 +882,56 @@ $icon-block-size-touch: 6rem;
     @include touch {
       padding: 1.5rem;
     }
+
     @include tablet-only {
       padding-left: $icon-block-size-touch / 2 + 1.5rem;
     }
+
     @include desktop {
       min-height: $icon-block-size + 4rem;
       // padding-left: $icon-block-size / 2 + 2rem;
       padding: 3*$column-gap 4*$column-gap;
     }
+
     &.content {
       margin-bottom: 0;
       // padding: 3*$column-gap 4*$column-gap;
     }
+
     &.has-title {
       // padding: $gap/2 $gap !important;
       padding-bottom: 3rem;
       padding-top: 3rem;
+
       @include tablet {
         padding-left: $icon-block-size / 2 + 2rem;
       }
+
       @include mobile {
         padding-top: $icon-block-size-touch/2 + 1.5rem !important;
       }
+
       .title-block {
         @include mobile {
           flex-direction: column;
           text-align: center;
         }
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
         .title-block-links {
           align-self: center;
         }
-        .title-block-links > * {
+
+        .title-block-links>* {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-end;
           margin-left: 2*$column-gap;
+
           @include mobile {
             margin-top: 2*$column-gap;
             margin-left: 0;
@@ -742,13 +939,16 @@ $icon-block-size-touch: 6rem;
           }
         }
       }
+
       .intro {
         margin-top: 3rem;
+
         p:last-child {
           margin-bottom: 0;
         }
       }
     }
+
     &:nth-child(odd) {
       background-color: $white;
     }
@@ -763,22 +963,34 @@ $icon-block-size-touch: 6rem;
     left: 0;
     background-color: $primary;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
     @include touch {
       width: $icon-block-size-touch;
       height: $icon-block-size-touch;
     }
+
     @include mobile {
       top: -0.5 * $icon-block-size-touch;
       left: calc(50% - #{$icon-block-size-touch}/2);
     }
   }
+
   .title.is-1 {
     font-size: 4rem;
-    @include tablet {font-size: 3rem;}
-    @include mobile {font-size: 2rem;}
+
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
   }
+
   .section-subtitle.subtitle.is-4 {
-    @include mobile {font-size: 1.25rem;}
+    @include mobile {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -787,29 +999,38 @@ $icon-block-size-touch: 6rem;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .img-button {
   width: $icon-block-size;
   margin: 0.5rem 2rem;
   margin-top: 0.5rem;
+
   @include touch {
     width: $icon-block-size-touch;
     margin: 1.5rem;
     margin-bottom: 0;
   }
+
   &:hover {
-    img {background-color: darken($primary, 2.5%);}
+    img {
+      background-color: darken($primary, 2.5%);
+    }
+
     // h2 {color: darken($primary, 2.5%);}
   }
+
   h2 {
     text-align: center;
     margin: 0.5rem -1.5rem;
     font-size: 1.4rem;
     font-weight: 400;
   }
+
   img {
     background-color: $primary;
     width: $icon-block-size;
     height: $icon-block-size;
+
     @include touch {
       width: $icon-block-size-touch;
       height: $icon-block-size-touch;
@@ -827,6 +1048,7 @@ $icon-block-size-touch: 6rem;
     .section-image {
       width: 0;
     }
+
     .section-content {
       width: 100%;
     }
@@ -834,34 +1056,43 @@ $icon-block-size-touch: 6rem;
 
   &:nth-child(even) {
     background-color: $white;
+
     @include tablet {
       flex-direction: row-reverse;
+
       .section-content {
         padding-left: 4*$column-gap;
       }
     }
   }
+
   &:nth-child(odd) {
     @include tablet {
       flex-direction: row;
+
       .section-content {
         padding-right: 4*$column-gap;
       }
     }
   }
+
   .section-image {
     width: 40%;
     position: relative;
     align-self: center;
+
     @include mobile {
       width: 100%;
     }
+
     &.is-padded {
       padding: 2* $column-gap;
     }
+
     &.is-cover {
       align-self: stretch;
       justify-self: stretch;
+
       img {
         object-fit: cover;
         object-position: center center;
@@ -870,13 +1101,16 @@ $icon-block-size-touch: 6rem;
       }
     }
   }
+
   .section-content {
     width: 60%;
     padding: 3*$column-gap 2*$column-gap;
+
     @include mobile {
       width: 100%;
       padding: 2*$column-gap;
     }
+
     .title.results-title {
       //margin-top: 1.25rem;
       margin-bottom: 0.75rem;
@@ -892,16 +1126,19 @@ $icon-block-size-touch: 6rem;
   //   grid-template-columns: repeat(2, 1fr);
   // }
   grid-gap: -1px;
+
   .img-holder {
     width: 100%;
-    padding-bottom: 75%;  // 4:3
+    padding-bottom: 75%; // 4:3
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+
     @include touch {
       padding-bottom: 100%;
     }
+
     .caption-source {
       font-size: 0.65rem;
       font-weight: 500;
@@ -913,42 +1150,46 @@ $icon-block-size-touch: 6rem;
       padding: 0.25em 0.75em;
       //text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
     }
+
     &:hover,
-  &:active {
-    .overlay {
-      bottom: 0;
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-  }
-  .overlay {
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s ease;
-    .text {
-      @include mobile {
-        font-size: 0.8em;
+    &:active {
+      .overlay {
+        bottom: 0;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.5);
       }
-      color: white;
-      position: absolute;
-      width: calc(100% - 2em);
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
     }
-  }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0);
+      opacity: 0;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease;
+
+      .text {
+        @include mobile {
+          font-size: 0.8em;
+        }
+
+        color: white;
+        position: absolute;
+        width: calc(100% - 2em);
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -964,6 +1205,7 @@ $icon-block-size-touch: 6rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   &:hover {
     color: $white;
     background-color: $dark;
@@ -974,16 +1216,20 @@ $icon-block-size-touch: 6rem;
 .highlight-author {
   font-weight: 600;
 }
+
 .publication.has-download {
   position: relative;
+
   .download-link {
     position: absolute;
     left: 0;
     color: $grey-light;
+
     a:hover {
       color: $text;
     }
   }
+
   .citation {
     display: block;
     padding-left: 1.75em;
@@ -994,9 +1240,9 @@ $icon-block-size-touch: 6rem;
 @page {
   /* size: 148mm 210mm; */
   size: 8.5in 11in;
-  margin: 0.5in;
+  margin: 0.65in;
   // margin-bottom: .5in;
-  margin-top: 0.45in;
+  margin-top: 0.65in;
   background-color: white;
 
   @bottom-right {
@@ -1021,45 +1267,55 @@ h1#title {
 
 .pagedjs_sheet {
   background-color: #fff;
-  border-bottom: 1px solid #666;
+  // border-bottom: 1px solid #666;
 }
 
 
 .one-page-resume.is-printable {
   line-height: 1.35em;
-  .resume-header{
+
+  .resume-header {
     margin-bottom: 0;
+
     .name h1 {
       font-size: 2.5em;
       margin-bottom: .1em;
     }
   }
+
   .resume {
     h2 {
       margin-top: .5em;
       margin-bottom: 0.5em;
       font-size: 1.5em;
     }
+
     .publication {
       margin-bottom: 0.5em;
     }
-    .cv-entry, .cv-skill {
+
+    .cv-entry,
+    .cv-skill {
       margin-bottom: 0.5em;
     }
   }
+
   .cv-entry {
     @include tablet {
       grid-template-columns: [main] 1fr [bar] auto [sidebar] 9em;
     }
+
     .cv-main {
       &.entry-primary {
-          grid-row: 1;
+        grid-row: 1;
       }
     }
+
     .cv-sidebar {
       text-align: left;
     }
   }
+
   .cv-skill {
     .cv-sidebar {
       text-align: left;
