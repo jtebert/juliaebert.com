@@ -1242,7 +1242,7 @@ $icon-block-size-touch: 6rem;
   size: 8.5in 11in;
   margin: 0.65in;
   // margin-bottom: .5in;
-  margin-top: 0.65in;
+  margin-top: 0.5in;
   background-color: white;
 
   @bottom-right {
@@ -1271,7 +1271,7 @@ h1#title {
 }
 
 
-.one-page-resume.is-printable {
+.dense-resume.is-printable {
   line-height: 1.35em;
 
   .resume-header {
@@ -1299,7 +1299,9 @@ h1#title {
       margin-bottom: 0.5em;
     }
   }
+}
 
+.right-bar-resume.is-printable {
   .cv-entry {
     @include tablet {
       grid-template-columns: [main] 1fr [bar] auto [sidebar] 9em;
@@ -1321,6 +1323,4 @@ h1#title {
       text-align: left;
     }
   }
-
-
 }

@@ -29,9 +29,11 @@
       <div class="block-content content">
         <vue-markdown>
 
-I recently completed my PhD in computer science at Harvard University, where I researched collective robotics with Prof. Radhika Nagpal in the [Self-organizing Systems Research group](https://ssr.seas.harvard.edu/). My research focused on developing algorithms for a variety of multi-agent systems, from robots to satellite constellations. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab.
+I am a software engineer and robotics researcher. I just started my career as a mission planning engineer at [Outrider](https://www.outrider.com/), and I'm a freshly minted PhD.
 
-I am interested in robotics, learning, biology, and the interface between them, such as bio-inspired robotics, autonomous vehicles, and multi-agent systems. I also consider myself a full-stack roboticist, working on both software (algorithms and control) and hardware (mechanical and electronic design). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
+I completed my PhD in computer science at Harvard University, where I developed algorithms for a variety of multi-agent systems, from robots to satellite constellations. I aim to take an interdisciplinary approach to collective robotics, integrating bio-inspiration and mathematical modeling to develop algorithms that can be applied beyond the lab.
+
+I am interested in bio-inspired robotics, autonomous vehicles, and multi-agent systems. I also consider myself a full-stack roboticist, working on both software (algorithms and control) and hardware (mechanical and electronic design). This lets me consider mechanical and algorithmic co-design in developing robust robot collectives.
 
 <!-- My dissertation research focuses on the creating algorithms for distributed decision-making in robots swarms. Specifically, I am developing algorithms for a variety of inspection tasks, where groups of robots with decentralized computation and communication must collectively investigate and classify their environment. This includes *global* inspection tasks, where the robots classify an environment, and *local* inspection, where the robots determine the presence and location of faults in their environment. -->
 
@@ -47,13 +49,17 @@ Outside the lab, I am excited about science communication and outreach. I've [sp
         <vue-markdown>
 ## Recent News
 
-**April 2022:** I successfully defended my PhD! It's titled "Distributed Decision-making Algorithms for Inspection by Autonomous Robot Collectives." In June, I will be starting a new position at [Outrider](https://www.outrider.ai/), where I will develop mission planning algorithms and software for autonomous trucks.
+**June 2022:** I was part of two papers that were accepted to IROS 2022: "A Hybrid PSO Algorithm for Multi-robot Target Search and Decision Awareness" and "Impressionist Algorithms for Autonomous Multi-Robot Systems: Flocking as a Case Study". Preprints will be up soon!
+
+**June 2022:** I started a new position at [Outrider](https://www.outrider.ai/), where I will develop mission planning algorithms and software for autonomous trucks.
+
+**April 2022:** I successfully defended my PhD! It's titled "Distributed Decision-making Algorithms for Inspection by Autonomous Robot Collectives."
 
 **January 2022:** We have a new paper out: "A Swarm Robotic Approach to Inspection of 2.5D Surfaces in Orbit." You can [read the preprint here.](/pdfs/inproceedings/2022_swarm.pdf)
 
 **September 2020:** I've been selected as a [Siebel Scholar](https://www.siebelscholars.com/) for the [Class of 2021](https://www.siebelscholars.com/articles/welcome-class-of-2021-siebel-scholars/)!
 
-**August 2020:** I presented my research at the 2020 DOE CSGF Annual Program Review. You can [watch the recording here](https://www.krellinst.org/csgf/conf/2020/video/ebert2016).
+<!-- **August 2020:** I presented my research at the 2020 DOE CSGF Annual Program Review. You can [watch the recording here](https://www.krellinst.org/csgf/conf/2020/video/ebert2016). -->
 
 <!-- **May 2020:** My latest paper was published at ICRA 2020: "Bayes Bots: Collective Bayesian Decision-Making in Decentralized Robot Swarms." You can [read the preprint here](/pdfs/inproceedings/2020_icra.pdf) and [watch a recording of my talk here.](https://www.youtube.com/watch?v=cvDgHfGTbOQ)
 

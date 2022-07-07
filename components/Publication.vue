@@ -7,7 +7,7 @@
     <span class="citation" v-if="format=='full'">
       <span class="author" v-html="authorsFirstLast+'. '"></span>
       <span class="year" v-if="json.year" v-html="json.year+'. '"></span>
-      <span class="pubtitle" v-html="json.title+'. '"></span>
+      <span class="pubtitle" v-html="title"></span>
       <span class="publisher-info" v-if="pubInfo" v-html="pubInfo"></span>
       <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
       <span class="doi is-screen-only" v-if="json.doi" v-html="doi"></span>
@@ -51,6 +51,8 @@ export default {
           return "mdi-book";
         case "inproceedings":
           return "mdi-book";
+        case "phdthesis":
+          return "mdi-book-open-page-variant";
         default:
           return "mdi-download";
       }
@@ -105,6 +107,16 @@ export default {
         }
       }
     },
+    title: function () {
+      return '"'+this.json.title+'." ';
+    },
+    thesisInfo: function () {
+      if (this.json.type == "phdthesis") {
+        return 'PhD Dissertation, ' + this.json.school;
+      } else {
+        return "";
+      }
+    },
     pubInfo: function () {
       // Journal/bookinfo, volume, issue, pages
       // All comma separated with a period at the end
@@ -112,6 +124,7 @@ export default {
         this.pubLocation,
         this.json.volume,
         this.json.number,
+        this.thesisInfo
       ].filter((n) => n);
       if (this.issueDate) {
         pubInfoArr[pubInfoArr.length - 1] += " " + this.issueDate;

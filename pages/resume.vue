@@ -1,5 +1,5 @@
 <template>
-  <primary-section :title="title" subtitle="I'm starting a new job soon!" texture="brick-wall" icon='cv' class="is-printable">
+  <primary-section :title="title" subtitle="I drive [autonomous, robotic] trucks." texture="brick-wall" icon='cv' class="is-printable">
     <div slot="links">
         <icon-button-link to="/pdfs/ebert-julia.resume.pdf" icon="file-pdf">View as PDF</icon-button-link>
         <!-- <icon-button-link is-internal to="/cv" icon="school">Academic CV</icon-button-link> -->
