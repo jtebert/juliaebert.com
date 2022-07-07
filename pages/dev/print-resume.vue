@@ -1,5 +1,5 @@
 <template>
-    <div class="content is-printable">
+    <div class="content is-printable dense-resume right-bar-resume">
       <resume-content></resume-content>
     </div>
 </template>

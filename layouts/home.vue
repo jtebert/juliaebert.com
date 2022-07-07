@@ -19,12 +19,13 @@
               :pre-erase-delay="2000"
               erase-style="clear"
               :text="[
-              'programs a swarm.',
+              'develops algorithms.',
+              'plans truck missions.',
+              // 'programs a swarm.',
               'builds robots.',
-              'simulates satellites.',
+              // 'simulates satellites.',
               //'writes a blog.',
               'makes things.',
-              'develops algorithms.',
               //'3D prints everything.'
               ]"
             ></vue-typer>

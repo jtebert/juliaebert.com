@@ -3,7 +3,7 @@
     <div class="resume">
         <resume-header
             name="Julia Ebert"
-            subtitle="Robotics Researcher &bull; Software Engineer &bull; Boston, MA"
+            subtitle="Software Engineer &bull; Robotics Researcher &bull; Boston, MA"
             :links='[
                 {to: "https://juliaebert.com", icon: "web", text:"juliaebert.com"},
                 {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
@@ -15,60 +15,18 @@
 
         <div slot="content">
 
-            <h2>Education</h2>
-
-            <cv-entry
-                location="Cambridge, MA"
-                title="Harvard University"
-                subtitle='PhD in Computer Science'
-                dates='2022'
-                :tasks="[
-                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar',
-                    'Thesis: <i>Distributed Decision-making for Inspection by Autonomous Robot Collectives</i>']"
-            ></cv-entry>
-            <cv-entry
-                location="London, UK"
-                title="Imperial College London"
-                dates='2016'
-                subtitle='Master of Research (MRes) in Bioengineering, with Distinction'
-                :tasks="[
-                    'Marshall Scholar',
-                    'Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>']"
-            ></cv-entry>
-            <cv-entry
-                location="Boston, MA"
-                title="Northeastern University"
-                subtitle="BS in Behavioral Neuroscience, Minor in Computer Science"
-                dates='2015'
-                :tasks="[
-                    'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA']"
-            ></cv-entry>
-
-            <h2>Skills</h2>
-
-            <cv-skill
-                category="Computer Science"
-                :skills="[
-                'Algorithm development', 'Python', 'C/C++ (including embedded programming and Arduino)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
-            ></cv-skill>
-            <cv-skill
-                category="Engineering & Fabrication"
-                :skills="[
-                'Computer-aided design (OnShape, Fusion 360)', 'Electronics design (Eagle) and production', '3D printing', 'CNC milling', 'Soldering', 'Laser cutting', 'Molding and casting']"
-            ></cv-skill>
-
             <h2>Experience</h2>
 
-            <!-- <cv-entry
+            <cv-entry
                 location="Golden, CO"
                 title="Outrider"
                 dates='2022 --'
                 subtitle='Software Engineer, Mission Planning (Remote)'
                 :tasks="[
-                    'Implement mission planning software for unmanned trucks in a distribution yard.',
-                    'Develop algorithms to coordinate multiple vehicles completing tasks.'
+                    'Implement mission planning software (C++, ROS) for autonomous trucks in a distribution yard.',
+                    'Develop algorithms for single- and multi-vehicle truck missions.',
                 ]"
-            ></cv-entry> -->
+            ></cv-entry>
 
             <cv-entry
                 location="Cambridge, MA"
@@ -76,10 +34,11 @@
                 dates='2016 -- 2022'
                 subtitle='Doctoral Researcher'
                 :tasks="[
-                    'Developing a framework for collective spatial decision-making in simulated and physical robot collectives. Includes developing bio-inspired and Bayesian decision and movement algorithms, and robust low-bandwidth communication.',
-                    'Created Kilosim, an open-source multi-robot simulator (C++) capable of efficiently simulating hundreds of robots at up to 1000x real time.',
-                    'Collaborating with MIT Media Lab to create heterogeneous robot swarm for inspection on space stations, including algorithm development and hardware testing in microgravity (Zero-G flights).',
-                    'Designing and manufacturing LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes electronic, mechanical, and algorithm design.'
+                    'Developed collective spatial decision-making algorithms for simulated and physical robot collectives. Includes bio-inspired and Bayesian decision and movement algorithms.',
+                    'Created open-source Kilosim (C++) to simulate hundreds of robots at up to 1000x real time.',
+                    'Collaborated with MIT Media Lab to create heterogeneous robot swarm for inspection on space stations, including algorithm development and hardware testing in microgravity (Zero-G flights).',
+                    'Supervised undergraduate and masters student research projects, and taught robotics and digital fabrication courses.',
+                    // 'Designed and manufactured LARVAbot: a collective of bioinspired robots to perform aggregate locomotion. Includes electronic, mechanical, and algorithm design.'
                      ]"></cv-entry>
 
             <cv-entry
@@ -88,11 +47,12 @@
                 title="Lawrence Livermore National Laboratory, <span>Dr. Michael Schneider</span>"
                 subtitle="Computational Science Research Intern"
                 :tasks="[
-                    'Designed multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
+                    // 'Designed multi-agent algorithms for orbit tracking (space situational awareness, SSA) and maneuver detection with satellite constellations.',
                     'Programmed, refactored, and documented research codebase (Python) for SSA, since used extensively by SSA researchers at LLNL.',
                     'Developed a simulator and visualization tools (Python) for orbit observation by low earth orbit satellites.',
                 ]"></cv-entry>
 
+            <!-- <span class="page-break"></span> -->
             <cv-entry
                 location="London, UK"
                 title="Imperial College Human Robotics Group, <span>Prof. Etienne Burdet and Dr. Ildar Farkhatdinov</span>"
@@ -101,8 +61,7 @@
                 :tasks="[
                     'Developed algorithms for human-robot co-control of the LOPES exoskeleton in standing a walking balance recovery. Tested with human participants and modeled in Simulink.']"
             ></cv-entry>
-            <span class="page-break"></span>
-            <cv-entry
+            <!-- <cv-entry
                 location="Boston, MA"
                 title="Northeastern University Action Lab, <span>Prof. Dagmar Sternad</span>"
                 dates='2011 -- 2015'
@@ -110,7 +69,7 @@
                 :tasks="[
                      'Programmed HapticMaster robot (C++) and conducted human-subject experiments control of objects with complex dynamics, resulting in two publications.',
                      'Designed and programmed (Matlab) experiments to assess ability of humans to learn and retain a motor task with rhythmic and discrete components. Conducted multi-month data collection (including with EEG) and analyzed results for Honors thesis.']"
-            ></cv-entry>
+            ></cv-entry> -->
             <!-- <cv-entry
                 location="Tübingen, DE"
                 title="Max Planck Institute for Intelligent Systems, <span>Prof. Stefan Schaal</span>"
@@ -121,9 +80,53 @@
                      'Conducted human subjects experiments and presented results at Neural Control of Movement conference.']"
             ></cv-entry> -->
 
-            <h2>Teaching & Mentoring Experience</h2>
+            <h2>Skills</h2>
+
+            <cv-skill
+                category="Computer Science"
+                :skills="[
+                'Algorithm development', 'Python', 'C/C++ (including embedded programming and Arduino)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
+            ></cv-skill>
+            <cv-skill
+                category="Engineering"
+                :skills="[
+                'Computer-aided design (OnShape)', 'Electronics design (Eagle)', '3D printing', 'Laser cutting']"
+            ></cv-skill>
+
+
+            <h2>Education</h2>
 
             <cv-entry
+                location="Cambridge, MA"
+                title="Harvard University"
+                subtitle='PhD in Computer Science'
+                dates='2022'
+                :tasks="[
+                    'Thesis: <i>Distributed Decision-making for Inspection by Autonomous Robot Collectives</i>',
+                    'Department of Energy Computation Science Graduate Fellow (DOE CSGF) &bull; Siebel Scholar',
+                    ]"
+            ></cv-entry>
+            <cv-entry
+                location="London, UK"
+                title="Imperial College London"
+                dates='2016'
+                subtitle='Master of Research (MRes) in Bioengineering, with Distinction'
+                :tasks="[
+                    'Marshall Scholar &bull; Thesis: <i>Assisting Balance Recovery with a Lower Limb Exoskeleton</i>',
+                    ]"
+            ></cv-entry>
+            <cv-entry
+                location="Boston, MA"
+                title="Northeastern University"
+                subtitle="BS in Behavioral Neuroscience, Minor in Computer Science"
+                dates='2015'
+            ></cv-entry>
+                <!-- :tasks="[
+                    'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA']" -->
+
+            <!-- <h2>Teaching & Mentoring Experience</h2> -->
+
+            <!-- <cv-entry
                 location="Cambridge, MA"
                 title="Harvard University"
                 :tasks="[
@@ -136,7 +139,7 @@
                     {date: 'Spring 2018',
                      task: '<b>Teaching fellow,</b> CS 189: Autonomous Robot Systems',
                      link: 'https://canvas.harvard.edu/courses/37276'}]"
-            ></cv-entry>
+            ></cv-entry> -->
             <!-- <cv-entry
                 location="Boston, MA"
                 title="Northeastern University"
@@ -162,8 +165,11 @@
 
             <h2>Select Publications</h2>
 
+            <p class="is-screen-only">You can view all my publications on the <nuxt-link to="/publications">Publications page.</nuxt-link></p>
+
             <publication-list
                 class="is-print-only"
+                format="short"
                 highlight-author="Ebert"
                 :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
                 :type-filter="['inproceedings', 'article']"

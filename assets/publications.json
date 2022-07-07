@@ -1,4 +1,39 @@
 {
+    "ebertphd2022": {
+        "type": "phdthesis",
+        "author": ["Ebert, Julia"],
+        "title": "Distributed Decision-making Algorithms for Inspection by Autonomous Robot Collectives",
+        "school": "Harvard University",
+        "year": 2022,
+        "file": "ebert-julia.dissertation.pdf"
+    },
+    "ebert2022": {
+        "type": "inproceedings",
+        "title": "A Hybrid PSO Algorithm for Multi-robot Target Search and Decision Awareness",
+        "year": 2022,
+        "author": [
+            "Ebert, Julia",
+            "Berlinger, Florian",
+            "Haghighat, Bahar",
+            "Nagpal, Radhika"
+        ],
+        "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",
+        "short_booktitle": "IROS 2022",
+        "note": "[Accepted]"
+    },
+    "berlinger2022": {
+        "type": "inproceedings",
+        "title": "Impressionist Algorithms for Autonomous Multi-Robot Systems: Flocking as a Case Study",
+        "year": 2022,
+        "author": [
+            "Berlinger, Florian",
+            "Ebert, Julia",
+            "Nagpal, Radhika"
+        ],
+        "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",
+        "short_booktitle": "IROS 2022",
+        "note": "[Accepted]"
+    },
     "haghighat2022-ants": {
         "type": "inproceedings",
         "title": "An Approach Based on Particle Swarm Optimization for Inspection of Spacecraft Hulls by a Swarm of Miniaturized Robots",
@@ -15,34 +50,7 @@
         ],
         "booktitle": "13th International Conference on Swarm Intelligence (ANTS 2022)",
         "short_booktitle": "ANTS 2022",
-        "note": "[Submitted]"
-    },
-    "ebert2022": {
-        "type": "inproceedings",
-        "title": "A Hybrid PSO Algorithm for Multi-robot Target Search and Decision Awareness",
-        "year": 2022,
-        "author": [
-            "Ebert, Julia",
-            "Berlinger, Florian",
-            "Haghighat, Bahar",
-            "Nagpal, Radhika"
-        ],
-        "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",
-        "short_booktitle": "IROS 2022",
-        "note": "[Submitted]"
-    },
-    "berlinger2022": {
-        "type": "inproceedings",
-        "title": "Impressionist Algorithms for Autonomous Multi-Robot Systems: Flocking as a Case Study",
-        "year": 2022,
-        "author": [
-            "Berlinger, Florian",
-            "Ebert, Julia",
-            "Nagpal, Radhika"
-        ],
-        "booktitle": "IEEE Robotics and Automation Letters (RA-L)",
-        "short_booktitle": "RA-L",
-        "note": "[Submitted]"
+        "note": "[Accepted]"
     },
     "haghighat2022": {
         "type": "inproceedings",
