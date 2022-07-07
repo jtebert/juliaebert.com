@@ -3,19 +3,15 @@
   <div class="container">
     <div class="columns">
       <div class="column is-2 has-text-centered">
-        <img src="/imgs/logos/harvard-seas-logo-light-opt.svg" style="max-height: 125px;">
+        <img src="/imgs/logos/outrider-logo-light-opt.svg" style="height: 100px;">
       </div>
       <div class="column content">
         <vue-markdown>
-Julia Ebert
+Julia Ebert, PhD
 
-PhD Candidate in Computer Science
+Software Engineer, Mission Planning
 
-School of Engineering and Applied Sciences, Harvard University
-
-4.101 Science and Engineering Complex
-150 Western Ave
-Boston, MA 02134
+Outrider
 
 [julia@juliaebert.com](mailto:julia@juliaebert.com)
         </vue-markdown>
