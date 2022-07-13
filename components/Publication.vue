@@ -12,22 +12,22 @@
       <span class="location" v-if="json.location" v-html="json.location+'. '"></span>
       <span class="doi is-screen-only" v-if="json.doi" v-html="doi"></span>
       <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
-      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link mdi-rotate-315 is-link-only"></a></i>
+      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link-variant is-link-only"></a></i>
     </span>
     <span v-else>
       <span class="author" v-html="authorsFirstLast+'. '"></span>
       <span class="year" v-if="json.year" v-html="'('+json.year+')'"></span>
       <span class="pubtitle" v-html="json.title+'. '"></span>
       <span class="publisher-info" v-if="pubInfo" v-html="shortPubInfo+'.'"></span>
-      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link mdi-rotate-315 is-link-only"></a></i>
+      <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link-variant is-link-only"></a></i>
     </span>
   </p>
 </template>
 
 <script>
-// This is designed to be used within another compononent (PublicationList),
+// This is designed to be used within another component (PublicationList),
 // which passes just a dictionary of values for a particular publication. This
-// compononent should not be used directly.
+// component should not be used directly.
 export default {
   props: {
     json: Object,

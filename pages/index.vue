@@ -8,7 +8,7 @@
       <div slot="links">
           <icon-button-link
             to="https://github.com/jtebert"
-            icon="github-circle"
+            icon="github"
             title="GitHub"
           >GitHub</icon-button-link>
           <icon-button-link

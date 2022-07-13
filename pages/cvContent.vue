@@ -15,7 +15,7 @@
                 >julia@juliaebert.com</icon-link>
                 <icon-link
                     to="https://github.com/jtebert"
-                    icon="github-circle"
+                    icon="github"
                     size=""
                 >github.com/jtebert</icon-link>
             </div>

@@ -6,7 +6,7 @@
             :links='[
                 {to: "https://juliaebert.com", icon: "web", text:"juliaebert.com"},
                 {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
-                {to: "https://github.com/jtebert", icon: "github-circle", text:"github.com/jtebert"},
+                {to: "https://github.com/jtebert", icon: "github", text:"github.com/jtebert"},
                 //{to: "https://linkedin.com/in/jtebert", icon: "linkedin", text:"linkedin.com/in/jtebert"},
                 {icon: "phone", text:"617-949-0214"}
             ]'
