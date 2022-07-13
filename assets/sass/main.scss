@@ -1240,21 +1240,21 @@ $icon-block-size-touch: 6rem;
 @page {
   /* size: 148mm 210mm; */
   size: 8.5in 11in;
-  margin: 0.65in;
-  // margin-bottom: .5in;
-  margin-top: 0.5in;
+  margin: 0.55in;
+  margin-bottom: .5in;
+  // margin-top: 0.5in;
   background-color: white;
 
   @bottom-right {
     vertical-align: top;
-    content: "Page " counter(page) "/" counter(pages);
+    // content: "Page " counter(page) "/" counter(pages);
     font-size: 11px;
     color: #000;
   }
 
   @bottom-left {
     vertical-align: top;
-    content: string(title);
+    // content: string(title);
     font-size: 11px;
     color: #000;
     /* text-transform: uppercase; */

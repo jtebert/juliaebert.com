@@ -103,7 +103,7 @@ You can also include button links in the top of the page with the `link` slot. W
 ```HTML
 <icon-button-link
     to="/path/to/target"
-    icon="file-pdf">
+    icon="file-pdf-box">
     Button Text
 </icon-button-link>
 ```
@@ -132,7 +132,7 @@ The main slot of the Project is used for describing the project, and may also in
 To include nicely-formatted links with Material Design Icons, use the `<icon-link>` component:
 ```HTML
 <icon-link
-    icon="github-circle"
+    icon="github"
     to="https://github.com/jtebert/lazy-baker">
     View on GitHub
 </icon-link>
