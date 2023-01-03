@@ -16,7 +16,7 @@
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.5",
     "cross-env": "^5.2.1",
-    "nuxt": "^2.15.7",
+    "nuxt": "^3.0.0",
     "pagedjs": "^0.2.0",
     "particles.js": "^2.0.0",
     "slugify": "^1.6.5",
