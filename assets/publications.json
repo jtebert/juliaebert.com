@@ -19,7 +19,7 @@
         ],
         "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",
         "short_booktitle": "IROS 2022",
-        "note": "[Accepted]"
+        "file": "2022_iros_hybrid.pdf"
     },
     "berlinger2022": {
         "type": "inproceedings",
@@ -32,7 +32,7 @@
         ],
         "booktitle": "2022 IEEE International Conference on Intelligent Robots and Systems (IROS)",
         "short_booktitle": "IROS 2022",
-        "note": "[Accepted]"
+        "file": "2022_iros_impressionist.pdf"
     },
     "haghighat2022-ants": {
         "type": "inproceedings",
@@ -50,7 +50,7 @@
         ],
         "booktitle": "13th International Conference on Swarm Intelligence (ANTS 2022)",
         "short_booktitle": "ANTS 2022",
-        "note": "[Accepted]"
+        "file": "2022_ants.pdf"
     },
     "haghighat2022": {
         "type": "inproceedings",
