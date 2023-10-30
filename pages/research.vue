@@ -1,7 +1,7 @@
 <template>
   <primary-section
     :title="title"
-    subtitle="Full Stack Robotics"
+    subtitle="Full stack robotics"
     texture="circuit-board"
   >
     <div slot="links">
