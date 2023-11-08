@@ -18,13 +18,24 @@
             <h2>Experience</h2>
 
             <cv-entry
-                location="Golden, CO"
+                location="Somerville, MA"
+                title="Fleet Robotics"
+                dates='2023 --'
+                subtitle='Autonomy Lead'
+                :tasks="[
+                    'Lead development of autonomy software for Fleet\'s autonomous hull-cleaning robots.',
+                ]"
+            ></cv-entry>
+
+            <cv-entry
+                location="Brighton, CO"
                 title="Outrider"
-                dates='2022 --'
+                dates='2022 -- 2023'
                 subtitle='Software Engineer, Mission Planning (Remote)'
                 :tasks="[
-                    'Implement mission planning software (C++, ROS) for autonomous trucks in a distribution yard.',
-                    'Develop algorithms for single- and multi-vehicle truck missions.',
+                    'Spearheaded design and development (C++, ROS) of new multi-robot planning for Outrider\'s of autonomous distribution yard trucks.',
+                    'Led cross-functional project teams to create new robot behaviors toward product goals.',
+                    'Supported test site and customer deployments of the mission planning system.'
                 ]"
             ></cv-entry>
 
@@ -53,14 +64,14 @@
                 ]"></cv-entry>
 
             <!-- <span class="page-break"></span> -->
-            <cv-entry
+            <!-- <cv-entry
                 location="London, UK"
                 title="Imperial College Human Robotics Group, <span>Prof. Etienne Burdet and Dr. Ildar Farkhatdinov</span>"
                 subtitle='Post-graduate Research Assistant'
                 dates='2015 -- 2016'
                 :tasks="[
                     'Developed algorithms for human-robot co-control of the LOPES exoskeleton in standing a walking balance recovery. Tested with human participants and modeled in Simulink.']"
-            ></cv-entry>
+            ></cv-entry> -->
             <!-- <cv-entry
                 location="Boston, MA"
                 title="Northeastern University Action Lab, <span>Prof. Dagmar Sternad</span>"
@@ -85,7 +96,7 @@
             <cv-skill
                 category="Computer Science"
                 :skills="[
-                'Algorithm development', 'Python', 'C/C++ (including embedded programming and Arduino)', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
+                'Algorithm development', 'C/C++', 'Python', 'Robot Operating System (ROS)', 'Linux', 'Git/version control', 'MATLAB', 'JavaScript']"
             ></cv-skill>
             <cv-skill
                 category="Engineering"

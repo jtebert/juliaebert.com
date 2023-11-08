@@ -3,15 +3,15 @@
   <div class="container">
     <div class="columns">
       <div class="column is-2 has-text-centered">
-        <img src="/imgs/logos/outrider-logo-light-opt.svg" style="height: 100px;">
+        <img src="/imgs/logos/fleet-logo-light-opt.svg" style="height: 100px;">
       </div>
       <div class="column content">
         <vue-markdown>
 Julia Ebert, PhD
 
-Software Engineer, Mission Planning
+Autonomy Lead
 
-Outrider
+Fleet Robotics
 
 [julia@juliaebert.com](mailto:julia@juliaebert.com)
         </vue-markdown>
