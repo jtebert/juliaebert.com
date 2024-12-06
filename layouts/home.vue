@@ -34,7 +34,7 @@
       </div>
     </section>
     <div id="main">
-      <nuxt/>
+      <slot />
     </div>
     <my-footer></my-footer>
   </div>

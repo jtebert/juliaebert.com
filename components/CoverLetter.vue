@@ -10,7 +10,7 @@
                 //{to: "https://linkedin.com/in/jtebert", icon: "linkedin", text:"linkedin.com/in/jtebert"},
                 {icon: "phone", text:"617-949-0214"}
             ]'
-        ></resume-header>
+        />
 
         <div id="cover-letter-content">
             <p>{{ date }}</p>
@@ -19,7 +19,7 @@
                 <p v-html="address"></p>
             </div>
 
-            <slot></slot>
+            <slot/>
         </div>
 
     </div>

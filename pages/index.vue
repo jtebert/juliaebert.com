@@ -89,7 +89,7 @@ import Gallery from "~/components/Gallery.vue";
 import IconButtonLink from "~/components/IconButtonLink.vue";
 import ImageBlockLink from "~/components/ImageBlockLink.vue";
 
-export default {
+definePageMeta({
   components: {
     VueMarkdown,
     PrimarySection,
@@ -98,7 +98,7 @@ export default {
     ImageBlockLink,
   },
   layout: "home",
-};
+});
 </script>
 
 <style lang="scss">

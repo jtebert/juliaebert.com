@@ -2,7 +2,7 @@
     <div class="default-layout">
       <nav-bar></nav-bar>
       <div class="body-content">
-      <nuxt/>
+        <slot />
       </div>
       <my-footer></my-footer>
     </div>

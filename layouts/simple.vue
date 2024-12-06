@@ -7,7 +7,7 @@
         <nav-bar></nav-bar>
       </div>
       <div class="hero-body">
-        <nuxt/>
+        <slot />
       </div>
     </section>
     <my-footer></my-footer>

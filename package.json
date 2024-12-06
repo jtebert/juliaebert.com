@@ -11,23 +11,26 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@mdi/font": "^6.9.96",
-    "@nuxtjs/google-analytics": "^2.4.0",
+    "@mdi/font": "^7.4.47",
+    "@nuxt/eslint": "^0.7.2",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.5",
     "cross-env": "^5.2.1",
-    "nuxt": "^2.15.7",
+    "eslint": "^9.16.0",
+    "html-webpack-plugin": "^5.6.3",
+    "nuxt": "^3.14.1592",
     "pagedjs": "^0.2.0",
     "particles.js": "^2.0.0",
+    "sass": "^1.82.0",
     "slugify": "^1.6.5",
+    "vue-loader": "^17.4.2",
     "vue-markdown": "^2.2.4",
     "vue-scrollto": "^2.20.0",
-    "vue-typer": "^1.2.0"
+    "vue-typer": "^1.2.0",
+    "webpack": "^5.97.1"
   },
   "devDependencies": {
-    "fibers": "^5.0.1",
-    "node-sass": "^4.14.1",
     "nodemon": "^1.19.4",
-    "sass-loader": "^10.3.1"
+    "sass-loader": "^10.5.2"
   }
 }

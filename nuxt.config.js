@@ -1,6 +1,6 @@
 import pkg from './package'
 
-export default {
+export default defineNuxtConfig( {
 
   generate: {fallback: '404.html'},
 
@@ -21,16 +21,15 @@ export default {
   /*
   ** Headers of the page
   */
-  head: {
+  meta: {
     title: 'Julia Ebert',
     meta:
         [
           {charset: 'utf-8'},
           {name: 'viewport', content: 'width=device-width, initial-scale=1'}, {
-            hid: 'description',
             name: 'description',
             content:
-                'Julia Ebert, apprentice robot herder. PhD candidate at Harvard University researching collective robotics.'
+                'Julia Ebert, robot herding PhD. Roboticist and software engineer.'
           },
           {name: 'msapplication-TileColor', content: '#03bc25'},
           {name: 'theme-color', content: '#03bc25'}
@@ -101,20 +100,19 @@ export default {
   ** Nuxt.js modules
   */
   modules:
-      [
-        ['@nuxtjs/google-analytics', {id: 'UA-54476418-1'}],
-        // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-        // '@nuxtjs/bulma',
-      ],
+      [// Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
+      // '@nuxtjs/bulma',
+      // ['@nuxtjs/google-analytics', {id: 'UA-54476418-1'}],
+       '@nuxt/eslint'],
 
   /*
   ** Build configuration
   */
   build: {
-    postcss: {preset: {features: {customProperties: false}}},
+    postcss: {preset: {features: {'custom-properties': false}}},
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {}
   }
-}
+})
