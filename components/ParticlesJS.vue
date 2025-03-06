@@ -1,7 +1,7 @@
 // Adapted from this Github issue: https://github.com/VincentGarreau/particles.js/issues/192#issuecomment-338865839
 
 <template>
-  <div id='particles-js'></div>
+  <div id='particles-js'/>
 </template>
 
 <script>
@@ -11,8 +11,7 @@ export default {
   name: "ParticlesJS",
 
   mounted() {
-    require("particles.js");
-    this.$nextTick(() => {
+    import("particles.js").then(() => {
       this.initParticlesJS();
     });
   },

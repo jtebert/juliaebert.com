@@ -2,12 +2,12 @@
   <div class="publication-list">
     <publication
       v-for="pub in publications"
-      :json="pub"
       :key="pub.key"
+      :json="pub"
       :highlightAuthor="highlightAuthor"
       :format="format"
       :showLink="showLinks"
-    ></publication>
+    />
   </div>
 </template>
 
@@ -18,6 +18,9 @@ import citations from "~/assets/publications.json";
 import _ from "lodash";
 
 export default {
+  components: {
+    Publication,
+  },
   props: {
     typeFilter: Array,
     pubKeyFilter: Array,
@@ -41,9 +44,6 @@ export default {
       citations: citations,
     };
   },
-  components: {
-    Publication,
-  },
   computed: {
     publications: function () {
       // Get an array of all the publications from the file that match the specification
@@ -52,26 +52,26 @@ export default {
       // Then map these keys to their corresponding values
       //   console.log(this.citations);
       //sorted = this.publicationsByYear();
-      var ret = Object.keys(this.citations)
+      const ret = Object.keys(this.citations)
         .filter((key) => this.pubFilter(key, this.citations[key]))
         .map((key) => {
-          var val = this.citations[key];
+          const val = this.citations[key];
           val.key = key;
           return val;
         });
-      var ret_sorted = _.sortBy(ret, [(pub) => -pub.year]);
+      const ret_sorted = _.sortBy(ret, [(pub) => -pub.year]);
       return ret_sorted;
     },
     publicationsByYear: function () {
       // Key the publications into an object by year (to be used if showYears is true)
-      var pub_year_obj = this.publications.reduce((o, val) => {
+      const pub_year_obj = this.publications.reduce((o, val) => {
         o[val.year] += [val];
         return o;
       }, {});
       // Then return a sorted list by year, in descending order (newest to oldest)
       return Object.keys(pub_year_obj)
         .map((year) => {
-          var p = {};
+          const p = {};
           p["publications"] = pub_year_obj[year];
           p["year"] = year;
           return p;

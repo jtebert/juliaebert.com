@@ -6,22 +6,18 @@
         <img src="/imgs/logos/fleet-logo-light-opt.svg" style="height: 100px;">
       </div>
       <div class="column content">
-        <vue-markdown>
-Julia Ebert, PhD
-
-Autonomy Lead
-
-Fleet Robotics
-
-[julia@juliaebert.com](mailto:julia@juliaebert.com)
-        </vue-markdown>
+        <p>Julia Ebert, PhD</p>
+        <p>Autonomy Lead</p>
+        <p>Fleet Robotics</p>
+        <p><a href="mailto:julia@juliaebert.com">julia@juliaebert.com</a></p>
       </div>
       <div class="column">
-        <vue-markdown class="content">
-*Made by Julia Ebert with [Nuxt](https://nuxtjs.org/), [Vue.js](https://vuejs.org/), [Bulma](https://bulma.io/), [Hero Patterns](https://www.heropatterns.com/), and icons from [The Noun Project](https://thenounproject.com/) by Maxim Basinski and Eucalyp. Typeset in [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Space Mono](https://fonts.google.com/specimen/Space+Mono).*
-
-*Source code available on [GitHub](https://github.com/jtebert/juliaebert.com) under the [MIT license](https://github.com/jtebert/juliaebert.com/blob/master/LICENSE.txt).*
-        </vue-markdown>
+        <p class="content">
+          <i>Made by Julia Ebert with <a href="https://nuxtjs.org/">Nuxt</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://bulma.io/">Bulma</a>, <a href="https://www.heropatterns.com/">Hero Patterns</a>, and icons from <a href="https://thenounproject.com/">The Noun Project</a> by Maxim Basinski and Eucalyp.</i>
+        </p>
+        <p>
+          <i>Source code available on <a href="https://github.com/jtebert/juliaebert.com">GitHub</a> under the <a href="https://github.com/jtebert/juliaebert.com/blob/master/LICENSE.txt">MIT license</a>.</i>
+        </p>
       </div>
     </div>
 
@@ -30,12 +26,8 @@ Fleet Robotics
 </template>
 
 <script>
-import VueMarkdown from "vue-markdown";
 
 export default {
-  components: {
-    VueMarkdown,
-  },
 };
 </script>
 

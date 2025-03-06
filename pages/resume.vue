@@ -1,12 +1,12 @@
 <template>
   <primary-section :title="title" subtitle="I make robots work together" texture="brick-wall" icon='cv' class="is-printable">
-    <div slot="links">
-        <icon-button-link to="/pdfs/ebert-julia.resume.pdf" icon="file-pdf-box">View as PDF</icon-button-link>
-        <!-- <icon-button-link is-internal to="/cv" icon="school">Academic CV</icon-button-link> -->
-    </div>
-    <div class="block-content content has-margin-small">
-      <resume-content></resume-content>
-    </div>
+    <template #links>
+      <icon-button-link to="/pdfs/ebert-julia.resume.pdf" icon="file-pdf-box">View as PDF</icon-button-link>
+      <!-- <icon-button-link is-internal to="/cv" icon="school">Academic CV</icon-button-link> -->
+    </template>
+      <template #default>
+        <resume-content/>
+      </template>
   </primary-section>
 </template>
 

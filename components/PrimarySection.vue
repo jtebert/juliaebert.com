@@ -7,19 +7,19 @@
           <div class="title-block">
             <div class="title-block-title">
               <h1 class="title is-1">{{ title }}</h1>
-              <h3 class="section-subtitle subtitle is-4" v-if="subtitle" v-html="subtitle"></h3>
+              <h3 v-if="subtitle" class="section-subtitle subtitle is-4" v-html="subtitle"/>
             </div>
             <div class="title-block-links">
               <div class="buttons">
-                <slot name="links"></slot>
+                <slot name="links"/>
               </div>
             </div>
           </div>
-          <div class="intro content" v-if="this.$slots.intro">
-            <slot name="intro"></slot>
+          <div v-if="$slots.intro" class="intro content">
+            <slot name="intro"/>
           </div>
         </div>
-        <slot></slot>
+        <slot/>
       </div>
     </div>
   </div>

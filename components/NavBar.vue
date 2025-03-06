@@ -1,28 +1,28 @@
 <template>
   <div
+    id="top-nav"
     class="navbar is-black is-transparent"
     role="navigation"
     aria-label="main navigation"
-    id="top-nav"
   >
     <div class="container nav-container">
       <div class="navbar-brand">
         <nuxt-link to="/">
-          <img src="/imgs/icons/about-me.svg" id="brand-icon" class="navbar-item is-screen-only">
+          <img id="brand-icon" src="/imgs/icons/about-me.svg" class="navbar-item is-screen-only">
         </nuxt-link>
         <a
           role="button"
           :class="['navbar-burger', {'is-active': isActive}]"
           aria-label="menu"
           aria-expanded="false"
-          v-on:click="menuToggle"
+          @click="menuToggle"
         >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <span aria-hidden="true"/>
+          <span aria-hidden="true"/>
+          <span aria-hidden="true"/>
         </a>
       </div>
-      <div :class="['navbar-menu', {'is-active': isActive}]" id="navMenu">
+      <div id="navMenu" :class="['navbar-menu', {'is-active': isActive}]">
         <div class="navbar-end">
           <nuxt-link
             v-for="(slug, name) in sectionNames"
@@ -36,29 +36,24 @@
   </div>
 </template>
 
-<script>
-import slugify from "slugify";
+<script setup>
+  import { ref, watch } from 'vue'
+  import { useRoute, useRuntimeConfig } from 'nuxt/app'
 
-export default {
-  props: {},
-  data() {
-    return {
-      isActive: false,
-      sectionNames: process.env.navItems,
-    };
-  },
-  methods: {
-    menuToggle: function () {
-      this.isActive = !this.isActive;
-    },
-  },
-  watch: {
-    $route: function () {
-      // Close the menu when the route changes (aka switch pages)
-      this.isActive = false;
-    },
-  },
-};
+  const route = useRoute()
+  const config = useRuntimeConfig()
+
+  const isActive = ref(false)
+  const sectionNames = ref(config.public.navItems)
+
+  watch(route, () => {
+    // Close the menu when the route changes (aka switch pages)
+    isActive.value = false
+  })
+
+  function menuToggle() {
+    isActive.value = !isActive.value
+  }
 </script>
 
 <style lang="scss">

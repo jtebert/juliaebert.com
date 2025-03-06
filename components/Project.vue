@@ -18,10 +18,10 @@
       <div class="content">
         <slot></slot>
       </div>
-      <div v-if="this.$slots.links"></div>
-      <div v-if="this.$slots.results">
+      <div v-if="$slots.links"/>
+      <div v-if="$slots.results">
         <h3 class="results-title title is-5">Some Results</h3>
-        <slot name="results"></slot>
+        <slot name="results"/>
       </div>
     </div>
   </div>

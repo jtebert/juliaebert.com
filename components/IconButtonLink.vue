@@ -1,13 +1,13 @@
 <template>
 <div>
   <nuxt-link v-if="isInternal" :to="to" :class="linkClasses">
-    <span class="icon"><i :class="iconClasses"></i></span>
-    <span v-if="hasText"><slot></slot></span>
+    <span class="icon"><i :class="iconClasses"/></span>
+    <span v-if="hasText"><slot/></span>
   </nuxt-link>
   <!-- <a v-else :class="['button', 'is-primary', {'is-large': !hasText}, {'is-medium': hasText}]" :href="to"> -->
   <a v-else :class="linkClasses" :href="to">
-    <span class="icon"><i :class="iconClasses"></i></span>
-    <span v-if="hasText"><slot></slot></span>
+    <span class="icon"><i :class="iconClasses"/></span>
+    <span v-if="hasText"><slot/></span>
   </a>
   </div>
 </template>
@@ -15,8 +15,8 @@
 <script>
 export default {
   props: {
-    icon: { type: String },
-    to: { type: String },
+    icon: { type: String, default: '' },
+    to: { type: String, default: '' },
     isInternal: { type: Boolean, default: false },
   },
   computed: {
@@ -34,7 +34,7 @@ export default {
       return `mdi mdi-${this.icon} mdi-${this.iconSize}px`;
     },
     linkClasses: function () {
-      var classes = "button is-primary";
+      let classes = "button is-primary";
       if (!this.hasText) {
         classes += " is-large";
       } else {

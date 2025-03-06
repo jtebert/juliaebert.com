@@ -2,15 +2,15 @@
   <div class="simple-layout">
     <particlesJS/>
 
-    <section class="hero bg-img is-fullheight" id="header">
+    <section id="header" class="hero bg-img is-fullheight">
       <div class="hero-head">
-        <nav-bar></nav-bar>
+        <nav-bar/>
       </div>
       <div class="hero-body">
         <slot />
       </div>
     </section>
-    <my-footer></my-footer>
+    <my-footer/>
   </div>
 </template>
 

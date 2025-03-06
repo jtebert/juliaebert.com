@@ -46,12 +46,10 @@ Julia Ebert
 
 <script>
 import CoverLetter from "~/components/CoverLetter.vue";
-import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     CoverLetter,
-    VueMarkdown,
   },
 };
 </script>

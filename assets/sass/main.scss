@@ -1,5 +1,5 @@
-@import "node_modules/bulma/sass/utilities/initial-variables";
-@import "node_modules/bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
 
 // $green: #00B140;
 $green: #03bc25;
@@ -60,7 +60,7 @@ $small-radius: 0;
 
 // Derived variables
 
-@import "node_modules/bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/derived-variables";
 
 $body-background-color: $dark;
 
@@ -95,7 +95,7 @@ table {
 }
 
 // @import "~bulma/sass/utilities/mixins";
-@import "node_modules/bulma/bulma";
+@import "~bulma/bulma";
 
 // TESTING TRANSITIONS
 
@@ -629,9 +629,10 @@ a.button:hover {
       z-index: 0;
 
       &:hover {
-        @extend .button;
+        // @extend .button;
         @extend .is-primary;
         @extend .is-hovered;
+        background-color: darken($primary, 2.5%);
       }
 
       @include mobile {
@@ -668,7 +669,7 @@ a.button:hover {
     }
   }
 
-  .navbar-item.nuxt-link-exact-active {
+  .navbar-item.router-link-exact-active {
     // Hacky highlighting of current page
     // color: $primary !important;
     @include desktop {

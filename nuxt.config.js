@@ -4,18 +4,18 @@ export default defineNuxtConfig( {
 
   generate: {fallback: '404.html'},
 
-  env: {
-    siteTitle: 'Julia Ebert',
-    navItems: {
-      'About Me': '',
-      // CV: "cv",
-      Resume: 'resume',
-      Research: 'research',
-      'Side Projects': 'side-projects',
-      Publications: 'publications',
-      // Media: "media"
-    },
-    baseURL: 'https://juliaebert.com'
+  runtimeConfig: {
+    public: {
+      siteTitle: 'Julia Ebert',
+      navItems: {
+        'About Me': '',
+        Resume: 'resume',
+        Research: 'research',
+        'Side Projects': 'side-projects',
+        Publications: 'publications',
+      },
+      baseURL: 'https://juliaebert.com'
+    }
   },
 
   /*
@@ -92,7 +92,7 @@ export default defineNuxtConfig( {
   */
   plugins:
       [
-        {src: '~/plugins/vue-typer.js', ssr: false},
+        // {src: '~/plugins/vue-typer.js', ssr: false},
         {src: '~/plugins/directives.js'}
       ],
 
@@ -109,10 +109,20 @@ export default defineNuxtConfig( {
   ** Build configuration
   */
   build: {
-    postcss: {preset: {features: {'custom-properties': false}}},
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {}
-  }
+    postcss: { preset: { features: { 'custom-properties': false } } },
+    extend(config, ctx) {
+      if (ctx.isDev) {
+        config.optimization.minimize = false;
+        config.devtool = 'source-map';
+      }
+    }
+  },
+
+  vite: {
+    resolve: {
+      alias: {
+        '~bulma': 'bulma',
+      },
+    },
+  },
 })

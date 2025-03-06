@@ -1,17 +1,17 @@
 <template>
   <div class="cv-entry">
-    <div class="cv-bar"></div>
+    <div class="cv-bar"/>
     <div class="cv-sidebar entry-primary">
-      <b v-if="location" v-html="location" class="location"></b>
+      <b v-if="location" class="location" v-html="location"/>
     </div>
     <div class="cv-main entry-primary">
-      <b v-html="title"></b>
+      <b v-html="title"/>
     </div>
     <div :class="['cv-sidebar', 'entry-subtitle', 'grid-row-'+subtitleRow]">
-      <span v-if="dates" v-html="dates.replace('--', '–')"></span>
+      <span v-if="dates" v-html="dates.replace('--', '–')"/>
     </div>
     <div :class="['cv-main', 'entry-subtitle', 'grid-row-'+subtitleRow]">
-      <span v-if="subtitle" v-html="subtitle"></span>
+      <span v-if="subtitle" v-html="subtitle"/>
     </div>
 
     <div
@@ -27,13 +27,13 @@
       :key="'task-'+uid+'-main-'+`${id}`"
       :class="['cv-main', 'grid-row-'+(id+rowOffset)]"
     >
-      <span class="cv-task" v-bind:class="{ bulleted: bulleted }">
-        <i v-if="bulleted" class="bullet mdi mdi-chevron-right"></i>
-        <span v-if="typeof(task)=='string'" v-html="task"></span> <!--If it's just a string -->
-        <span v-else v-html="task.task"></span> <!-- If it's an object -->
-        <a v-if="task.hasOwnProperty('link')" :href="task.link"><i class="link mdi mdi-link-variant is-link-only"></i><br></a>
-        <nuxt-link class="is-screen-only" v-else-if="task.hasOwnProperty('to')" :to="task.to"><i class="link md mdi-link-variant is-link-only"></i><br></nuxt-link>
-        <i v-if="task.hasOwnProperty('description')"><span class="cv-description" v-html="task.description"></span></i>
+      <span class="cv-task" :class="{ bulleted: bulleted }">
+        <i v-if="bulleted" class="bullet mdi mdi-chevron-right"/>
+        <span v-if="typeof(task)=='string'" v-html="task"/> <!--If it's just a string -->
+        <span v-else v-html="task.task"/> <!-- If it's an object -->
+        <a v-if="task.hasOwnProperty('link')" :href="task.link"><i class="link mdi mdi-link-variant is-link-only"/><br></a>
+        <nuxt-link v-else-if="task.hasOwnProperty('to')" class="is-screen-only" :to="task.to"><i class="link md mdi-link-variant is-link-only"/><br></nuxt-link>
+        <i v-if="task.hasOwnProperty('description')"><span class="cv-description" v-html="task.description"/></i>
       </span>
     </div>
 
@@ -44,15 +44,30 @@
 export default {
   props: {
     // Main header for the CV entry (eg employer)
-    title: String,
+    title: {
+      type: String,
+      default: '',
+    },
     // Secondary header for entry (eg position)
-    subtitle: String,
+    subtitle: {
+      type: String,
+      default: '',
+    },
     // City/state/country of the position (shown in sidebar, hidden on mobile)
-    location: String,
+    location: {
+      type: String,
+      default: '',
+    },
     // Optional dates for the entire position (rather than for the bulleted points)
-    dates: [String, Number],
+    dates: {
+      type: [String, Number],
+      default: '',
+    },
     // Overall description for the position (shown in small, unbulleted text)
-    description: String,
+    description: {
+      type: String,
+      default: '',
+    },
     // Bulleted list of tasks/roles in the entry. Each task may be:
     // - A String (shorthand for just the task below)
     // - An Object containing: (optional unless noted)
@@ -61,7 +76,10 @@ export default {
     //   - date: Dates of task (will be in sidebar)
     //   - link: EXTERNAL link (shown next to task)
     //   - to: INTERNAL to website link (shown next to task). Don't use both `to` and `link`
-    tasks: Array,
+    tasks: {
+      type: Array,
+      default: () => [],
+    },
     // Whether or not the tasks are bulleted
     bulleted: {
       type: Boolean,

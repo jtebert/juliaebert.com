@@ -4,19 +4,19 @@
     subtitle="Making the world a better place, one peer-reviewed article at a time"
     texture="bank-note"
   >
-    <div slot="links">
+    <template #links>
         <icon-button-link
           to="https://scholar.google.com/citations?user=dsoLpEQAAAAJ&hl=en"
           icon="school"
         >Google Scholar</icon-button-link>
-    </div>
+    </template>
     <div class="block-content content">
       <h1>Dissertation</h1>
-      <publication-list highlight-author="Ebert" :type-filter="['phdthesis']"></publication-list>
+      <publication-list highlight-author="Ebert" :type-filter="['phdthesis']"/>
       <h1>Papers</h1>
-      <publication-list highlight-author="Ebert" :type-filter="['inproceedings', 'article']"></publication-list>
+      <publication-list highlight-author="Ebert" :type-filter="['inproceedings', 'article']"/>
       <h1>Conference Abstracts and Posters</h1>
-      <publication-list highlight-author="Ebert" :type-filter="['poster']"></publication-list>
+      <publication-list highlight-author="Ebert" :type-filter="['poster']"/>
     </div>
   </primary-section>
 </template>
