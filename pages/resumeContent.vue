@@ -21,7 +21,11 @@
         dates='2023 --'
         subtitle='Autonomy Lead'
         :tasks="[
-            'Lead development of autonomy software for Fleet\'s autonomous hull-cleaning robots.',
+          'Architected and implemented the software system from the ground up, including hardware selection, communication protocols (ZMQ, protobuf), DevOps (Docker, CI/CD pipeline), and user interface development, enabling Fleet\'s first on-ship robot demonstrations.',
+          'Hired and managed a team of three software engineers and supervised interns, ranging from high school to PhD level.',
+          'Designed and implemented robot control systems, safety mechanisms, and a robust logging system.',
+          'Developed robust path planning and execution systems for autonomous underwater navigation on 3D curved steel surfaces, addressing challenges of limited sensing and harsh operating conditions.',
+          'Led project planning for the software team, collaborating with product management and executive teams to align goals, manage timelines, and mitigate risks across cross-functional teams (firmware, hardware, test).',
         ]"
       />
       <cv-entry
@@ -89,12 +93,12 @@
       <cv-skill
         category="Computer Science"
         :skills="[
-        'Algorithm development', 'C/C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'MATLAB', 'JavaScript']"
+        'Algorithm development', 'C/C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
       />
       <cv-skill
         category="Engineering"
         :skills="[
-        'Computer-aided design (OnShape)', 'Electronics design (Eagle)', '3D printing', 'Laser cutting']"
+        'Computer-aided design (OnShape)', '3D printing', 'Basic PCB design', 'Laser cutting']"
       />
 
       <h2>Education</h2>

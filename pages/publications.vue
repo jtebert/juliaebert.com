@@ -11,11 +11,11 @@
         >Google Scholar</icon-button-link>
     </template>
     <div class="block-content content">
-      <h1>Dissertation</h1>
+      <h1 class="is-size-1">Dissertation</h1>
       <publication-list highlight-author="Ebert" :type-filter="['phdthesis']"/>
-      <h1>Papers</h1>
+      <h1 class="is-size-1">Papers</h1>
       <publication-list highlight-author="Ebert" :type-filter="['inproceedings', 'article']"/>
-      <h1>Conference Abstracts and Posters</h1>
+      <h1 class="is-size-1">Conference Abstracts and Posters</h1>
       <publication-list highlight-author="Ebert" :type-filter="['poster']"/>
     </div>
   </primary-section>

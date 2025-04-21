@@ -1,7 +1,8 @@
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
+// First import Bulma's initial variables and functions
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
 
-// $green: #00B140;
+// Define our custom colors and variables
 $green: #03bc25;
 $green-invert: findColorInvert($green);
 $green-light: #43e660;
@@ -27,12 +28,12 @@ $red: #f23c2b;
 $red-light: #f56558;
 $red-invert: findColorInvert($red);
 
-// $text: $white-ter;
 $text: $grey-darker;
 
+// Set derived variables BEFORE importing Bulma's derived-variables
 $primary: $green;
 $link: $primary;
-$link-invert: findColorInvert($primary);
+$link-invert: $green-invert;
 $link-hover: inherit;
 $link-focus: $white;
 $link-active: $white;
@@ -42,9 +43,9 @@ $light: $white-ter;
 $warning: $orange;
 $warning-invert: $orange-invert;
 
-$family-sans-serif: "Montserrat", sans-serif;
-$family-title: "Montserrat", "Frank Ruhl Libre", serif;
-$family-subtitle: "Space Mono", sans-serif;
+$family-sans-serif: "Montserrat", -apple-system, system-ui, sans-serif;
+$family-title: "Montserrat", serif;
+$family-subtitle: "Space Mono", monospace;
 
 $title-weight: 500;
 $subtitle-weight: $weight-normal;
@@ -58,9 +59,14 @@ $content-heading-weight: 500;
 $radius: 0;
 $small-radius: 0;
 
-// Derived variables
+// Import Bulma's derived variables AFTER setting our custom values
+@import "bulma/sass/utilities/derived-variables";
 
-@import "~bulma/sass/utilities/derived-variables";
+// Create any custom color overrides
+$custom-colors: (
+  "primary": ($primary, $primary-invert)
+);
+$colors: map-merge($colors, $custom-colors);
 
 $body-background-color: $dark;
 
@@ -69,6 +75,13 @@ $tabs-link-color: $light;
 $tabs-boxed-link-hover-background-color: $primary;
 
 $footer-background-color: $black;
+
+// Finally import the rest of Bulma
+@import "bulma/bulma";
+
+body {
+  font-family: $family-sans-serif;
+}
 
 .subtitle,
 .content .subtitle {
@@ -95,7 +108,6 @@ table {
 }
 
 // @import "~bulma/sass/utilities/mixins";
-@import "~bulma/bulma";
 
 // TESTING TRANSITIONS
 
@@ -723,25 +735,27 @@ a.button:hover {
       }
     }
 
-    #does-things.subtitle.vue-typer {
+    .typing-container {
       display: flex;
       align-items: center;
       font-size: 50px;
 
-      @include mobile {
-        font-size: 6.5vw;
+      .subtitle.typing{
+        font-size: 50px;
+        margin-bottom: 0;
+
+        @include mobile {
+          font-size: 6.5vw;
+        }
       }
 
-      .custom.char {
-        color: $primary;
-      }
-
-      .custom.caret {
+      .cursor{
+        display: block;
         background-color: $primary;
         width: 0.5em;
         height: 0.8em;
-        vertical-align: bottom;
         margin: 0.1em 0.05em;
+        animation: blink 1s step-end infinite;
       }
     }
   }
@@ -772,6 +786,15 @@ a.button:hover {
   &:not(.bg-img) {
     background: linear-gradient(to top, #121212, #13142a);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
