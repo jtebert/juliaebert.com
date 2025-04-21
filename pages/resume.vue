@@ -16,7 +16,6 @@ import IconButtonLink from "~/components/IconButtonLink.vue";
 import resumeContent from "~/pages/resumeContent.vue";
 
 export default {
-  // layout: "printable",
   components: {
     PrimarySection,
     IconButtonLink,
@@ -29,12 +28,6 @@ export default {
     return {
       title: this.title + " - " + process.env.siteTitle,
       meta: [{ hid: "resume" }],
-      // script: [
-      //   {
-      //     hid: "paged",
-      //     src: "https://unpkg.com/pagedjs/dist/paged.polyfill.js",
-      //   },
-      // ],
     };
   },
 };

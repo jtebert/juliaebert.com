@@ -73,7 +73,7 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['vue-typer', 'pagedjs']
+    transpile: ['vue-typer']
   },
 
   // Vite configuration
@@ -84,9 +84,6 @@ export default defineNuxtConfig({
           additionalData: '@import "bulma/sass/utilities/_all.sass";'
         }
       }
-    },
-    optimizeDeps: {
-      include: ['pagedjs']
     },
     server: {
       hmr: {

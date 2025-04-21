@@ -16,16 +16,16 @@
     <div class="block-content content">
       <h2>Experience</h2>
       <cv-entry
-        location="Somerville, MA"
+        location="Boston, MA"
         title="Fleet Robotics"
         dates='2023 --'
         subtitle='Autonomy Lead'
         :tasks="[
-          'Architected and implemented the software system from the ground up, including hardware selection, communication protocols (ZMQ, protobuf), DevOps (Docker, CI/CD pipeline), and user interface development, enabling Fleet\'s first on-ship robot demonstrations.',
-          'Hired and managed a team of three software engineers and supervised interns, ranging from high school to PhD level.',
-          'Designed and implemented robot control systems, safety mechanisms, and a robust logging system.',
-          'Developed robust path planning and execution systems for autonomous underwater navigation on 3D curved steel surfaces, addressing challenges of limited sensing and harsh operating conditions.',
-          'Led project planning for the software team, collaborating with product management and executive teams to align goals, manage timelines, and mitigate risks across cross-functional teams (firmware, hardware, test).',
+          'Architect and implement the software system from the ground up, including hardware selection, communication protocols (ZMQ, protobuf), DevOps (Docker, CI/CD pipeline), and user interface development, enabling Fleet\'s first on-ship robot demonstrations.',
+          'Manage a team of three software engineers and supervise high school through PhD student interns.',
+          'Design and implement robot control systems, safety mechanisms, and a robust logging system.',
+          'Develop robust path planning and execution systems for autonomous underwater navigation on 3D curved steel surfaces, addressing challenges of limited sensing and harsh operating conditions.',
+          'Lead software project planning, collaborating with product management and executives to align goals, manage timelines, and mitigate risks.',
         ]"
       />
       <cv-entry
@@ -93,7 +93,7 @@
       <cv-skill
         category="Computer Science"
         :skills="[
-        'Algorithm development', 'C/C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
+        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
       />
       <cv-skill
         category="Engineering"
@@ -169,18 +169,18 @@
       />
 
 
-      <h2>Select Publications</h2>
+      <h2 class="is-screen-only">Select Publications</h2>
 
       <p class="is-screen-only">You can view all my publications on the <nuxt-link to="/publications">Publications page.</nuxt-link></p>
 
-      <publication-list
+      <!-- <publication-list
         class="is-print-only"
         format="short"
         highlight-author="Ebert"
         :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
         :type-filter="['inproceedings', 'article']"
         :showLinks="false"
-      />
+      /> -->
       <publication-list
         class="is-screen-only"
         highlight-author="Ebert"

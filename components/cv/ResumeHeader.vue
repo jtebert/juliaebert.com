@@ -9,7 +9,7 @@
             <icon-link v-for="link in links" :key="link.text"
                 :to="link.to"
                 :icon="link.icon"
-                size="">
+                size="16px">
                 {{ link.text }}
             </icon-link>
         </div>
