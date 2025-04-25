@@ -40,75 +40,68 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    // Main header for the CV entry (eg employer)
-    title: {
-      type: String,
-      default: '',
-    },
-    // Secondary header for entry (eg position)
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    // City/state/country of the position (shown in sidebar, hidden on mobile)
-    location: {
-      type: String,
-      default: '',
-    },
-    // Optional dates for the entire position (rather than for the bulleted points)
-    dates: {
-      type: [String, Number],
-      default: '',
-    },
-    // Overall description for the position (shown in small, unbulleted text)
-    description: {
-      type: String,
-      default: '',
-    },
-    // Bulleted list of tasks/roles in the entry. Each task may be:
-    // - A String (shorthand for just the task below)
-    // - An Object containing: (optional unless noted)
-    //   - task: (required) Description of the task
-    //   - description: Additional short detail about task (will be in smaller text)
-    //   - date: Dates of task (will be in sidebar)
-    //   - link: EXTERNAL link (shown next to task)
-    //   - to: INTERNAL to website link (shown next to task). Don't use both `to` and `link`
-    tasks: {
-      type: Array,
-      default: () => [],
-    },
-    // Whether or not the tasks are bulleted
-    bulleted: {
-      type: Boolean,
-      default: true,
-    },
-    // Whether to show the task items before the description/subtitle
-    tasksFirst: {
-      type: Boolean,
-      default: false,
-    },
+<script setup>
+import { ref, computed } from 'vue';
+
+const props = defineProps({
+  // Main header for the CV entry (eg employer)
+  title: {
+    type: String,
+    default: '',
   },
-  computed: {
-    rowOffset() {
-      return 3;
-    },
-    uid() {
-      // This is a hacky way to give each CV item a pseudo-unique ID (generated
-      // at runtime) so that there are keys to make Vue happy.
-      return Math.floor((Math.random() * 2) ^ 32) + 1;
-    },
-    subtitleRow() {
-      if (this.tasksFirst) {
-        return this.tasks.length + this.rowOffset;
-      } else {
-        return this.rowOffset - 1;
-      }
-    },
+  // Secondary header for entry (eg position)
+  subtitle: {
+    type: String,
+    default: '',
   },
-};
+  // City/state/country of the position (shown in sidebar, hidden on mobile)
+  location: {
+    type: String,
+    default: '',
+  },
+  // Optional dates for the entire position (rather than for the bulleted points)
+  dates: {
+    type: [String, Number],
+    default: '',
+  },
+  // Overall description for the position (shown in small, unbulleted text)
+  description: {
+    type: String,
+    default: '',
+  },
+  // Bulleted list of tasks/roles in the entry. Each task may be:
+  // - A String (shorthand for just the task below)
+  // - An Object containing: (optional unless noted)
+  //   - task: (required) Description of the task
+  //   - description: Additional short detail about task (will be in smaller text)
+  //   - date: Dates of task (will be in sidebar)
+  //   - link: EXTERNAL link (shown next to task)
+  //   - to: INTERNAL to website link (shown next to task). Don't use both `to` and `link`
+  tasks: {
+    type: Array,
+    default: () => [],
+  },
+  // Whether or not the tasks are bulleted
+  bulleted: {
+    type: Boolean,
+    default: true,
+  },
+  // Whether to show the task items before the description/subtitle
+  tasksFirst: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const rowOffset = ref(3);
+const uid = ref(Math.floor((Math.random() * 2) ^ 32) + 1);
+const subtitleRow = computed(() => {
+  if (props.tasksFirst) {
+    return props.tasks.length + rowOffset.value;
+  } else {
+    return rowOffset.value - 1;
+  }
+});
 </script>
 
 <style>

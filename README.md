@@ -22,7 +22,7 @@ $ npm run generate
 $ npm update
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxt.com).
 
 ## Creating It
 

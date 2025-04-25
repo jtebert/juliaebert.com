@@ -50,24 +50,57 @@ It is available as a vector (SVG) or raster (PNG) image. Never use it as a JPG i
 Include files, including PNG at various sizes/colors and favicon.
 </p>
 
-<table>
-| Green                                              | Dark (Grey)                                       | White                                              | Black
-| -------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------
-| [SVG (default: 32x32)](/imgs/logos/logo-green.svg) | [SVG (default: 32x32)](/imgs/logos/logo-dark.svg) | [SVG (default: 32x32)](/imgs/logos/logo-white.svg) | [SVG (default: 32x32)](/imgs/logos/logo-black.svg)
-| [32x32](/imgs/logos/logo-green-32x32.png)          | [32x32](/imgs/logos/logo-dark-32x32.png)          | [32x32](/imgs/logos/logo-white-32x32.png)          | [32x32](/imgs/logos/logo-black-32x32.png)
-| [64x64](/imgs/logos/logo-green-64x64.png)          | [64x64](/imgs/logos/logo-dark-64x64.png)          | [64x64](/imgs/logos/logo-white-64x64.png)          | [64x64](/imgs/logos/logo-black-64x64.png)
-| [128x128](/imgs/logos/logo-green-128x128.png)      | [128x128](/imgs/logos/logo-dark-128x128.png)      | [128x128](/imgs/logos/logo-white-128x128.png)      | [128x128](/imgs/logos/logo-black-128x128.png)
-| [256x256](/imgs/logos/logo-green-256x256.png)      | [256x256](/imgs/logos/logo-dark-256x256.png)      | [256x256](/imgs/logos/logo-white-256x256.png)      | [256x256](/imgs/logos/logo-black-256x256.png)
+<table class="table is-bordered is-striped">
+  <thead>
+    <tr>
+      <th>Green</th>
+      <th>Dark (Grey)</th>
+      <th>White</th>
+      <th>Black</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/imgs/logos/logo-green.svg">SVG (default: 32x32)</a></td>
+      <td><a href="/imgs/logos/logo-dark.svg">SVG (default: 32x32)</a></td>
+      <td><a href="/imgs/logos/logo-white.svg">SVG (default: 32x32)</a></td>
+      <td><a href="/imgs/logos/logo-black.svg">SVG (default: 32x32)</a></td>
+    </tr>
+    <tr>
+      <td><a href="/imgs/logos/logo-green-32x32.png">32x32</a></td>
+      <td><a href="/imgs/logos/logo-dark-32x32.png">32x32</a></td>
+      <td><a href="/imgs/logos/logo-white-32x32.png">32x32</a></td>
+      <td><a href="/imgs/logos/logo-black-32x32.png">32x32</a></td>
+    </tr>
+    <tr>
+      <td><a href="/imgs/logos/logo-green-64x64.png">64x64</a></td>
+      <td><a href="/imgs/logos/logo-dark-64x64.png">64x64</a></td>
+      <td><a href="/imgs/logos/logo-white-64x64.png">64x64</a></td>
+      <td><a href="/imgs/logos/logo-black-64x64.png">64x64</a></td>
+    </tr>
+    <tr>
+      <td><a href="/imgs/logos/logo-green-128x128.png">128x128</a></td>
+      <td><a href="/imgs/logos/logo-dark-128x128.png">128x128</a></td>
+      <td><a href="/imgs/logos/logo-white-128x128.png">128x128</a></td>
+      <td><a href="/imgs/logos/logo-black-128x128.png">128x128</a></td>
+    </tr>
+    <tr>
+      <td><a href="/imgs/logos/logo-green-256x256.png">256x256</a></td>
+      <td><a href="/imgs/logos/logo-dark-256x256.png">256x256</a></td>
+      <td><a href="/imgs/logos/logo-white-256x256.png">256x256</a></td>
+      <td><a href="/imgs/logos/logo-black-256x256.png">256x256</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 class="is-size-2">Profile Photo</h2>
 
 <ul>
-<li>Uncropped ([original](/imgs/profile-photo/profile-orig.jpg))</li>
-<li>Square, far crop ([high res](/imgs/profile-photo/profile-square-far-lg.jpg), [lower res](/imgs/profile-photo/profile-square-far-sm.jpg))</li>
-<li>Square, close crop ([high res](/imgs/profile-photo/profile-square-near-lg.jpg), [lower res](/imgs/profile-photo/profile-square-near-sm.jpg))</li>
-<li>Portrait orientation ([high res](/imgs/profile-photo/profile-portrait-lg.jpg), [lower res](/imgs/profile-photo/profile-portrait-sm.jpg))</li>
-<li>Landscape orientation ([high res](/imgs/profile-photo/profile-landscape-lg.jpg), [lower res](/imgs/profile-photo/profile-landscape-sm.jpg))</li>
+  <li>Uncropped (<a href="/imgs/profile-photo/profile-orig.jpg">original</a>)</li>
+  <li>Square, far crop (<a href="/imgs/profile-photo/profile-square-far-lg.jpg">high res</a>, <a href="/imgs/profile-photo/profile-square-far-sm.jpg">lower res</a>)</li>
+  <li>Square, close crop (<a href="/imgs/profile-photo/profile-square-near-lg.jpg">high res</a>, <a href="/imgs/profile-photo/profile-square-near-sm.jpg">lower res</a>)</li>
+  <li>Portrait orientation (<a href="/imgs/profile-photo/profile-portrait-lg.jpg">high res</a>, <a href="/imgs/profile-photo/profile-portrait-sm.jpg">lower res</a>)</li>
+  <li>Landscape orientation (<a href="/imgs/profile-photo/profile-landscape-lg.jpg">high res</a>, <a href="/imgs/profile-photo/profile-landscape-sm.jpg">lower res</a>)</li>
 </ul>
 
     </div>
