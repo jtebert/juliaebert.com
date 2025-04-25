@@ -9,22 +9,22 @@
   </nuxt-link>
 </template>
 
-<script>
+<script setup>
 import slugify from "slugify";
+import { computed } from "vue";
 
-export default {
-  props: ["title", "link", "icon"],
-  computed: {
-    slug: function() {
-      return slugify(this.title, { lower: true });
-    },
-    icon_src: function() {
-      if (this.icon) {
-        return "/imgs/icons/" + this.icon + ".svg";
-      } else {
-        return "/imgs/icons/" + this.slug + ".svg";
-      }
-    }
+const props = defineProps({
+  title: String,
+  link: String,
+  icon: String
+});
+
+const slug = computed(() => slugify(props.title, { lower: true }));
+const icon_src = computed(() => {
+  if (props.icon) {
+    return "/imgs/icons/" + props.icon + ".svg";
+  } else {
+    return "/imgs/icons/" + slug.value + ".svg";
   }
-};
+});
 </script>

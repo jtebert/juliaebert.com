@@ -1,3 +1,22 @@
+// // Set radius variables before any Bulma imports
+// $radius: 0;
+// $radius-small: 0;
+// $radius-large: 0;
+// $radius-rounded: 0;
+
+// // Set component-specific radius variables before Bulma import
+// $card-radius: 0;
+// $button-radius: 0;
+// $notification-radius: 0;
+// $box-radius: 0;
+// $tag-radius: 0;
+// $input-radius: 0;
+// $pagination-radius: 0;
+// $panel-radius: 0;
+// $dropdown-radius: 0;
+// $modal-radius: 0;
+// $message-radius: 0;
+
 // First import Bulma's initial variables and functions
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
@@ -56,8 +75,9 @@ $subtitle-color: $primary;
 $content-heading-color: $text;
 $content-heading-weight: 500;
 
+// Set radius variables for buttons
+$radius-small: 0;
 $radius: 0;
-$small-radius: 0;
 
 // Import Bulma's derived variables AFTER setting our custom values
 @import "bulma/sass/utilities/derived-variables";
@@ -79,6 +99,10 @@ $footer-background-color: $black;
 // Finally import the rest of Bulma
 @import "bulma/bulma";
 
+// Workaround because for some reason it's complaining that
+// this variable doesn't exist
+$column-gap: 0.75rem;
+
 body {
   font-family: $family-sans-serif;
 }
@@ -96,10 +120,6 @@ body {
   margin-bottom: 1em;
 }
 
-// Workaround because for some reason it's complaining that
-// this variable doesn't exist
-$column-gap: 0.75rem;
-
 // Custom CSS
 
 table.table,
@@ -108,32 +128,6 @@ table {
 }
 
 // @import "~bulma/sass/utilities/mixins";
-
-// TESTING TRANSITIONS
-
-.page-enter-active,
-.page-leave-active,
-.layout-enter-active,
-.layout-leave-active {
-  transition: opacity 0.2s ease;
-
-  .container:not(.nav-container) {
-    transition: all 0.2s ease;
-    // transition-property: opacity, transform;
-  }
-}
-
-.page-enter,
-.page-leave-active,
-.layout-enter,
-.layout-leave-to {
-  opacity: 0;
-
-  .container:not(.nav-container) {
-    transform: scale(0.98);
-    // transform: translate(0, 16px) scale(0.9);
-  }
-}
 
 html {
   @include mobile {
@@ -625,23 +619,30 @@ a.button:hover {
 
   &#top-nav {
     background: none;
+    position: relative;
+    z-index: 1000;
 
     @include desktop {
       margin-bottom: -$navbar-height;
     }
-  }
 
-  .navbar-brand {
+    .navbar-brand,
+    .navbar-item {
+      position: relative;
+      z-index: 1000;
+      pointer-events: auto;
+    }
+
     #brand-icon {
       background-color: $primary;
       position: fixed;
       padding: 0;
       cursor: pointer;
       height: 2 * $navbar-height;
-      z-index: 0;
+      z-index: 1001;
+      pointer-events: auto;
 
       &:hover {
-        // @extend .button;
         @extend .is-primary;
         @extend .is-hovered;
         background-color: darken($primary, 2.5%);
@@ -658,7 +659,6 @@ a.button:hover {
   }
 
   #navMenu {
-    //padding: 0;
     @include touch {
       position: absolute;
       top: $navbar-height;
@@ -722,7 +722,6 @@ a.button:hover {
       }
     }
 
-    //align-items: flex-end;
     .name-title {
       text-transform: uppercase;
       font-size: 80px;
@@ -760,6 +759,10 @@ a.button:hover {
     }
   }
 
+  .hero-footer {
+    z-index: 1001;
+  }
+
   .to-rest {
     color: $white;
     opacity: 0.4;
@@ -768,6 +771,7 @@ a.button:hover {
     transition: opacity 0.2s linear;
     display: inline-block;
     padding-bottom: $gap/2;
+
 
     &:hover {
       opacity: 0.7;
@@ -1274,7 +1278,6 @@ h1#title {
 
 .pagedjs_sheet {
   background-color: #fff;
-  // border-bottom: 1px solid #666;
 }
 
 .dense-resume.is-printable {
@@ -1329,4 +1332,9 @@ h1#title {
       text-align: left;
     }
   }
+}
+
+// Direct border-radius override
+* {
+  border-radius: 0 !important;
 }

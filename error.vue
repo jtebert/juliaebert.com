@@ -4,11 +4,13 @@
   const props = defineProps({
     error: Object as () => NuxtError
   })
+
+  const error = props.error!
 </script>
 
 <template>
   <div>
-    <NuxtLayout name="default">
+    <NuxtLayout name="simple">
 
       <div class="container has-text-centered">
       <h1 v-if="error.statusCode === 404" class="error-title">Page Not Found</h1>

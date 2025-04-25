@@ -4,21 +4,15 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import resumeContent from "~/pages/resumeContent.vue";
+import { useRuntimeConfig } from '#app';
 
-export default {
-  components: {
-    resumeContent,
-  },
-  data() {
-    return { title: "Resume" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "resume" }]
-    };
-  }
-};
+const config = useRuntimeConfig();
+const title = "Resume";
+
+useHead({
+  title: `${title} - ${config.public.siteTitle}`,
+  meta: [{ hid: "resume" }]
+});
 </script>

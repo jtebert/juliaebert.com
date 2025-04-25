@@ -37,23 +37,23 @@
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue'
-  import { useRoute, useRuntimeConfig } from 'nuxt/app'
+import { ref, watch } from 'vue'
+import { useRoute, useRuntimeConfig } from 'nuxt/app'
 
-  const route = useRoute()
-  const config = useRuntimeConfig()
+const route = useRoute()
+const config = useRuntimeConfig()
 
-  const isActive = ref(false)
-  const sectionNames = ref(config.public.navItems)
+const isActive = ref(false)
+const sectionNames = ref(config.public.navItems)
 
-  watch(route, () => {
-    // Close the menu when the route changes (aka switch pages)
-    isActive.value = false
-  })
+watch(route, () => {
+  // Close the menu when the route changes (aka switch pages)
+  isActive.value = false
+})
 
-  function menuToggle() {
-    isActive.value = !isActive.value
-  }
+function menuToggle() {
+  isActive.value = !isActive.value
+}
 </script>
 
 <style lang="scss">

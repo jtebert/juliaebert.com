@@ -4,12 +4,6 @@
     subtitle="Full stack robotics"
     texture="circuit-board"
   >
-    <template #links>
-        <icon-button-link
-          to="https://ssr.seas.harvard.edu/"
-          icon="robot"
-        >SSR Group</icon-button-link>
-    </template>
     <template #intro>
       <p>I am interested in using bio-inspiration to improve robotics. Biological systems, from cellular organization to ant colonies to human society, are able to produce complex behavior and structures at scales unachievable by a (relatively simple) individual. In addition, humans and animals are able to learn and adapt much quicker than state-of-the-art robots.</p>
 
@@ -49,7 +43,7 @@
         subtitle="Advisor: Prof. Radhika Nagpal, Harvard University"
       >
         <p>Sawfly larva move together in a large aggregate, possibly giving them energetic advantages for reduced movement effort, exploiting the sensing of a few individuals, avoiding losing members of the collective, or overcoming obstacles.</p>
-        <p>I am desiging and building a group of larva-inspired robots capable of similar collective movement. These LARVAbots can maintain an aggregate as they move and overcome obstacles by exploiting the shape of the group. Currently, I am investigating whether their collective behavior can result in greater movement efficiency than the movement of individual robots.</p>
+        <p>I designed and built a group of larva-inspired robots capable of similar collective movement. These LARVAbots can maintain an aggregate as they move and overcome obstacles by exploiting the shape of the group. Currently, I am investigating whether their collective behavior can result in greater movement efficiency than the movement of individual robots.</p>
         <p>This started as a project in the MIT course How To Make (Almost) Anything. You can <a href="http://fab.cba.mit.edu/classes/863.17/Harvard/people/julia-ebert/project/">read more about the inital project development here.</a></p>
       </project>
 
@@ -58,7 +52,7 @@
         title="Cooperative Exoskeleton Control for Human Balance Recovery"
         subtitle="Advisors: Prof. Etienne Burdet and Dr. Ildar Farkhatdinov, Imperial College London"
       >
-        <p>Maintaining balance in the face of perpurbations is essential to walking and standing. For my masters thesis, I developed controls for LOPES (LOwer-extremity Powered ExoSkeleton, University of Twente) to assist humans with balance recovery after perturbations, using a combination of feed-forward and feedback control (such as hip torques and a PD controller). We found that even simple, single-joint torques are sufficient to reduce the time to a recovery movement and the energy used by subjects in recovery.</p>
+        <p>Maintaining balance in the face of perturbations is essential to walking and standing. For my masters thesis, I developed controls for LOPES (LOwer-extremity Powered ExoSkeleton, University of Twente) to assist humans with balance recovery after perturbations, using a combination of feed-forward and feedback control (such as hip torques and a PD controller). We found that even simple, single-joint torques are sufficient to reduce the time to a recovery movement and the energy used by subjects in recovery.</p>
         <template #results>
           <publication-list highlight-author="Ebert" :pub-key-filter="['ebert2016eurohaptics', 'farkhatdinov2019']"/>
         </template>

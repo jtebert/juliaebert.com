@@ -28,7 +28,7 @@
 <script>
 import PrimarySection from "~/components/PrimarySection.vue";
 import ResumeHeader from "~/components/cv/ResumeHeader.vue";
-import { Previewer } from "pagedjs";
+// import { Previewer } from "pagedjs";
 
 export default {
   components: {
@@ -49,23 +49,23 @@ export default {
   },
 };
 
-if (process.client) {
-  let paged = new Previewer();
-  document.addEventListener("DOMContentLoaded", function () {
-    let flow = paged
-      .preview(
-        "", // use everything/default
-        // document.getElementsByClassName("content is-printable")[0],
-        // ["/assets/sass/main.scss"],
-        // ["/paged.css"], // css
-        "", // use inline css (which is where main.scss ends up (in <style></style>))
-        document.body // output
-      )
-      .then((flow) => {
-        console.log("Rendered", flow.total, "pages.");
-      });
-  });
-}
+// if (process.client) {
+//   let paged = new Previewer();
+//   document.addEventListener("DOMContentLoaded", function () {
+//     let flow = paged
+//       .preview(
+//         "", // use everything/default
+//         // document.getElementsByClassName("content is-printable")[0],
+//         // ["/assets/sass/main.scss"],
+//         // ["/paged.css"], // css
+//         "", // use inline css (which is where main.scss ends up (in <style></style>))
+//         document.body // output
+//       )
+//       .then((flow) => {
+//         console.log("Rendered", flow.total, "pages.");
+//       });
+//   });
+// }
 </script>
 
 <style>

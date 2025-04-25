@@ -68,12 +68,12 @@ export default defineNuxtConfig({
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/directives.js' }
+    { src: '~/plugins/particles.client.js', mode: 'client' }
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['vue-typer']
+    transpile: ['@tsparticles/vue3']
   },
 
   // Vite configuration

@@ -9,11 +9,23 @@
         {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
         {to: "https://github.com/jtebert", icon: "github", text:"github.com/jtebert"},
         {to: "https://linkedin.com/in/jtebert", icon: "linkedin", text:"linkedin.com/in/jtebert"},
-        //{icon: "phone", text:"617-949-0214"}
+        {icon: "phone", text:"617-949-0214"}
       ]'
     />
 
     <div class="block-content content">
+      <h2>Skills</h2>
+      <cv-skill
+        category="Computer Science"
+        :skills="[
+        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
+      />
+      <cv-skill
+        category="Engineering"
+        :skills="[
+        'Computer-aided design (OnShape)', '3D printing', 'Basic PCB design', 'Laser cutting']"
+      />
+
       <h2>Experience</h2>
       <cv-entry
         location="Boston, MA"
@@ -89,18 +101,6 @@
           'Conducted human subjects experiments and presented results at Neural Control of Movement conference.']"
       ></cv-entry> -->
 
-      <h2>Skills</h2>
-      <cv-skill
-        category="Computer Science"
-        :skills="[
-        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
-      />
-      <cv-skill
-        category="Engineering"
-        :skills="[
-        'Computer-aided design (OnShape)', '3D printing', 'Basic PCB design', 'Laser cutting']"
-      />
-
       <h2>Education</h2>
       <cv-entry
         location="Cambridge, MA"
@@ -158,29 +158,29 @@
             task: '<b>Undergraduate mentor,</b> Proactive Recruitment in Science and Mathematics (PRISM)'}]"
       ></cv-entry> -->
 
-      <h2>Interests & Activities</h2>
-      <cv-skill
+      <h2 class="is-screen-only">Interests & Activities</h2>
+      <cv-skill class="is-screen-only"
         category="Outreach"
         :skills="['NPR <i>Brains On</i> podcast guest', 'FIRST Lego League judge', 'Harvard <i>Science in the News</i> public lecture']"
       />
-      <cv-skill
+      <cv-skill class="is-screen-only"
         category="Personal"
         :skills="['Curling', 'Open source 3D print models', 'Web design & development', 'Woodworking']"
       />
 
 
-      <h2 class="is-screen-only">Select Publications</h2>
+      <h2>Select Publications</h2>
 
       <p class="is-screen-only">You can view all my publications on the <nuxt-link to="/publications">Publications page.</nuxt-link></p>
 
-      <!-- <publication-list
+      <publication-list
         class="is-print-only"
         format="short"
         highlight-author="Ebert"
         :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
         :type-filter="['inproceedings', 'article']"
         :showLinks="false"
-      /> -->
+      />
       <publication-list
         class="is-screen-only"
         highlight-author="Ebert"

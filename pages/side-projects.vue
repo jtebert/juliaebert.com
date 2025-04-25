@@ -5,13 +5,6 @@
     texture="lines-in-motion"
   >
     <template #links>
-      <!-- <p class="buttons">
-      <icon-button-link
-        to="https://blog.juliaebert.com"
-        icon="pencil">
-        Blog
-      </icon-button-link>
-      </p>-->
         <icon-button-link
           to="https://docs.juliaebert.com"
           icon="text-box-multiple"
@@ -26,6 +19,20 @@
       <p>Recently, I have also gotten into the habit of <a href="https://docs.juliaebert.com/projects">documenting my projects</a> as I go, so you can also check out what I'm currently working on.</p>
     </template>
     <div>
+
+      <project
+        is-cover
+        img-src="/imgs/projects/mega-lego-minifigure.jpg"
+        title="Mega Lego Minifigures"
+      >
+        <div>
+          <tags tags="Lego, 3D Printing, CAD (OnShape)"/>
+          <p>What better way to combine my childhood love of Lego with my adult love of 3D printing? I modeled a 10x scale Lego minifigure from scratch in OnShape, and carefully designed the whole thing for 3D printing with minimal supports, robust joints, and accurate tolerances.</p>
+          <p>The design has been my biggest hit on both Makerworld and Printables, and has spawned a huge variety of remixes and accessories. It's always amazing to see my own projects spark others' creativity, and see the photos of a thrilled child holding the giant Lego minifigure their parents printed for them.</p>
+          <icon-link icon="printer-3d-nozzle" to="https://www.printables.com/model/300000-mega-lego-minifigure">View on Printables</icon-link>
+        </div>
+
+      </project>
 
       <project
         is-cover
@@ -110,10 +117,10 @@
           <tags tags="Python, Ruby, Matlab, JavaScript"/>
           <p>Suture Score is an application to provide instant, objective feedback on suturing technique to surgical trainees. To prepare for assessments and surgery, students need as much practice as possible. Using innovative image recognition techniques, Suture Score aims to enhance trainees' practice to improve their suturing skills.</p>
           <p>Suture Score was created at the NHS-sponsored TELHack hackathon, where it won first place. It's now being tested for further development and use within the NHS.</p>
-          <icon-link icon="web" :to="'https://scoremysutures.herokuapp.com/'">View website</icon-link>
+          <!-- <icon-link icon="web" :to="'https://scoremysutures.herokuapp.com/'">View website</icon-link> -->
         </div>
       </project>
-      <project
+      <!-- <project
         is-mockup
         :img-src="'/imgs/projects/sciencebait-mockup-desktop.png'"
         title="Science Clickbait"
@@ -134,8 +141,8 @@
             :to="'https://github.com/jtebert/sciencebait'"
           >View on GitHub</icon-link>
         </div>
-      </project>
-      <project
+      </project> -->
+      <!-- <project
         is-padded
         :img-src="'/imgs/projects/vroom_logo_alt.png'"
         img-align="right"
@@ -155,35 +162,23 @@
           <icon-link icon="web" :to="'https://blurber.herokuapp.com/'">Try it</icon-link>
           <icon-link icon="github" :to="'https://github.com/jtebert/blurber'">View on GitHub</icon-link>
         </div>
-      </project>
+      </project> -->
     </div>
   </primary-section>
 </template>
 
-<script>
+<script setup>
 import Tags from "~/components/Tags.vue";
 import IconLink from "~/components/IconLink.vue";
 import IconButtonLink from "~/components/IconButtonLink.vue";
 import Project from "~/components/Project.vue";
 import PrimarySection from "~/components/PrimarySection.vue";
+import { ref } from 'vue';
 
-export default {
-  components: {
-    Tags,
-    IconLink,
-    IconButtonLink,
-    Project,
-    Project,
-    PrimarySection,
-  },
-  data() {
-    return { title: "Side Projects" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "side-projects" }],
-    };
-  },
-};
+const title = ref("Side Projects");
+
+useHead({
+  title: `${title.value} - ${process.env.siteTitle}`,
+  meta: [{ hid: "side-projects" }],
+});
 </script>

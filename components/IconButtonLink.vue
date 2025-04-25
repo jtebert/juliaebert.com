@@ -12,38 +12,28 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    icon: { type: String, default: '' },
-    to: { type: String, default: '' },
-    isInternal: { type: Boolean, default: false },
-  },
-  computed: {
-    hasText: function () {
-      return this.$slots.default;
-    },
-    iconSize: function () {
-      if (this.hasText) {
-        return 24;
-      } else {
-        return 36;
-      }
-    },
-    iconClasses: function () {
-      return `mdi mdi-${this.icon} mdi-${this.iconSize}px`;
-    },
-    linkClasses: function () {
-      let classes = "button is-primary";
-      if (!this.hasText) {
-        classes += " is-large";
-      } else {
-        classes += " is-medium";
-      }
-      return classes;
-    },
-  },
-};
+<script setup>
+import { computed, useSlots } from 'vue';
+
+const props = defineProps({
+  icon: { type: String, default: '' },
+  to: { type: String, default: '' },
+  isInternal: { type: Boolean, default: false },
+});
+
+const slots = useSlots();
+const hasText = computed(() => slots.default);
+const iconSize = computed(() => hasText.value ? 24 : 36);
+const iconClasses = computed(() => `mdi mdi-${props.icon} mdi-${iconSize.value}px`);
+const linkClasses = computed(() => {
+  let classes = "button is-primary";
+  if (!hasText.value) {
+    classes += " is-large";
+  } else {
+    classes += " is-medium";
+  }
+  return classes;
+});
 </script>
 
 <style lang="scss">
