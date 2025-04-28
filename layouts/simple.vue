@@ -1,7 +1,6 @@
 <template>
   <div class="simple-layout">
     <particles/>
-
     <section id="header" class="hero is-fullheight">
       <div class="hero-head">
         <nav-bar/>

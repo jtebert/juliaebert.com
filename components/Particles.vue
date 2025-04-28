@@ -38,7 +38,6 @@ const handleParticlesLoaded = async (container) => {
 
 .particles-wrapper.fade-in {
   opacity: 1;
-  pointer-events: auto;
 }
 
 #tsparticles {

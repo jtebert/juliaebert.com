@@ -16,15 +16,16 @@
     </span>
     <span v-else>
       <span class="author" v-html="authorsFirstLast+'. '"></span>
-      <span class="year" v-if="json.year" v-html="'('+json.year+')'"></span>
+      <span class="year" v-if="json.year" v-html="'('+json.year+') '"></span>
       <span class="pubtitle" v-html="json.title+'. '"></span>
-      <span class="publisher-info" v-if="pubInfo" v-html="shortPubInfo+'.'"></span>
+      <span class="publisher-info" v-if="pubInfo" v-html="shortPubInfo+'. '"></span>
       <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link-variant is-link-only"></a></i>
     </span>
   </p>
 </template>
 
 <script>
+import { useRuntimeConfig } from '#app';
 // This is designed to be used within another component (PublicationList),
 // which passes just a dictionary of values for a particular publication. This
 // component should not be used directly.
@@ -58,7 +59,8 @@ export default {
       }
     },
     absoluteFile() {
-      return process.env.baseURL + this.file;
+      const config = useRuntimeConfig();
+      return config.public.baseURL + this.file;
     },
     file: function () {
       return "/pdfs/" + this.json.type + "/" + this.json.file;

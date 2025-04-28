@@ -9,7 +9,7 @@
         {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
         {to: "https://github.com/jtebert", icon: "github", text:"github.com/jtebert"},
         {to: "https://linkedin.com/in/jtebert", icon: "linkedin", text:"linkedin.com/in/jtebert"},
-        {icon: "phone", text:"617-949-0214"}
+        // {icon: "phone", text:"617-949-0214"}
       ]'
     />
 
@@ -18,7 +18,7 @@
       <cv-skill
         category="Computer Science"
         :skills="[
-        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript']"
+        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript', 'HTML/CSS']"
       />
       <cv-skill
         category="Engineering"
@@ -177,7 +177,7 @@
         class="is-print-only"
         format="short"
         highlight-author="Ebert"
-        :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
+        :pub-key-filter="['ebert2022', 'ebert2020icra',  'ebert2018aamas']"
         :type-filter="['inproceedings', 'article']"
         :showLinks="false"
       />
