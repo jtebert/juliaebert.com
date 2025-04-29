@@ -129,7 +129,7 @@
             ></cv-award>
             <cv-award
                 date="2010 -- 2015"
-                award="Northeastern Dean’s List (6 semesters)"
+                award="Northeastern Dean's List (6 semesters)"
                 link="http://catalog.northeastern.edu/undergraduate/academic-policies-procedures/honors/"></cv-award>
             <cv-award date="2015" award="Finalist; Rhodes, Fulbright, and Mitchell Scholarships"></cv-award>
             <!-- </div> -->
@@ -362,26 +362,14 @@
                     '3D printing', 'Web design and development', 'Graphic design', 'Writing', 'Baking']"
                 ></cv-skill>
             </div>
-
-
         </div>
     </div>
 </template>
 
-<script>
-import PublicationList from "~/components/PublicationList.vue";
-import CvEntry from "~/components/cv/CvEntry.vue";
-import CvAward from "~/components/cv/CvAward.vue";
-import CvSkill from "~/components/cv/CvSkill.vue";
-import IconLink from "~/components/IconLink.vue";
-
-export default {
-  components: {
-    PublicationList,
-    CvEntry,
-    CvAward,
-    CvSkill,
-    IconLink,
-  },
-};
+<script setup>
+import PublicationList from "~/components/PublicationList.vue"
+import CvEntry from "~/components/cv/CvEntry.vue"
+import CvAward from "~/components/cv/CvAward.vue"
+import CvSkill from "~/components/cv/CvSkill.vue"
+import IconLink from "~/components/IconLink.vue"
 </script>

@@ -30,6 +30,7 @@
           <p>What better way to combine my childhood love of Lego with my adult love of 3D printing? I modeled a 10x scale Lego minifigure from scratch in OnShape, and carefully designed the whole thing for 3D printing with minimal supports, robust joints, and accurate tolerances.</p>
           <p>The design has been my biggest hit on both Makerworld and Printables, and has spawned a huge variety of remixes and accessories. It's always amazing to see my own projects spark others' creativity, and see the photos of a thrilled child holding the giant Lego minifigure their parents printed for them.</p>
           <icon-link icon="printer-3d-nozzle" to="https://www.printables.com/model/300000-mega-lego-minifigure">View on Printables</icon-link>
+          <icon-link icon="printer-3d-nozzle" to="https://makerworld.com/en/models/48116-mega-lego-like-minifigure-10-1-scale">View on Makerworld</icon-link>
         </div>
 
       </project>
@@ -43,6 +44,7 @@
           <tags tags="3D Printing, Blender"/>
           <p>After a degree in neuroscience, I've always wanted to hold my own brain in my hands. Thanks to an MRI, some research software, and my first foray into Blender, I finally made it happen. (Bonus: the hemispheres are held together with magnets!)</p>
           <icon-link icon="printer-3d-nozzle" to="https://docs.juliaebert.com/projects/3d-print-brain">Read more</icon-link>
+          <icon-link icon="printer-3d-nozzle" to="https://www.printables.com/model/207798-full-size-human-brain">View on Printables</icon-link>
         </div>
       </project>
 
@@ -174,11 +176,14 @@ import IconButtonLink from "~/components/IconButtonLink.vue";
 import Project from "~/components/Project.vue";
 import PrimarySection from "~/components/PrimarySection.vue";
 import { ref } from 'vue';
+import { useRuntimeConfig } from '#app';
+import { usePageTitle } from '~/composables/usePageTitle';
 
 const title = ref("Side Projects");
+const config = useRuntimeConfig();
 
 useHead({
-  title: `${title.value} - ${process.env.siteTitle}`,
+  title: usePageTitle(title.value),
   meta: [{ hid: "side-projects" }],
 });
 </script>

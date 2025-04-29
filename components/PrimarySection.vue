@@ -25,29 +25,34 @@
   </div>
 </template>
 
-<script>
-import slugify from "slugify";
+<script setup>
+import { computed } from 'vue'
+import slugify from "slugify"
 
-export default {
-  props: ["texture", "title", "subtitle", "icon"],
-  computed: {
-    slug: function () {
-      return slugify(this.title, { lower: true });
-    },
-    iconSlug: function () {
-      if (this.icon) {
-        return this.icon;
-      } else {
-        return this.slug;
-      }
-    },
-    textureClass: function () {
-      if (this.texture) {
-        return "has-texture-" + this.texture;
-      } else {
-        return "";
-      }
-    },
-  },
-};
+const props = defineProps({
+  texture: String,
+  title: String,
+  subtitle: String,
+  icon: String
+})
+
+const slug = computed(() => {
+  return slugify(props.title, { lower: true })
+})
+
+const iconSlug = computed(() => {
+  if (props.icon) {
+    return props.icon
+  } else {
+    return slug.value
+  }
+})
+
+const textureClass = computed(() => {
+  if (props.texture) {
+    return "has-texture-" + props.texture
+  } else {
+    return ""
+  }
+})
 </script>

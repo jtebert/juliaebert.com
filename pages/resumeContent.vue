@@ -194,18 +194,9 @@
   <!-- Co-developed and programmed labs and assignments for upper-level undergraduate course (Turtlebot robots programmed with Python and ROS) -->
 </template>
 
-<script>
+<script setup>
 import PublicationList from "~/components/PublicationList.vue";
 import CvEntry from "~/components/cv/CvEntry.vue";
 import CvSkill from "~/components/cv/CvSkill.vue";
 import ResumeHeader from "~/components/cv/ResumeHeader.vue";
-
-export default {
-  components: {
-    PublicationList,
-    CvEntry,
-    CvSkill,
-    ResumeHeader,
-  },
-};
 </script>

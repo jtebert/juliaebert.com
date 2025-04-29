@@ -96,28 +96,18 @@
   </primary-section>
 </template>
 
-<script>
+<script setup>
 import Project from "~/components/Project.vue";
 import PublicationList from "~/components/PublicationList.vue";
 import PrimarySection from "~/components/PrimarySection.vue";
 import IconButtonLink from "~/components/IconButtonLink.vue";
+import { usePageTitle } from '~/composables/usePageTitle';
+import { ref } from 'vue';
 
-export default {
-  components: {
-    PrimarySection,
-    Project,
-    PublicationList,
-    Project,
-    IconButtonLink,
-  },
-  data() {
-    return { title: "Research" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "research" }],
-    };
-  },
-};
+const title = ref("Research");
+
+useHead({
+  title: usePageTitle(title.value),
+  meta: [{ hid: "research" }],
+});
 </script>

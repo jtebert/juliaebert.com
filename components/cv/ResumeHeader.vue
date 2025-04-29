@@ -16,17 +16,12 @@
     </div>
 </template>
 
-<script>
-import IconLink from "~/components/IconLink.vue";
+<script setup>
+import IconLink from "~/components/IconLink.vue"
 
-export default {
-  components: {
-    IconLink,
-  },
-  props: {
-    name: { type: String },
-    subtitle: { type: String },
-    links: { type: Array },
-  },
-};
+defineProps({
+  name: { type: String },
+  subtitle: { type: String },
+  links: { type: Array },
+})
 </script>

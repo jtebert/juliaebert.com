@@ -121,25 +121,16 @@
   </primary-section>
 </template>
 
-<script>
-import IconLink from "~/components/IconLink.vue";
-import Project from "~/components/Project.vue";
-import PrimarySection from "~/components/PrimarySection.vue";
+<script setup>
+import IconLink from "~/components/IconLink.vue"
+import Project from "~/components/Project.vue"
+import PrimarySection from "~/components/PrimarySection.vue"
+import { usePageTitle } from '~/composables/usePageTitle';
 
-export default {
-  components: {
-    PrimarySection,
-    Project,
-    IconLink
-  },
-  data() {
-    return { title: "Media" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "media" }]
-    };
-  }
-};
+const title = ref("Media")
+
+useHead({
+  title: usePageTitle(title.value),
+  meta: [{ hid: "media" }]
+})
 </script>

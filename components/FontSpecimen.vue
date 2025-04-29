@@ -16,18 +16,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["fontFamily", "fontWeight", "color", "backgroundColor"],
-  computed: {
-    styleObject: {
-      fontFamily: this.fontFamily,
-      fontWeight: this.fontWeight,
-      color: this.color,
-      backgroundColor: this.backgroundColor
-    }
-  }
-};
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  fontFamily: String,
+  fontWeight: String,
+  color: String,
+  backgroundColor: String
+})
+
+const styleObject = computed(() => ({
+  fontFamily: props.fontFamily,
+  fontWeight: props.fontWeight,
+  color: props.color,
+  backgroundColor: props.backgroundColor
+}))
 </script>
 
 <style lang="scss">

@@ -99,8 +99,8 @@ export default defineNuxtConfig({
       navItems: {
         'About Me': '',
         Resume: 'resume',
-        Research: 'research',
         'Side Projects': 'side-projects',
+        Research: 'research',
         Publications: 'publications',
       },
       baseURL: 'https://juliaebert.com'

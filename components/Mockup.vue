@@ -44,10 +44,11 @@
 </div>
 </template>
 
-<script>
-export default {
-  props: ["imgSrc", "mobileImgSrc"]
-};
+<script setup>
+defineProps({
+  imgSrc: String,
+  mobileImgSrc: String
+})
 </script>
 
 <style lang="scss">

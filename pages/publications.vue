@@ -21,25 +21,17 @@
   </primary-section>
 </template>
 
-<script>
+<script setup>
 import PublicationList from "~/components/PublicationList.vue";
 import PrimarySection from "~/components/PrimarySection.vue";
 import IconButtonLink from "~/components/IconButtonLink.vue";
+import { usePageTitle } from '~/composables/usePageTitle';
+import { ref } from 'vue';
 
-export default {
-  components: {
-    IconButtonLink,
-    PrimarySection,
-    PublicationList,
-  },
-  data() {
-    return { title: "Publications" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "publications" }],
-    };
-  },
-};
+const title = ref("Publications");
+
+useHead({
+  title: usePageTitle(title.value),
+  meta: [{ hid: "publications" }],
+});
 </script>

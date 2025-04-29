@@ -25,47 +25,22 @@
     </div>
 </template>
 
-<script>
-import PrimarySection from "~/components/PrimarySection.vue";
+<script setup>
 import ResumeHeader from "~/components/cv/ResumeHeader.vue";
-// import { Previewer } from "pagedjs";
+import { usePageTitle } from '~/composables/usePageTitle';
+import { ref } from 'vue';
 
-export default {
-  components: {
-    PrimarySection,
-    ResumeHeader,
-  },
-  props: ["date", "address"],
-  computed: {},
+const props = defineProps({
+  date: String,
+  address: String
+});
 
-  data() {
-    return { title: "Cover Letter" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "cover-letter" }],
-    };
-  },
-};
+const title = ref("Cover Letter");
 
-// if (process.client) {
-//   let paged = new Previewer();
-//   document.addEventListener("DOMContentLoaded", function () {
-//     let flow = paged
-//       .preview(
-//         "", // use everything/default
-//         // document.getElementsByClassName("content is-printable")[0],
-//         // ["/assets/sass/main.scss"],
-//         // ["/paged.css"], // css
-//         "", // use inline css (which is where main.scss ends up (in <style></style>))
-//         document.body // output
-//       )
-//       .then((flow) => {
-//         console.log("Rendered", flow.total, "pages.");
-//       });
-//   });
-// }
+useHead({
+  title: usePageTitle(title.value),
+  meta: [{ hid: "cover-letter" }]
+});
 </script>
 
 <style>

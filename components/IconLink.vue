@@ -4,19 +4,18 @@
   </a>
 </template>
 
-<script>
-export default {
-  props: {
-    icon: { type: String, default: "link-variant" },
-    to: { type: String, default: '' },
-    size: { type: String, default: "24px" }
-  },
-  computed: {
-    iconSize: function() {
-      return this.size ? "mdi-" + this.size : "mdi-24px";
-    }
-  }
-};
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  icon: { type: String, default: "link-variant" },
+  to: { type: String, default: '' },
+  size: { type: String, default: "24px" }
+})
+
+const iconSize = computed(() => {
+  return props.size ? "mdi-" + props.size : "mdi-24px"
+})
 </script>
 
 <style lang="scss">
