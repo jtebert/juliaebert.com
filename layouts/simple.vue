@@ -1,29 +1,20 @@
 <template>
   <div class="simple-layout">
-    <particlesJS/>
-
-    <section class="hero bg-img is-fullheight" id="header">
+    <particles/>
+    <section id="header" class="hero is-fullheight">
       <div class="hero-head">
-        <nav-bar></nav-bar>
+        <nav-bar/>
       </div>
       <div class="hero-body">
-        <nuxt/>
+        <slot />
       </div>
     </section>
-    <my-footer></my-footer>
+    <my-footer/>
   </div>
 </template>
 
-<script>
+<script setup>
 import NavBar from "~/components/NavBar.vue";
 import MyFooter from "~/components/MyFooter.vue";
-import ParticlesJS from "~/components/ParticlesJS.vue";
-
-export default {
-  components: {
-    NavBar,
-    MyFooter,
-    ParticlesJS
-  }
-};
+import Particles from "~/components/Particles.vue";
 </script>

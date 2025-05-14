@@ -5,11 +5,11 @@
     </div>
 </template>
 
-<script>
-export default {
-  props: {
-    color: { type: String },
-    showLight: { type: Boolean, default: true },
-  },
-};
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  color: { type: String },
+  showLight: { type: Boolean, default: true },
+});
 </script>

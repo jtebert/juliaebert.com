@@ -1,49 +1,39 @@
 <template>
 <div>
   <nuxt-link v-if="isInternal" :to="to" :class="linkClasses">
-    <span class="icon"><i :class="iconClasses"></i></span>
-    <span v-if="hasText"><slot></slot></span>
+    <span class="icon"><i :class="iconClasses"/></span>
+    <span v-if="hasText"><slot/></span>
   </nuxt-link>
   <!-- <a v-else :class="['button', 'is-primary', {'is-large': !hasText}, {'is-medium': hasText}]" :href="to"> -->
   <a v-else :class="linkClasses" :href="to">
-    <span class="icon"><i :class="iconClasses"></i></span>
-    <span v-if="hasText"><slot></slot></span>
+    <span class="icon"><i :class="iconClasses"/></span>
+    <span v-if="hasText"><slot/></span>
   </a>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    icon: { type: String },
-    to: { type: String },
-    isInternal: { type: Boolean, default: false },
-  },
-  computed: {
-    hasText: function () {
-      return this.$slots.default;
-    },
-    iconSize: function () {
-      if (this.hasText) {
-        return 24;
-      } else {
-        return 36;
-      }
-    },
-    iconClasses: function () {
-      return `mdi mdi-${this.icon} mdi-${this.iconSize}px`;
-    },
-    linkClasses: function () {
-      var classes = "button is-primary";
-      if (!this.hasText) {
-        classes += " is-large";
-      } else {
-        classes += " is-medium";
-      }
-      return classes;
-    },
-  },
-};
+<script setup>
+import { computed, useSlots } from 'vue';
+
+const props = defineProps({
+  icon: { type: String, default: '' },
+  to: { type: String, default: '' },
+  isInternal: { type: Boolean, default: false },
+});
+
+const slots = useSlots();
+const hasText = computed(() => slots.default);
+const iconSize = computed(() => hasText.value ? 24 : 36);
+const iconClasses = computed(() => `mdi mdi-${props.icon} mdi-${iconSize.value}px`);
+const linkClasses = computed(() => {
+  let classes = "button is-primary";
+  if (!hasText.value) {
+    classes += " is-large";
+  } else {
+    classes += " is-medium";
+  }
+  return classes;
+});
 </script>
 
 <style lang="scss">

@@ -1,62 +1,96 @@
 <template>
   <div class="body-content">
-    <!-- <section class="hero is-fullheight bg-img" id="header"> -->
-    <particlesJS/>
+    <section class="hero is-fullheight" id="header">
+      <particles/>
 
-    <section class="hero is-fullheight bg-img" id="header">
-      <div class="hero-head">
-        <nav-bar></nav-bar>
+      <div class="hero-head debug-head">
+        <nav-bar/>
       </div>
       <div class="hero-body">
         <div class="typer-title">
           <h1 class="name-title">Julia Ebert</h1>
           <client-only>
-            <vue-typer
-              class="subtitle"
-              id="does-things"
-              :pre-type-delay="600"
-              :type-delay="70"
-              :pre-erase-delay="2000"
-              erase-style="clear"
-              :text="[
-                'builds robots.',
-                'develops algorithms.',
-                // 'programs a swarm.',
-                'makes things.',
-                //'3D prints everything.'
-              ]"
-            ></vue-typer>
+            <div class="typing-container">
+              <span id="does-things"  class="subtitle typing">
+                <span id="typing-element" ref="typingElement"/>
+              </span>
+              <span class="cursor"/>
+            </div>
           </client-only>
         </div>
       </div>
       <div class="hero-footer has-text-centered">
-        <i class="mdi mdi-chevron-down to-rest" v-scroll-to="'#main'"></i>
+        <i @click="scrollToMain" class="mdi mdi-chevron-down to-rest" style="cursor: pointer;"/>
       </div>
     </section>
-    <div id="main">
-      <nuxt/>
+    <div id="main" ref="mainElement">
+      <slot />
     </div>
-    <my-footer></my-footer>
+    <my-footer/>
   </div>
 </template>
 
-<script>
+<script setup>
 import NavBar from "~/components/NavBar.vue";
 import MyFooter from "~/components/MyFooter.vue";
-import ParticlesJS from "~/components/ParticlesJS.vue";
+import Particles from "~/components/Particles.vue";
+import { ref, onMounted, nextTick } from 'vue';
 
-// if (process.browser) {
-//   require "~/plugins/particles."
-// }
-
-export default {
-  components: {
-    NavBar,
-    MyFooter,
-    ParticlesJS,
-  },
+const typingElement = ref(null);
+const mainElement = ref(null);
+const scrollToMain = () => {
+  if (mainElement.value) {
+    mainElement.value.scrollIntoView({ behavior: 'smooth' });
+  }
 };
-</script>
 
-<style lang="scss">
-</style>
+
+const strings = [
+  'builds robots.',
+  'develops algorithms.',
+  'makes things.'
+];
+let currentStringIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+const typingSpeed = 70;
+const delayBetweenStrings = 2000;
+
+onMounted(async () => {
+  if (import.meta.client) {
+    await nextTick();
+    if (typingElement.value) {
+      type();
+    }
+  }
+});
+
+function type() {
+  if (!typingElement.value) {
+    return;
+  }
+
+  const currentString = strings[currentStringIndex];
+
+  if (isDeleting) {
+    // Instant deletion
+    typingElement.value.textContent = '';
+    currentCharIndex = 0;
+    isDeleting = false;
+    currentStringIndex = (currentStringIndex + 1) % strings.length;
+    setTimeout(type, typingSpeed);
+  } else {
+    typingElement.value.textContent = currentString.substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+
+    if (currentCharIndex === currentString.length) {
+      setTimeout(() => {
+        isDeleting = true;
+        type();
+      }, delayBetweenStrings);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
+  }
+}
+</script>

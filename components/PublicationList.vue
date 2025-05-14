@@ -2,101 +2,80 @@
   <div class="publication-list">
     <publication
       v-for="pub in publications"
-      :json="pub"
       :key="pub.key"
+      :json="pub"
       :highlightAuthor="highlightAuthor"
       :format="format"
       :showLink="showLinks"
-    ></publication>
+    />
   </div>
 </template>
 
-<script>
-import Publication from "~/components/Publication";
-// https://stackoverflow.com/a/47958533
-import citations from "~/assets/publications.json";
-import _ from "lodash";
+<script setup>
+import { computed, ref } from 'vue'
+import Publication from "~/components/Publication.vue"
+import citationsData from "~/assets/publications.json"
+import _ from "lodash"
 
-export default {
-  props: {
-    typeFilter: Array,
-    pubKeyFilter: Array,
-    keywordFilter: Array,
-    showYears: {
-      type: Boolean,
-      default: false,
-    },
-    highlightAuthor: String,
-    showLinks: {
-      type: Boolean,
-      default: true,
-    },
-    format: {
-      type: String,
-      default: "full",
-    },
+const props = defineProps({
+  typeFilter: Array,
+  pubKeyFilter: Array,
+  keywordFilter: Array,
+  showYears: {
+    type: Boolean,
+    default: false,
   },
-  data() {
-    return {
-      citations: citations,
-    };
+  highlightAuthor: String,
+  showLinks: {
+    type: Boolean,
+    default: true,
   },
-  components: {
-    Publication,
+  format: {
+    type: String,
+    default: "full",
   },
-  computed: {
-    publications: function () {
-      // Get an array of all the publications from the file that match the specification
-      // NB: The output does not retain the pubKeys
-      // Filter the citation keys based on all the specified filters
-      // Then map these keys to their corresponding values
-      //   console.log(this.citations);
-      //sorted = this.publicationsByYear();
-      var ret = Object.keys(this.citations)
-        .filter((key) => this.pubFilter(key, this.citations[key]))
-        .map((key) => {
-          var val = this.citations[key];
-          val.key = key;
-          return val;
-        });
-      var ret_sorted = _.sortBy(ret, [(pub) => -pub.year]);
-      return ret_sorted;
-    },
-    publicationsByYear: function () {
-      // Key the publications into an object by year (to be used if showYears is true)
-      var pub_year_obj = this.publications.reduce((o, val) => {
-        o[val.year] += [val];
-        return o;
-      }, {});
-      // Then return a sorted list by year, in descending order (newest to oldest)
-      return Object.keys(pub_year_obj)
-        .map((year) => {
-          var p = {};
-          p["publications"] = pub_year_obj[year];
-          p["year"] = year;
-          return p;
-        })
-        .sort((a, b) => b.year - a.year);
-    },
-  },
-  methods: {
-    pubFilter(key, pub) {
-      // Check whether the publication meets all the filter requirements
-      return (
-        (!this.pubKeyFilter || // If there's a pubKey filter...
-          this.pubKeyFilter.includes(key)) && // ... the filter must include this pub's key
-        (!this.typeFilter || // And if there's a type filter...
-          this.typeFilter.includes(pub.type)) && // ... the filter must include this pub's type
-        (!this.keywordFilter || // And if there's a keyword filter...
-          (pub.keywords && // ... the pub must have keywords and ...
-            // ...there must be a non-empty intersection between the keyword filter
-            //    and the pub's keywords
-            this.keywordFilter.filter((v) => pub.keywords.includes(v)).length >
-              0))
-      );
-    },
-  },
-};
+})
+
+const citations = ref(citationsData)
+
+const publications = computed(() => {
+  const ret = Object.keys(citations.value)
+    .filter((key) => pubFilter(key, citations.value[key]))
+    .map((key) => {
+      const val = citations.value[key]
+      val.key = key
+      return val
+    })
+  const ret_sorted = _.sortBy(ret, [(pub) => -pub.year])
+  return ret_sorted
+})
+
+const publicationsByYear = computed(() => {
+  const pub_year_obj = publications.value.reduce((o, val) => {
+    o[val.year] += [val]
+    return o
+  }, {})
+  return Object.keys(pub_year_obj)
+    .map((year) => {
+      const p = {}
+      p["publications"] = pub_year_obj[year]
+      p["year"] = year
+      return p
+    })
+    .sort((a, b) => b.year - a.year)
+})
+
+function pubFilter(key, pub) {
+  return (
+    (!props.pubKeyFilter ||
+      props.pubKeyFilter.includes(key)) &&
+    (!props.typeFilter ||
+      props.typeFilter.includes(pub.type)) &&
+    (!props.keywordFilter ||
+      (pub.keywords &&
+        props.keywordFilter.filter((v) => pub.keywords.includes(v)).length > 0))
+  )
+}
 </script>
 
 <style lang="scss">

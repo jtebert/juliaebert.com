@@ -9,18 +9,17 @@
     </div>
 </template>
 
-<script>
-export default {
-  props: {
-    category: { type: String },
-    skills: { type: Array },
-  },
-  computed: {
-    skillsHTML() {
-      return this.skills.join(" &bull; ");
-    },
-  },
-};
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  category: { type: String },
+  skills: { type: Array },
+})
+
+const skillsHTML = computed(() => {
+  return props.skills.join(" &bull; ")
+})
 </script>
 
 <style lang="scss">

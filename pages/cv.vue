@@ -10,25 +10,15 @@
   </primary-section>
 </template>
 
-<script>
-import PrimarySection from "~/components/PrimarySection.vue";
-import IconButtonLink from "~/components/IconButtonLink.vue";
-import cvContent from "~/pages/cvContent.vue";
+<script setup>
+import PrimarySection from "~/components/PrimarySection.vue"
+import IconButtonLink from "~/components/IconButtonLink.vue"
+import cvContent from "~/pages/cvContent.vue"
 
-export default {
-  components: {
-    PrimarySection,
-    IconButtonLink,
-    cvContent,
-  },
-  data() {
-    return { title: "CV" };
-  },
-  head() {
-    return {
-      title: this.title + " - " + process.env.siteTitle,
-      meta: [{ hid: "cv" }],
-    };
-  },
-};
+const title = ref("CV")
+
+useHead({
+  title: title.value + " - " + process.env.siteTitle,
+  meta: [{ hid: "cv" }],
+})
 </script>
