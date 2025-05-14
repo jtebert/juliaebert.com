@@ -14,33 +14,32 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    imgSrcs: Array,
-    imgDir: {
-      type: String,
-      default: "/imgs"
-    }
-  },
-  methods: {
-    img: function(imgSrc) {
-      if (Array.isArray(imgSrc)) {
-        return imgSrc[0];
-      } else {
-        return imgSrc;
-      }
-    },
-    caption: function(imgSrc) {
-      if (Array.isArray(imgSrc)) {
-        return imgSrc[1];
-      }
-    },
-    source: function(imgSrc) {
-      if (Array.isArray(imgSrc)) {
-        return imgSrc[2];
-      }
-    }
+<script setup>
+const props = defineProps({
+  imgSrcs: Array,
+  imgDir: {
+    type: String,
+    default: "/imgs"
+  }
+});
+
+const img = (imgSrc) => {
+  if (Array.isArray(imgSrc)) {
+    return imgSrc[0];
+  } else {
+    return imgSrc;
+  }
+};
+
+const caption = (imgSrc) => {
+  if (Array.isArray(imgSrc)) {
+    return imgSrc[1];
+  }
+};
+
+const source = (imgSrc) => {
+  if (Array.isArray(imgSrc)) {
+    return imgSrc[2];
   }
 };
 </script>

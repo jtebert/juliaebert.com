@@ -6,13 +6,12 @@
   </p>
 </template>
 
-<script>
-export default {
-  props: ["tags"],
-  computed: {
-    tagList: function() {
-      return this.tags.split(",").map(t => t.trim());
-    }
-  }
-};
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  tags: String
+});
+
+const tagList = computed(() => props.tags.split(",").map(t => t.trim()));
 </script>

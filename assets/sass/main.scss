@@ -1,51 +1,70 @@
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
+// // Set radius variables before any Bulma imports
+// $radius: 0;
+// $radius-small: 0;
+// $radius-large: 0;
+// $radius-rounded: 0;
 
-// $green: #00B140;
-$green: #03BC25;
+// // Set component-specific radius variables before Bulma import
+// $card-radius: 0;
+// $button-radius: 0;
+// $notification-radius: 0;
+// $box-radius: 0;
+// $tag-radius: 0;
+// $input-radius: 0;
+// $pagination-radius: 0;
+// $panel-radius: 0;
+// $dropdown-radius: 0;
+// $modal-radius: 0;
+// $message-radius: 0;
+
+// First import Bulma's initial variables and functions
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
+// Define our custom colors and variables
+$green: #03bc25;
 $green-invert: findColorInvert($green);
-$green-light: #43E660;
+$green-light: #43e660;
 $green-light-invert: findColorInvert($green-light);
 
-$cyan: #2FD7DA;
-$cyan-light: #78E9EB;
+$cyan: #2fd7da;
+$cyan-light: #78e9eb;
 $cyan-invert: findColorInvert($cyan);
 
-$blue: #3A93F2;
-$blue-light: #71B7FC;
+$blue: #3a93f2;
+$blue-light: #71b7fc;
 $blue-invert: findColorInvert($blue);
 
-$orange: #F18F01;
-$orange-light: #FFAC30;
+$orange: #f18f01;
+$orange-light: #ffac30;
 $orange-invert: findColorInvert($orange);
 
-$purple: #9246F4;
-$purple-light: #B569FA;
+$purple: #9246f4;
+$purple-light: #b569fa;
 $purple-invert: findColorInvert($purple);
 
-$red: #F23C2B;
-$red-light: #F56558;
+$red: #f23c2b;
+$red-light: #f56558;
 $red-invert: findColorInvert($red);
 
-// $text: $white-ter;
 $text: $grey-darker;
 
+// Set derived variables BEFORE importing Bulma's derived-variables
 $primary: $green;
 $link: $primary;
-$link-invert: findColorInvert($primary);
+$link-invert: $green-invert;
 $link-hover: inherit;
 $link-focus: $white;
 $link-active: $white;
 $dark: $black-bis;
 $light: $white-ter;
 
-
 $warning: $orange;
 $warning-invert: $orange-invert;
 
-$family-sans-serif: 'Montserrat', sans-serif;
-$family-title: 'Montserrat', 'Frank Ruhl Libre', serif;
-$family-subtitle: 'Space Mono', sans-serif;
+$family-sans-serif: "Montserrat", -apple-system, system-ui, sans-serif;
+$family-title: "Montserrat", serif;
+$family-subtitle: "Space Mono", monospace;
 
 $title-weight: 500;
 $subtitle-weight: $weight-normal;
@@ -56,13 +75,18 @@ $subtitle-color: $primary;
 $content-heading-color: $text;
 $content-heading-weight: 500;
 
+// Set radius variables for buttons
+$radius-small: 0;
 $radius: 0;
-$small-radius: 0;
 
+// Import Bulma's derived variables AFTER setting our custom values
+@import "bulma/sass/utilities/derived-variables";
 
-// Derived variables
-
-@import "~bulma/sass/utilities/derived-variables";
+// Create any custom color overrides
+$custom-colors: (
+  "primary": ($primary, $primary-invert)
+);
+$colors: map-merge($colors, $custom-colors);
 
 $body-background-color: $dark;
 
@@ -71,6 +95,17 @@ $tabs-link-color: $light;
 $tabs-boxed-link-hover-background-color: $primary;
 
 $footer-background-color: $black;
+
+// Finally import the rest of Bulma
+@import "bulma/bulma";
+
+// Workaround because for some reason it's complaining that
+// this variable doesn't exist
+$column-gap: 0.75rem;
+
+body {
+  font-family: $family-sans-serif;
+}
 
 .subtitle,
 .content .subtitle {
@@ -85,11 +120,6 @@ $footer-background-color: $black;
   margin-bottom: 1em;
 }
 
-// Workaround because for some reason it's complaining that
-// this variable doesn't exist
-$column-gap: 0.75rem;
-
-
 // Custom CSS
 
 table.table,
@@ -98,36 +128,6 @@ table {
 }
 
 // @import "~bulma/sass/utilities/mixins";
-@import "~bulma/bulma";
-
-
-
-// TESTING TRANSITIONS
-
-.page-enter-active,
-.page-leave-active,
-.layout-enter-active,
-.layout-leave-active {
-  transition: opacity .2s ease;
-
-  .container:not(.nav-container) {
-    transition: all .2s ease;
-    // transition-property: opacity, transform;
-  }
-}
-
-.page-enter,
-.page-leave-active,
-.layout-enter,
-.layout-leave-to {
-  opacity: 0;
-
-  .container:not(.nav-container) {
-    transform: scale(0.98);
-    // transform: translate(0, 16px) scale(0.9);
-  }
-}
-
 
 html {
   @include mobile {
@@ -142,7 +142,7 @@ html {
 }
 
 .strikethrough:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 60%;
@@ -151,7 +151,6 @@ html {
   left: 0;
   border-bottom: 2px solid;
 }
-
 
 p a:hover {
   text-decoration: underline;
@@ -259,7 +258,6 @@ a.button:hover {
   }
 }
 
-
 .section.is-content {
   padding: 3rem 2rem;
 }
@@ -267,7 +265,6 @@ a.button:hover {
 .tag {
   font-weight: 500;
 }
-
 
 // CV STUFF
 
@@ -278,7 +275,7 @@ a.button:hover {
   }
 
   @include mobile {
-    grid-row: (2*$var)-1;
+    grid-row: (2 * $var)-1;
   }
 }
 
@@ -288,7 +285,7 @@ a.button:hover {
   }
 
   @include mobile {
-    grid-row: 2*$var;
+    grid-row: 2 * $var;
   }
 }
 
@@ -310,11 +307,10 @@ a.button:hover {
 
   @include mobile {
     padding-left: calc(0.5rem + 2.15em);
-    ;
     text-indent: calc(-0.5rem - 2.15em);
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 
-    >* {
+    > * {
       display: inline;
     }
 
@@ -338,7 +334,6 @@ a.button:hover {
 .cv-entry,
 .cv-skill,
 .cv-award {
-
   // display: grid;
   @include tablet {
     grid-column-gap: $column-gap * 2;
@@ -448,26 +443,25 @@ a.button:hover {
 }
 
 @media print {
-
   // Resets
   .is-print-only {
-    display: inherit
+    display: inherit;
   }
 
   .is-screen-only {
-    display: none
+    display: none;
   }
 
   footer {
-    display: none
+    display: none;
   }
 
   img.icon-block {
-    display: none
+    display: none;
   }
 
   .navbar {
-    display: none
+    display: none;
   }
 
   .cv-entry,
@@ -481,7 +475,7 @@ a.button:hover {
     }
 
     * {
-      box-shadow: none !important
+      box-shadow: none !important;
     }
 
     .container {
@@ -522,7 +516,7 @@ a.button:hover {
     h2 {
       font-size: 2em;
       font-family: $family-subtitle;
-      color: $primary  !important;
+      color: $primary !important;
     }
 
     .cv-award {
@@ -537,7 +531,6 @@ a.button:hover {
     .cv-entry,
     .cv-skill,
     .cv-award {
-
       // Fixes too-wide gap for paged.js printing
       @include tablet {
         grid-column-gap: $column-gap;
@@ -599,11 +592,11 @@ a.button:hover {
       }
 
       h2 {
-        color: $black  !important;
+        color: $black !important;
         font-family: $family-sans-serif;
         margin-top: 1em;
         font-size: 1.75em;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         padding-bottom: 0.35em;
       }
     }
@@ -613,7 +606,6 @@ a.button:hover {
     }
   }
 }
-
 
 // LAYOUT: ALT
 
@@ -627,23 +619,33 @@ a.button:hover {
 
   &#top-nav {
     background: none;
+    position: relative;
+    z-index: 1000;
 
     @include desktop {
       margin-bottom: -$navbar-height;
     }
-  }
 
-  .navbar-brand {
+    .navbar-brand,
+    .navbar-item {
+      position: relative;
+      z-index: 1000;
+      pointer-events: auto;
+    }
+
     #brand-icon {
       background-color: $primary;
       position: fixed;
       padding: 0;
       cursor: pointer;
-      height: 2* $navbar-height;
-      z-index: 0;
+      height: 2 * $navbar-height;
+      z-index: 1001;
+      pointer-events: auto;
 
       &:hover {
-        @extend .button.is-primary.is-hovered;
+        @extend .is-primary;
+        @extend .is-hovered;
+        background-color: darken($primary, 2.5%);
       }
 
       @include mobile {
@@ -657,8 +659,6 @@ a.button:hover {
   }
 
   #navMenu {
-
-    //padding: 0;
     @include touch {
       position: absolute;
       top: $navbar-height;
@@ -681,12 +681,11 @@ a.button:hover {
     }
   }
 
-  .navbar-item.nuxt-link-exact-active {
-
+  .navbar-item.router-link-exact-active {
     // Hacky highlighting of current page
     // color: $primary !important;
     @include desktop {
-      border-top: 4px solid $primary  !important;
+      border-top: 4px solid $primary !important;
     }
 
     padding-top: calc(0.5rem - 4px);
@@ -694,7 +693,6 @@ a.button:hover {
 }
 
 .hero {
-
   .typer-title {
     z-index: 4;
     display: flex;
@@ -705,7 +703,7 @@ a.button:hover {
 
     flex-direction: column;
 
-    >* {
+    > * {
       margin: 3rem $gap 0 $gap;
       line-height: 1em;
 
@@ -724,7 +722,6 @@ a.button:hover {
       }
     }
 
-    //align-items: flex-end;
     .name-title {
       text-transform: uppercase;
       font-size: 80px;
@@ -737,37 +734,44 @@ a.button:hover {
       }
     }
 
-    #does-things.subtitle.vue-typer {
+    .typing-container {
       display: flex;
       align-items: center;
       font-size: 50px;
 
-      @include mobile {
-        font-size: 6.5vw;
+      .subtitle.typing{
+        font-size: 50px;
+        margin-bottom: 0;
+
+        @include mobile {
+          font-size: 6.5vw;
+        }
       }
 
-      .custom.char {
-        color: $primary;
-      }
-
-      .custom.caret {
+      .cursor{
+        display: block;
         background-color: $primary;
         width: 0.5em;
         height: 0.8em;
-        vertical-align: bottom;
         margin: 0.1em 0.05em;
+        animation: blink 1s step-end infinite;
       }
     }
   }
 
+  .hero-footer {
+    z-index: 1001;
+  }
+
   .to-rest {
     color: $white;
-    opacity: .4;
+    opacity: 0.4;
     font-size: 92px;
     cursor: pointer;
     transition: opacity 0.2s linear;
     display: inline-block;
     padding-bottom: $gap/2;
+
 
     &:hover {
       opacity: 0.7;
@@ -789,6 +793,15 @@ a.button:hover {
   }
 }
 
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 #particles-js {
   position: absolute;
   display: block;
@@ -797,17 +810,8 @@ a.button:hover {
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  //background: #000000;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
-// #particles-js {
-//   width: 100%;
-//   height: 100%;
-//   background: cornflowerblue;
-// }
 
 // LAYOUT: SIMPLE (for error pages, zB)
 .simple-layout {
@@ -829,7 +833,7 @@ a.button:hover {
 
 // COMPONENT : MOCKUP
 .mockup {
-  margin: 2* $column-gap;
+  margin: 2 * $column-gap;
 
   svg {
     width: 100%;
@@ -890,7 +894,7 @@ $icon-block-size-touch: 6rem;
     @include desktop {
       min-height: $icon-block-size + 4rem;
       // padding-left: $icon-block-size / 2 + 2rem;
-      padding: 3*$column-gap 4*$column-gap;
+      padding: 3 * $column-gap 4 * $column-gap;
     }
 
     &.content {
@@ -925,15 +929,15 @@ $icon-block-size-touch: 6rem;
           align-self: center;
         }
 
-        .title-block-links>* {
+        .title-block-links > * {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-end;
-          margin-left: 2*$column-gap;
+          margin-left: 2 * $column-gap;
 
           @include mobile {
-            margin-top: 2*$column-gap;
+            margin-top: 2 * $column-gap;
             margin-left: 0;
             align-items: center;
           }
@@ -971,7 +975,7 @@ $icon-block-size-touch: 6rem;
 
     @include mobile {
       top: -0.5 * $icon-block-size-touch;
-      left: calc(50% - #{$icon-block-size-touch}/2);
+      left: calc(50% - #{$icon-block-size-touch}/ 2);
     }
   }
 
@@ -1061,7 +1065,7 @@ $icon-block-size-touch: 6rem;
       flex-direction: row-reverse;
 
       .section-content {
-        padding-left: 4*$column-gap;
+        padding-left: 4 * $column-gap;
       }
     }
   }
@@ -1071,7 +1075,7 @@ $icon-block-size-touch: 6rem;
       flex-direction: row;
 
       .section-content {
-        padding-right: 4*$column-gap;
+        padding-right: 4 * $column-gap;
       }
     }
   }
@@ -1086,7 +1090,7 @@ $icon-block-size-touch: 6rem;
     }
 
     &.is-padded {
-      padding: 2* $column-gap;
+      padding: 2 * $column-gap;
     }
 
     &.is-cover {
@@ -1104,11 +1108,11 @@ $icon-block-size-touch: 6rem;
 
   .section-content {
     width: 60%;
-    padding: 3*$column-gap 2*$column-gap;
+    padding: 3 * $column-gap 2 * $column-gap;
 
     @include mobile {
       width: 100%;
-      padding: 2*$column-gap;
+      padding: 2 * $column-gap;
     }
 
     .title.results-title {
@@ -1236,12 +1240,11 @@ $icon-block-size-touch: 6rem;
   }
 }
 
-
 @page {
   /* size: 148mm 210mm; */
   size: 8.5in 11in;
   margin: 0.55in;
-  margin-bottom: .5in;
+  margin-bottom: 0.5in;
   // margin-top: 0.5in;
   background-color: white;
 
@@ -1267,9 +1270,7 @@ h1#title {
 
 .pagedjs_sheet {
   background-color: #fff;
-  // border-bottom: 1px solid #666;
 }
-
 
 .dense-resume.is-printable {
   line-height: 1.35em;
@@ -1279,13 +1280,13 @@ h1#title {
 
     .name h1 {
       font-size: 2.5em;
-      margin-bottom: .1em;
+      margin-bottom: 0.1em;
     }
   }
 
   .resume {
     h2 {
-      margin-top: .5em;
+      margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 1.5em;
     }
@@ -1323,4 +1324,9 @@ h1#title {
       text-align: left;
     }
   }
+}
+
+// Direct border-radius override
+* {
+  border-radius: 0 !important;
 }

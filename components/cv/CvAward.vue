@@ -5,21 +5,22 @@
     </div>
 </template>
 
-<script>
-export default {
-  props: ["date", "award", "link"],
-  computed: {
-    award_link: function() {
-      if (this.link) {
-        // var tmp = `<a href='${this.link}'>${this.award}</a>`;
-        var tmp = `${this.award} <a href='${this.link}'><i class="link mdi mdi-link-variant"></i></a>`;
-        return tmp;
-      } else {
-        return this.award;
-      }
-    }
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  date: String,
+  award: String,
+  link: String
+})
+
+const award_link = computed(() => {
+  if (props.link) {
+    return `${props.award} <a href='${props.link}'><i class="link mdi mdi-link-variant"></i></a>`
+  } else {
+    return props.award
   }
-};
+})
 </script>
 
 <style lang="scss">

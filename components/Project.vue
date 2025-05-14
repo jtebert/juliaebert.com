@@ -18,40 +18,32 @@
       <div class="content">
         <slot></slot>
       </div>
-      <div v-if="this.$slots.links"></div>
-      <div v-if="this.$slots.results">
+      <div v-if="$slots.links"/>
+      <div v-if="$slots.results">
         <h3 class="results-title title is-5">Some Results</h3>
-        <slot name="results"></slot>
+        <slot name="results"/>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import Mockup from "~/components/Mockup.vue";
 import slugify from "slugify";
+import { computed, useSlots } from 'vue';
 
-export default {
-  props: {
-    imgSrc: String,
-    videoSrc: String,
-    mobileImgSrc: String,
-    title: String,
-    subtitle: String,
-    isMockup: { type: Boolean, default: false },
-    isPadded: { type: Boolean, default: false },
-    isCover: { type: Boolean, default: false }
-  },
-  computed: {
-    imgless: function() {
-      return !(this.imgSrc || this.videoSrc);
-    },
-    slug: function() {
-      return slugify(this.title, { lower: true });
-    }
-  },
-  components: {
-    Mockup
-  }
-};
+const props = defineProps({
+  imgSrc: String,
+  videoSrc: String,
+  mobileImgSrc: String,
+  title: String,
+  subtitle: String,
+  isMockup: { type: Boolean, default: false },
+  isPadded: { type: Boolean, default: false },
+  isCover: { type: Boolean, default: false }
+});
+
+const slots = useSlots();
+const imgless = computed(() => !(props.imgSrc || props.videoSrc));
+const slug = computed(() => slugify(props.title, { lower: true }));
 </script>

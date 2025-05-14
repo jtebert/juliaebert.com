@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
@@ -13,7 +13,7 @@ $ npm run dev
 
 # build for production and launch server
 $ npm run build
-$ npm start
+$ npm run start
 
 # generate static project
 $ npm run generate
@@ -22,7 +22,7 @@ $ npm run generate
 $ npm update
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxt.com).
 
 ## Creating It
 
@@ -33,7 +33,7 @@ setup (including deploying to Netlify)](https://scotch.io/tutorials/build-a-serv
 
 ## Modifying It
 
-*A summary of the main components.*
+_A summary of the main components._
 
 ### Site Config (`nuxt.config.js`)
 
@@ -43,7 +43,7 @@ Particularly for this site setup are the `navItems` found under `env`. This uses
 
 ### Icons
 
-By default, the icons that appear throughout the site are determined by matching the slug of the section title (hacky, I know). Icons are pulled from `/static/imgs/icons`, so you just need to put in SVG file there with a name matching the page slug. To see the details or change this, look at `/components/PrimarySection.vue`. Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/static/imgs/icons/hello.svg`.
+By default, the icons that appear throughout the site are determined by matching the slug of the section title (hacky, I know). Icons are pulled from `/public/imgs/icons`, so you just need to put in SVG file there with a name matching the page slug. To see the details or change this, look at `/components/PrimarySection.vue`. Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/public/imgs/icons/hello.svg`.
 
 ### Home
 
@@ -57,7 +57,7 @@ The particles specifications are in `assets/particles.json`. You can generate/cu
 
 The list of publications that can be used in a `PublicationList` component are stored as a JSON file in `/assets/publications.json`. It's essentially a hacky JSON version of `.bib` files. The contents are formatted into something that roughly approximates the ACM citation format. This can be modified in `/components/Publication.vue`.
 
-Note that each entry can contain a `file` option; this should specify a relative location to `/static/pdfs/<TYPE>`, where `<TYPE>` is the type of publication (e.g., `inproceedings`, `poster`, article`). All PDFs of papers/posters should be placed in these folders.
+Note that each entry can contain a `file` option; this should specify a relative location to `/public/pdfs/<TYPE>`, where `<TYPE>` is the type of publication (e.g., `inproceedings`, `poster`, article`). All PDFs of papers/posters should be placed in these folders.
 
 ### Footer
 
@@ -95,11 +95,12 @@ The primary section is (as described above), basically the root component of the
 
 The title and subtitle are specified as props in the `<primary-section>` component. This component also specifies the background texture of the page with the `texture` prop. If no texture is given, it will be a plain color.
 
-Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/static/imgs/icons/hello.svg`. If you don't specify the `icon`, it will match the slug of the section title.
+Within a `PrimarySection`, you can change the icon using the `icon` property (specifying the name of an SVG file, with no extension, in `imgs/icons`) -- e.g., use `icon='hello'` to use the file `/public/imgs/icons/hello.svg`. If you don't specify the `icon`, it will match the slug of the section title.
 
 The intro text is a slot within the component, used as `<div slot="intro">...` This lets you do multiple paragraphs or longer text content.
 
 You can also include button links in the top of the page with the `link` slot. Within each of these, you can include multile `<icon-button-links>`, which are used like:
+
 ```HTML
 <icon-button-link
     to="/path/to/target"
@@ -107,6 +108,7 @@ You can also include button links in the top of the page with the `link` slot. W
     Button Text
 </icon-button-link>
 ```
+
 where the icon is a [Material Design Icon](https://materialdesignicons.com/). The `to` path can be relative or absolute; it's basically an `href`.
 
 All other components on a default layout page should be children of this element (within a single div, because it's going into a Vue `slot`).
@@ -126,10 +128,13 @@ If you include an image, you can also choose how it will be formatted. There are
 Videos will also be subjected to the `is-cover` prop, but not `is-mockup`. These will be shown like a GIF: autoplaying, looping, and muted. This is preferred to using a GIF because of its much smaller file size and better video/image quality.
 
 The main slot of the Project is used for describing the project, and may also include tags and links. Tags are just little blocks with text; they're not even links to anything. To use multiple tags, just separate them with a comma:
+
 ```HTML
 <tags tags="Python, Django, Wagtail CMS"></tags>
 ```
+
 To include nicely-formatted links with Material Design Icons, use the `<icon-link>` component:
+
 ```HTML
 <icon-link
     icon="github"
@@ -139,6 +144,7 @@ To include nicely-formatted links with Material Design Icons, use the `<icon-lin
 ```
 
 Finally, the Project has a slot for `results`, which is a formatted section to include a short filtered PublicationList (more below). It might look something like this:
+
 ```HTML
 <div slot="results">
     <publication-list
@@ -170,7 +176,7 @@ Separate sections with H2 headers, as these are what is used for making nice for
 
 For all components, date ranges should be separated with `--`, which will be re-formatted to the "correct" endash.
 
-*Note: The CV components are all done with CSS `flex`. It's supported fine by all current major browsers except Internet Explorer. IMO, if you're still using IE, that's on you and you don't get to see a nice-looking CV.*
+_Note: The CV components are all done with CSS `flex`. It's supported fine by all current major browsers except Internet Explorer. IMO, if you're still using IE, that's on you and you don't get to see a nice-looking CV._
 
 #### CV Award
 
@@ -220,6 +226,7 @@ A "typical" resume entry: (Note that this uses a list of strings for tasks, rath
 ```
 
 Multiple tasks with no subtitle, to list teaching positions:
+
 ```HTML
 <cv-entry
     location="Cambridge, MA"
@@ -233,6 +240,7 @@ Multiple tasks with no subtitle, to list teaching positions:
 ```
 
 Multiple research projects within a single group:
+
 ```HTML
 <cv-entry
     location="Cambridge, MA"

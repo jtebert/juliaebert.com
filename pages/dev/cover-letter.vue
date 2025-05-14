@@ -44,14 +44,6 @@ Julia Ebert
 </cover-letter>
 </template>
 
-<script>
-import CoverLetter from "~/components/CoverLetter.vue";
-import VueMarkdown from "vue-markdown";
-
-export default {
-  components: {
-    CoverLetter,
-    VueMarkdown,
-  },
-};
+<script setup>
+import CoverLetter from "~/components/CoverLetter.vue"
 </script>
