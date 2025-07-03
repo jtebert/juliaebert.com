@@ -3,7 +3,7 @@
   <div class="resume">
     <resume-header
       name="Julia Ebert"
-      subtitle="Software Engineer &bull; Robotics Researcher &bull; Boston, MA"
+      subtitle="Robotics Research & Development &bull; Software Engineering &bull; Boston, MA"
       :links='[
         {to: "https://juliaebert.com", icon: "web", text:"juliaebert.com"},
         {to: "mailto:julia@juliaebert.com", icon: "email", text:"julia@juliaebert.com"},
@@ -18,12 +18,12 @@
       <cv-skill
         category="Computer Science"
         :skills="[
-        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker', 'Robot Operating System (ROS)',  'Git/version control', 'ZMQ', 'Protobuf', 'MATLAB', 'JavaScript', 'HTML/CSS']"
+        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker',  'Git/version control', 'ZeroMQ', 'Protocol buffers (Protobuf)', 'Robot Operating System (ROS)', 'MuJoCo', 'JavaScript', 'HTML/CSS']"
       />
       <cv-skill
         category="Engineering"
         :skills="[
-        'Computer-aided design (OnShape)', '3D printing', 'Basic PCB design', 'Laser cutting']"
+        'Computer-aided design (OnShape)', '3D printing', 'Basic PCB design (Eagle)', 'Laser cutting']"
       />
 
       <h2>Experience</h2>
