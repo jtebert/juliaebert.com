@@ -1,4 +1,30 @@
 {
+    "meyers2025": {
+        "type": "article",
+        "author": [
+            "Meyers, Joshua E.",
+            "Schneider, Michael D.",
+            "Ebert, Julia T.",
+            "Schlafly, Edward F.",
+            "Yeager, Travis",
+            "Perloff, Alexx",
+            "Merl, Daniel",
+            "Lifset, Noah",
+            "Bernstein, Jason",
+            "Dawson, William A.",
+            "Golovich, Nathan",
+            "Higgins, Denvir",
+            "McGill, Peter",
+            "Miller, Caleb",
+            "Pruett, Kerianne"
+        ],
+        "title": "SSAPy &ndash; Space Situational Awareness for Python",
+        "year": 2025,
+        "journal": "The Journal of Open Source Software",
+        "short_journal": "JOSS",
+        "file": "2025_joss.pdf",
+        "doi": "10.21105/joss.08147"
+    },
     "ebertphd2022": {
         "type": "phdthesis",
         "author": ["Ebert, Julia"],
