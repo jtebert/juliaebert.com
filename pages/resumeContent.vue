@@ -16,9 +16,14 @@
     <div class="block-content content">
       <h2>Skills</h2>
       <cv-skill
-        category="Computer Science"
+        category="Tools"
         :skills="[
-        'Algorithm development', 'C++', 'Python', 'Linux', 'Docker',  'Git/version control', 'ZeroMQ', 'Protocol buffers (Protobuf)', 'Robot Operating System (ROS)', 'MuJoCo', 'JavaScript', 'HTML/CSS']"
+        'Linux', 'Docker', 'Git', 'ZeroMQ', 'Protocol buffers (Protobuf)', 'Robot Operating System (ROS)', 'MuJoCo']"
+      />
+      <cv-skill
+        category="Languages"
+        :skills="[
+        'C++', 'Python', 'JavaScript', 'HTML/CSS']"
       />
       <cv-skill
         category="Engineering"
@@ -34,10 +39,10 @@
         subtitle='Autonomy Lead'
         :tasks="[
           'Architect and implement the software system from the ground up, including hardware selection, communication protocols (ZMQ, protobuf), DevOps (Docker, CI/CD pipeline), and user interface development, enabling Fleet\'s first on-ship robot demonstrations.',
-          'Manage a team of three software engineers and supervise high school through PhD student interns.',
+          'Develop robust path planning and execution systems for autonomous underwater navigation on complex surfaces, addressing challenges of limited sensing and harsh operating conditions.',
           'Design and implement robot control systems, safety mechanisms, and a robust logging system.',
-          'Develop robust path planning and execution systems for autonomous underwater navigation on 3D curved steel surfaces, addressing challenges of limited sensing and harsh operating conditions.',
-          'Lead software project planning, collaborating with product management and executives to align goals, manage timelines, and mitigate risks.',
+          'Manage a team of software engineers and supervise high school through PhD student interns.',
+          'Lead software project planning and collaborate with stakeholders to manage timelines and risks.',
         ]"
       />
       <cv-entry
@@ -46,8 +51,8 @@
         dates='2022 -- 2023'
         subtitle='Software Engineer, Mission Planning (Remote)'
         :tasks="[
-          'Spearheaded design and development (C++, ROS) of new multi-robot planning for Outrider\'s of autonomous distribution yard trucks.',
-          'Led cross-functional project teams to create new robot behaviors toward product goals.',
+          'Spearheaded design and development (C++, ROS) of new multi-robot planning for Outrider\'s fleet of autonomous distribution yard trucks.',
+          'Led cross-functional project teams to create new robot behaviors toward commercial product goals.',
           'Supported test site and customer deployments of the mission planning system.'
         ]"
       />
@@ -126,6 +131,9 @@
         title="Northeastern University"
         subtitle="BS in Behavioral Neuroscience, Minor in Computer Science"
         dates='2015'
+        :tasks="[
+          'Goldwater Scholar &bull; German Academic Exchange Service (DAAD) Scholar &bull; summa cum laude'
+        ]"
       />
       <!-- :tasks="[
         'Goldwater Scholar &bull; summa cum laude &bull; 3.98 GPA']" -->
@@ -177,14 +185,14 @@
         class="is-print-only"
         format="short"
         highlight-author="Ebert"
-        :pub-key-filter="['ebert2022', 'ebert2020icra',  'ebert2018aamas']"
+        :pub-key-filter="['meyers2025', 'ebert2022', 'ebert2020icra',  'ebert2018aamas']"
         :type-filter="['inproceedings', 'article']"
         :showLinks="false"
       />
       <publication-list
         class="is-screen-only"
         highlight-author="Ebert"
-        :pub-key-filter="['ebert2022', 'ebert2020icra', 'farkhatdinov2019', 'ebert2018aamas']"
+        :pub-key-filter="['meyers2025', 'ebert2022', 'ebert2020icra', 'ebert2018aamas']"
         :type-filter="['inproceedings', 'article']"
         :showLinks="true"
       />

@@ -19,6 +19,7 @@
       <span class="year" v-if="json.year" v-html="'('+json.year+') '"></span>
       <span class="pubtitle" v-html="json.title+'. '"></span>
       <span class="publisher-info" v-if="pubInfo" v-html="shortPubInfo+'. '"></span>
+      <span class="note" v-if="json.note" v-html="json.note+'.'"></span>
       <i class="is-print-only"><a v-if="json.file" :href="absoluteFile" class="link mdi mdi-link-variant is-link-only"></a></i>
     </span>
   </p>
