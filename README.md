@@ -18,6 +18,10 @@ $ npm run start
 # generate static project
 $ npm run generate
 
+# generate resume PDF (requires dev server to be running)
+$ npm run generate-pdf
+$ npm run generate-pdf -- custom-name.pdf
+
 # Update the packages
 $ npm update
 ```
@@ -83,7 +87,7 @@ Additionally, you can choose to include information in the print and online vers
 
 You can use the browser print interface (I'm using Chrome) to adjust things like margins when printing to PDF (and removing the URL bars), but occasionally it cuts lines of text in half or splits up sections weirdly. To hackily solve this, you can insert `<span class="page-break"></span>` to manually add a page break in the printed version of the CV; this will have no effect on the web view.
 
-When I include a link to "View PDF" on the page, I do this by generating the PDF by printing from the browser, then including the PDF as a file in the static files.
+To generate the resume PDF, run the dev server (`npm run dev`) and then in a separate terminal run `npm run generate-pdf`. This uses Puppeteer (headless Chrome) to produce a PDF with selectable text, saved to `/public/pdfs/ebert-julia.resume.pdf`. To save under a different name in the same folder, pass it as an argument: `npm run generate-pdf -- custom-name.pdf`. Page size and margins are controlled by the `@page` rule in `assets/sass/main.scss`.
 
 ## Components
 

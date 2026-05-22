@@ -12,7 +12,8 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate": "nuxi generate"
+    "generate": "nuxi generate",
+    "generate-pdf": "node scripts/generate-resume-pdf.mjs"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
+    "puppeteer-core": "^25.0.4",
     "sass": "^1.85.1",
     "sass-loader": "^10.5.2"
   }

@@ -62,7 +62,11 @@ $light: $white-ter;
 $warning: $orange;
 $warning-invert: $orange-invert;
 
-$family-sans-serif: "Montserrat", -apple-system, system-ui, sans-serif;
+$family-sans-serif:
+  "Montserrat",
+  -apple-system,
+  system-ui,
+  sans-serif;
 $family-title: "Montserrat", serif;
 $family-subtitle: "Space Mono", monospace;
 
@@ -84,7 +88,10 @@ $radius: 0;
 
 // Create any custom color overrides
 $custom-colors: (
-  "primary": ($primary, $primary-invert)
+  "primary": (
+    $primary,
+    $primary-invert,
+  ),
 );
 $colors: map-merge($colors, $custom-colors);
 
@@ -444,6 +451,11 @@ a.button:hover {
 
 @media print {
   // Resets
+  html,
+  body {
+    background-color: white !important;
+  }
+
   .is-print-only {
     display: inherit;
   }
@@ -665,7 +677,9 @@ a.button:hover {
       right: 0;
       width: calc(100% - 2 * #{$navbar-height});
       display: block;
-      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transition:
+        transform 0.3s ease-out,
+        opacity 0.3s ease-out;
       transform: scaleY(0);
       transform-origin: top;
       opacity: 0;
@@ -739,7 +753,7 @@ a.button:hover {
       align-items: center;
       font-size: 50px;
 
-      .subtitle.typing{
+      .subtitle.typing {
         font-size: 50px;
         margin-bottom: 0;
 
@@ -748,7 +762,7 @@ a.button:hover {
         }
       }
 
-      .cursor{
+      .cursor {
         display: block;
         background-color: $primary;
         width: 0.5em;
@@ -772,7 +786,6 @@ a.button:hover {
     display: inline-block;
     padding-bottom: $gap/2;
 
-
     &:hover {
       opacity: 0.7;
     }
@@ -794,7 +807,8 @@ a.button:hover {
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     opacity: 1;
   }
   50% {
@@ -811,7 +825,6 @@ a.button:hover {
   width: 100vw;
   height: 100vh;
 }
-
 
 // LAYOUT: SIMPLE (for error pages, zB)
 .simple-layout {
@@ -1243,9 +1256,9 @@ $icon-block-size-touch: 6rem;
 @page {
   /* size: 148mm 210mm; */
   size: 8.5in 11in;
-  margin: 0.55in;
-  margin-bottom: 0.5in;
-  // margin-top: 0.5in;
+  margin: 0.5in;
+  margin-top: 0.4in;
+  margin-bottom: 0.45in;
   background-color: white;
 
   @bottom-right {
@@ -1293,6 +1306,11 @@ h1#title {
 
     .publication {
       margin-bottom: 0.5em;
+    }
+
+    .block-content > *:last-child,
+    .publication:last-child {
+      margin-bottom: 0 !important;
     }
 
     .cv-entry,
