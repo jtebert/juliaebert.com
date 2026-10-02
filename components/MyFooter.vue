@@ -3,12 +3,12 @@
   <div class="container">
     <div class="columns">
       <div class="column is-2 has-text-centered">
-        <img src="/imgs/logos/fleet-logo-light-opt.svg" style="height: 100px;">
+        <img src="/imgs/logos/motional-logo-light-opt.svg" style="height: 100px;">
       </div>
       <div class="column content">
         <p>Julia Ebert, PhD</p>
-        <p>Autonomy Lead</p>
-        <p>Fleet Robotics</p>
+        <p>Staff Autonomy Engineer</p>
+        <p>Motional</p>
         <p><a href="mailto:julia@juliaebert.com">julia@juliaebert.com</a></p>
       </div>
       <div class="column">

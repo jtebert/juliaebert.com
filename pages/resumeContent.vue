@@ -21,7 +21,7 @@
           icon: 'linkedin',
           text: 'linkedin.com/in/jtebert',
         },
-        { icon: 'phone', text: '617-949-0214' },
+        // { icon: 'phone', text: '617-949-0214' },
       ]"
     ></resume-header>
 
@@ -48,6 +48,7 @@
       <cv-skill
         category="Everything else"
         :skills="[
+          'Systems engineering',
           'Computer-aided design (OnShape)',
           '3D printing',
           'Laser cutting',
@@ -56,10 +57,23 @@
       />
 
       <h2>Experience</h2>
+
+      <cv-entry
+        location="Boston, MA"
+        title="Motional"
+        dates="2026 --"
+        subtitle="Staff Engineer, Autonomy"
+        :tasks="[
+          'Contribute expertise, development, and code review to autonomous vehicle planning.',
+          'Manage problem decomposition, testing, and metrics for new features in the AV planning stack.',
+          'Connect systems engineering and on-vehicle planning teams to ensure we develop the right solutions to the right problems.',
+        ]"
+      />
+
       <cv-entry
         location="Boston, MA"
         title="Fleet Robotics"
-        dates="2023 --"
+        dates="2023 -- 2026"
         subtitle="Autonomy Lead"
         :tasks="[
           'Architect and implement the software stack from the ground up (hardware choice, communication protocols, Docker/CI, and UI development), enabling Fleet\'s first on-ship robot demonstrations.',
@@ -94,6 +108,7 @@
         ]"
       />
       <cv-entry
+        class="is-screen-only"
         location="Livermore, CA"
         dates="Summer 2018"
         title="Lawrence Livermore National Laboratory, <span>Dr. Michael Schneider</span>"
